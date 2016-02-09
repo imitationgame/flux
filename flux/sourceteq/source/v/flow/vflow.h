@@ -1,8 +1,7 @@
 #import "appdel.h"
 
-@interface vflow:UIView
+@interface vflow:UIScrollView
 
-@property(weak, nonatomic)UIScrollView *scroll;
 @property(weak, nonatomic)UIView *container;
 
 @end

@@ -7,37 +7,22 @@
     self = [super init];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
- 
-    UIScrollView *scroll = [[UIScrollView alloc] init];
-    [scroll setTranslatesAutoresizingMaskIntoConstraints:NO];
-    self.scroll = scroll;
     
     UIView *container = [[UIView alloc] init];
-    [container setTranslatesAutoresizingMaskIntoConstraints:NO];
     [container setClipsToBounds:YES];
+    [container setBackgroundColor:[UIColor whiteColor]];
     self.container = container;
     
-    [scroll addSubview:container];
-    [self addSubview:scroll];
-    
-    NSDictionary *views = @{@"scroll":scroll, @"container":container};
-    NSDictionary *metrics = @{};
-    
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[scroll]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[scroll]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[container]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[container]-0-|" options:0 metrics:metrics views:views]];
-    
+    [self addSubview:container];
     [self initial];
     
-    return self;
-}
-
--(void)updateConstraints
-{
-    [super updateConstraints];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC), dispatch_get_main_queue(),
+                   ^
+                   {
+                       [self initial];
+                   });
     
-    [self updateheight:500];
+    return self;
 }
 
 #pragma mark functionality
@@ -47,24 +32,19 @@
     dispatch_async(dispatch_get_main_queue(),
                    ^
                    {
-                       CGFloat width = self.container.bounds.size.width;
+                       CGFloat width = self.bounds.size.width;
                        
-                       [self.scroll setContentSize:CGSizeMake(width, height)];
+                       [self setContentSize:CGSizeMake(width, height)];
                        [self.container setFrame:CGRectMake(0, 0, width, height)];
                    });
 }
 
 -(void)initial
 {
-    vflowettcon *connector = [[vflowettcon alloc] init];
+    vflowettcon *connector = [[vflowettcon alloc] initWithFrame:CGRectMake(50, 50, 50, 50)];
+    [self.container addSubview:connector];
     
-    [self addSubview:connector];
-    
-    NSDictionary *views = @{@"con":connector};
-    NSDictionary *metrics = @{};
-    
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-30-[con(50)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-30-[con(50)]" options:0 metrics:metrics views:views]];
+    [self updateheight:500];
 }
 
 @end

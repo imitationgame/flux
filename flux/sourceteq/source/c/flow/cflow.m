@@ -14,12 +14,12 @@
 {
     UIImage *image;
     
-    CGSize size = self.viewflow.scroll.contentSize;
+    CGSize size = self.viewflow.container.bounds.size;
     CGFloat width = size.width;
     CGFloat height = size.height;
     
     UIGraphicsBeginImageContextWithOptions(size, YES, [UIScreen mainScreen].scale);
-    [self.viewflow drawViewHierarchyInRect:CGRectMake(0, 0, width, height) afterScreenUpdates:YES];
+    [self.viewflow.container drawViewHierarchyInRect:CGRectMake(0, 0, width, height) afterScreenUpdates:YES];
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     

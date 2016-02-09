@@ -2,18 +2,12 @@
 
 @implementation vflowettcon
 
--(instancetype)init
+-(instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super init];
+    self = [super initWithFrame:frame];
+    [self.layer setCornerRadius:frame.size.width / 2.0];
     
     return self;
-}
-
--(void)layoutSubviews
-{
-    [self.layer setCornerRadius:self.bounds.size.width / 2.0];
-    
-    [super layoutSubviews];
 }
 
 @end
