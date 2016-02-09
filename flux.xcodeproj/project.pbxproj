@@ -34,6 +34,7 @@
 		DA01573B1C6A691900FAC166 /* vratemenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DA01571C1C6A691900FAC166 /* vratemenu.m */; };
 		DA01573C1C6A691900FAC166 /* vratemenucel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA01571E1C6A691900FAC166 /* vratemenucel.m */; };
 		DA0157411C6A694300FAC166 /* in in Resources */ = {isa = PBXBuildFile; fileRef = DA0157401C6A694300FAC166 /* in */; };
+		DA30A8301C6A6DE1004F5828 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA30A82F1C6A6DE1004F5828 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		DA01571F1C6A691900FAC166 /* v.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
 		DA0157401C6A694300FAC166 /* in */ = {isa = PBXFileReference; lastKnownFileType = folder; path = in; sourceTree = "<group>"; };
 		DA0157461C6A6B2000FAC166 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DA30A82F1C6A6DE1004F5828 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA44B3001C6A6C3F00767625 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA44B3011C6A6C3F00767625 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 				DA0156CF1C6A691900FAC166 /* imateq */,
 				DA0156D31C6A691900FAC166 /* langteq */,
 				DA0156D81C6A691900FAC166 /* sourceteq */,
+				DA30A82F1C6A6DE1004F5828 /* Images.xcassets */,
 			);
 			path = flux;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			files = (
 				DA0157201C6A691900FAC166 /* flux.db in Resources */,
 				DA0157251C6A691900FAC166 /* Localizable.strings in Resources */,
+				DA30A8301C6A6DE1004F5828 /* Images.xcassets in Resources */,
 				DA0157231C6A691900FAC166 /* analytics.plist in Resources */,
 				DA0157241C6A691900FAC166 /* defs.plist in Resources */,
 				DA0157271C6A691900FAC166 /* Info.plist in Resources */,
@@ -638,6 +642,8 @@
 			baseConfigurationReference = AAF852B4A434BEC12240BC1D /* Pods-flux.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/flux/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -654,6 +660,8 @@
 			baseConfigurationReference = 529AB1EEDB596610CE66AC6A /* Pods-flux.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/flux/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

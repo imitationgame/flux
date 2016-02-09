@@ -1,17 +1,4 @@
-"app_title"="Turing";
-
-"status_taketest"="Start test";
-"status_creator"="Creator";
-
-"turing_stoptest"="Stop test";
-
-"creator_header_title"="Test creator";
-"creator_header_new"="New test";
-"creator_header_export"="Export";
-"creator_header_close"="Close";
-
-"creatoradd_title"="New test";
-"creatoradd_header_title"="Test title";
+"app_title"="Flux";
 
 "rate_descr"="How would you rate this app?";
 "rate_donereview"="Rate sent. Would you write a review in the app store?";
