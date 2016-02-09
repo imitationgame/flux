@@ -9,6 +9,7 @@
     [self setBackgroundColor:[UIColor whiteColor]];
  
     UIScrollView *scroll = [[UIScrollView alloc] init];
+    [scroll setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.scroll = scroll;
     
     [self addSubview:scroll];
@@ -19,6 +20,8 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[scroll]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[scroll]-0-|" options:0 metrics:metrics views:views]];
     
+    [self initial];
+    
     return self;
 }
 
@@ -26,7 +29,15 @@
 
 -(void)initial
 {
+    vflowettcon *connector = [[vflowettcon alloc] init];
     
+    [self addSubview:connector];
+    
+    NSDictionary *views = @{@"con":connector};
+    NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-30-[con(50)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-30-[con(50)]" options:0 metrics:metrics views:views]];
 }
 
 @end

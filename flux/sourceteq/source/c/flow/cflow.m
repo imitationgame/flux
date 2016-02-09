@@ -4,7 +4,7 @@
 
 -(void)loadView
 {
-    self.view = 
+    self.view = [[vflow alloc] init];
 }
 
 @end

@@ -9,11 +9,11 @@
     return self;
 }
 
--(void)updateConstraints
+-(void)layoutSubviews
 {
-    [super updateConstraints];
-    
     [self.layer setCornerRadius:self.bounds.size.width / 2.0];
+    
+    [super layoutSubviews];
 }
 
 @end
