@@ -89,6 +89,8 @@
 		DA01571F1C6A691900FAC166 /* v.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
 		DA0157401C6A694300FAC166 /* in */ = {isa = PBXFileReference; lastKnownFileType = folder; path = in; sourceTree = "<group>"; };
 		DA0157461C6A6B2000FAC166 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DA44B3001C6A6C3F00767625 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
+		DA44B3011C6A6C3F00767625 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		DA0156D81C6A691900FAC166 /* sourceteq */ = {
 			isa = PBXGroup;
 			children = (
+				DA44B2FF1C6A6C3F00767625 /* private */,
 				DA0156D91C6A691900FAC166 /* core */,
 				DA0156DE1C6A691900FAC166 /* generic */,
 				DA0156E71C6A691900FAC166 /* lib */,
@@ -352,6 +355,15 @@
 				DA01571E1C6A691900FAC166 /* vratemenucel.m */,
 			);
 			path = main;
+			sourceTree = "<group>";
+		};
+		DA44B2FF1C6A6C3F00767625 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				DA44B3001C6A6C3F00767625 /* private.h */,
+				DA44B3011C6A6C3F00767625 /* privateconstants.h */,
+			);
+			path = private;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
