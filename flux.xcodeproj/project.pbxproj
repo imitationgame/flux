@@ -40,6 +40,7 @@
 		DA30A83B1C6A9376004F5828 /* vflowett.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30A83A1C6A9376004F5828 /* vflowett.m */; };
 		DA30A83E1C6A93FB004F5828 /* vflowettcon.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30A83D1C6A93FB004F5828 /* vflowettcon.m */; };
 		DAB837A81C6AAB4400730B67 /* mflow.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837A71C6AAB4400730B67 /* mflow.m */; };
+		DAB837AB1C6AAB6600730B67 /* mflowett.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837AA1C6AAB6600730B67 /* mflowett.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,8 @@
 		DA44B3011C6A6C3F00767625 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DAB837A61C6AAB4400730B67 /* mflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflow.h; sourceTree = "<group>"; };
 		DAB837A71C6AAB4400730B67 /* mflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflow.m; sourceTree = "<group>"; };
+		DAB837A91C6AAB6600730B67 /* mflowett.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowett.h; sourceTree = "<group>"; };
+		DAB837AA1C6AAB6600730B67 /* mflowett.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowett.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -438,6 +441,8 @@
 			children = (
 				DAB837A61C6AAB4400730B67 /* mflow.h */,
 				DAB837A71C6AAB4400730B67 /* mflow.m */,
+				DAB837A91C6AAB6600730B67 /* mflowett.h */,
+				DAB837AA1C6AAB6600730B67 /* mflowett.m */,
 			);
 			path = flow;
 			sourceTree = "<group>";
@@ -575,6 +580,7 @@
 				DAB837A81C6AAB4400730B67 /* mflow.m in Sources */,
 				DA0157311C6A691900FAC166 /* crate.m in Sources */,
 				DA30A83B1C6A9376004F5828 /* vflowett.m in Sources */,
+				DAB837AB1C6AAB6600730B67 /* mflowett.m in Sources */,
 				DA01573B1C6A691900FAC166 /* vratemenu.m in Sources */,
 				DA0157341C6A691900FAC166 /* mdbcreate.m in Sources */,
 				DA01573A1C6A691900FAC166 /* vrate.m in Sources */,
