@@ -8,19 +8,15 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
     
+    self.width = 0;
+    self.height = 0;
+    
     UIView *container = [[UIView alloc] init];
     [container setClipsToBounds:YES];
     [container setBackgroundColor:[UIColor whiteColor]];
     self.container = container;
     
     [self addSubview:container];
-    [self initial];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC), dispatch_get_main_queue(),
-                   ^
-                   {
-                       [self initial];
-                   });
     
     return self;
 }
@@ -29,14 +25,8 @@
 
 -(void)updateheight:(CGFloat)height
 {
-    dispatch_async(dispatch_get_main_queue(),
-                   ^
-                   {
-                       CGFloat width = self.bounds.size.width;
-                       
-                       [self setContentSize:CGSizeMake(width, height)];
-                       [self.container setFrame:CGRectMake(0, 0, width, height)];
-                   });
+    [self setContentSize:CGSizeMake(self.width, self.height)];
+    [self.container setFrame:CGRectMake(0, 0, self.width, self.height)];
 }
 
 -(void)initial
