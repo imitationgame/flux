@@ -36,6 +36,7 @@
 		DA0157411C6A694300FAC166 /* in in Resources */ = {isa = PBXBuildFile; fileRef = DA0157401C6A694300FAC166 /* in */; };
 		DA30A8301C6A6DE1004F5828 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA30A82F1C6A6DE1004F5828 /* Images.xcassets */; };
 		DA30A8341C6A708E004F5828 /* cflow.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30A8331C6A708E004F5828 /* cflow.m */; };
+		DA30A8381C6A9303004F5828 /* vflow.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30A8371C6A9303004F5828 /* vflow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,8 @@
 		DA30A82F1C6A6DE1004F5828 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA30A8321C6A708E004F5828 /* cflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cflow.h; sourceTree = "<group>"; };
 		DA30A8331C6A708E004F5828 /* cflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cflow.m; sourceTree = "<group>"; };
+		DA30A8361C6A9303004F5828 /* vflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflow.h; sourceTree = "<group>"; };
+		DA30A8371C6A9303004F5828 /* vflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vflow.m; sourceTree = "<group>"; };
 		DA44B3001C6A6C3F00767625 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA44B3011C6A6C3F00767625 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -345,6 +348,7 @@
 		DA01570D1C6A691900FAC166 /* v */ = {
 			isa = PBXGroup;
 			children = (
+				DA30A8351C6A92FA004F5828 /* flow */,
 				DA01570E1C6A691900FAC166 /* alert */,
 				DA0157111C6A691900FAC166 /* general */,
 				DA0157181C6A691900FAC166 /* main */,
@@ -393,6 +397,15 @@
 			children = (
 				DA30A8321C6A708E004F5828 /* cflow.h */,
 				DA30A8331C6A708E004F5828 /* cflow.m */,
+			);
+			path = flow;
+			sourceTree = "<group>";
+		};
+		DA30A8351C6A92FA004F5828 /* flow */ = {
+			isa = PBXGroup;
+			children = (
+				DA30A8361C6A9303004F5828 /* vflow.h */,
+				DA30A8371C6A9303004F5828 /* vflow.m */,
 			);
 			path = flow;
 			sourceTree = "<group>";
@@ -548,6 +561,7 @@
 				DA0157321C6A691900FAC166 /* cpages.m in Sources */,
 				DA0157381C6A691900FAC166 /* viewbase.m in Sources */,
 				DA0157291C6A691900FAC166 /* analytics.m in Sources */,
+				DA30A8381C6A9303004F5828 /* vflow.m in Sources */,
 				DA0157351C6A691900FAC166 /* mdirs.m in Sources */,
 				DA01572A1C6A691900FAC166 /* tools.m in Sources */,
 				DA01572B1C6A691900FAC166 /* updater.m in Sources */,

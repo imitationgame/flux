@@ -2,4 +2,9 @@
 
 @implementation cflow
 
+-(void)loadView
+{
+    self.view = 
+}
+
 @end
