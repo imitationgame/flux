@@ -42,6 +42,7 @@
 		DAB837A81C6AAB4400730B67 /* mflow.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837A71C6AAB4400730B67 /* mflow.m */; };
 		DAB837AB1C6AAB6600730B67 /* mflowett.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837AA1C6AAB6600730B67 /* mflowett.m */; };
 		DAB837AE1C6AAB9C00730B67 /* mflowettcon.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837AD1C6AAB9C00730B67 /* mflowettcon.m */; };
+		DAB837B11C6AAD1B00730B67 /* vflowpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837B01C6AAD1B00730B67 /* vflowpoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +119,8 @@
 		DAB837AA1C6AAB6600730B67 /* mflowett.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowett.m; sourceTree = "<group>"; };
 		DAB837AC1C6AAB9C00730B67 /* mflowettcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowettcon.h; sourceTree = "<group>"; };
 		DAB837AD1C6AAB9C00730B67 /* mflowettcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowettcon.m; sourceTree = "<group>"; };
+		DAB837AF1C6AAD1B00730B67 /* vflowpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowpoint.h; sourceTree = "<group>"; };
+		DAB837B01C6AAD1B00730B67 /* vflowpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vflowpoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,6 +429,8 @@
 				DA30A83A1C6A9376004F5828 /* vflowett.m */,
 				DA30A83C1C6A93FB004F5828 /* vflowettcon.h */,
 				DA30A83D1C6A93FB004F5828 /* vflowettcon.m */,
+				DAB837AF1C6AAD1B00730B67 /* vflowpoint.h */,
+				DAB837B01C6AAD1B00730B67 /* vflowpoint.m */,
 			);
 			path = flow;
 			sourceTree = "<group>";
@@ -601,6 +606,7 @@
 				DA30A83E1C6A93FB004F5828 /* vflowettcon.m in Sources */,
 				DA30A8381C6A9303004F5828 /* vflow.m in Sources */,
 				DA0157351C6A691900FAC166 /* mdirs.m in Sources */,
+				DAB837B11C6AAD1B00730B67 /* vflowpoint.m in Sources */,
 				DA01572A1C6A691900FAC166 /* tools.m in Sources */,
 				DA01572B1C6A691900FAC166 /* updater.m in Sources */,
 			);
