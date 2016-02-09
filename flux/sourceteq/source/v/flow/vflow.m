@@ -38,6 +38,8 @@
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-30-[con(50)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-30-[con(50)]" options:0 metrics:metrics views:views]];
+    
+    [self.scroll setContentSize:CGSizeMake(300, 300)];
 }
 
 @end

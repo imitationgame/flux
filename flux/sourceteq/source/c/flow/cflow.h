@@ -1,5 +1,7 @@
 #import "appdel.h"
 
+@class vflow;
+
 @interface cflow:UIViewController
 
 -(void)share;
