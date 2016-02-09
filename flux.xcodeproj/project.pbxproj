@@ -37,6 +37,7 @@
 		DA30A8301C6A6DE1004F5828 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA30A82F1C6A6DE1004F5828 /* Images.xcassets */; };
 		DA30A8341C6A708E004F5828 /* cflow.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30A8331C6A708E004F5828 /* cflow.m */; };
 		DA30A8381C6A9303004F5828 /* vflow.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30A8371C6A9303004F5828 /* vflow.m */; };
+		DA30A83B1C6A9376004F5828 /* vflowett.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30A83A1C6A9376004F5828 /* vflowett.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,8 @@
 		DA30A8331C6A708E004F5828 /* cflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cflow.m; sourceTree = "<group>"; };
 		DA30A8361C6A9303004F5828 /* vflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflow.h; sourceTree = "<group>"; };
 		DA30A8371C6A9303004F5828 /* vflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vflow.m; sourceTree = "<group>"; };
+		DA30A8391C6A9376004F5828 /* vflowett.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowett.h; sourceTree = "<group>"; };
+		DA30A83A1C6A9376004F5828 /* vflowett.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vflowett.m; sourceTree = "<group>"; };
 		DA44B3001C6A6C3F00767625 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA44B3011C6A6C3F00767625 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -406,6 +409,8 @@
 			children = (
 				DA30A8361C6A9303004F5828 /* vflow.h */,
 				DA30A8371C6A9303004F5828 /* vflow.m */,
+				DA30A8391C6A9376004F5828 /* vflowett.h */,
+				DA30A83A1C6A9376004F5828 /* vflowett.m */,
 			);
 			path = flow;
 			sourceTree = "<group>";
@@ -550,6 +555,7 @@
 				DA0157301C6A691900FAC166 /* cmain.m in Sources */,
 				DA01573C1C6A691900FAC166 /* vratemenucel.m in Sources */,
 				DA0157311C6A691900FAC166 /* crate.m in Sources */,
+				DA30A83B1C6A9376004F5828 /* vflowett.m in Sources */,
 				DA01573B1C6A691900FAC166 /* vratemenu.m in Sources */,
 				DA0157341C6A691900FAC166 /* mdbcreate.m in Sources */,
 				DA01573A1C6A691900FAC166 /* vrate.m in Sources */,
