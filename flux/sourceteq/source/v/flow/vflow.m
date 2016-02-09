@@ -22,4 +22,11 @@
     return self;
 }
 
+#pragma mark functionality
+
+-(void)initial
+{
+    
+}
+
 @end
