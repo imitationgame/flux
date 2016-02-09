@@ -10,6 +10,15 @@
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     [self setViewControllers:@[[[UIViewController alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
+    UIBarButtonItem *itemadd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(actionadd:)];
+    self.itemadd = itemadd;
+    
+    UIBarButtonItem *itemsettings = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:nil];
+    self.itemsettings = itemsettings;
+    
+    [self.navigationItem setRightBarButtonItem:itemadd];
+    [self.navigationItem setLeftBarButtonItem:itemsettings];
+    
     return self;
 }
 
@@ -27,6 +36,13 @@
 -(BOOL)prefersStatusBarHidden
 {
     return NO;
+}
+
+#pragma mark actions
+
+-(void)actionadd:(UIBarButtonItem*)item
+{
+    
 }
 
 @end
