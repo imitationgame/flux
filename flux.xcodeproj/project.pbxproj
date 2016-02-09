@@ -57,8 +57,6 @@
 		DA0156EB1C6A691900FAC166 /* timerbg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timerbg.h; sourceTree = "<group>"; };
 		DA0156EC1C6A691900FAC166 /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
 		DA0156ED1C6A691900FAC166 /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
-		DA0156EF1C6A691900FAC166 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
-		DA0156F01C6A691900FAC166 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA0156F31C6A691900FAC166 /* c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
 		DA0156FA1C6A691900FAC166 /* cmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmain.h; sourceTree = "<group>"; };
 		DA0156FB1C6A691900FAC166 /* cmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmain.m; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 				DA0156E71C6A691900FAC166 /* lib */,
 				DA0156EC1C6A691900FAC166 /* libdb.a */,
 				DA0156ED1C6A691900FAC166 /* libtimerbg.a */,
-				DA0156EE1C6A691900FAC166 /* private */,
 				DA0156F11C6A691900FAC166 /* source */,
 			);
 			path = sourceteq;
@@ -230,15 +227,6 @@
 				DA0156EB1C6A691900FAC166 /* timerbg.h */,
 			);
 			path = timerbg;
-			sourceTree = "<group>";
-		};
-		DA0156EE1C6A691900FAC166 /* private */ = {
-			isa = PBXGroup;
-			children = (
-				DA0156EF1C6A691900FAC166 /* private.h */,
-				DA0156F01C6A691900FAC166 /* privateconstants.h */,
-			);
-			path = private;
 			sourceTree = "<group>";
 		};
 		DA0156F11C6A691900FAC166 /* source */ = {
@@ -607,6 +595,7 @@
 				DA0156CB1C6A68B800FAC166 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
