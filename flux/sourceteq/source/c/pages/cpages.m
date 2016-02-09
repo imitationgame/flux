@@ -8,7 +8,6 @@
 -(instancetype)init
 {
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    [self setViewControllers:@[[[UIViewController alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     UIBarButtonItem *itemadd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(actionadd:)];
     self.itemadd = itemadd;
@@ -16,8 +15,10 @@
     UIBarButtonItem *itemsettings = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:nil];
     self.itemsettings = itemsettings;
     
-    [self.navigationItem setRightBarButtonItem:itemadd];
-    [self.navigationItem setLeftBarButtonItem:itemsettings];
+    UIBarButtonItem *itemlist = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:nil];
+    self.itemlist = itemlist;
+    
+    [self actionlist:nil];
     
     return self;
 }
@@ -42,10 +43,25 @@
 
 -(void)actionadd:(UIBarButtonItem*)item
 {
-    [self setViewControllers:@[[[cflow alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:
+    __weak cpages *weakself = self;
+    
+    [weakself setViewControllers:@[[[cflow alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:
      ^(BOOL done)
      {
-         
+         [weakself.navigationItem setRightBarButtonItem:nil];
+         [weakself.navigationItem setLeftBarButtonItem:weakself.itemlist];
+     }];
+}
+
+-(void)actionlist:(UIBarButtonItem*)item
+{
+    __weak cpages *weakself = self;
+    
+    [weakself setViewControllers:@[[[UIViewController alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:
+     ^(BOOL done)
+     {
+         [weakself.navigationItem setRightBarButtonItem:weakself.itemadd];
+         [weakself.navigationItem setLeftBarButtonItem:weakself.itemsettings];
      }];
 }
 
