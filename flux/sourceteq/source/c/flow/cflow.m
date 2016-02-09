@@ -23,8 +23,11 @@
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
+    NSString *filename = @"flowchart.png";
+    NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:filename]];
+    [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
 
-    UIActivityViewController *act = [[UIActivityViewController alloc] initWithActivityItems:@[image] applicationActivities:nil];
+    UIActivityViewController *act = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:nil];
     
     if([UIPopoverPresentationController class])
     {
