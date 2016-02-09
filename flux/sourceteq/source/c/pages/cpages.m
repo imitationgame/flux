@@ -42,7 +42,11 @@
 
 -(void)actionadd:(UIBarButtonItem*)item
 {
-    
+    [self setViewControllers:@[[[cflow alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:
+     ^(BOOL done)
+     {
+         
+     }];
 }
 
 @end
