@@ -4,4 +4,6 @@
 
 -(void)share;
 
+@property(weak, nonatomic)vflow *viewflow;
+
 @end
