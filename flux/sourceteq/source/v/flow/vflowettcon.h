@@ -1,13 +1,6 @@
-//
-//  vflowettcon.h
-//  flux
-//
-//  Created by zero on 2/9/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "vflowett.h"
 
-#import <Foundation/Foundation.h>
-
-@interface vflowettcon : NSObject
+@interface vflowettcon:vflowett
 
 @end
