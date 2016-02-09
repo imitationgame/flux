@@ -2,4 +2,6 @@
 
 @interface cflow:UIViewController
 
+-(void)share;
+
 @end

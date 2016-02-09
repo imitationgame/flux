@@ -7,4 +7,11 @@
     self.view = [[vflow alloc] init];
 }
 
+#pragma mark public
+
+-(void)share
+{
+    
+}
+
 @end

@@ -19,6 +19,9 @@
     UIBarButtonItem *itemlist = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(actionlist:)];
     self.itemlist = itemlist;
     
+    UIBarButtonItem *itemshare = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(actionshare:)];
+    self.itemshare = itemshare;
+    
     [self.navigationItem setRightBarButtonItem:itemadd];
     [self.navigationItem setLeftBarButtonItem:itemsettings];
     
@@ -50,7 +53,7 @@
     [weakself setViewControllers:@[[[cflow alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:
      ^(BOOL done)
      {
-         [weakself.navigationItem setRightBarButtonItem:nil];
+         [weakself.navigationItem setRightBarButtonItem:weakself.itemshare];
          [weakself.navigationItem setLeftBarButtonItem:weakself.itemlist];
      }];
 }
@@ -65,6 +68,12 @@
          [weakself.navigationItem setRightBarButtonItem:weakself.itemadd];
          [weakself.navigationItem setLeftBarButtonItem:weakself.itemsettings];
      }];
+}
+
+-(void)actionshare:(UIBarButtonItem*)item
+{
+    cflow *controller = self.viewControllers[0];
+    [controller share];
 }
 
 @end
