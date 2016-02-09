@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F1EB52D1DDFE8C50BFE54C5 /* libPods-flux.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D60D1698722BA7AB93D8769 /* libPods-flux.a */; };
 		DA0157201C6A691900FAC166 /* flux.db in Resources */ = {isa = PBXBuildFile; fileRef = DA0156CD1C6A691900FAC166 /* flux.db */; };
 		DA0157231C6A691900FAC166 /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA0156D41C6A691900FAC166 /* analytics.plist */; };
 		DA0157241C6A691900FAC166 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA0156D51C6A691900FAC166 /* defs.plist */; };
@@ -36,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D60D1698722BA7AB93D8769 /* libPods-flux.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-flux.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		529AB1EEDB596610CE66AC6A /* Pods-flux.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flux.release.xcconfig"; path = "Pods/Target Support Files/Pods-flux/Pods-flux.release.xcconfig"; sourceTree = "<group>"; };
+		AAF852B4A434BEC12240BC1D /* Pods-flux.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flux.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flux/Pods-flux.debug.xcconfig"; sourceTree = "<group>"; };
 		DA0156B21C6A68B700FAC166 /* flux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0156CD1C6A691900FAC166 /* flux.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flux.db; sourceTree = "<group>"; };
 		DA0156D41C6A691900FAC166 /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
@@ -100,17 +104,37 @@
 			files = (
 				DA01572D1C6A691900FAC166 /* libtimerbg.a in Frameworks */,
 				DA01572C1C6A691900FAC166 /* libdb.a in Frameworks */,
+				0F1EB52D1DDFE8C50BFE54C5 /* libPods-flux.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		319D3BAB8DB921A6AB403CD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D60D1698722BA7AB93D8769 /* libPods-flux.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D7DD8B7A74EA5721DA4AAAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAF852B4A434BEC12240BC1D /* Pods-flux.debug.xcconfig */,
+				529AB1EEDB596610CE66AC6A /* Pods-flux.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DA0156A91C6A68B700FAC166 = {
 			isa = PBXGroup;
 			children = (
 				DA0156B41C6A68B700FAC166 /* flux */,
 				DA0156B31C6A68B700FAC166 /* Products */,
+				8D7DD8B7A74EA5721DA4AAAC /* Pods */,
+				319D3BAB8DB921A6AB403CD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -373,9 +397,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA0156C91C6A68B800FAC166 /* Build configuration list for PBXNativeTarget "flux" */;
 			buildPhases = (
+				9A4C6AB3BCEF557B79105F16 /* Check Pods Manifest.lock */,
 				DA0156AE1C6A68B700FAC166 /* Sources */,
 				DA0156AF1C6A68B700FAC166 /* Frameworks */,
 				DA0156B01C6A68B700FAC166 /* Resources */,
+				41B194B8C0C131C66D887052 /* Embed Pods Frameworks */,
+				50816CFB18D12F3779EFCAF5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -434,6 +461,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41B194B8C0C131C66D887052 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flux/Pods-flux-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50816CFB18D12F3779EFCAF5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-flux/Pods-flux-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A4C6AB3BCEF557B79105F16 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA0156AE1C6A68B700FAC166 /* Sources */ = {
@@ -560,6 +635,7 @@
 		};
 		DA0156CA1C6A68B800FAC166 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAF852B4A434BEC12240BC1D /* Pods-flux.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/flux/sourceteq/core/Info.plist";
@@ -575,6 +651,7 @@
 		};
 		DA0156CB1C6A68B800FAC166 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 529AB1EEDB596610CE66AC6A /* Pods-flux.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/flux/sourceteq/core/Info.plist";
