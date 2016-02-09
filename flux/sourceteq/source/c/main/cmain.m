@@ -23,16 +23,16 @@
     [super viewDidLoad];
     [self.navigationBar setBackgroundColor:[UIColor whiteColor]];
     [self.navigationBar setBarTintColor:colormain];
-    [self.navigationBar setTintColor:colormain];
-    [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:fontname size:18], NSForegroundColorAttributeName:colormain}];
+    [self.navigationBar setTintColor:[UIColor whiteColor]];
+    [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:fontname size:18], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationBar setTranslucent:NO];
     
-    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:fontname size:18], NSForegroundColorAttributeName:colormain} forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:fontname size:18], NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
-    return UIStatusBarStyleDefault;
+    return UIStatusBarStyleLightContent;
 }
 
 -(BOOL)prefersStatusBarHidden
