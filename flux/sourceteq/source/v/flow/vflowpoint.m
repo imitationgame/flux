@@ -22,15 +22,16 @@
     NSUInteger height = rect.size.height;
     NSUInteger width_2 = width / 2;
     NSUInteger height_2 = height / 2;
+    NSUInteger margin = 15;
     
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetLineWidth(context, 4);
+    CGContextSetLineWidth(context, 3);
     CGContextSetStrokeColorWithColor(context, self.tintColor.CGColor);
-    CGContextMoveToPoint(context, width_2, 8);
-    CGContextAddLineToPoint(context, width_2, height - 16);
+    CGContextMoveToPoint(context, width_2, margin);
+    CGContextAddLineToPoint(context, width_2, height - margin);
     CGContextDrawPath(context, kCGPathStroke);
-    CGContextMoveToPoint(context, 8, height_2);
-    CGContextAddLineToPoint(context, width - 16, height_2);
+    CGContextMoveToPoint(context, margin, height_2);
+    CGContextAddLineToPoint(context, width - margin, height_2);
     CGContextDrawPath(context, kCGPathStroke);
 }
 
@@ -57,7 +58,7 @@
     }
     else
     {
-        [self setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1]];
+        [self setBackgroundColor:[UIColor colorWithWhite:0.95 alpha:1]];
         [self setTintColor:[UIColor colorWithWhite:0.7 alpha:1]];
     }
     
