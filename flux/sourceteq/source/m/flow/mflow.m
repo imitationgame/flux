@@ -33,4 +33,9 @@
     return item;
 }
 
+-(void)add:(id<mflowetttypesprotocol>)type
+{
+    
+}
+
 @end

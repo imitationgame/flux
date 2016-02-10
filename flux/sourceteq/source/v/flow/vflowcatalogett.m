@@ -58,6 +58,13 @@
      ^
      {
          [self setAlpha:alpha];
+     } completion:
+     ^(BOOL done)
+     {
+         if(!show)
+         {
+             [self removeFromSuperview];
+         }
      }];
 }
 

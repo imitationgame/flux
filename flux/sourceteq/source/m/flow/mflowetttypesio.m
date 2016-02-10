@@ -19,4 +19,11 @@
     return name;
 }
 
+-(mflowett*)modelett
+{
+    mflowett *ett = [[mflowett alloc] init];
+    
+    return ett;
+}
+
 @end

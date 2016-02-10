@@ -68,6 +68,8 @@
         self.catalogett = catalogett;
         [self addSubview:catalogett];
         
+        [catalogett show:YES];
+        
         NSDictionary *views = @{@"catalog":catalogett};
         NSDictionary *metrics = @{};
         
@@ -106,7 +108,8 @@
 
 -(void)catalogtypeselected:(id<mflowetttypesprotocol>)type
 {
-    
+    [self.catalogett show:NO];
+    [self.model add:type];
 }
 
 @end
