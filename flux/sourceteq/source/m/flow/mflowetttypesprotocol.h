@@ -1,8 +1,10 @@
 #import <UIKit/UIKit.h>
 
+@class vflowcatalogettcel;
+
 @protocol mflowetttypesprotocol <NSObject>
 
 -(NSString*)labeltext;
--(UIView*)overview;
+-(void)overview:(vflowcatalogettcel*)cell;
 
 @end

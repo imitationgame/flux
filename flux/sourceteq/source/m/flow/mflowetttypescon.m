@@ -12,9 +12,12 @@
     return string;
 }
 
--(UIView*)overview
+-(void)overview:(vflowcatalogettcel*)cell
 {
-    UIView *view = [[UIView alloc] init];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    [view setClipsToBounds:YES];
+    [view setUserInteractionEnabled:NO];
+    [view.layer setCornerRadius:10];
     
     return view;
 }

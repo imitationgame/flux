@@ -51,7 +51,7 @@
     }
     else
     {
-        color = [UIColor colorWithWhite:0 alpha:0.4];
+        color = [UIColor colorWithWhite:0 alpha:0.3];
     }
     
     [self.label setTextColor:color];
@@ -63,8 +63,9 @@
 -(void)config:(id<mflowetttypesprotocol>)item
 {
     [self.overview removeFromSuperview];
+    self.overview = [item overview];
     [self.label setText:[item labeltext]];
-    [self addSubview:[item overview]];
+    [self addSubview:self.overview];
     
     [self hover];
 }
