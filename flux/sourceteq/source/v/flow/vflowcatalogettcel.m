@@ -6,6 +6,7 @@
 {
     self = [super initWithFrame:frame];
     [self setClipsToBounds:YES];
+    [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.8]];
     
     UILabel *label = [[UILabel alloc] init];
     [label setBackgroundColor:[UIColor clearColor]];
@@ -26,6 +27,37 @@
     return self;
 }
 
+-(void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    [self hover];
+}
+
+-(void)setHighlighted:(BOOL)highlighted
+{
+    [super setHighlighted:highlighted];
+    [self hover];
+}
+
+#pragma mark functionality
+
+-(void)hover
+{
+    UIColor *color;
+    
+    if(self.isSelected || self.isHighlighted)
+    {
+        color = [UIColor blackColor];
+    }
+    else
+    {
+        color = [UIColor colorWithWhite:0 alpha:0.4];
+    }
+    
+    [self.label setTextColor:color];
+    [self.overview setBackgroundColor:color];
+}
+
 #pragma mark public
 
 -(void)config:(id<mflowetttypesprotocol>)item
@@ -33,6 +65,8 @@
     [self.overview removeFromSuperview];
     [self.label setText:[item labeltext]];
     [self addSubview:[item overview]];
+    
+    [self hover];
 }
 
 @end

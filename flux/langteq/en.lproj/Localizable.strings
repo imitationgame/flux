@@ -1,5 +1,8 @@
 "app_title"="Flux";
 
+"flow_catalog_con"="Connector";
+"flow_catalog_pro"="Process";
+
 "rate_descr"="How would you rate this app?";
 "rate_donereview"="Rate sent. Would you write a review in the app store?";
 "rate_send"="Send";

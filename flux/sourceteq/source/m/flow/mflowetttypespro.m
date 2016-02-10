@@ -7,7 +7,7 @@
 
 -(NSString*)labeltext
 {
-    NSString *string = NSLocalizedString(@"", nil);
+    NSString *string = NSLocalizedString(@"flow_catalog_pro", nil);
     
     return string;
 }
