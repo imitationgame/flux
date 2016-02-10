@@ -16,5 +16,6 @@
 @property(nonatomic)CGPoint instarting;
 @property(nonatomic)CGPoint inending;
 @property(nonatomic)CGRect rect;
+@property(nonatomic)NSUInteger linewidth;
 
 @end

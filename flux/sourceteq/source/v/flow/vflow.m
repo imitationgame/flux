@@ -88,9 +88,15 @@
     [self.scroll addSubview:viewpoint];
 }
 
--(void)addlinestarting:(CGPoint)starting ending:(CGPoint)ending
+-(mflowlinesitem*)addlinestarting:(CGPoint)starting ending:(CGPoint)ending
 {
+    mflowlinesitem *linemodel = [[mflowlinesitem alloc] init:starting ending:ending];
+    vflowline *lineview = [linemodel generateview];
     
+    [self.model.lines add:linemodel];
+    [self.scroll addSubview:lineview];
+    
+    return linemodel;
 }
 
 -(void)initialpoint
@@ -119,6 +125,9 @@
     
     [self.scroll addSubview:ettview];
     [self.model.points remove:point];
+    
+    mflowlinesitem *line = [self addlinestarting:CGPointMake(ettview.model.x, ettview.model.y) ending:CGPointMake(ettview.model.x, ettview.model.y + 100)];
+    line.startingett = ettview.model;
 }
 
 @end

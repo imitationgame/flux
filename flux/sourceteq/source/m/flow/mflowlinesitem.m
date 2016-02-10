@@ -6,6 +6,7 @@
 {
     self = [super init];
     
+    self.linewidth = 3;
     self.starting = starting;
     self.ending = ending;
     
@@ -35,6 +36,11 @@
         startingrecty = endingy;
         endingrecty = startingy;
     }
+    
+    startingrectx -= self.linewidth;
+    startingrecty -= self.linewidth;
+    endingrectx += self.linewidth;
+    endingrecty += self.linewidth;
     
     width = endingrectx - startingrectx;
     height = endingrecty - startingrecty;
