@@ -28,15 +28,22 @@
 
 #pragma mark functionality
 
+-(void)addpointatx:(NSUInteger)x y:(NSUInteger)y
+{
+    mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:x y:y];
+    vflowpoint *viewpoint = [modelpoint generateview];
+    
+    [self.model.points add:modelpoint];
+    [self addSubview:viewpoint];
+}
+
 -(void)initialpoint
 {
     dispatch_async(dispatch_get_main_queue(),
                    ^
                    {
                        NSUInteger width = self.bounds.size.width;
-                       mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:width / 2 y:100];
-                       [self.model.points add:modelpoint];
-                       [self.container addSubview:[modelpoint generateview]];
+                       [self addpointatx:width / 2 y:100];
                    });
 }
 
