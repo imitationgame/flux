@@ -1,6 +1,7 @@
 #import "appdel.h"
 
 @class mflowett;
+@class mflowpoints;
 
 @interface mflow:NSObject
 

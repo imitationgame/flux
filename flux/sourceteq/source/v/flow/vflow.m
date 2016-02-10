@@ -23,12 +23,23 @@
 
 -(void)layoutSubviews
 {
-    
-    
+    [self initialpoint];
     [super layoutSubviews];
 }
 
 #pragma mark functionality
+
+-(void)initialpoint
+{
+    dispatch_async(dispatch_get_main_queue(),
+                   ^
+                   {
+                       NSUInteger width = self.bounds.size.width;
+                       NSUInteger height = self.bounds.size.height;
+                       
+                       [self.model.points add:[[mflowpointsitem alloc] init:width / 2 y:100]];
+                   });
+}
 
 -(void)updateheight:(CGFloat)height
 {
