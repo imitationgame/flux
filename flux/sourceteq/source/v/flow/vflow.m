@@ -64,7 +64,7 @@
 {
     if(!self.catalogett)
     {
-        vflowcatalogett *catalogett = [[vflowcatalogett alloc] init];
+        vflowcatalogett *catalogett = [[vflowcatalogett alloc] init:self];
         self.catalogett = catalogett;
         [self addSubview:catalogett];
         
@@ -100,6 +100,13 @@
 {
     [self.scroll setContentSize:CGSizeMake(self.width, self.height)];
     [self.container setFrame:CGRectMake(0, 0, self.width, self.height)];
+}
+
+#pragma mark public
+
+-(void)catalogtypeselected:(id<mflowetttypesprotocol>)type
+{
+    
 }
 
 @end

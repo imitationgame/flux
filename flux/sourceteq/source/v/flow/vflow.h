@@ -6,6 +6,8 @@
 
 @interface vflow:viewbase
 
+-(void)catalogtypeselected:(id<mflowetttypesprotocol>)type;
+
 @property(strong, nonatomic)mflow *model;
 @property(weak, nonatomic)vflowcatalogett *catalogett;
 @property(weak, nonatomic)UIScrollView *scroll;

@@ -74,7 +74,7 @@
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    
+    [self.flow catalogtypeselected:[self.model item:index.item]];
 }
 
 @end
