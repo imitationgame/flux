@@ -8,8 +8,7 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
     
-    self.width = 0;
-    self.height = 0;
+    self.model = [[mflow alloc] init];
     
     UIView *container = [[UIView alloc] init];
     [container setClipsToBounds:YES];
