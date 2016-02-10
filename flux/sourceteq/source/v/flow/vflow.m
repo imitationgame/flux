@@ -88,6 +88,8 @@
     [self.scroll addSubview:viewpoint];
 }
 
+-(void)
+
 -(void)initialpoint
 {
     dispatch_async(dispatch_get_main_queue(),

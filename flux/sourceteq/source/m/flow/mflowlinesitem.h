@@ -1,6 +1,7 @@
 #import "appdel.h"
 
 @class vflowline;
+@class mflowett;
 
 @interface mflowlinesitem:NSObject
 
@@ -8,6 +9,8 @@
 -(vflowline*)generateview;
 
 @property(weak, nonatomic)vflowline *view;
+@property(weak, nonatomic)mflowett *startingett;
+@property(weak, nonatomic)mflowett *endingett;
 @property(nonatomic)CGPoint starting;
 @property(nonatomic)CGPoint ending;
 @property(nonatomic)CGPoint instarting;
