@@ -16,6 +16,7 @@
 
 -(vflowline*)generateview
 {
+    [self.view removeFromSuperview];
     vflowline *view = [[vflowline alloc] init];
     self.view = view;
     
