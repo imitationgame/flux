@@ -13,6 +13,7 @@
     self.width = 0;
     self.height = 0;
     self.points = [[mflowpoints alloc] init];
+    self.lines = [[mflowlines alloc] init];
     
     return self;
 }

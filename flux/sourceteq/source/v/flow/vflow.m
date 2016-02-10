@@ -14,6 +14,7 @@
     self.controller = controller;
     initialized = NO;
     self.model = [[mflow alloc] init];
+    self.deltaline = 100;
     
     UIScrollView *scroll = [[UIScrollView alloc] init];
     [scroll setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -115,6 +116,13 @@
     [self.container setFrame:CGRectMake(0, 0, self.width, self.height)];
 }
 
+-(BOOL)validatepointat:(CGPoint)point
+{
+    BOOL valid = YES;
+    
+    return NO;
+}
+
 #pragma mark public
 
 -(void)catalogtypeselected:(id<mflowetttypesprotocol>)type
@@ -123,11 +131,32 @@
     mflowpointsitem *point = [self.model.points selecteditem];
     vflowett *ettview = [self.model add:type point:point];
     
-    [self.scroll addSubview:ettview];
-    [self.model.points remove:point];
-    
     mflowlinesitem *line = [self addlinestarting:CGPointMake(ettview.model.x, ettview.model.y) ending:CGPointMake(ettview.model.x, ettview.model.y + 100)];
     line.startingett = ettview.model;
+    
+    [self.scroll addSubview:ettview];
+    [self.model.points remove:point];
+}
+
+-(CGPoint)pointlinedown:(CGPoint)point
+{
+    CGPoint endingpoint;
+    
+    return endingpoint;
+}
+
+-(CGPoint)pointlineleft:(CGPoint)point
+{
+    CGPoint endingpoint;
+    
+    return endingpoint;
+}
+
+-(CGPoint)pointlineright:(CGPoint)point
+{
+    CGPoint endingpoint;
+    
+    return endingpoint;
 }
 
 @end
