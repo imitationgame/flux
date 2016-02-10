@@ -158,12 +158,28 @@
 {
     CGPoint endingpoint;
     
+    BOOL valid = NO;
+    
+    do
+    {
+        endingpoint = CGPointMake(point.x - self.deltaline, point.y);
+    }
+    while(!valid);
+    
     return endingpoint;
 }
 
 -(CGPoint)pointlineright:(CGPoint)point
 {
     CGPoint endingpoint;
+    
+    BOOL valid = NO;
+    
+    do
+    {
+        endingpoint = CGPointMake(point.x + self.deltaline, point.y);
+    }
+    while(!valid);
     
     return endingpoint;
 }
