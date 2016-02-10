@@ -3,6 +3,6 @@
 @protocol mflowetttypesprotocol <NSObject>
 
 -(NSString*)labeltext;
--(UIView*)overview;
+-(NSString*)imagename;
 
 @end

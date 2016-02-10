@@ -16,13 +16,21 @@
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.label = label;
     
+    UIImageView *image = [[UIImageView alloc] init];
+    [image setContentMode:UIViewContentModeScaleAspectFit];
+    [image setClipsToBounds:YES];
+    [image setUserInteractionEnabled:NO];
+    [image setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.image = image;
+    
     [self addSubview:label];
     
-    NSDictionary *views = @{@"label":label};
+    NSDictionary *views = @{@"label":label, @"image":image};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[label]-5-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[image]-10-[label]-5-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[image]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -55,17 +63,15 @@
     }
     
     [self.label setTextColor:color];
-    [self.overview setBackgroundColor:color];
+    [self.image setTintColor:color];
 }
 
 #pragma mark public
 
 -(void)config:(id<mflowetttypesprotocol>)item
 {
-    [self.overview removeFromSuperview];
-    self.overview = [item overview];
     [self.label setText:[item labeltext]];
-    [self addSubview:self.overview];
+    [self.image setImage:[[UIImage imageNamed:[item imagename]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
     
     [self hover];
 }

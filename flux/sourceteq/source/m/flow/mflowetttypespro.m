@@ -12,11 +12,11 @@
     return string;
 }
 
--(UIView*)overview
+-(NSString*)imagename
 {
-    UIView *view = [[UIView alloc] init];
+    NSString *name = @"";
     
-    return view;
+    return name;
 }
 
 @end

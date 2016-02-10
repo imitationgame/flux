@@ -12,14 +12,11 @@
     return string;
 }
 
--(UIView*)overview
+-(NSString*)imagename
 {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-    [view setClipsToBounds:YES];
-    [view setUserInteractionEnabled:NO];
-    [view.layer setCornerRadius:10];
+    NSString *name = @"connector";
     
-    return view;
+    return name;
 }
 
 @end
