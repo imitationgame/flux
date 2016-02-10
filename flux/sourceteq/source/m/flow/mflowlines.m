@@ -16,6 +16,11 @@
 
 #pragma mark public
 
+-(void)add:(mflowlinesitem*)item
+{
+    [array addObject:item];
+}
+
 -(NSUInteger)count
 {
     return array.count;
