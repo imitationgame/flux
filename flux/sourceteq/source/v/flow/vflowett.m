@@ -3,11 +3,13 @@
 
 @implementation vflowett
 
--(instancetype)initWithFrame:(CGRect)frame
+-(instancetype)init:(mflowett*)model
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:colormain];
+    
+    self.model = model;
     
     return self;
 }

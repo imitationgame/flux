@@ -35,9 +35,10 @@
 
 -(void)add:(id<mflowetttypesprotocol>)type
 {
-    mflowett *ett = [type modelett];
+    mflowett *ettmodel = [type modelett];
+    vflowett *ettview = [ettmodel generateview];
     
-    [array addObject:ett];
+    [array addObject:ettmodel];
 }
 
 @end
