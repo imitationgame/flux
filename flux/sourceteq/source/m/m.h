@@ -10,3 +10,5 @@
 #import "mflowetttypesprotocol.h"
 #import "mflowetttypescon.h"
 #import "mflowetttypespro.h"
+#import "mflowetttypesdec.h"
+#import "mflowetttypesio.h"

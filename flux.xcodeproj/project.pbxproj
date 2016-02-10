@@ -62,6 +62,8 @@
 		DAB837DD1C6ADAB000730B67 /* io.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB837D71C6ADAB000730B67 /* io.png */; };
 		DAB837DE1C6ADAB000730B67 /* io@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB837D81C6ADAB000730B67 /* io@2x.png */; };
 		DAB837DF1C6ADAB000730B67 /* io@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB837D91C6ADAB000730B67 /* io@3x.png */; };
+		DAB837E21C6ADB1B00730B67 /* mflowetttypesdec.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837E11C6ADB1B00730B67 /* mflowetttypesdec.m */; };
+		DAB837E51C6ADB2900730B67 /* mflowetttypesio.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837E41C6ADB2900730B67 /* mflowetttypesio.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +169,10 @@
 		DAB837D71C6ADAB000730B67 /* io.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = io.png; sourceTree = "<group>"; };
 		DAB837D81C6ADAB000730B67 /* io@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "io@2x.png"; sourceTree = "<group>"; };
 		DAB837D91C6ADAB000730B67 /* io@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "io@3x.png"; sourceTree = "<group>"; };
+		DAB837E01C6ADB1B00730B67 /* mflowetttypesdec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowetttypesdec.h; sourceTree = "<group>"; };
+		DAB837E11C6ADB1B00730B67 /* mflowetttypesdec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowetttypesdec.m; sourceTree = "<group>"; };
+		DAB837E31C6ADB2900730B67 /* mflowetttypesio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowetttypesio.h; sourceTree = "<group>"; };
+		DAB837E41C6ADB2900730B67 /* mflowetttypesio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowetttypesio.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -526,6 +532,10 @@
 				DAB837C01C6AC37100730B67 /* mflowetttypescon.m */,
 				DAB837C21C6AC3F200730B67 /* mflowetttypespro.h */,
 				DAB837C31C6AC3F200730B67 /* mflowetttypespro.m */,
+				DAB837E01C6ADB1B00730B67 /* mflowetttypesdec.h */,
+				DAB837E11C6ADB1B00730B67 /* mflowetttypesdec.m */,
+				DAB837E31C6ADB2900730B67 /* mflowetttypesio.h */,
+				DAB837E41C6ADB2900730B67 /* mflowetttypesio.m */,
 			);
 			path = flow;
 			sourceTree = "<group>";
@@ -682,12 +692,14 @@
 				DA0157311C6A691900FAC166 /* crate.m in Sources */,
 				DA30A83B1C6A9376004F5828 /* vflowett.m in Sources */,
 				DAB837AB1C6AAB6600730B67 /* mflowett.m in Sources */,
+				DAB837E51C6ADB2900730B67 /* mflowetttypesio.m in Sources */,
 				DAB837BD1C6AC20400730B67 /* mflowetttypes.m in Sources */,
 				DA01573B1C6A691900FAC166 /* vratemenu.m in Sources */,
 				DA0157341C6A691900FAC166 /* mdbcreate.m in Sources */,
 				DA01573A1C6A691900FAC166 /* vrate.m in Sources */,
 				DA30A8341C6A708E004F5828 /* cflow.m in Sources */,
 				DA0157371C6A691900FAC166 /* vblur.m in Sources */,
+				DAB837E21C6ADB1B00730B67 /* mflowetttypesdec.m in Sources */,
 				DA0157261C6A691900FAC166 /* appdel.m in Sources */,
 				DAB837B41C6AB69100730B67 /* mflowpoints.m in Sources */,
 				DA0157361C6A691900FAC166 /* valert.m in Sources */,
