@@ -57,11 +57,11 @@
     
     if(self.isSelected || self.isHighlighted)
     {
-        color = [UIColor blackColor];
+        color = colormain;
     }
     else
     {
-        color = [UIColor colorWithWhite:0 alpha:0.4];
+        color = [UIColor colorWithWhite:0 alpha:0.3];
     }
     
     [self.label setTextColor:color];

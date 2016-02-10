@@ -14,7 +14,7 @@
 
 -(NSString*)imagename
 {
-    NSString *name = @"";
+    NSString *name = @"process";
     
     return name;
 }
