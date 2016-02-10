@@ -21,9 +21,9 @@
 
 -(mflowett*)modelett
 {
-    mflowett *ett = [[mflowett alloc] init];
+    mflowettcon *ettcon = [[mflowettcon alloc] init];
     
-    return ett;
+    return ettcon;
 }
 
 @end
