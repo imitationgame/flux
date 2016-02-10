@@ -113,6 +113,7 @@
     vflowett *ettview = [self.model add:type point:point];
     
     [self.scroll addSubview:ettview];
+    [self.model.points remove:point];
 }
 
 @end
