@@ -5,6 +5,9 @@
 -(instancetype)init:(mflowlinesitem*)model
 {
     self = [super init];
+    [self setClipsToBounds:YES];
+    [self setUserInteractionEnabled:NO];
+    [self setBackgroundColor:[UIColor clearColor]];
     
     self.model = model;
     
