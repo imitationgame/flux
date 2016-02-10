@@ -1,13 +1,5 @@
-//
-//  vflowcatalogett.h
-//  flux
-//
-//  Created by zero on 2/9/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
-
-@interface vflowcatalogett : NSObject
+@interface vflowcatalogett:UIView<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @end

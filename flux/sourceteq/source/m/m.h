@@ -6,3 +6,5 @@
 #import "mflowettcon.h"
 #import "mflowpoints.h"
 #import "mflowpointsitem.h"
+#import "mflowetttypes.h"
+#import "mflowetttypesprotocol.h"
