@@ -17,10 +17,16 @@
     self.container = container;
     
     [self addSubview:container];
-    
     [self addSubview:[[vflowpoint alloc] init:60 y:60]];
     
     return self;
+}
+
+-(void)layoutSubviews
+{
+    
+    
+    [super layoutSubviews];
 }
 
 #pragma mark functionality

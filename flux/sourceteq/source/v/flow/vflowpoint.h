@@ -4,7 +4,4 @@
 
 -(instancetype)init:(NSUInteger)x y:(NSUInteger)y;
 
-@property(nonatomic)NSUInteger x;
-@property(nonatomic)NSUInteger y;
-
 @end
