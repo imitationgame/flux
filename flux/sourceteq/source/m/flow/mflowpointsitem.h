@@ -7,7 +7,7 @@
 -(instancetype)init:(NSUInteger)x y:(NSUInteger)y;
 -(vflowpoint*)generateview;
 
-@property(strong, nonatomic)vflowpoint *view;
+@property(weak, nonatomic)vflowpoint *view;
 @property(nonatomic)NSUInteger x;
 @property(nonatomic)NSUInteger y;
 
