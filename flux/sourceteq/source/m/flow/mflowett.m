@@ -7,9 +7,11 @@
 
 -(vflowett*)generateview
 {
-    vflowett *ett = [[vflowett alloc] init];
+    [self.view removeFromSuperview];
+    vflowett *view = [[vflowett alloc] init];
+    self.view = view;
     
-    return ett;
+    return view;
 }
 
 @end

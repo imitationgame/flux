@@ -6,4 +6,6 @@
 
 -(vflowett*)generateview;
 
+@property(weak, nonatomic)vflowett *view;
+
 @end
