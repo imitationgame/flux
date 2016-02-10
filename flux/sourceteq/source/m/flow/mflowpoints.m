@@ -54,13 +54,22 @@
 
 -(mflowpointsitem*)selecteditem
 {
+    mflowpointsitem *selected;
     NSUInteger count = [self count];
     
     for(NSUInteger i = 0; i < count; i++)
     {
         mflowpointsitem *item = [self item:i];
-        [item.view setSelected:NO];
+        
+        if([item.view isSelected])
+        {
+            selected = item;
+            
+            break;
+        }
     }
+    
+    return selected;
 }
 
 @end
