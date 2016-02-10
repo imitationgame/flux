@@ -1,4 +1,5 @@
 #import "appdel.h"
+#import "mflowetttypesprotocol.h"
 
 @interface mflowetttypes:NSObject
 

@@ -10,7 +10,8 @@
     self = [super init];
     
     array = [NSArray arrayWithObjects:
-             [],
+             [[mflowetttypescon alloc] init],
+             [[mflowetttypespro alloc] init],
              nil];
     
     return self;
