@@ -109,9 +109,11 @@
 -(void)catalogtypeselected:(id<mflowetttypesprotocol>)type
 {
     [self.catalogett show:NO];
+    mflowpointsitem *point = [self.model.points selecteditem];
     vflowett *ettview = [self.model add:type];
+    [ettview inpoint];
     
-    
+    [self.scroll addSubview:ettview];
 }
 
 @end

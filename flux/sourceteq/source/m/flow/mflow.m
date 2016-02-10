@@ -33,9 +33,10 @@
     return item;
 }
 
--(vflowett*)add:(id<mflowetttypesprotocol>)type
+-(vflowett*)add:(id<mflowetttypesprotocol>)type point:(mflowpointsitem*)point
 {
     mflowett *ettmodel = [type modelett];
+    [ettmodel atpoint:point];
     vflowett *ettview = [ettmodel generateview];
     
     [array addObject:ettmodel];
