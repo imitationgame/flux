@@ -14,7 +14,8 @@
     self.controller = controller;
     initialized = NO;
     self.model = [[mflow alloc] init];
-    self.deltaline = 100;
+    self.deltaline = 150;
+    self.pointmargin = 50;
     
     UIScrollView *scroll = [[UIScrollView alloc] init];
     [scroll setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -141,6 +142,14 @@
 -(CGPoint)pointlinedown:(CGPoint)point
 {
     CGPoint endingpoint;
+    
+    BOOL valid = NO;
+    
+    do
+    {
+        endingpoint = CGPointMake(point.x, point.y + self.deltaline);
+    }
+    while(!valid);
     
     return endingpoint;
 }

@@ -18,5 +18,6 @@
 @property(nonatomic)NSUInteger width;
 @property(nonatomic)NSUInteger height;
 @property(nonatomic)NSUInteger deltaline;
+@property(nonatomic)NSUInteger pointmargin;
 
 @end
