@@ -35,8 +35,8 @@
                    {
                        NSUInteger width = self.bounds.size.width;
                        mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:width / 2 y:100];
-                       
                        [self.model.points add:modelpoint];
+                       [self.container addSubview:[modelpoint generateview]];
                    });
 }
 

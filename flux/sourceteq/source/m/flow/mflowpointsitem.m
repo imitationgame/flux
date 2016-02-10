@@ -17,7 +17,10 @@
 -(vflowpoint*)generateview
 {
     [self.view removeFromSuperview];
-    vflowpoint *view = [[vflowpoint alloc] init:self.x y:self.y];
+    vflowpoint *view = [[vflowpoint alloc] init:self];
+    self.view = view;
+    
+    return view;
 }
 
 @end
