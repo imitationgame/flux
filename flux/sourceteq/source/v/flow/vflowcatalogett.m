@@ -8,6 +8,7 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor clearColor]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self setAlpha:0];
 
     self.flow = flow;
     self.model = [[mflowetttypes alloc] init];
@@ -40,6 +41,24 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+#pragma mark public
+
+-(void)show:(BOOL)show
+{
+    CGFloat alpha = 0;
+    
+    if(show)
+    {
+        alpha = 1;
+    }
+    
+    [UIView animateWithDuration:0.4 animations:
+     ^
+     {
+         [self setAlpha:alpha];
+     }];
 }
 
 #pragma mark -
