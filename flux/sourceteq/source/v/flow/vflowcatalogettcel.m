@@ -10,4 +10,11 @@
     return self;
 }
 
+#pragma mark public
+
+-(void)config:(id<mflowetttypesprotocol>)item
+{
+    
+}
+
 @end
