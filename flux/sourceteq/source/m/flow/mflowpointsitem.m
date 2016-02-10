@@ -12,4 +12,12 @@
     return self;
 }
 
+#pragma mark public
+
+-(vflowpoint*)generateview
+{
+    [self.view removeFromSuperview];
+    vflowpoint *view = [[vflowpoint alloc] init:self.x y:self.y];
+}
+
 @end

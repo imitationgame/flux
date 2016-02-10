@@ -2,16 +2,15 @@
 
 @implementation vflowpoint
 
--(instancetype)init:(NSUInteger)x y:(NSUInteger)y
+-(instancetype)init:(mflowpointsitem*)flowpoint
 {
     self = [super initWithFrame:CGRectMake(0, 0, 50, 50)];
     [self setClipsToBounds:YES];
-    [self setCenter:CGPointMake(x, y)];
+    [self setCenter:CGPointMake(flowpoint.x, flowpoint.y)];
     [self.layer setCornerRadius:25];
     [self hover];
     
-    self.x = x;
-    self.y = y;
+    self.model = flowpoint;
     
     return self;
 }

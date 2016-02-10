@@ -16,7 +16,6 @@
     self.container = container;
     
     [self addSubview:container];
-    [self addSubview:[[vflowpoint alloc] init:60 y:60]];
     
     return self;
 }
@@ -35,9 +34,9 @@
                    ^
                    {
                        NSUInteger width = self.bounds.size.width;
-                       NSUInteger height = self.bounds.size.height;
+                       mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:width / 2 y:100];
                        
-                       [self.model.points add:[[mflowpointsitem alloc] init:width / 2 y:100]];
+                       [self.model.points add:modelpoint];
                    });
 }
 
