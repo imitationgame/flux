@@ -1,6 +1,9 @@
 #import "vflow.h"
 
 @implementation vflow
+{
+    BOOL initialized;
+}
 
 -(instancetype)init
 {
@@ -8,6 +11,7 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
     
+    initialized = NO;
     self.model = [[mflow alloc] init];
     
     UIView *container = [[UIView alloc] init];
@@ -22,8 +26,21 @@
 
 -(void)layoutSubviews
 {
-    [self initialpoint];
+    if(!initialized)
+    {
+        initialized = YES;
+        [self initialpoint];
+    }
+    
     [super layoutSubviews];
+}
+
+#pragma mark actions
+
+-(void)actionpoint:(vflowpoint*)point
+{
+    [self.model.points unselectall];
+    [point setSelected:YES];
 }
 
 #pragma mark functionality
@@ -32,6 +49,7 @@
 {
     mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:x y:y];
     vflowpoint *viewpoint = [modelpoint generateview];
+    [viewpoint addTarget:self action:@selector(actionpoint:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.model.points add:modelpoint];
     [self addSubview:viewpoint];
@@ -51,14 +69,6 @@
 {
     [self setContentSize:CGSizeMake(self.width, self.height)];
     [self.container setFrame:CGRectMake(0, 0, self.width, self.height)];
-}
-
--(void)initial
-{
-    vflowettcon *connector = [[vflowettcon alloc] initWithFrame:CGRectMake(50, 50, 50, 50)];
-    [self.container addSubview:connector];
-    
-    [self updateheight:500];
 }
 
 @end

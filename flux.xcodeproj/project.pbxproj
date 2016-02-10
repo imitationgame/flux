@@ -45,6 +45,7 @@
 		DAB837B11C6AAD1B00730B67 /* vflowpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837B01C6AAD1B00730B67 /* vflowpoint.m */; };
 		DAB837B41C6AB69100730B67 /* mflowpoints.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837B31C6AB69100730B67 /* mflowpoints.m */; };
 		DAB837B71C6AB6AB00730B67 /* mflowpointsitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837B61C6AB6AB00730B67 /* mflowpointsitem.m */; };
+		DAB837BA1C6AC15100730B67 /* vflowcatalogett.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837B91C6AC15100730B67 /* vflowcatalogett.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +128,8 @@
 		DAB837B31C6AB69100730B67 /* mflowpoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowpoints.m; sourceTree = "<group>"; };
 		DAB837B51C6AB6AB00730B67 /* mflowpointsitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowpointsitem.h; sourceTree = "<group>"; };
 		DAB837B61C6AB6AB00730B67 /* mflowpointsitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowpointsitem.m; sourceTree = "<group>"; };
+		DAB837B81C6AC15100730B67 /* vflowcatalogett.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowcatalogett.h; sourceTree = "<group>"; };
+		DAB837B91C6AC15100730B67 /* vflowcatalogett.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vflowcatalogett.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,6 +440,8 @@
 				DA30A83D1C6A93FB004F5828 /* vflowettcon.m */,
 				DAB837AF1C6AAD1B00730B67 /* vflowpoint.h */,
 				DAB837B01C6AAD1B00730B67 /* vflowpoint.m */,
+				DAB837B81C6AC15100730B67 /* vflowcatalogett.h */,
+				DAB837B91C6AC15100730B67 /* vflowcatalogett.m */,
 			);
 			path = flow;
 			sourceTree = "<group>";
@@ -595,6 +600,7 @@
 			files = (
 				DA0157331C6A691900FAC166 /* mdb.m in Sources */,
 				DA0157281C6A691900FAC166 /* main.m in Sources */,
+				DAB837BA1C6AC15100730B67 /* vflowcatalogett.m in Sources */,
 				DAB837AE1C6AAB9C00730B67 /* mflowettcon.m in Sources */,
 				DA0157301C6A691900FAC166 /* cmain.m in Sources */,
 				DA01573C1C6A691900FAC166 /* vratemenucel.m in Sources */,
