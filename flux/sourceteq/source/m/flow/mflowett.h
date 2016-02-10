@@ -12,5 +12,7 @@
 @property(weak, nonatomic)vflowett *view;
 @property(nonatomic)NSUInteger x;
 @property(nonatomic)NSUInteger y;
+@property(nonatomic)NSUInteger width;
+@property(nonatomic)NSUInteger height;
 
 @end
