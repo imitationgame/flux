@@ -8,7 +8,7 @@
 -(vflowett*)generateview
 {
     [self.view removeFromSuperview];
-    vflowett *view = [[vflowett alloc] init];
+    vflowett *view = [[vflowett alloc] init:self];
     self.view = view;
     
     return view;

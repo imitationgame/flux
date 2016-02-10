@@ -33,12 +33,14 @@
     return item;
 }
 
--(void)add:(id<mflowetttypesprotocol>)type
+-(vflowett*)add:(id<mflowetttypesprotocol>)type
 {
     mflowett *ettmodel = [type modelett];
     vflowett *ettview = [ettmodel generateview];
     
     [array addObject:ettmodel];
+    
+    return ettview;
 }
 
 @end

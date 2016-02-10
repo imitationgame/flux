@@ -7,7 +7,7 @@
 
 -(NSUInteger)count;
 -(mflowett*)item:(NSUInteger)index;
--(void)add:(id<mflowetttypesprotocol>)type;
+-(vflowett*)add:(id<mflowetttypesprotocol>)type;
 
 @property(strong, nonatomic)mflowpoints *points;
 @property(nonatomic)NSUInteger width;
