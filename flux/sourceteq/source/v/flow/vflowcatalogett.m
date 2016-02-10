@@ -2,16 +2,17 @@
 
 @implementation vflowcatalogett
 
--(instancetype)init
+-(instancetype)init:(vflow*)flow
 {
     self = [super init];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor clearColor]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
 
+    self.flow = flow;
     self.model = [[mflowetttypes alloc] init];
     
-    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     [flow setHeaderReferenceSize:CGSizeZero];
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
