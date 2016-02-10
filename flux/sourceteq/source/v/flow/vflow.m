@@ -88,7 +88,10 @@
     [self.scroll addSubview:viewpoint];
 }
 
--(void)
+-(void)addlinestarting:(CGPoint)starting ending:(CGPoint)ending
+{
+    
+}
 
 -(void)initialpoint
 {
