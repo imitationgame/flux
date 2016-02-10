@@ -30,4 +30,15 @@
     return item;
 }
 
+-(void)add:(mflowpointsitem*)item
+{
+    [array addObject:item];
+}
+
+-(void)remove:(mflowpointsitem*)item
+{
+    [item.view removeFromSuperview];
+    [array removeObject:item];
+}
+
 @end

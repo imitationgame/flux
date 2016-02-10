@@ -1,13 +1,13 @@
-//
-//  mflowpointsitem.h
-//  flux
-//
-//  Created by zero on 2/9/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@class vflowpoint;
 
-@interface mflowpointsitem : NSObject
+@interface mflowpointsitem:NSObject
+
+-(instancetype)init:(NSUInteger)x y:(NSUInteger)y;
+
+@property(weak, nonatomic)vflowpoint *view;
+@property(nonatomic)NSUInteger x;
+@property(nonatomic)NSUInteger y;
 
 @end

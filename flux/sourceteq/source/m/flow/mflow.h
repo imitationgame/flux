@@ -7,4 +7,6 @@
 -(NSUInteger)count;
 -(mflowett*)item:(NSUInteger)index;
 
+@property(strong, nonatomic)mflowpoints *points;
+
 @end

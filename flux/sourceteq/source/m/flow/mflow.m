@@ -10,6 +10,7 @@
     self = [super init];
     
     array = [NSMutableArray array];
+    self.points = [[mflowpoints alloc] init];
     
     return self;
 }
