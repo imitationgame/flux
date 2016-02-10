@@ -26,6 +26,8 @@
     [self.navigationBar setTintColor:[UIColor whiteColor]];
     [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:fontname size:18], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationBar setTranslucent:NO];
+    [self.navigationBar setShadowImage:[[UIImage alloc] init]];
+    [self.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:fontname size:18], NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
 }
