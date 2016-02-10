@@ -1,13 +1,5 @@
-//
-//  mflowlinesitem.h
-//  flux
-//
-//  Created by zero on 2/10/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mflowlinesitem : NSObject
+@interface mflowlinesitem:NSObject
 
 @end
