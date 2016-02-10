@@ -11,7 +11,14 @@
     
     self.model = model;
     
+    [self setFrame:CGRectMake(model.starting.x, model.starting.y, model.ending.x, <#CGFloat height#>)];
+    
     return self;
+}
+
+-(void)drawRect:(CGRect)rect
+{
+    
 }
 
 @end
