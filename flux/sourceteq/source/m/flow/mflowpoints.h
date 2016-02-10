@@ -9,5 +9,6 @@
 -(void)add:(mflowpointsitem*)item;
 -(void)remove:(mflowpointsitem*)item;
 -(void)unselectall;
+-(mflowpointsitem*)selecteditem;
 
 @end

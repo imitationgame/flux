@@ -52,4 +52,15 @@
     }
 }
 
+-(mflowpointsitem*)selecteditem
+{
+    NSUInteger count = [self count];
+    
+    for(NSUInteger i = 0; i < count; i++)
+    {
+        mflowpointsitem *item = [self item:i];
+        [item.view setSelected:NO];
+    }
+}
+
 @end

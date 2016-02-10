@@ -109,7 +109,9 @@
 -(void)catalogtypeselected:(id<mflowetttypesprotocol>)type
 {
     [self.catalogett show:NO];
-    [self.model add:type];
+    vflowett *ettview = [self.model add:type];
+    
+    
 }
 
 @end
