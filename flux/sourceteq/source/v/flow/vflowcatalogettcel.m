@@ -30,7 +30,9 @@
 
 -(void)config:(id<mflowetttypesprotocol>)item
 {
-    
+    [self.overview removeFromSuperview];
+    [self.label setText:[item labeltext]];
+    [self addSubview:[item overview]];
 }
 
 @end

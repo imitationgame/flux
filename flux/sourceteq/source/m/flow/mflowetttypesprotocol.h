@@ -2,4 +2,7 @@
 
 @protocol mflowetttypesprotocol <NSObject>
 
+-(NSString*)labeltext;
+-(UIView*)overview;
+
 @end
