@@ -47,6 +47,7 @@
 		DAB837B71C6AB6AB00730B67 /* mflowpointsitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837B61C6AB6AB00730B67 /* mflowpointsitem.m */; };
 		DAB837BA1C6AC15100730B67 /* vflowcatalogett.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837B91C6AC15100730B67 /* vflowcatalogett.m */; };
 		DAB837BD1C6AC20400730B67 /* mflowetttypes.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837BC1C6AC20400730B67 /* mflowetttypes.m */; };
+		DAB837C11C6AC37100730B67 /* mflowetttypescon.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837C01C6AC37100730B67 /* mflowetttypescon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +135,8 @@
 		DAB837BB1C6AC20400730B67 /* mflowetttypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowetttypes.h; sourceTree = "<group>"; };
 		DAB837BC1C6AC20400730B67 /* mflowetttypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowetttypes.m; sourceTree = "<group>"; };
 		DAB837BE1C6AC21200730B67 /* mflowetttypesprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowetttypesprotocol.h; sourceTree = "<group>"; };
+		DAB837BF1C6AC37100730B67 /* mflowetttypescon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowetttypescon.h; sourceTree = "<group>"; };
+		DAB837C01C6AC37100730B67 /* mflowetttypescon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowetttypescon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -475,6 +478,8 @@
 				DAB837BB1C6AC20400730B67 /* mflowetttypes.h */,
 				DAB837BC1C6AC20400730B67 /* mflowetttypes.m */,
 				DAB837BE1C6AC21200730B67 /* mflowetttypesprotocol.h */,
+				DAB837BF1C6AC37100730B67 /* mflowetttypescon.h */,
+				DAB837C01C6AC37100730B67 /* mflowetttypescon.m */,
 			);
 			path = flow;
 			sourceTree = "<group>";
@@ -613,6 +618,7 @@
 				DA01573C1C6A691900FAC166 /* vratemenucel.m in Sources */,
 				DAB837B71C6AB6AB00730B67 /* mflowpointsitem.m in Sources */,
 				DAB837A81C6AAB4400730B67 /* mflow.m in Sources */,
+				DAB837C11C6AC37100730B67 /* mflowetttypescon.m in Sources */,
 				DA0157311C6A691900FAC166 /* crate.m in Sources */,
 				DA30A83B1C6A9376004F5828 /* vflowett.m in Sources */,
 				DAB837AB1C6AAB6600730B67 /* mflowett.m in Sources */,
