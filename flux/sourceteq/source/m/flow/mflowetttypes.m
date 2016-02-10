@@ -12,6 +12,8 @@
     array = [NSArray arrayWithObjects:
              [[mflowetttypescon alloc] init],
              [[mflowetttypespro alloc] init],
+             [[mflowetttypesdec alloc] init],
+             [[mflowetttypesio alloc] init],
              nil];
     
     return self;
