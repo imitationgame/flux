@@ -14,6 +14,7 @@
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setFont:[UIFont fontWithName:fontname size:12]];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [label setTextAlignment:NSTextAlignmentCenter];
     self.label = label;
     
     UIImageView *image = [[UIImageView alloc] init];
@@ -24,12 +25,13 @@
     self.image = image;
     
     [self addSubview:label];
+    [self addSubview:image];
     
     NSDictionary *views = @{@"label":label, @"image":image};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[image]-10-[label]-5-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[image(40)]-5-[label]-5-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[image]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
@@ -59,7 +61,7 @@
     }
     else
     {
-        color = [UIColor colorWithWhite:0 alpha:0.3];
+        color = [UIColor colorWithWhite:0 alpha:0.4];
     }
     
     [self.label setTextColor:color];

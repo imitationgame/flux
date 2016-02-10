@@ -53,6 +53,9 @@
 		DAB837CB1C6AD6F700730B67 /* connector.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB837C81C6AD6F700730B67 /* connector.png */; };
 		DAB837CC1C6AD6F700730B67 /* connector@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB837C91C6AD6F700730B67 /* connector@2x.png */; };
 		DAB837CD1C6AD6F700730B67 /* connector@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB837CA1C6AD6F700730B67 /* connector@3x.png */; };
+		DAB837D11C6AD91300730B67 /* process.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB837CE1C6AD91300730B67 /* process.png */; };
+		DAB837D21C6AD91300730B67 /* process@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB837CF1C6AD91300730B67 /* process@2x.png */; };
+		DAB837D31C6AD91300730B67 /* process@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB837D01C6AD91300730B67 /* process@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +152,9 @@
 		DAB837C81C6AD6F700730B67 /* connector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connector.png; sourceTree = "<group>"; };
 		DAB837C91C6AD6F700730B67 /* connector@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connector@2x.png"; sourceTree = "<group>"; };
 		DAB837CA1C6AD6F700730B67 /* connector@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connector@3x.png"; sourceTree = "<group>"; };
+		DAB837CE1C6AD91300730B67 /* process.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = process.png; sourceTree = "<group>"; };
+		DAB837CF1C6AD91300730B67 /* process@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "process@2x.png"; sourceTree = "<group>"; };
+		DAB837D01C6AD91300730B67 /* process@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "process@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +238,9 @@
 		DA0156D21C6A691900FAC166 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				DAB837CE1C6AD91300730B67 /* process.png */,
+				DAB837CF1C6AD91300730B67 /* process@2x.png */,
+				DAB837D01C6AD91300730B67 /* process@3x.png */,
 				DAB837C81C6AD6F700730B67 /* connector.png */,
 				DAB837C91C6AD6F700730B67 /* connector@2x.png */,
 				DAB837CA1C6AD6F700730B67 /* connector@3x.png */,
@@ -566,10 +575,13 @@
 			files = (
 				DAB837CC1C6AD6F700730B67 /* connector@2x.png in Resources */,
 				DA0157201C6A691900FAC166 /* flux.db in Resources */,
+				DAB837D21C6AD91300730B67 /* process@2x.png in Resources */,
 				DA0157251C6A691900FAC166 /* Localizable.strings in Resources */,
+				DAB837D31C6AD91300730B67 /* process@3x.png in Resources */,
 				DAB837CD1C6AD6F700730B67 /* connector@3x.png in Resources */,
 				DA30A8301C6A6DE1004F5828 /* Images.xcassets in Resources */,
 				DAB837CB1C6AD6F700730B67 /* connector.png in Resources */,
+				DAB837D11C6AD91300730B67 /* process.png in Resources */,
 				DA0157231C6A691900FAC166 /* analytics.plist in Resources */,
 				DA0157241C6A691900FAC166 /* defs.plist in Resources */,
 				DA0157271C6A691900FAC166 /* Info.plist in Resources */,
