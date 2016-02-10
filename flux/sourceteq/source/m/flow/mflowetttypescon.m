@@ -12,7 +12,7 @@
     return string;
 }
 
--(void)overview:(vflowcatalogettcel*)cell
+-(UIView*)overview
 {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
     [view setClipsToBounds:YES];

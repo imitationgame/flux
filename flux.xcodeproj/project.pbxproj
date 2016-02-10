@@ -50,6 +50,9 @@
 		DAB837C11C6AC37100730B67 /* mflowetttypescon.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837C01C6AC37100730B67 /* mflowetttypescon.m */; };
 		DAB837C41C6AC3F200730B67 /* mflowetttypespro.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837C31C6AC3F200730B67 /* mflowetttypespro.m */; };
 		DAB837C71C6AC56D00730B67 /* vflowcatalogettcel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837C61C6AC56D00730B67 /* vflowcatalogettcel.m */; };
+		DAB837CB1C6AD6F700730B67 /* connector.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB837C81C6AD6F700730B67 /* connector.png */; };
+		DAB837CC1C6AD6F700730B67 /* connector@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB837C91C6AD6F700730B67 /* connector@2x.png */; };
+		DAB837CD1C6AD6F700730B67 /* connector@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB837CA1C6AD6F700730B67 /* connector@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +146,9 @@
 		DAB837C31C6AC3F200730B67 /* mflowetttypespro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowetttypespro.m; sourceTree = "<group>"; };
 		DAB837C51C6AC56D00730B67 /* vflowcatalogettcel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowcatalogettcel.h; sourceTree = "<group>"; };
 		DAB837C61C6AC56D00730B67 /* vflowcatalogettcel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vflowcatalogettcel.m; sourceTree = "<group>"; };
+		DAB837C81C6AD6F700730B67 /* connector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connector.png; sourceTree = "<group>"; };
+		DAB837C91C6AD6F700730B67 /* connector@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connector@2x.png"; sourceTree = "<group>"; };
+		DAB837CA1C6AD6F700730B67 /* connector@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connector@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +232,9 @@
 		DA0156D21C6A691900FAC166 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				DAB837C81C6AD6F700730B67 /* connector.png */,
+				DAB837C91C6AD6F700730B67 /* connector@2x.png */,
+				DAB837CA1C6AD6F700730B67 /* connector@3x.png */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -555,9 +564,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB837CC1C6AD6F700730B67 /* connector@2x.png in Resources */,
 				DA0157201C6A691900FAC166 /* flux.db in Resources */,
 				DA0157251C6A691900FAC166 /* Localizable.strings in Resources */,
+				DAB837CD1C6AD6F700730B67 /* connector@3x.png in Resources */,
 				DA30A8301C6A6DE1004F5828 /* Images.xcassets in Resources */,
+				DAB837CB1C6AD6F700730B67 /* connector.png in Resources */,
 				DA0157231C6A691900FAC166 /* analytics.plist in Resources */,
 				DA0157241C6A691900FAC166 /* defs.plist in Resources */,
 				DA0157271C6A691900FAC166 /* Info.plist in Resources */,

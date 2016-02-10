@@ -7,15 +7,16 @@
 
 -(NSString*)labeltext
 {
-    NSString *string = ;
+    NSString *string = NSLocalizedString(@"flow_catalog_pro", nil);
     
     return string;
 }
 
--(void)overview:(vflowcatalogettcel*)cell
+-(UIView*)overview
 {
-    [cell.label setText:NSLocalizedString(@"flow_catalog_pro", nil)];
-    [cell.overview removeFromSuperview];
+    UIView *view = [[UIView alloc] init];
+    
+    return view;
 }
 
 @end
