@@ -5,21 +5,34 @@
     BOOL initialized;
 }
 
--(instancetype)init
+-(instancetype)init:(cflow*)controller
 {
-    self = [super init];
+    self = [super init:controller];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
     
+    self.controller = controller;
     initialized = NO;
     self.model = [[mflow alloc] init];
+    
+    UIScrollView *scroll = [[UIScrollView alloc] init];
+    [scroll setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [scroll setClipsToBounds:YES];
+    self.scroll = scroll;
     
     UIView *container = [[UIView alloc] init];
     [container setClipsToBounds:YES];
     [container setBackgroundColor:[UIColor whiteColor]];
     self.container = container;
     
-    [self addSubview:container];
+    [scroll addSubview:container];
+    [self addSubview:scroll];
+    
+    NSDictionary *views = @{@"scroll":scroll};
+    NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[scroll]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[scroll]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -41,9 +54,27 @@
 {
     [self.model.points unselectall];
     [point setSelected:YES];
+    
+    [self showcatalogett];
 }
 
 #pragma mark functionality
+
+-(void)showcatalogett
+{
+    if(!self.catalogett)
+    {
+        vflowcatalogett *catalogett = [[vflowcatalogett alloc] init];
+        self.catalogett = catalogett;
+        [self addSubview:catalogett];
+        
+        NSDictionary *views = @{@"catalog":catalogett};
+        NSDictionary *metrics = @{};
+        
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[catalog]-0-|" options:0 metrics:metrics views:views]];
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[catalog(80)]-20-|" options:0 metrics:metrics views:views]];
+    }
+}
 
 -(void)addpointatx:(NSUInteger)x y:(NSUInteger)y
 {
@@ -52,7 +83,7 @@
     [viewpoint addTarget:self action:@selector(actionpoint:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.model.points add:modelpoint];
-    [self addSubview:viewpoint];
+    [self.scroll addSubview:viewpoint];
 }
 
 -(void)initialpoint
@@ -67,7 +98,7 @@
 
 -(void)updateheight:(CGFloat)height
 {
-    [self setContentSize:CGSizeMake(self.width, self.height)];
+    [self.scroll setContentSize:CGSizeMake(self.width, self.height)];
     [self.container setFrame:CGRectMake(0, 0, self.width, self.height)];
 }
 

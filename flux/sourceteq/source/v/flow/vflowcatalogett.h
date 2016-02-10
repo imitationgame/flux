@@ -4,6 +4,6 @@
 
 @interface vflowcatalogett:UIView<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-@property(weak, nonatomic)mflowetttypes *model;
+@property(strong, nonatomic)mflowetttypes *model;
 
 @end

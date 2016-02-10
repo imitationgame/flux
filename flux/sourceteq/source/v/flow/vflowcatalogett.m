@@ -5,7 +5,12 @@
 -(instancetype)init
 {
     self = [super init];
+    [self setClipsToBounds:YES];
+    [self setBackgroundColor:[UIColor clearColor]];
+    [self setTranslatesAutoresizingMaskIntoConstraints:NO];
 
+    self.model = [[mflowetttypes alloc] init];
+    
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setHeaderReferenceSize:CGSizeZero];
     [flow setFooterReferenceSize:CGSizeZero];
@@ -24,7 +29,14 @@
     [collection setDataSource:self];
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     [collection registerClass:[vflowcatalogettcel class] forCellWithReuseIdentifier:celid];
+    
     [self addSubview:collection];
+    
+    NSDictionary *views = @{@"col":collection};
+    NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
