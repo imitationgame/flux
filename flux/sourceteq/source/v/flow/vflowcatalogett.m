@@ -13,14 +13,14 @@
     self.model = [[mflowetttypes alloc] init];
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    [flow setHeaderReferenceSize:CGSizeZero];
-    [flow setFooterReferenceSize:CGSizeZero];
-    [flow setMinimumInteritemSpacing:0];
-    [flow setMinimumLineSpacing:5];
-    [flow setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-    [flow setSectionInset:UIEdgeInsetsMake(0, 5, 0, 5)];
+    [layout setHeaderReferenceSize:CGSizeZero];
+    [layout setFooterReferenceSize:CGSizeZero];
+    [layout setMinimumInteritemSpacing:0];
+    [layout setMinimumLineSpacing:5];
+    [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    [layout setSectionInset:UIEdgeInsetsMake(0, 5, 0, 5)];
     
-    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
+    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     [collection setBackgroundColor:[UIColor clearColor]];
     [collection setShowsHorizontalScrollIndicator:NO];
     [collection setShowsVerticalScrollIndicator:NO];
