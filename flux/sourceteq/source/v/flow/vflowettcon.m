@@ -10,8 +10,8 @@
     CGFloat height = 60;
     
     [self setFrame:CGRectMake(0, 0, width, height)];
-    [self setCenter:CGPointMake(self.model.x, self.model.y)];
-    [self.layer setCornerRadius:frame.size.width / 2.0];
+    [self setCenter:CGPointMake(self.model.width, self.model.height)];
+    [self.layer setCornerRadius:self.model.width / 2.0];
     
     return self;
 }

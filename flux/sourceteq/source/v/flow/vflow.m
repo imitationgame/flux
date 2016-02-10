@@ -110,8 +110,7 @@
 {
     [self.catalogett show:NO];
     mflowpointsitem *point = [self.model.points selecteditem];
-    vflowett *ettview = [self.model add:type];
-    [ettview inpoint];
+    vflowett *ettview = [self.model add:type point:point];
     
     [self.scroll addSubview:ettview];
 }
