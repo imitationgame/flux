@@ -9,8 +9,9 @@
 {
     vflowcontent *content = [[vflowcontent alloc] init];
     flow.contentview = content;
+    [flow addSubview:content];
     
-    NSDictionary *views = @{@"scroll":self};
+    NSDictionary *views = @{@"scroll":content};
     NSDictionary *metrics = @{};
     
     [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[scroll]-0-|" options:0 metrics:metrics views:views]];
@@ -22,6 +23,9 @@
     self = [super init];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self setClipsToBounds:YES];
+
+    self.width = 100000;
+    self.height = 100000;
     
     UIView *container = [[UIView alloc] init];
     [container setClipsToBounds:YES];
@@ -30,6 +34,27 @@
     self.container = container;
     
     return self;
+}
+
+-(void)updateConstraints
+{
+    [super updateConstraints];
+    
+    NSLog(@"update");
+    
+    dispatch_async(dispatch_get_main_queue(),
+                   ^
+                   {
+                       NSUInteger screenwidth = self.bounds.size.width;
+                       NSUInteger deadwidth = self.width - screenwidth;
+                       NSUInteger deadwidth_2 = deadwidth / 2;
+                       self.marginleft = deadwidth_2;
+                       self.marginright = deadwidth_2;
+                       self.visibley = self.bounds.size.height;
+                       self.centerx = deadwidth_2 + (screenwidth / 2);
+                       
+                       [self.container setFrame:CGRectMake(self.marginleft, 0, self.width, self.height)];
+                   });
 }
 
 #pragma mark functionality
@@ -65,7 +90,7 @@
     }
     else
     {
-        [self addSubview:view];
+        [super addSubview:view];
     }
 }
 

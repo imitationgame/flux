@@ -12,11 +12,10 @@
     self.model = [[mflow alloc] init:self];
     [vflowcontent containerin:self];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 3), dispatch_get_main_queue(),
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC), dispatch_get_main_queue(),
                    ^
                    {
-                       NSUInteger width = self.bounds.size.width;
-                       [self addpointatx:width / 2 y:100];
+                       [self addpointatx:self.contentview.centerx y:100];
                    });
     
     return self;
@@ -35,12 +34,6 @@
 -(void)addpointatx:(NSUInteger)x y:(NSUInteger)y
 {
     [self.model.points pointat:x y:y];
-}
-
--(void)updateheight:(CGFloat)height
-{
-//    [self.scroll setContentSize:CGSizeMake(self.width, self.height)];
-//    [self.container setFrame:CGRectMake(0, 0, self.width, self.height)];
 }
 
 #pragma mark public
