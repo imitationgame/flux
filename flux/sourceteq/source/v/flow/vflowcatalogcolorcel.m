@@ -8,7 +8,7 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor clearColor]];
     
-    CGFloat margin = 15;
+    CGFloat margin = 20;
     CGFloat width_margin = frame.size.width - (margin * 2);
     CGFloat width_margin_2 = width_margin / 2.0;
     
