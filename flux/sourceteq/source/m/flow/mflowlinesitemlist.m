@@ -5,10 +5,11 @@
     NSMutableArray *array;
 }
 
--(instancetype)init
+-(instancetype)init:(mflowett*)flowett
 {
     self = [super init];
     
+    self.flowett = flowett;
     array = [NSMutableArray array];
     
     return self;

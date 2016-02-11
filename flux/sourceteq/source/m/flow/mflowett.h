@@ -2,15 +2,16 @@
 
 @class mflowpointsitem;
 @class vflowett;
+@class mflowlinesitemlist;
 
 @interface mflowett:NSObject
 
-+(void)ett:(id<mflowetttypesprotocol>)type at:(mflowpointsitem*)point flow:(vflow*)flow;
 -(void)atpoint:(mflowpointsitem*)point;
 -(vflowett*)generateview;
 -(vflowett*)flowett;
 
 @property(weak, nonatomic)vflowett *view;
+@property(strong, nonatomic)mflowlinesitemlist *linesitemlist;
 @property(nonatomic)NSUInteger x;
 @property(nonatomic)NSUInteger y;
 @property(nonatomic)NSUInteger width;

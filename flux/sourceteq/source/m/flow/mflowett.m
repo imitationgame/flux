@@ -3,15 +3,13 @@
 
 @implementation mflowett
 
-+(void)ett:(id<mflowetttypesprotocol>)type at:(mflowpointsitem*)point flow:(vflow*)flow
+-(instancetype)init
 {
-    mflowett *ettmodel = [type modelett];
-    [ettmodel atpoint:point];
-    vflowett *ettview = [ettmodel generateview];
+    self = [super init];
     
-    [array addObject:ettmodel];
+    self.linesitemlist = [[mflowlinesitemlist alloc] init];
     
-    return ettview;
+    return self;
 }
 
 #pragma mark public
