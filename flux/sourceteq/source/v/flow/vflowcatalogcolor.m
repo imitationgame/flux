@@ -40,6 +40,7 @@
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     [layout setHeaderReferenceSize:CGSizeZero];
     [layout setFooterReferenceSize:CGSizeZero];
+    [layout setItemSize:CGSizeMake(80, 80)];
     [layout setMinimumInteritemSpacing:0];
     [layout setMinimumLineSpacing:5];
     [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
