@@ -12,6 +12,7 @@
 
 -(void)actionpoint:(vflowpoint*)point;
 -(void)actionett:(vflowett*)ett;
+-(void)show;
 -(void)addpointatx:(NSUInteger)x y:(NSUInteger)y;
 -(void)catalogtypeselected:(id<mflowetttypesprotocol>)type;
 

@@ -12,12 +12,6 @@
     self.model = [[mflow alloc] init:self];
     [vflowcontent containerin:self];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC), dispatch_get_main_queue(),
-                   ^
-                   {
-                       [self addpointatx:self.contentview.centerx y:100];
-                   });
-    
     return self;
 }
 
@@ -36,6 +30,14 @@
 }
 
 #pragma mark public
+
+-(void)show
+{
+    if(![self.model.points count])
+    {
+        [self addpointatx:self.contentview.centerx y:100];
+    }
+}
 
 -(void)addpointatx:(NSUInteger)x y:(NSUInteger)y
 {

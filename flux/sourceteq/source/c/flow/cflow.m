@@ -2,6 +2,12 @@
 
 @implementation cflow
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.viewflow show];
+}
+
 -(void)loadView
 {
     self.view = [[vflow alloc] init:self];

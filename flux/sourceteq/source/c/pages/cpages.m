@@ -62,7 +62,7 @@
 {
     __weak cpages *weakself = self;
     
-    [weakself setViewControllers:@[[[UIViewController alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:
+    [weakself setViewControllers:@[[[UIViewController alloc] init]] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:
      ^(BOOL done)
      {
          [weakself.navigationItem setRightBarButtonItem:weakself.itemadd];

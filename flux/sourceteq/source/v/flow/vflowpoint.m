@@ -9,6 +9,8 @@
     [self setCenter:CGPointMake(flowpoint.x, flowpoint.y)];
     [self.layer setCornerRadius:25];
     [self hover];
+    [self setAlpha:0];
+    [self animateshow];
     
     self.model = flowpoint;
     
@@ -32,6 +34,15 @@
     CGContextMoveToPoint(context, margin, height_2);
     CGContextAddLineToPoint(context, width - margin, height_2);
     CGContextDrawPath(context, kCGPathStroke);
+}
+
+-(void)animateshow
+{
+    [UIView animateWithDuration:0.3 animations:
+     ^
+     {
+         [self setAlpha:1];
+     }];
 }
 
 -(void)setHighlighted:(BOOL)highlighted
