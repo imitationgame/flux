@@ -8,10 +8,10 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor clearColor]];
     
-    CGFloat outermargin = 17;
+    CGFloat outermargin = 16;
     CGFloat outerwidth_margin = frame.size.width - (outermargin * 2);
     CGFloat outerwidth_margin_2 = outerwidth_margin / 2.0;
-    CGFloat margin = 20;
+    CGFloat margin = 22;
     CGFloat width_margin = frame.size.width - (margin * 2);
     CGFloat width_margin_2 = width_margin / 2.0;
     
@@ -28,6 +28,12 @@
     [circle setTranslatesAutoresizingMaskIntoConstraints:NO];
     [circle.layer setCornerRadius:width_margin_2];
     self.circle = circle;
+    
+    UIView *selector = [[UIView alloc] init];
+    [selector setUserInteractionEnabled:NO];
+    [selector setClipsToBounds:YES];
+    [selector setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.selector = selector;
 
     [self addSubview:outercircle];
     [self addSubview:circle];
@@ -39,8 +45,23 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(margin)-[circle]-(margin)-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(outermargin)-[outercircle]-(outermargin)-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(outermargin)-[outercircle]-(outermargin)-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(outermargin)-[selector]-(outermargin)-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:-[selector(2)]-0-|" options:0 metrics:metrics views:views]];
+    [self addSubview:selector];
     
     return self;
+}
+
+-(void)setHighlighted:(BOOL)highlighted
+{
+    [super setHighlighted:highlighted];
+    [self hover];
+}
+
+-(void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    [self hover];
 }
 
 #pragma mark functionality
@@ -49,11 +70,13 @@
 {
     if(self.isSelected || self.isHighlighted)
     {
-        [self.circle setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.3]];
+        [self.outercircle setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.8]];
+        [self.selector setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.8]];
     }
     else
     {
-        [self.circle setBackgroundColor:[UIColor clearColor]];
+        [self.outercircle setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.1]];
+        [self.selector setBackgroundColor:[UIColor clearColor]];
     }
 }
 

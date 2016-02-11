@@ -6,5 +6,6 @@
 
 @property(weak, nonatomic)UIView *circle;
 @property(weak, nonatomic)UIView *outercircle;
+@property(weak, nonatomic)UIView *selector;
 
 @end
