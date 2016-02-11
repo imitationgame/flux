@@ -5,6 +5,7 @@
 
 @interface vflowcatalogett:UIView<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
++(void)catalogin:(vflow*)flow;
 -(instancetype)init:(vflow*)flow;
 -(void)show:(BOOL)show;
 

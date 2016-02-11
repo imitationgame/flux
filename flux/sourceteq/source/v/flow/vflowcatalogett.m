@@ -2,6 +2,24 @@
 
 @implementation vflowcatalogett
 
++(void)catalogin:(vflow*)flow
+{
+    if(!flow.catalogett)
+    {
+        vflowcatalogett *catalogett = [[vflowcatalogett alloc] init:flow];
+        flow.catalogett = catalogett;
+        [flow addSubview:catalogett];
+        
+        [catalogett show:YES];
+        
+        NSDictionary *views = @{@"catalog":catalogett};
+        NSDictionary *metrics = @{};
+        
+        [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[catalog]-0-|" options:0 metrics:metrics views:views]];
+        [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[catalog(80)]-20-|" options:0 metrics:metrics views:views]];
+    }
+}
+
 -(instancetype)init:(vflow*)flow
 {
     self = [super init];

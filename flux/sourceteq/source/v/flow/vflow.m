@@ -62,20 +62,7 @@
 
 -(void)showcatalogett
 {
-    if(!self.catalogett)
-    {
-        vflowcatalogett *catalogett = [[vflowcatalogett alloc] init:self];
-        self.catalogett = catalogett;
-        [self addSubview:catalogett];
-        
-        [catalogett show:YES];
-        
-        NSDictionary *views = @{@"catalog":catalogett};
-        NSDictionary *metrics = @{};
-        
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[catalog]-0-|" options:0 metrics:metrics views:views]];
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[catalog(80)]-20-|" options:0 metrics:metrics views:views]];
-    }
+    [vflowcatalogett catalogin:self];
 }
 
 -(void)addpointatx:(NSUInteger)x y:(NSUInteger)y
