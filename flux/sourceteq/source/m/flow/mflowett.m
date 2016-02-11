@@ -3,23 +3,19 @@
 
 @implementation mflowett
 
--(instancetype)init:(mflow*)flow
+-(instancetype)init:(mflow*)flow atpoint:(mflowpointsitem*)point
 {
     self = [super init];
     
     self.flow = flow;
     self.linesitemlist = [[mflowlinesitemlist alloc] init:self];
+    self.x = point.x;
+    self.y = point.y;
     
     return self;
 }
 
 #pragma mark public
-
--(void)atpoint:(mflowpointsitem*)point
-{
-    self.x = point.x;
-    self.y = point.y;
-}
 
 -(vflowett*)generateview
 {

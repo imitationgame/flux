@@ -33,7 +33,7 @@
 
 -(void)add:(id<mflowetttypesprotocol>)type point:(mflowpointsitem*)point
 {
-    mflowett *ettmodel = [type modelett];
+    mflowett *ettmodel = [type modelett:self.flow];
     [ettmodel atpoint:point];
     vflowett *ettview = [ettmodel generateview];
     

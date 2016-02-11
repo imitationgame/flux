@@ -7,8 +7,7 @@
 
 @interface mflowett:NSObject
 
--(instancetype)init:(mflow*)flow;
--(void)atpoint:(mflowpointsitem*)point;
+-(instancetype)init:(mflow*)flow atpoint:(mflowpointsitem*)point;
 -(vflowett*)generateview;
 -(vflowett*)flowett;
 
