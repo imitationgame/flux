@@ -4,23 +4,23 @@
 
 +(void)catalogin:(vflowett*)viewett
 {
-    if(!viewett. .catalogett)
+    if(!viewett.flowview.catalogcolor)
     {
-        vflowcatalogcolor *catalogcolor = [[vflowcatalogcolor alloc] init:flow];
-        flow.catalogcolor = catalogcolor;
-        [flow addSubview:catalogcolor];
+        vflowcatalogcolor *catalogcolor = [[vflowcatalogcolor alloc] init:viewett];
+        viewett.flowview.catalogcolor = catalogcolor;
+        [viewett.flowview addSubview:catalogcolor];
         
         [catalogcolor show:YES];
         
         NSDictionary *views = @{@"catalog":catalogcolor};
         NSDictionary *metrics = @{};
         
-        [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[catalog]-0-|" options:0 metrics:metrics views:views]];
-        [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[catalog(120)]-0-|" options:0 metrics:metrics views:views]];
+        [viewett.flowview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[catalog]-0-|" options:0 metrics:metrics views:views]];
+        [viewett.flowview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[catalog(120)]-0-|" options:0 metrics:metrics views:views]];
     }
 }
 
--(instancetype)init:(vflow*)flow
+-(instancetype)init:(vflowett*)viewett
 {
     self = [super init];
     [self setClipsToBounds:YES];
@@ -28,8 +28,7 @@
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self setAlpha:0];
     
-    self.flow = flow;
-    self.model = [[mflowetttypes alloc] init];
+    self.viewett = viewett;
     
     UIView *border = [[UIView alloc] init];
     [border setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.1]];
