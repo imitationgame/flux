@@ -9,6 +9,16 @@
 {
     self = [super init];
     
+    array = [NSArray arrayWithObjects:
+             [[mflowcolorsmain alloc] init],
+             [[mflowcolorsblue alloc] init],
+             [[mflowcolorsgreen alloc] init],
+             [[mflowcolorsyellow alloc] init],
+             [[mflowcolorsviolet alloc] init],
+             [[mflowcolorsgrey alloc] init],
+             [[mflowcolorspink alloc] init],
+             nil];
+    
     return self;
 }
 
