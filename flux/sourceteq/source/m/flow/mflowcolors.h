@@ -3,6 +3,7 @@
 
 @interface mflowcolors:NSObject
 
+-(id<mflowcolorsprotocol>)defaultcolor;
 -(NSUInteger)count;
 -(id<mflowcolorsprotocol>)item:(NSUInteger)index;
 

@@ -24,6 +24,11 @@
 
 #pragma mark public
 
+-(id<mflowcolorsprotocol>)defaultcolor
+{
+    return [self item:0];
+}
+
 -(NSUInteger)count
 {
     NSUInteger count = array.count;
