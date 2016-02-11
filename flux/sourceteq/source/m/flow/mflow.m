@@ -12,7 +12,7 @@
     self.ettlist = [[mflowettlist alloc] init:self];
     self.points = [[mflowpoints alloc] init:self];
     self.lines = [[mflowlines alloc] init:self];
-    self.colors = [[mflowcolors alloc] init];
+    self.colors = [[mflowcolors alloc] init:self];
     
     return self;
 }
