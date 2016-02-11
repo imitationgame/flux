@@ -14,8 +14,6 @@
     self.controller = controller;
     initialized = NO;
     self.model = [[mflow alloc] init];
-    self.deltaline = 150;
-    self.pointmargin = 50;
     
     UIScrollView *scroll = [[UIScrollView alloc] init];
     [scroll setTranslatesAutoresizingMaskIntoConstraints:NO];
