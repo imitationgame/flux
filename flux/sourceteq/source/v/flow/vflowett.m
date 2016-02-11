@@ -7,7 +7,7 @@
 {
     self = [super init];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:colormain];
+    [self setBackgroundColor:[model.color color]];
     
     self.model = model;
     
