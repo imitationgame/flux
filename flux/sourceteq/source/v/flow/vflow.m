@@ -12,6 +12,13 @@
     self.model = [[mflow alloc] init];
     [vflowcontent containerin:self];
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 3), dispatch_get_main_queue(),
+                   ^
+                   {
+                       NSUInteger width = self.bounds.size.width;
+                       [self addpointatx:width / 2 y:100];
+                   });
+    
     return self;
 }
 
@@ -24,11 +31,6 @@
 }
 
 #pragma mark functionality
-
--(void)showcatalogett
-{
-    
-}
 
 -(void)addpointatx:(NSUInteger)x y:(NSUInteger)y
 {
@@ -49,16 +51,6 @@
     [self.scroll addSubview:lineview];
     
     return linemodel;
-}
-
--(void)initialpoint
-{
-    dispatch_async(dispatch_get_main_queue(),
-                   ^
-                   {
-                       NSUInteger width = self.bounds.size.width;
-                       [self addpointatx:width / 2 y:100];
-                   });
 }
 
 -(void)updateheight:(CGFloat)height
