@@ -7,8 +7,8 @@
     self = [super init:flow atpoint:point];
  
     self.viewclass = [vflowettcon class];
-    self.width = 60;
-    self.height = 60;
+    self.width = 120;
+    self.height = 120;
     
     [self.linesitemlist linedown];
     
