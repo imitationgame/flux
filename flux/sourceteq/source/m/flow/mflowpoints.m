@@ -48,7 +48,7 @@
     [point.view setSelected:YES];
 }
 
-+(void)pointat:(NSUInteger)x y:(NSUInteger)y flow:(vflow*)flow
+-(void)pointat:(NSUInteger)x y:(NSUInteger)y flow:(vflow*)flow
 {
     mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:x y:y];
     vflowpoint *viewpoint = [modelpoint generateview];

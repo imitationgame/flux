@@ -4,6 +4,7 @@
 
 @interface mflowpoints:NSObject
 
+-(instancetype)init:(mflow*)flow;
 -(NSUInteger)count;
 -(mflowpointsitem*)item:(NSUInteger)index;
 -(void)add:(mflowpointsitem*)item;
