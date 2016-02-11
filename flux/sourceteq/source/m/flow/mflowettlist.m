@@ -43,10 +43,12 @@
 -(void)selectett:(mflowett*)ett
 {
     self.selected = ett;
+    [ett selected:YES];
 }
 
 -(void)deselect
 {
+    [self.selected selected:NO];
     self.selected = nil;
 }
 

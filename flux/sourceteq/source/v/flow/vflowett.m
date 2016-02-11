@@ -12,6 +12,7 @@
     [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
     [self.imageView setClipsToBounds:YES];
     [self.imageView setTintColor:[model.color color]];
+    [self.layer setBorderWidth:3];
     
     self.model = model;
     self.flowview = model.flow.view;

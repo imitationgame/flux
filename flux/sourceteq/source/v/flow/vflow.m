@@ -31,6 +31,7 @@
 
 -(void)actionett:(vflowett*)ett
 {
+    [self.model.ettlist selectett:ett.model];
     [vflowcatalogcolor catalogin:ett];
 }
 
