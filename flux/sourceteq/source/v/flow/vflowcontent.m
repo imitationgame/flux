@@ -66,6 +66,7 @@
     NSUInteger miny = y - pointmargin;
     NSUInteger maxx = x + pointmargin;
     NSUInteger maxy = y + pointmargin;
+    NSUInteger maxymargin = maxy + 50;
     CGRect rect = CGRectMake(minx, miny, maxx, maxy);
     NSArray *subviews = self.container.subviews;
     
@@ -95,9 +96,9 @@
             changed = YES;
         }
         
-        if(maxy > self.visibley)
+        if(maxymargin > self.visibley)
         {
-            self.visibley = maxy;
+            self.visibley = maxymargin;
             changed = YES;
         }
         
@@ -116,7 +117,7 @@
     NSUInteger scrollwidth_2 = scrollwidth / 2;
     NSUInteger pagewidth = self.marginright - self.marginleft;
     NSUInteger pagewidth_2 = pagewidth / 2;
-    CGFloat screenmarginleft = -self.marginleft;
+    CGFloat screenmarginleft = -(CGFloat)self.marginleft;
     CGSize contentsize = CGSizeMake(pagewidth, self.visibley);
     CGRect containerframe = CGRectMake(screenmarginleft, 0, self.width, self.height);
     
