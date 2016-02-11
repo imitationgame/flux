@@ -5,5 +5,6 @@
 -(void)config:(id<mflowcolorsprotocol>)model;
 
 @property(weak, nonatomic)UIView *circle;
+@property(weak, nonatomic)UIView *outercircle;
 
 @end
