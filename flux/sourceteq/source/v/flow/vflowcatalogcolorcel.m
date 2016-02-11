@@ -36,9 +36,10 @@
     self.selector = selector;
 
     [self addSubview:outercircle];
+    [self addSubview:selector];
     [self addSubview:circle];
     
-    NSDictionary *views = @{@"outercircle":outercircle, @"circle":circle};
+    NSDictionary *views = @{@"outercircle":outercircle, @"circle":circle, @"selector":selector};
     NSDictionary *metrics = @{@"margin":@(margin), @"outermargin":@(outermargin)};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(margin)-[circle]-(margin)-|" options:0 metrics:metrics views:views]];
@@ -46,7 +47,7 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(outermargin)-[outercircle]-(outermargin)-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(outermargin)-[outercircle]-(outermargin)-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(outermargin)-[selector]-(outermargin)-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:-[selector(2)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[selector(5)]" options:0 metrics:metrics views:views]];
     [self addSubview:selector];
     
     return self;

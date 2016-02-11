@@ -29,6 +29,12 @@
     return view;
 }
 
+-(void)setColor:(id<mflowcolorsprotocol>)color
+{
+    self.color = color;
+    [self.view.imageView setTintColor:[color color]];
+}
+
 -(void)selected:(BOOL)selected
 {
     

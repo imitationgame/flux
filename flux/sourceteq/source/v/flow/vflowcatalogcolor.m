@@ -45,7 +45,7 @@
     [layout setMinimumInteritemSpacing:0];
     [layout setMinimumLineSpacing:5];
     [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-    [layout setSectionInset:UIEdgeInsetsMake(0, 5, 0, 5)];
+    [layout setSectionInset:UIEdgeInsetsMake(0, 30, 0, 30)];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     [collection setBackgroundColor:[UIColor clearColor]];
@@ -145,6 +145,7 @@
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
     id<mflowcolorsprotocol> color = [self.model item:index.item];
+    [self.viewett.model setColor:[color color]];
     [self.viewett setBackgroundColor:[color color]];
 }
 
