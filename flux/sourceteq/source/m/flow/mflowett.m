@@ -7,7 +7,7 @@
 {
     self = [super init];
     
-    self.linesitemlist = [[mflowlinesitemlist alloc] init];
+    self.linesitemlist = [[mflowlinesitemlist alloc] init:self];
     
     return self;
 }
