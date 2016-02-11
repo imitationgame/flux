@@ -31,9 +31,23 @@
     return item;
 }
 
--(void)add:(mflowett*)item
+-(void)add:(id<mflowetttypesprotocol>)type point:(mflowpointsitem*)point
 {
-    [array addObject:item];
+    mflowett *ettmodel = [type modelett];
+    [ettmodel atpoint:point];
+    vflowett *ettview = [ettmodel generateview];
+    
+    [array addObject:ettmodel];
+    
+    CGPoint linestarting = CGPointMake(ettview.model.x, ettview.model.y);
+    CGPoint lineending = [self.model pointlinedown:linestarting];
+    
+    mflowlinesitem *line = [self addlinestarting:linestarting ending:lineending];
+    line.startingett = ettview.model;
+    
+    [self.scroll addSubview:ettview];
+    
+    return ettview;
 }
 
 @end

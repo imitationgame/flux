@@ -48,17 +48,7 @@
 -(void)catalogtypeselected:(id<mflowetttypesprotocol>)type
 {
     [self.catalogett show:NO];
-    mflowpointsitem *point = self.model.points.selected;
-    vflowett *ettview = [self.model add:type point:point];
-    
-    CGPoint linestarting = CGPointMake(ettview.model.x, ettview.model.y);
-    CGPoint lineending = [self.model pointlinedown:linestarting];
-    
-    mflowlinesitem *line = [self addlinestarting:linestarting ending:lineending];
-    line.startingett = ettview.model;
-    
-    [self.scroll addSubview:ettview];
-    [self.model.points remove:point];
+    [self.model add:type];
 }
 
 @end

@@ -2,25 +2,16 @@
 #import "mflowetttypesprotocol.h"
 
 @class mflowettlist;
-@class mflowett;
 @class mflowpoints;
-@class mflowpointsitem;
 @class mflowlines;
-@class mflowlinesitem;
 @class vflow;
-@class vflowett;
 
 @interface mflow:NSObject
 
 -(instancetype)init:(vflow*)view;
--(NSUInteger)count;
--(mflowett*)item:(NSUInteger)index;
--(vflowett*)add:(id<mflowetttypesprotocol>)type point:(mflowpointsitem*)point;
-//-(void)linedownfrom:()
+-(void)add:(id<mflowetttypesprotocol>)type;
 
--(CGPoint)pointlinedown:(CGPoint)point;
--(CGPoint)pointlineleft:(CGPoint)point;
--(CGPoint)pointlineright:(CGPoint)point;
+
 
 @property(weak, nonatomic)vflow *view;
 @property(strong, nonatomic)mflowettlist *ettlist;

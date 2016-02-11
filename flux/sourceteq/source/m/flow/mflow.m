@@ -1,15 +1,11 @@
 #import "mflow.h"
 
 @implementation mflow
-{
-    NSMutableArray *array;
-}
 
 -(instancetype)init:(vflow*)view
 {
     self = [super init];
     
-    array = [NSMutableArray array];
     self.view = view;
     self.width = 0;
     self.height = 0;
@@ -89,29 +85,12 @@
 
 #pragma mark public
 
--(NSUInteger)count
+-(void)add:(id<mflowetttypesprotocol>)type
 {
-    NSUInteger count = array.count;
-    
-    return count;
-}
+    mflowpointsitem *point = self.points.selected;
+    [self.ettlist add:type point:point];
 
--(mflowett*)item:(NSUInteger)index
-{
-    mflowett *item = array[index];
-    
-    return item;
-}
-
--(vflowett*)add:(id<mflowetttypesprotocol>)type point:(mflowpointsitem*)point
-{
-    mflowett *ettmodel = [type modelett];
-    [ettmodel atpoint:point];
-    vflowett *ettview = [ettmodel generateview];
-    
-    [array addObject:ettmodel];
-    
-    return ettview;
+    [self.model.points remove:point];
 }
 
 -(CGPoint)pointlinedown:(CGPoint)point
