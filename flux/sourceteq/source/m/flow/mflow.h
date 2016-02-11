@@ -1,6 +1,7 @@
 #import "appdel.h"
 #import "mflowetttypesprotocol.h"
 
+@class mflowettlist;
 @class mflowett;
 @class mflowpoints;
 @class mflowpointsitem;

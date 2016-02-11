@@ -3,6 +3,7 @@
 #import "mdb.h"
 #import "mdbcreate.h"
 #import "mflow.h"
+#import "mflowettlist.h"
 #import "mflowettcon.h"
 #import "mflowpoints.h"
 #import "mflowpointsitem.h"
