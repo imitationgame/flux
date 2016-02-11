@@ -73,6 +73,13 @@
 		DAEACBB01C6CEF380047ABF0 /* vflowcatalogcolor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBAF1C6CEF380047ABF0 /* vflowcatalogcolor.m */; };
 		DAEACBB31C6CEF4C0047ABF0 /* vflowcatalogcolorcel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBB21C6CEF4C0047ABF0 /* vflowcatalogcolorcel.m */; };
 		DAEACBB71C6CF19F0047ABF0 /* mflowcolors.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBB61C6CF19F0047ABF0 /* mflowcolors.m */; };
+		DAEACBBB1C6CF1E10047ABF0 /* mflowcolorsmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBBA1C6CF1E10047ABF0 /* mflowcolorsmain.m */; };
+		DAEACBBE1C6CF1EE0047ABF0 /* mflowcolorsblue.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBBD1C6CF1EE0047ABF0 /* mflowcolorsblue.m */; };
+		DAEACBC11C6CF1FD0047ABF0 /* mflowcolorsgreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBC01C6CF1FD0047ABF0 /* mflowcolorsgreen.m */; };
+		DAEACBC41C6CF20F0047ABF0 /* mflowcolorsyellow.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBC31C6CF20F0047ABF0 /* mflowcolorsyellow.m */; };
+		DAEACBC71C6CF21C0047ABF0 /* mflowcolorsviolet.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBC61C6CF21C0047ABF0 /* mflowcolorsviolet.m */; };
+		DAEACBCA1C6CF2290047ABF0 /* mflowcolorsgrey.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBC91C6CF2290047ABF0 /* mflowcolorsgrey.m */; };
+		DAEACBCD1C6CF2400047ABF0 /* mflowcolorspink.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBCC1C6CF2400047ABF0 /* mflowcolorspink.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -201,6 +208,20 @@
 		DAEACBB51C6CF19F0047ABF0 /* mflowcolors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowcolors.h; sourceTree = "<group>"; };
 		DAEACBB61C6CF19F0047ABF0 /* mflowcolors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowcolors.m; sourceTree = "<group>"; };
 		DAEACBB81C6CF1CD0047ABF0 /* mflowcolorsprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowcolorsprotocol.h; sourceTree = "<group>"; };
+		DAEACBB91C6CF1E10047ABF0 /* mflowcolorsmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowcolorsmain.h; sourceTree = "<group>"; };
+		DAEACBBA1C6CF1E10047ABF0 /* mflowcolorsmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowcolorsmain.m; sourceTree = "<group>"; };
+		DAEACBBC1C6CF1EE0047ABF0 /* mflowcolorsblue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowcolorsblue.h; sourceTree = "<group>"; };
+		DAEACBBD1C6CF1EE0047ABF0 /* mflowcolorsblue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowcolorsblue.m; sourceTree = "<group>"; };
+		DAEACBBF1C6CF1FD0047ABF0 /* mflowcolorsgreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowcolorsgreen.h; sourceTree = "<group>"; };
+		DAEACBC01C6CF1FD0047ABF0 /* mflowcolorsgreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowcolorsgreen.m; sourceTree = "<group>"; };
+		DAEACBC21C6CF20F0047ABF0 /* mflowcolorsyellow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowcolorsyellow.h; sourceTree = "<group>"; };
+		DAEACBC31C6CF20F0047ABF0 /* mflowcolorsyellow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowcolorsyellow.m; sourceTree = "<group>"; };
+		DAEACBC51C6CF21C0047ABF0 /* mflowcolorsviolet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowcolorsviolet.h; sourceTree = "<group>"; };
+		DAEACBC61C6CF21C0047ABF0 /* mflowcolorsviolet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowcolorsviolet.m; sourceTree = "<group>"; };
+		DAEACBC81C6CF2290047ABF0 /* mflowcolorsgrey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowcolorsgrey.h; sourceTree = "<group>"; };
+		DAEACBC91C6CF2290047ABF0 /* mflowcolorsgrey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowcolorsgrey.m; sourceTree = "<group>"; };
+		DAEACBCB1C6CF2400047ABF0 /* mflowcolorspink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowcolorspink.h; sourceTree = "<group>"; };
+		DAEACBCC1C6CF2400047ABF0 /* mflowcolorspink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowcolorspink.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -583,6 +604,20 @@
 				DAEACBB51C6CF19F0047ABF0 /* mflowcolors.h */,
 				DAEACBB61C6CF19F0047ABF0 /* mflowcolors.m */,
 				DAEACBB81C6CF1CD0047ABF0 /* mflowcolorsprotocol.h */,
+				DAEACBB91C6CF1E10047ABF0 /* mflowcolorsmain.h */,
+				DAEACBBA1C6CF1E10047ABF0 /* mflowcolorsmain.m */,
+				DAEACBBC1C6CF1EE0047ABF0 /* mflowcolorsblue.h */,
+				DAEACBBD1C6CF1EE0047ABF0 /* mflowcolorsblue.m */,
+				DAEACBBF1C6CF1FD0047ABF0 /* mflowcolorsgreen.h */,
+				DAEACBC01C6CF1FD0047ABF0 /* mflowcolorsgreen.m */,
+				DAEACBC21C6CF20F0047ABF0 /* mflowcolorsyellow.h */,
+				DAEACBC31C6CF20F0047ABF0 /* mflowcolorsyellow.m */,
+				DAEACBC51C6CF21C0047ABF0 /* mflowcolorsviolet.h */,
+				DAEACBC61C6CF21C0047ABF0 /* mflowcolorsviolet.m */,
+				DAEACBC81C6CF2290047ABF0 /* mflowcolorsgrey.h */,
+				DAEACBC91C6CF2290047ABF0 /* mflowcolorsgrey.m */,
+				DAEACBCB1C6CF2400047ABF0 /* mflowcolorspink.h */,
+				DAEACBCC1C6CF2400047ABF0 /* mflowcolorspink.m */,
 			);
 			path = flow;
 			sourceTree = "<group>";
@@ -729,24 +764,30 @@
 				DAB837C71C6AC56D00730B67 /* vflowcatalogettcel.m in Sources */,
 				DA87C5461C6BD3C300796D79 /* mflowlines.m in Sources */,
 				DA0157281C6A691900FAC166 /* main.m in Sources */,
+				DAEACBCA1C6CF2290047ABF0 /* mflowcolorsgrey.m in Sources */,
 				DAB837BA1C6AC15100730B67 /* vflowcatalogett.m in Sources */,
 				DAB837AE1C6AAB9C00730B67 /* mflowettcon.m in Sources */,
 				DA87C54C1C6C12AA00796D79 /* vflowcontent.m in Sources */,
 				DA87C54F1C6C444F00796D79 /* mflowettlist.m in Sources */,
 				DA0157301C6A691900FAC166 /* cmain.m in Sources */,
+				DAEACBBE1C6CF1EE0047ABF0 /* mflowcolorsblue.m in Sources */,
 				DAB837C41C6AC3F200730B67 /* mflowetttypespro.m in Sources */,
 				DA01573C1C6A691900FAC166 /* vratemenucel.m in Sources */,
 				DAB837B71C6AB6AB00730B67 /* mflowpointsitem.m in Sources */,
 				DAB837A81C6AAB4400730B67 /* mflow.m in Sources */,
 				DAB837C11C6AC37100730B67 /* mflowetttypescon.m in Sources */,
+				DAEACBC71C6CF21C0047ABF0 /* mflowcolorsviolet.m in Sources */,
 				DA0157311C6A691900FAC166 /* crate.m in Sources */,
 				DA30A83B1C6A9376004F5828 /* vflowett.m in Sources */,
+				DAEACBCD1C6CF2400047ABF0 /* mflowcolorspink.m in Sources */,
+				DAEACBC41C6CF20F0047ABF0 /* mflowcolorsyellow.m in Sources */,
 				DAB837AB1C6AAB6600730B67 /* mflowett.m in Sources */,
 				DAB837E51C6ADB2900730B67 /* mflowetttypesio.m in Sources */,
 				DAB837BD1C6AC20400730B67 /* mflowetttypes.m in Sources */,
 				DA87C5401C6BBB8B00796D79 /* vflowline.m in Sources */,
 				DA01573B1C6A691900FAC166 /* vratemenu.m in Sources */,
 				DA0157341C6A691900FAC166 /* mdbcreate.m in Sources */,
+				DAEACBBB1C6CF1E10047ABF0 /* mflowcolorsmain.m in Sources */,
 				DA01573A1C6A691900FAC166 /* vrate.m in Sources */,
 				DA30A8341C6A708E004F5828 /* cflow.m in Sources */,
 				DA0157371C6A691900FAC166 /* vblur.m in Sources */,
@@ -764,6 +805,7 @@
 				DA30A83E1C6A93FB004F5828 /* vflowettcon.m in Sources */,
 				DA30A8381C6A9303004F5828 /* vflow.m in Sources */,
 				DA0157351C6A691900FAC166 /* mdirs.m in Sources */,
+				DAEACBC11C6CF1FD0047ABF0 /* mflowcolorsgreen.m in Sources */,
 				DA87C5491C6BD3DB00796D79 /* mflowlinesitem.m in Sources */,
 				DAB837B11C6AAD1B00730B67 /* vflowpoint.m in Sources */,
 				DA01572A1C6A691900FAC166 /* tools.m in Sources */,
