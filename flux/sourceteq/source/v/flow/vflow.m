@@ -29,14 +29,12 @@
     [vflowcatalogett catalogin:self];
 }
 
-#pragma mark functionality
+#pragma mark public
 
 -(void)addpointatx:(NSUInteger)x y:(NSUInteger)y
 {
     [self.model.points pointat:x y:y];
 }
-
-#pragma mark public
 
 -(void)catalogtypeselected:(id<mflowetttypesprotocol>)type
 {

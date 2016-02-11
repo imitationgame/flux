@@ -8,8 +8,9 @@
 
 @interface vflow:viewbase
 
--(void)catalogtypeselected:(id<mflowetttypesprotocol>)type;
 -(void)actionpoint:(vflowpoint*)point;
+-(void)addpointatx:(NSUInteger)x y:(NSUInteger)y;
+-(void)catalogtypeselected:(id<mflowetttypesprotocol>)type;
 
 @property(strong, nonatomic)mflow *model;
 @property(weak, nonatomic)vflowcatalogett *catalogett;

@@ -46,6 +46,7 @@
     linemodel.startingett = self.flowett;
     [self add:linemodel];
     [self.flowett.flow.view.contentview addSubview:lineview];
+    [self.flowett.flow.view addpointatx:lineend.x y:lineend.y];
 }
 
 @end
