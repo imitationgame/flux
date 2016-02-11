@@ -19,9 +19,9 @@
     return name;
 }
 
--(mflowett*)modelett:(mflow*)flow
+-(mflowett*)modelett:(mflow*)flow atpoint:(mflowpointsitem*)point
 {
-    mflowettcon *ettcon = [[mflowettcon alloc] init:flow];
+    mflowettcon *ettcon = [[mflowettcon alloc] init:flow atpoint:point];
     
     return ettcon;
 }

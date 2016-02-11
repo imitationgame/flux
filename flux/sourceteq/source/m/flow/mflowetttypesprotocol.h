@@ -2,12 +2,12 @@
 
 @class mflow;
 @class mflowett;
-@class mflowlinesitem;
+@class mflowpointsitem;
 
 @protocol mflowetttypesprotocol <NSObject>
 
 -(NSString*)labeltext;
 -(NSString*)imagename;
--(mflowett*)modelett:(mflow*)flow;
+-(mflowett*)modelett:(mflow*)flow atpoint:(mflowpointsitem*)point;
 
 @end
