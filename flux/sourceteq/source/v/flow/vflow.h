@@ -4,6 +4,7 @@
 @class mflow;
 @class vflowcatalogett;
 @class vflowcontent;
+@class vflowpoint;
 
 @interface vflow:viewbase
 

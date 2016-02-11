@@ -5,12 +5,12 @@
     NSMutableArray *array;
 }
 
--(instancetype)init:(vflow*)flow
+-(instancetype)init:(vflow*)view
 {
     self = [super init];
     
     array = [NSMutableArray array];
-    self.flow = flow;
+    self.view = view;
     self.width = 0;
     self.height = 0;
     self.deltaline = 150;
