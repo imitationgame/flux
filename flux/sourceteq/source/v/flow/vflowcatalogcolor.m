@@ -60,9 +60,9 @@
     [buttoncancel setBackgroundColor:[UIColor clearColor]];
     [buttoncancel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [buttoncancel.titleLabel setFont:[UIFont fontWithName:fontname size:16]];
-    [buttoncancel setTitleColor:[UIColor colorWithRed:1 green:0.1 blue:0 alpha:1] forState:UIControlStateNormal];
-    [buttoncancel setTitleColor:[UIColor colorWithRed:1 green:0.1 blue:0 alpha:0.2] forState:UIControlStateHighlighted];
-    [buttoncancel setTitle:NSLocalizedString(@"flow_catalog_cancel", nil) forState:UIControlStateNormal];
+    [buttoncancel setTitleColor:colormain forState:UIControlStateNormal];
+    [buttoncancel setTitleColor:[colormain colorWithAlphaComponent:0.2] forState:UIControlStateHighlighted];
+    [buttoncancel setTitle:NSLocalizedString(@"flow_colors_accept", nil) forState:UIControlStateNormal];
     [buttoncancel addTarget:self action:@selector(actionclose:) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:blur];
