@@ -8,9 +8,10 @@
     self = [super init];
     
     self.flow = flow;
-    self.linesitemlist = [[mflowlinesitemlist alloc] init:self];
     self.x = point.x;
     self.y = point.y;
+    self.linesitemlist = [[mflowlinesitemlist alloc] init:self];
+    self.viewclass = [vflowett class];
     
     return self;
 }
@@ -20,15 +21,8 @@
 -(vflowett*)generateview
 {
     [self.view removeFromSuperview];
-    vflowett *view = [self flowett];
+    vflowett *view = [(vflowett*)[self.viewclass alloc] init:self];
     self.view = view;
-    
-    return view;
-}
-
--(vflowett*)flowett
-{
-    vflowett *view = [[vflowett alloc] init:self];
     
     return view;
 }

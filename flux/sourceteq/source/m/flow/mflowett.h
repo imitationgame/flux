@@ -9,11 +9,11 @@
 
 -(instancetype)init:(mflow*)flow atpoint:(mflowpointsitem*)point;
 -(vflowett*)generateview;
--(vflowett*)flowett;
 
 @property(weak, nonatomic)mflow *flow;
 @property(weak, nonatomic)vflowett *view;
 @property(strong, nonatomic)mflowlinesitemlist *linesitemlist;
+@property(nonatomic)Class viewclass;
 @property(nonatomic)NSUInteger x;
 @property(nonatomic)NSUInteger y;
 @property(nonatomic)NSUInteger width;

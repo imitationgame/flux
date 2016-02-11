@@ -2,15 +2,23 @@
 
 @implementation mflowettcon
 
-#pragma mark flow ett
-
--(void)atpoint:(mflowpointsitem*)point
+-(instancetype)init:(mflow*)flow atpoint:(mflowpointsitem*)point
 {
-    [super atpoint:point];
+    self = [super init:flow atpoint:point];
     
     self.width = 60;
     self.height = 60;
+    
+    CGPoint linestarting = CGPointMake(ettview.model.x, ettview.model.y);
+    CGPoint lineending = [self.model pointlinedown:linestarting];
+    
+    mflowlinesitem *line = [self addlinestarting:linestarting ending:lineending];
+    line.startingett = ettview.model;
+    
+    return self;
 }
+
+#pragma mark flow ett
 
 -(vflowett*)flowett
 {
