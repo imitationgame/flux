@@ -5,7 +5,8 @@
 -(instancetype)init:(mflow*)flow atpoint:(mflowpointsitem*)point
 {
     self = [super init:flow atpoint:point];
-    
+ 
+    self.viewclass = [vflowettcon class];
     self.width = 60;
     self.height = 60;
     
@@ -16,15 +17,6 @@
     line.startingett = ettview.model;
     
     return self;
-}
-
-#pragma mark flow ett
-
--(vflowett*)flowett
-{
-    vflowettcon *view = [[vflowettcon alloc] init:self];
-    
-    return view;
 }
 
 @end
