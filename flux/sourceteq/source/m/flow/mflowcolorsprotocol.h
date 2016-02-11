@@ -1,13 +1,9 @@
-//
-//  mflowcolorsprotocol.h
-//  flux
-//
-//  Created by zero on 2/11/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol mflowcolorsprotocol <NSObject>
+
+-(UIColor*)color;
+-(NSString*)name;
+-(colortype)type;
 
 @end

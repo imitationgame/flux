@@ -4,12 +4,15 @@
 
 // creator
 
-typedef NS_ENUM(NSUInteger, test_type)
+typedef NS_ENUM(NSUInteger, colortype)
 {
-    test_type_text,
-    test_type_color,
-    test_type_image,
-    test_type_number
+    colortype_main,
+    colortype_blue,
+    colortype_green,
+    colortype_yellow,
+    colortype_violet,
+    colortype_grey,
+    colortype_pink
 };
 
 // analytics
