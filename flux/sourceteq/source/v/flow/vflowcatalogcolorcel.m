@@ -30,4 +30,11 @@
     return self;
 }
 
+#pragma mark public
+
+-(void)config:(id<mflowcolorsprotocol>)model
+{
+    [self.circle setBackgroundColor:[model color]];
+}
+
 @end

@@ -29,6 +29,7 @@
     [self setAlpha:0];
     
     self.viewett = viewett;
+    self.model = viewett.flowview.model.colors;
     
     UIView *border = [[UIView alloc] init];
     [border setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.1]];
@@ -55,7 +56,7 @@
     [collection setDelegate:self];
     [collection setDataSource:self];
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [collection registerClass:[vflowcatalogettcel class] forCellWithReuseIdentifier:celid];
+    [collection registerClass:[vflowcatalogcolorcel class] forCellWithReuseIdentifier:celid];
     
     UIButton *buttoncancel = [[UIButton alloc] init];
     [buttoncancel setBackgroundColor:[UIColor clearColor]];
@@ -116,6 +117,35 @@
              [self removeFromSuperview];
          }
      }];
+}
+
+#pragma mark -
+#pragma mark col del
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
+{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
+{
+    NSUInteger count = [self.model count];
+    
+    return count;
+}
+
+-(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
+{
+    vflowcatalogcolorcel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
+    [cel config:[self.model item:index.item]];
+    
+    return cel;
+}
+
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    id<mflowcolorsprotocol> color = [self.model item:index.item];
+    [self.viewett setBackgroundColor:[color color]];
 }
 
 @end
