@@ -117,13 +117,6 @@
     [self.container setFrame:CGRectMake(0, 0, self.width, self.height)];
 }
 
--(BOOL)validatepointat:(CGPoint)point
-{
-    BOOL valid = YES;
-    
-    return NO;
-}
-
 #pragma mark public
 
 -(void)catalogtypeselected:(id<mflowetttypesprotocol>)type
