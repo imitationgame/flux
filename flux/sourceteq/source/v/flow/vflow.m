@@ -25,8 +25,17 @@
 
 -(void)actionett:(vflowett*)ett
 {
-    [self.model.ettlist selectett:ett.model];
-    [vflowcatalogcolor catalogin:ett];
+    if(ett.model == self.model.ettlist.selected)
+    {
+        [self.model.ettlist deselect];
+        [self.catalogcolor show:NO];
+    }
+    else
+    {
+        [self.catalogett show:NO];
+        [self.model.ettlist selectett:ett.model];
+        [vflowcatalogcolor catalogin:ett];
+    }
 }
 
 #pragma mark public
