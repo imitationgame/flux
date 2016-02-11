@@ -6,7 +6,8 @@
 
 @interface mflowlinesitem:NSObject
 
-+(void)lineat:(CGPoint)starting to:(CGPoint)ending flow:(vflow*)flow;
+-(instancetype)init:(CGPoint)starting ending:(CGPoint)ending;
+-(vflowline*)generateview;
 
 @property(weak, nonatomic)vflowline *view;
 @property(weak, nonatomic)mflowett *startingett;
