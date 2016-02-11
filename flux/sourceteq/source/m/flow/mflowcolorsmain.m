@@ -1,13 +1,28 @@
-//
-//  mflowcolorsmain.m
-//  flux
-//
-//  Created by zero on 2/11/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "mflowcolorsmain.h"
 
 @implementation mflowcolorsmain
+
+#pragma mark colors protocol
+
+-(UIColor*)color
+{
+    UIColor *color = colormain;
+    
+    return color;
+}
+
+-(NSString*)name
+{
+    NSString *name = NSLocalizedString(@"", nil);
+    
+    return name;
+}
+
+-(colortype)type
+{
+    colortype type = colortype_main;
+    
+    return type;
+}
 
 @end
