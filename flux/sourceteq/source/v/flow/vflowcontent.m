@@ -40,8 +40,6 @@
 {
     [super updateConstraints];
     
-    NSLog(@"update");
-    
     dispatch_async(dispatch_get_main_queue(),
                    ^
                    {
@@ -53,7 +51,7 @@
                        self.visibley = self.bounds.size.height;
                        self.centerx = deadwidth_2 + (screenwidth / 2);
                        
-                       [self.container setFrame:CGRectMake(self.marginleft, 0, self.width, self.height)];
+                       [self.container setFrame:CGRectMake(-((CGFloat)self.marginleft), 0, self.width, self.height)];
                    });
 }
 
