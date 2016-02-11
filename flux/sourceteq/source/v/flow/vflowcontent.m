@@ -32,7 +32,7 @@
 
 #pragma mark public
 
--(void)addview:(UIView*)view
+-(void)addSubview:(UIView*)view
 {
     [self.container addSubview:view];
 }

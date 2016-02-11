@@ -1,12 +1,12 @@
 #import "appdel.h"
 
+@class vflow;
 @class vflowline;
 @class mflowett;
 
 @interface mflowlinesitem:NSObject
 
--(instancetype)init:(CGPoint)starting ending:(CGPoint)ending;
--(vflowline*)generateview;
++(void)lineat:(CGPoint)starting to:(CGPoint)ending flow:(vflow*)flow;
 
 @property(weak, nonatomic)vflowline *view;
 @property(weak, nonatomic)mflowett *startingett;

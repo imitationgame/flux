@@ -2,6 +2,17 @@
 
 @implementation mflowlinesitem
 
++(void)lineat:(CGPoint)starting to:(CGPoint)ending flow:(vflow*)flow
+{
+    mflowlinesitem *linemodel = [[mflowlinesitem alloc] init:starting ending:ending];
+    vflowline *lineview = [linemodel generateview];
+    
+    [flow.model.lines add:linemodel];
+    [flow.contentview addview:lineview];
+    
+    return linemodel;
+}
+
 -(instancetype)init:(CGPoint)starting ending:(CGPoint)ending
 {
     self = [super init];
