@@ -132,49 +132,4 @@
     [self.model.points remove:point];
 }
 
--(CGPoint)pointlinedown:(CGPoint)point
-{
-    CGPoint endingpoint;
-    
-    BOOL valid = NO;
-    
-    do
-    {
-        endingpoint = CGPointMake(point.x, point.y + self.deltaline);
-    }
-    while(!valid);
-    
-    return endingpoint;
-}
-
--(CGPoint)pointlineleft:(CGPoint)point
-{
-    CGPoint endingpoint;
-    
-    BOOL valid = NO;
-    
-    do
-    {
-        endingpoint = CGPointMake(point.x - self.deltaline, point.y);
-    }
-    while(!valid);
-    
-    return endingpoint;
-}
-
--(CGPoint)pointlineright:(CGPoint)point
-{
-    CGPoint endingpoint;
-    
-    BOOL valid = NO;
-    
-    do
-    {
-        endingpoint = CGPointMake(point.x + self.deltaline, point.y);
-    }
-    while(!valid);
-    
-    return endingpoint;
-}
-
 @end

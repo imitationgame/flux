@@ -18,6 +18,42 @@
     return self;
 }
 
+#pragma mark functionality
+
+-(BOOL)rect:(CGRect)rect insersectsview:(UIView*)view
+{
+    BOOL intersects = NO;
+    
+    return intersects;
+}
+
+-(BOOL)validatepointat:(CGPoint)point
+{
+    BOOL valid = YES;
+    
+    CGRect perrect = CGRectMake(point.x -= self.pointmargin, point.y -= self.pointmargin, point.x += self.pointmargin, point.y += self.pointmargin);
+    NSUInteger count = [self count];
+    
+    for(NSUInteger i = 0; i < count; i++)
+    {
+        mflowett *flowett = [self item:i];
+        
+        if([self rect:perrect insersectsview:flowett.view])
+        {
+            valid = NO;
+            
+            break;
+        }
+    }
+    
+    if(valid)
+    {
+        
+    }
+    
+    return NO;
+}
+
 #pragma mark public
 
 -(NSUInteger)count
@@ -43,6 +79,51 @@
     [array addObject:ettmodel];
     
     return ettview;
+}
+
+-(CGPoint)pointlinedown:(CGPoint)point
+{
+    CGPoint endingpoint;
+    
+    BOOL valid = NO;
+    
+    do
+    {
+        endingpoint = CGPointMake(point.x, point.y + self.deltaline);
+    }
+    while(!valid);
+    
+    return endingpoint;
+}
+
+-(CGPoint)pointlineleft:(CGPoint)point
+{
+    CGPoint endingpoint;
+    
+    BOOL valid = NO;
+    
+    do
+    {
+        endingpoint = CGPointMake(point.x - self.deltaline, point.y);
+    }
+    while(!valid);
+    
+    return endingpoint;
+}
+
+-(CGPoint)pointlineright:(CGPoint)point
+{
+    CGPoint endingpoint;
+    
+    BOOL valid = NO;
+    
+    do
+    {
+        endingpoint = CGPointMake(point.x + self.deltaline, point.y);
+    }
+    while(!valid);
+    
+    return endingpoint;
 }
 
 @end
