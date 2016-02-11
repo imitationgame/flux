@@ -1,4 +1,5 @@
 #import "appdel.h"
+#import "mflowcolorsprotocol.h"
 
 @interface mflowcolors:NSObject
 
