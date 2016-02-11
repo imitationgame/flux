@@ -6,7 +6,7 @@
 {
     self = [super init];
     
-    self.linewidth = 3;
+    self.linewidth = 4;
     self.starting = starting;
     self.ending = ending;
     
