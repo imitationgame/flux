@@ -5,10 +5,11 @@
     NSMutableArray *array;
 }
 
--(instancetype)init
+-(instancetype)init:(mflow*)flow
 {
     self = [super init];
     
+    self.flow = flow;
     array = [NSMutableArray array];
     
     return self;

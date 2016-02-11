@@ -1,5 +1,6 @@
 #import "appdel.h"
 
+@class mflow;
 @class mflowpointsitem;
 
 @interface mflowpoints:NSObject
@@ -10,8 +11,8 @@
 -(void)add:(mflowpointsitem*)item;
 -(void)remove:(mflowpointsitem*)item;
 -(void)selectpoint:(mflowpointsitem*)point;
--(mflowpointsitem*)selecteditem;
 
+@property(weak, nonatomic)mflow *flow;
 @property(weak, nonatomic)mflowpointsitem *selected;
 
 @end

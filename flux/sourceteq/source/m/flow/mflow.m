@@ -15,8 +15,8 @@
     self.height = 0;
     self.deltaline = 150;
     self.pointmargin = 50;
-    self.points = [[mflowpoints alloc] init];
-    self.lines = [[mflowlines alloc] init];
+    self.points = [[mflowpoints alloc] init:self];
+    self.lines = [[mflowlines alloc] init:self];
     
     return self;
 }
