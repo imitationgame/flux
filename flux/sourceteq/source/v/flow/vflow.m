@@ -123,7 +123,10 @@
     mflowpointsitem *point = [self.model.points selecteditem];
     vflowett *ettview = [self.model add:type point:point];
     
-    mflowlinesitem *line = [self addlinestarting:CGPointMake(ettview.model.x, ettview.model.y) ending:CGPointMake(ettview.model.x, ettview.model.y + 100)];
+    CGPoint linestarting = CGPointMake(ettview.model.x, ettview.model.y);
+    CGPoint lineending = [self.model pointlinedown:linestarting];
+    
+    mflowlinesitem *line = [self addlinestarting:linestarting ending:lineending];
     line.startingett = ettview.model;
     
     [self.scroll addSubview:ettview];
