@@ -5,7 +5,7 @@
 @interface mflowlinesitemlist:NSObject
 
 -(NSUInteger)count;
--(mflowlinesitem*)item;
+-(mflowlinesitem*)item:(NSUInteger)index;
 -(void)add:(mflowlinesitem*)item;
 
 @end
