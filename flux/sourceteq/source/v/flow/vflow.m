@@ -37,17 +37,6 @@
     [mflowpointsitem pointat:x y:y flow:self];
 }
 
--(mflowlinesitem*)addlinestarting:(CGPoint)starting ending:(CGPoint)ending
-{
-    mflowlinesitem *linemodel = [[mflowlinesitem alloc] init:starting ending:ending];
-    vflowline *lineview = [linemodel generateview];
-    
-    [self.model.lines add:linemodel];
-    [self.scroll addSubview:lineview];
-    
-    return linemodel;
-}
-
 -(void)updateheight:(CGFloat)height
 {
     [self.scroll setContentSize:CGSizeMake(self.width, self.height)];

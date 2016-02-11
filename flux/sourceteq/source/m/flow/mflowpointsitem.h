@@ -5,7 +5,7 @@
 
 @interface mflowpointsitem:NSObject
 
-+(void)pointat:(NSUInteger)x y:(NSUInteger)y flow:(vflow*)flow;
+-(instancetype)init:(NSUInteger)x y:(NSUInteger)y;
 
 @property(weak, nonatomic)vflowpoint *view;
 @property(nonatomic)NSUInteger x;
