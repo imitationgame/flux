@@ -2,9 +2,9 @@
 
 @implementation vflowcatalogcolor
 
-+(void)catalogin:(vflow*)flow
++(void)catalogin:(vflowett*)viewett
 {
-    if(!flow.catalogett)
+    if(!viewett. .catalogett)
     {
         vflowcatalogcolor *catalogcolor = [[vflowcatalogcolor alloc] init:flow];
         flow.catalogcolor = catalogcolor;

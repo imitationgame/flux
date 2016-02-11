@@ -10,6 +10,7 @@
     [self setBackgroundColor:[model.color color]];
     
     self.model = model;
+    self.flowview = model.flow.view;
     
     return self;
 }

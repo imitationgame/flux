@@ -4,8 +4,8 @@
 
 @interface vflowcatalogcolor:UIView<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-+(void)catalogin:(vflow*)flow;
++(void)catalogin:(vflowett*)viewett;
 
-@property(weak, nonatomic)vflow *flow;
+@property(weak, nonatomic)vflowett *viewett;
 
 @end
