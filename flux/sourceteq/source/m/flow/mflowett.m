@@ -31,14 +31,7 @@
 
 -(void)selected:(BOOL)selected
 {
-    if(selected)
-    {
-        [self.view.layer setBorderColor:[UIColor colorWithWhite:0 alpha:0.5].CGColor];
-    }
-    else
-    {
-        [self.view.layer setBorderColor:[UIColor clearColor].CGColor];
-    }
+    [self.view setSelected:selected];
 }
 
 -(void)changecolor:(id<mflowcolorsprotocol>)color
