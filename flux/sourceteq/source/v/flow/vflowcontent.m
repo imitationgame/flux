@@ -103,11 +103,25 @@
         
         if(changed)
         {
-            
+            [self adjustscreen];
         }
     }
         
     return valid;
+}
+
+-(void)adjustscreen
+{
+    NSUInteger scrollwidth = self.bounds.size.width;
+    NSUInteger scrollwidth_2 = scrollwidth / 2;
+    NSUInteger pagewidth = self.marginright - self.marginleft;
+    NSUInteger pagewidth_2 = pagewidth / 2;
+    CGFloat screenmarginleft = -self.marginleft;
+    CGSize contentsize = CGSizeMake(pagewidth, self.visibley);
+    CGRect containerframe = CGRectMake(screenmarginleft, 0, self.width, self.height);
+    
+    [self setContentSize:contentsize];
+    [self.container setFrame:containerframe];
 }
 
 #pragma mark public
