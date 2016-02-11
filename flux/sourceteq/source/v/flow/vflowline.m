@@ -18,7 +18,7 @@
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(context, self.model.linewidth);
-    CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+    CGContextSetStrokeColorWithColor(context, [UIColor colorWithWhite:0.8 alpha:1].CGColor);
     CGContextMoveToPoint(context, self.model.instarting.x, self.model.instarting.y);
     CGContextAddLineToPoint(context, self.model.inending.x, self.model.inending.y);
     CGContextDrawPath(context, kCGPathStroke);
