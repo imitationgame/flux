@@ -1,13 +1,5 @@
-//
-//  vflowcontent.h
-//  flux
-//
-//  Created by zero on 2/10/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
-
-@interface vflowcontent : NSObject
+@interface vflowcontent:UIView
 
 @end
