@@ -2,6 +2,17 @@
 
 @implementation mflowpointsitem
 
++(void)pointat:(NSUInteger)x y:(NSUInteger)y flow:(vflow*)flow
+{
+    mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:x y:y];
+    vflowpoint *viewpoint = [modelpoint generateview];
+    [viewpoint addTarget:flow action:@selector(actionpoint:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [flow.model.points add:modelpoint];
+    [flow.content];
+    [f.scroll addSubview:viewpoint];
+}
+
 -(instancetype)init:(NSUInteger)x y:(NSUInteger)y
 {
     self = [super init];

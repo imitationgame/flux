@@ -30,4 +30,11 @@
     return self;
 }
 
+#pragma mark public
+
+-(void)addview:(UIView*)view
+{
+    [self.container addSubview:view];
+}
+
 @end

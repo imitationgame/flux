@@ -34,6 +34,9 @@
 
 -(void)addpointatx:(NSUInteger)x y:(NSUInteger)y
 {
+    
+    
+    
     mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:x y:y];
     vflowpoint *viewpoint = [modelpoint generateview];
     [viewpoint addTarget:self action:@selector(actionpoint:) forControlEvents:UIControlEventTouchUpInside];
