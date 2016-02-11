@@ -3,10 +3,11 @@
 
 @implementation mflowett
 
--(instancetype)init
+-(instancetype)init:(mflow*)flow
 {
     self = [super init];
     
+    self.flow = flow;
     self.linesitemlist = [[mflowlinesitemlist alloc] init:self];
     
     return self;

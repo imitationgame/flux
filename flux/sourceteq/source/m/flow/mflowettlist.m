@@ -37,7 +37,7 @@
     [ettmodel atpoint:point];
     vflowett *ettview = [ettmodel generateview];
     
-    [array addObject:ettmodel];
+    
     
     CGPoint linestarting = CGPointMake(ettview.model.x, ettview.model.y);
     CGPoint lineending = [self.model pointlinedown:linestarting];
@@ -47,7 +47,8 @@
     
     [self.scroll addSubview:ettview];
     
-    return ettview;
+    
+    [array addObject:ettmodel];
 }
 
 @end
