@@ -1,5 +1,8 @@
 #import "vflowcontent.h"
 
+#define deltaline 150
+#define pointmargin 50
+
 @implementation vflowcontent
 
 +(void)containerin:(vflow*)flow
@@ -30,11 +33,50 @@
     return self;
 }
 
+#pragma mark functionality
+
+-(BOOL)validatepoint:(CGPoint)point
+{
+    BOOL valid = YES;
+    NSInteger x = point.x;
+    NSInteger y = point.y;
+    CGRect rect = CGRectMake(x - pointmargin, y - pointmargin, x + pointmargin, y + pointmargin);
+    NSArray *subviews = self.container.subviews;
+    
+    for(UIView *view in subviews)
+    {
+        if(CGRectIntersectsRect(rect, view.frame))
+        {
+            valid = NO;
+            
+            break;
+        }
+    }
+        
+    return valid;
+}
+
 #pragma mark public
 
 -(void)addSubview:(UIView*)view
 {
     [self.container addSubview:view];
+}
+
+-(CGPoint)linefrom:(CGPoint)point deltax:(NSInteger)deltax deltay:(NSInteger)deltay
+{
+    CGPoint endingpoint = CGPointMake(point.x, point.y);
+    BOOL found = NO;
+    
+    while(!found)
+    {
+        endingpoint.x += deltax * deltaline;
+        endingpoint.y += deltay * deltaline;
+        
+        found = [self validatepoint:endingpoint];
+    }
+    
+    return endingpoint;
 }
 
 @end

@@ -9,8 +9,6 @@
     self.view = view;
     self.width = 0;
     self.height = 0;
-    self.deltaline = 150;
-    self.pointmargin = 50;
     self.ettlist = [[mflowettlist alloc] init:self];
     self.points = [[mflowpoints alloc] init:self];
     self.lines = [[mflowlines alloc] init:self];
@@ -143,5 +141,6 @@
     
     return endingpoint;
 }
+
 
 @end

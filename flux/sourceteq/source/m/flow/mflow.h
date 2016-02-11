@@ -12,14 +12,11 @@
 -(void)add:(id<mflowetttypesprotocol>)type;
 
 
-
 @property(weak, nonatomic)vflow *view;
 @property(strong, nonatomic)mflowettlist *ettlist;
 @property(strong, nonatomic)mflowpoints *points;
 @property(strong, nonatomic)mflowlines *lines;
 @property(nonatomic)NSUInteger width;
 @property(nonatomic)NSUInteger height;
-@property(nonatomic)NSUInteger deltaline;
-@property(nonatomic)NSUInteger pointmargin;
 
 @end
