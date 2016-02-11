@@ -59,6 +59,8 @@
 
 -(BOOL)validatepoint:(CGPoint)point
 {
+#warning "here"
+    
     BOOL valid = YES;
     NSInteger x = point.x;
     NSInteger y = point.y;
