@@ -5,6 +5,7 @@
 #import "vratemenu.h"
 #import "vratemenucel.h"
 #import "vflow.h"
+#import "vflowcontent.h"
 #import "vflowettcon.h"
 #import "vflowpoint.h"
 #import "vflowcatalogett.h"
