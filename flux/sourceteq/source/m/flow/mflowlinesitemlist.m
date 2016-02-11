@@ -36,4 +36,23 @@
     [array addObject:item];
 }
 
+-(void)linedown
+{
+    CGPoint linestart = CGPointMake(self.flowett.x, self.flowett.y);
+    CGPoint lineend = [self.flowett.flow.view.contentview linefrom:linestart deltax:0 deltay:1];
+    
+    
+    mflowlinesitem *linemodel = [[mflowlinesitem alloc] init:starting ending:ending];
+    vflowline *lineview = [linemodel generateview];
+    
+    [flow.model.lines add:linemodel];
+    [flow.contentview addSubview:lineview];
+    
+    
+    
+    
+    mflowlinesitem *line = [self addlinestarting:linestarting ending:lineending];
+    line.startingett = ettview.model;
+}
+
 @end

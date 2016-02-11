@@ -9,6 +9,7 @@
 -(NSUInteger)count;
 -(mflowlinesitem*)item:(NSUInteger)index;
 -(void)add:(mflowlinesitem*)item;
+-(void)linedown;
 
 @property(weak, nonatomic)mflowett *flowett;
 

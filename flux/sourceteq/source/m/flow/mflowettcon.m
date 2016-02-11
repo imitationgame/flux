@@ -10,13 +10,7 @@
     self.width = 60;
     self.height = 60;
     
-    CGPoint linestart = CGPointMake(self.x, self.y);
-    
-    
-    CGPoint lineending = [self.model pointlinedown:linestarting];
-    
-    mflowlinesitem *line = [self addlinestarting:linestarting ending:lineending];
-    line.startingett = ettview.model;
+    [self.linesitemlist linedown];
     
     return self;
 }
