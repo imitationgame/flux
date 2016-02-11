@@ -29,6 +29,11 @@
     [vflowcatalogett catalogin:self];
 }
 
+-(void)actionett:(vflowett*)ett
+{
+    
+}
+
 #pragma mark public
 
 -(void)addpointatx:(NSUInteger)x y:(NSUInteger)y

@@ -10,6 +10,7 @@
 @interface vflow:viewbase
 
 -(void)actionpoint:(vflowpoint*)point;
+-(void)actionett:(vflowett*)ett;
 -(void)addpointatx:(NSUInteger)x y:(NSUInteger)y;
 -(void)catalogtypeselected:(id<mflowetttypesprotocol>)type;
 

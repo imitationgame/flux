@@ -23,6 +23,7 @@
 {
     [self.view removeFromSuperview];
     vflowett *view = [(vflowett*)[self.viewclass alloc] init:self];
+    [view addTarget:self.flow.view action:@selector(actionett:) forControlEvents:UIControlEventTouchUpInside];
     self.view = view;
     
     return view;
