@@ -5,10 +5,11 @@
     NSArray *array;
 }
 
--(instancetype)init
+-(instancetype)init:(mflow*)flow
 {
     self = [super init];
     
+    self.flow = flow;
     array = [NSArray arrayWithObjects:
              [[mflowcolorsmain alloc] init],
              [[mflowcolorsblue alloc] init],
