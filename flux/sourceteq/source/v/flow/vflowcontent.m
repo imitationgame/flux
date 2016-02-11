@@ -83,7 +83,28 @@
     {
         BOOL changed = NO;
         
-        if(minx)
+        if(minx < self.marginleft)
+        {
+            self.marginleft = minx;
+            changed = YES;
+        }
+        
+        if(maxx > self.width - self.marginright)
+        {
+            self.marginright = self.width - maxx;
+            changed = YES;
+        }
+        
+        if(maxy > self.visibley)
+        {
+            self.visibley = maxy;
+            changed = YES;
+        }
+        
+        if(changed)
+        {
+            
+        }
     }
         
     return valid;
