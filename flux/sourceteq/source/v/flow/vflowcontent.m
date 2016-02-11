@@ -5,7 +5,7 @@
 +(void)containerin:(vflow*)flow
 {
     vflowcontent *content = [[vflowcontent alloc] init];
-    flow.content = content;
+    flow.contentview = content;
     
     NSDictionary *views = @{@"scroll":self};
     NSDictionary *metrics = @{};

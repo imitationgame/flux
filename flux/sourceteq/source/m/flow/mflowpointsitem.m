@@ -9,8 +9,7 @@
     [viewpoint addTarget:flow action:@selector(actionpoint:) forControlEvents:UIControlEventTouchUpInside];
     
     [flow.model.points add:modelpoint];
-    [flow.content];
-    [f.scroll addSubview:viewpoint];
+    [flow.contentview addview:viewpoint];
 }
 
 -(instancetype)init:(NSUInteger)x y:(NSUInteger)y
