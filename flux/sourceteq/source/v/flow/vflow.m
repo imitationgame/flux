@@ -14,25 +14,7 @@
     self.controller = controller;
     initialized = NO;
     self.model = [[mflow alloc] init];
-    
-    UIScrollView *scroll = [[UIScrollView alloc] init];
-    [scroll setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [scroll setClipsToBounds:YES];
-    self.scroll = scroll;
-    
-    UIView *container = [[UIView alloc] init];
-    [container setClipsToBounds:YES];
-    [container setBackgroundColor:[UIColor whiteColor]];
-    self.container = container;
-    
-    [scroll addSubview:container];
-    [self addSubview:scroll];
-    
-    NSDictionary *views = @{@"scroll":scroll};
-    NSDictionary *metrics = @{};
-    
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[scroll]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[scroll]-0-|" options:0 metrics:metrics views:views]];
+    [vflowcontent containerint:self];
     
     return self;
 }

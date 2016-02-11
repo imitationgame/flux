@@ -3,6 +3,7 @@
 
 @class mflow;
 @class vflowcatalogett;
+@class vflowcontent;
 
 @interface vflow:viewbase
 
@@ -10,8 +11,7 @@
 
 @property(strong, nonatomic)mflow *model;
 @property(weak, nonatomic)vflowcatalogett *catalogett;
-@property(weak, nonatomic)UIScrollView *scroll;
-@property(weak, nonatomic)UIView *container;
+@property(weak, nonatomic)vflowcontent *content;
 @property(nonatomic)NSUInteger width;
 @property(nonatomic)NSUInteger height;
 
