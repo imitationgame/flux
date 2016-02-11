@@ -6,6 +6,8 @@
 "flow_catalog_io"="input/output";
 "flow_catalog_cancel"="Cancel";
 
+"flow_colors_main"="Main";
+
 "rate_descr"="How would you rate this app?";
 "rate_donereview"="Rate sent. Would you write a review in the app store?";
 "rate_send"="Send";

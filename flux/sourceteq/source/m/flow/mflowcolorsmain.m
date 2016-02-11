@@ -13,7 +13,7 @@
 
 -(NSString*)name
 {
-    NSString *name = NSLocalizedString(@"", nil);
+    NSString *name = NSLocalizedString(@"flow_colors_main", nil);
     
     return name;
 }
