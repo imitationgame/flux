@@ -11,3 +11,5 @@
 #import "vflowcatalogett.h"
 #import "vflowcatalogettcel.h"
 #import "vflowline.h"
+#import "vflowcatalogcolor.h"
+#import "vflowcatalogcolorcel.h"
