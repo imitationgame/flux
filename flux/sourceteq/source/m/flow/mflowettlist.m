@@ -40,4 +40,14 @@
     [self.flow.view.contentview addSubview:ettview];
 }
 
+-(void)selectett:(mflowett*)ett
+{
+    self.selected = ett;
+}
+
+-(void)deselect
+{
+    self.selected = nil;
+}
+
 @end

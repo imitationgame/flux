@@ -6,6 +6,7 @@
 @class vflowcatalogcolor;
 @class vflowcontent;
 @class vflowpoint;
+@class vflowett;
 
 @interface vflow:viewbase
 

@@ -29,4 +29,9 @@
     return view;
 }
 
+-(void)selected:(BOOL)selected
+{
+    
+}
+
 @end

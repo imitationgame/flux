@@ -10,6 +10,7 @@
 
 -(instancetype)init:(mflow*)flow atpoint:(mflowpointsitem*)point;
 -(vflowett*)generateview;
+-(void)selected:(BOOL)selected;
 
 @property(weak, nonatomic)mflow *flow;
 @property(weak, nonatomic)vflowett *view;

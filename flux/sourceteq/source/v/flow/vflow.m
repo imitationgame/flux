@@ -31,7 +31,7 @@
 
 -(void)actionett:(vflowett*)ett
 {
-    
+    [vflowcatalogcolor catalogin:ett];
 }
 
 #pragma mark public
