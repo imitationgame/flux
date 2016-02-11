@@ -48,7 +48,36 @@
     
     if(valid)
     {
+        count = [self.points count];
         
+        for(NSUInteger i = 0; i < count; i++)
+        {
+            mflowpointsitem *pointitem = [self.points item:i];
+            
+            if([self rect:perrect insersectsview:pointitem.view])
+            {
+                valid = NO;
+                
+                break;
+            }
+        }
+        
+        if(valid)
+        {
+            count = [self.lines count];
+            
+            for(NSUInteger i = 0; i < count; i++)
+            {
+                mflowlinesitem *lineitem = [self.lines item:i];
+                
+                if([self rect:perrect insersectsview:lineitem.view])
+                {
+                    valid = NO;
+                    
+                    break;
+                }
+            }
+        }
     }
     
     return NO;
@@ -84,12 +113,14 @@
 -(CGPoint)pointlinedown:(CGPoint)point
 {
     CGPoint endingpoint;
+    NSUInteger y;
     
     BOOL valid = NO;
     
     do
     {
-        endingpoint = CGPointMake(point.x, point.y + self.deltaline);
+        y += self.deltaline;
+        endingpoint = CGPointMake(point.x, y);
     }
     while(!valid);
     
@@ -99,12 +130,14 @@
 -(CGPoint)pointlineleft:(CGPoint)point
 {
     CGPoint endingpoint;
+    NSUInteger x = point.x;
     
     BOOL valid = NO;
     
     do
     {
-        endingpoint = CGPointMake(point.x - self.deltaline, point.y);
+        x -= self.deltaline;
+        endingpoint = CGPointMake(x, point.y);
     }
     while(!valid);
     
@@ -114,12 +147,14 @@
 -(CGPoint)pointlineright:(CGPoint)point
 {
     CGPoint endingpoint;
+    NSUInteger x = point.x;
     
     BOOL valid = NO;
     
     do
     {
-        endingpoint = CGPointMake(point.x + self.deltaline, point.y);
+        x+= self.deltaline;
+        endingpoint = CGPointMake(x, point.y);
     }
     while(!valid);
     
