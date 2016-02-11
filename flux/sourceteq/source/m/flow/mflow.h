@@ -4,6 +4,7 @@
 @class mflowettlist;
 @class mflowpoints;
 @class mflowlines;
+@class mflowcolors;
 @class vflow;
 
 @interface mflow:NSObject
