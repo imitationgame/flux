@@ -2,6 +2,7 @@
 
 #define deltaline 150
 #define pointmargin 50
+#define pagemargin 100
 
 @implementation vflowcontent
 
@@ -66,7 +67,9 @@
     NSUInteger miny = y - pointmargin;
     NSUInteger maxx = x + pointmargin;
     NSUInteger maxy = y + pointmargin;
-    NSUInteger maxymargin = maxy + 50;
+    NSUInteger maxymargin = maxy + pagemargin;
+    NSUInteger maxxmargin = maxx + pagemargin;
+    NSUInteger minxmargin = minx - pagemargin;
     CGRect rect = CGRectMake(minx, miny, maxx, maxy);
     NSArray *subviews = self.container.subviews;
     
@@ -84,15 +87,15 @@
     {
         BOOL changed = NO;
         
-        if(minx < self.marginleft)
+        if(minxmargin < self.marginleft)
         {
-            self.marginleft = minx;
+            self.marginleft = minxmargin;
             changed = YES;
         }
         
-        if(maxx > self.width - self.marginright)
+        if(maxxmargin > self.width - self.marginright)
         {
-            self.marginright = self.width - maxx;
+            self.marginright = self.width - maxxmargin;
             changed = YES;
         }
         
@@ -114,9 +117,7 @@
 -(void)adjustscreen
 {
     NSUInteger scrollwidth = self.bounds.size.width;
-    NSUInteger scrollwidth_2 = scrollwidth / 2;
     NSUInteger pagewidth = self.marginright - self.marginleft;
-    NSUInteger pagewidth_2 = pagewidth / 2;
     CGFloat screenmarginleft = -(CGFloat)self.marginleft;
     CGSize contentsize = CGSizeMake(pagewidth, self.visibley);
     CGRect containerframe = CGRectMake(screenmarginleft, 0, self.width, self.height);
