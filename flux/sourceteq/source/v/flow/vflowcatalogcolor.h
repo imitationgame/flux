@@ -9,5 +9,6 @@
 
 @property(weak, nonatomic)vflowett *viewett;
 @property(weak, nonatomic)mflowcolors *model;
+@property(weak, nonatomic)UICollectionView *collection;
 
 @end

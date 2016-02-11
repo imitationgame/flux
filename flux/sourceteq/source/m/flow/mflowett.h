@@ -11,6 +11,7 @@
 -(instancetype)init:(mflow*)flow atpoint:(mflowpointsitem*)point;
 -(vflowett*)generateview:(NSString*)imagename;
 -(void)selected:(BOOL)selected;
+-(void)changecolor:(id<mflowcolorsprotocol>)color;
 
 @property(weak, nonatomic)mflow *flow;
 @property(weak, nonatomic)vflowett *view;

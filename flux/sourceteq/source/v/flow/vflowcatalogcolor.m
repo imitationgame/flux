@@ -45,7 +45,7 @@
     [layout setMinimumInteritemSpacing:0];
     [layout setMinimumLineSpacing:5];
     [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-    [layout setSectionInset:UIEdgeInsetsMake(0, 30, 0, 30)];
+    [layout setSectionInset:UIEdgeInsetsMake(0, 40, 0, 40)];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     [collection setBackgroundColor:[UIColor clearColor]];
@@ -57,6 +57,7 @@
     [collection setDataSource:self];
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     [collection registerClass:[vflowcatalogcolorcel class] forCellWithReuseIdentifier:celid];
+    self.collection = collection;
     
     UIButton *buttoncancel = [[UIButton alloc] init];
     [buttoncancel setBackgroundColor:[UIColor clearColor]];
@@ -112,7 +113,27 @@
      } completion:
      ^(BOOL done)
      {
-         if(!show)
+         if(show)
+         {
+             id<mflowcolorsprotocol> current = self.viewett.model.color;
+             NSUInteger selected = 0;
+             NSUInteger count = [self.model count];
+             
+             for(NSUInteger i = 0; i < count; i++)
+             {
+                 id<mflowcolorsprotocol> item = [self.model item:i];
+                 
+                 if(item == current)
+                 {
+                     selected = i;
+                     
+                     break;
+                 }
+             }
+             
+             [self.collection selectItemAtIndexPath:[NSIndexPath indexPathForItem:selected inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
+         }
+         else
          {
              [self removeFromSuperview];
          }
@@ -145,8 +166,7 @@
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
     id<mflowcolorsprotocol> color = [self.model item:index.item];
-    [self.viewett.model setColor:[color color]];
-    [self.viewett setBackgroundColor:[color color]];
+    [self.viewett.model changecolor:color];
 }
 
 @end
