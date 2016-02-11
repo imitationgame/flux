@@ -26,9 +26,8 @@
     UIView *container = [[UIView alloc] init];
     [container setClipsToBounds:YES];
     [container setBackgroundColor:[UIColor whiteColor]];
-    self.container = container;
-    
     [self addSubview:container];
+    self.container = container;
     
     return self;
 }
@@ -60,7 +59,14 @@
 
 -(void)addSubview:(UIView*)view
 {
-    [self.container addSubview:view];
+    if(self.container)
+    {
+        [self.container addSubview:view];
+    }
+    else
+    {
+        [self addSubview:view];
+    }
 }
 
 -(CGPoint)linefrom:(CGPoint)point deltax:(NSInteger)deltax deltay:(NSInteger)deltay
