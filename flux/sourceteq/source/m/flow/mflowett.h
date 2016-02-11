@@ -9,7 +9,7 @@
 @interface mflowett:NSObject
 
 -(instancetype)init:(mflow*)flow atpoint:(mflowpointsitem*)point;
--(vflowett*)generateview;
+-(vflowett*)generateview:(NSString*)imagename;
 -(void)selected:(BOOL)selected;
 
 @property(weak, nonatomic)mflow *flow;

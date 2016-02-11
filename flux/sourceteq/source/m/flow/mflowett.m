@@ -19,10 +19,10 @@
 
 #pragma mark public
 
--(vflowett*)generateview
+-(vflowett*)generateview:(NSString*)imagename
 {
     [self.view removeFromSuperview];
-    vflowett *view = [(vflowett*)[self.viewclass alloc] init:self];
+    vflowett *view = [(vflowett*)[self.viewclass alloc] init:self imagename:imagename];
     [view addTarget:self.flow.view action:@selector(actionett:) forControlEvents:UIControlEventTouchUpInside];
     self.view = view;
     

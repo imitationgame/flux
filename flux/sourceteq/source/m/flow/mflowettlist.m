@@ -34,7 +34,7 @@
 -(void)add:(id<mflowetttypesprotocol>)type point:(mflowpointsitem*)point
 {
     mflowett *ettmodel = [type modelett:self.flow atpoint:point];
-    vflowett *ettview = [ettmodel generateview];
+    vflowett *ettview = [ettmodel generateview:[type imagename]];
     [array addObject:ettmodel];
     
     [self.flow.view.contentview addSubview:ettview];

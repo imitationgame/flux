@@ -5,7 +5,7 @@
 
 @interface vflowett:UIButton
 
--(instancetype)init:(mflowett*)model;
+-(instancetype)init:(mflowett*)model imagename:(NSString*)imagename;
 
 @property(weak, nonatomic)mflowett *model;
 @property(weak, nonatomic)vflow *flowview;
