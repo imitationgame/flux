@@ -57,11 +57,20 @@
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     [collection registerClass:[vflowcatalogettcel class] forCellWithReuseIdentifier:celid];
     
+    UIButton *buttoncancel = [[UIButton alloc] init];
+    [buttoncancel setBackgroundColor:[UIColor clearColor]];
+    [buttoncancel setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [buttoncancel.titleLabel setFont:[UIFont fontWithName:fontname size:16]];
+    [buttoncancel setTitleColor:[UIColor colorWithRed:1 green:0.1 blue:0 alpha:1] forState:UIControlStateNormal];
+    [buttoncancel setTitleColor:[UIColor colorWithRed:1 green:0.1 blue:0 alpha:0.2] forState:UIControlStateHighlighted];
+    [buttoncancel setTitle:NSLocalizedString(@"flow_catalog_cancel", nil) forState:UIControlStateNormal];
+    
     [self addSubview:blur];
     [self addSubview:border];
     [self addSubview:collection];
+    [self addSubview:buttoncancel];
     
-    NSDictionary *views = @{@"col":collection, @"blur":blur, @"border":border};
+    NSDictionary *views = @{@"col":collection, @"blur":blur, @"border":border, @"button":buttoncancel};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
@@ -70,6 +79,8 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-70-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-70-[border(1)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(150)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[button(40)]" options:0 metrics:metrics views:views]];
     
     return self;
 }
