@@ -7,6 +7,12 @@
 "flow_catalog_cancel"="Cancel";
 
 "flow_colors_main"="Main";
+"flow_colors_blue"="Blue";
+"flow_colors_green"="Green";
+"flow_colors_yellow"="Yellow";
+"flow_colors_violet"="Violet";
+"flow_colors_grey"="Grey";
+"flow_colors_pink"="Pink";
 
 "rate_descr"="How would you rate this app?";
 "rate_donereview"="Rate sent. Would you write a review in the app store?";
