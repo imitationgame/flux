@@ -16,7 +16,7 @@
         NSDictionary *metrics = @{};
         
         [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[catalog]-0-|" options:0 metrics:metrics views:views]];
-        [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[catalog(80)]-20-|" options:0 metrics:metrics views:views]];
+        [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[catalog(150)]-0-|" options:0 metrics:metrics views:views]];
     }
 }
 
@@ -30,6 +30,13 @@
 
     self.flow = flow;
     self.model = [[mflowetttypes alloc] init];
+    
+    UIView *border = [[UIView alloc] init];
+    [border setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.2]];
+    [border setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [border setUserInteractionEnabled:NO];
+    
+    vblur *blur = [vblur light:NO];
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     [layout setHeaderReferenceSize:CGSizeZero];
@@ -50,13 +57,19 @@
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     [collection registerClass:[vflowcatalogettcel class] forCellWithReuseIdentifier:celid];
     
+    [self addSubview:blur];
+    [self addSubview:border];
     [self addSubview:collection];
     
-    NSDictionary *views = @{@"col":collection};
+    NSDictionary *views = @{@"col":collection, @"blur":blur, @"border":border};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-70-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-70-[blur]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-70-[border(1)]" options:0 metrics:metrics views:views]];
     
     return self;
 }
