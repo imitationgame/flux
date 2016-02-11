@@ -116,7 +116,6 @@
 
 -(void)adjustscreen
 {
-    NSUInteger scrollwidth = self.bounds.size.width;
     NSUInteger pagewidth = self.marginright - self.marginleft;
     CGFloat screenmarginleft = -(CGFloat)self.marginleft;
     CGSize contentsize = CGSizeMake(pagewidth, self.visibley);

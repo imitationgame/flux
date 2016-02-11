@@ -16,7 +16,7 @@
         NSDictionary *metrics = @{};
         
         [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[catalog]-0-|" options:0 metrics:metrics views:views]];
-        [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[catalog(150)]-0-|" options:0 metrics:metrics views:views]];
+        [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[catalog(120)]-0-|" options:0 metrics:metrics views:views]];
     }
 }
 
@@ -32,7 +32,7 @@
     self.model = [[mflowetttypes alloc] init];
     
     UIView *border = [[UIView alloc] init];
-    [border setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.2]];
+    [border setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.1]];
     [border setTranslatesAutoresizingMaskIntoConstraints:NO];
     [border setUserInteractionEnabled:NO];
     
@@ -64,6 +64,7 @@
     [buttoncancel setTitleColor:[UIColor colorWithRed:1 green:0.1 blue:0 alpha:1] forState:UIControlStateNormal];
     [buttoncancel setTitleColor:[UIColor colorWithRed:1 green:0.1 blue:0 alpha:0.2] forState:UIControlStateHighlighted];
     [buttoncancel setTitle:NSLocalizedString(@"flow_catalog_cancel", nil) forState:UIControlStateNormal];
+    [buttoncancel addTarget:self action:@selector(actionclose:) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:blur];
     [self addSubview:border];
@@ -74,15 +75,22 @@
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-70-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-40-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-70-[blur]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-40-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-70-[border(1)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[border(40)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(150)]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[button(40)]" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+#pragma mark actions
+
+-(void)actionclose:(UIButton*)button
+{
+    [self show:NO];
 }
 
 #pragma mark public
