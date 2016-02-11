@@ -72,6 +72,7 @@
 		DAB837E51C6ADB2900730B67 /* mflowetttypesio.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837E41C6ADB2900730B67 /* mflowetttypesio.m */; };
 		DAEACBB01C6CEF380047ABF0 /* vflowcatalogcolor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBAF1C6CEF380047ABF0 /* vflowcatalogcolor.m */; };
 		DAEACBB31C6CEF4C0047ABF0 /* vflowcatalogcolorcel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBB21C6CEF4C0047ABF0 /* vflowcatalogcolorcel.m */; };
+		DAEACBB71C6CF19F0047ABF0 /* mflowcolors.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBB61C6CF19F0047ABF0 /* mflowcolors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -197,6 +198,9 @@
 		DAEACBAF1C6CEF380047ABF0 /* vflowcatalogcolor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vflowcatalogcolor.m; sourceTree = "<group>"; };
 		DAEACBB11C6CEF4C0047ABF0 /* vflowcatalogcolorcel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowcatalogcolorcel.h; sourceTree = "<group>"; };
 		DAEACBB21C6CEF4C0047ABF0 /* vflowcatalogcolorcel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vflowcatalogcolorcel.m; sourceTree = "<group>"; };
+		DAEACBB51C6CF19F0047ABF0 /* mflowcolors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowcolors.h; sourceTree = "<group>"; };
+		DAEACBB61C6CF19F0047ABF0 /* mflowcolors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowcolors.m; sourceTree = "<group>"; };
+		DAEACBB81C6CF1CD0047ABF0 /* mflowcolorsprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowcolorsprotocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -576,6 +580,9 @@
 				DA87C5481C6BD3DB00796D79 /* mflowlinesitem.m */,
 				DA87C5501C6C4C5D00796D79 /* mflowlinesitemlist.h */,
 				DA87C5511C6C4C5D00796D79 /* mflowlinesitemlist.m */,
+				DAEACBB51C6CF19F0047ABF0 /* mflowcolors.h */,
+				DAEACBB61C6CF19F0047ABF0 /* mflowcolors.m */,
+				DAEACBB81C6CF1CD0047ABF0 /* mflowcolorsprotocol.h */,
 			);
 			path = flow;
 			sourceTree = "<group>";
@@ -749,6 +756,7 @@
 				DAB837B41C6AB69100730B67 /* mflowpoints.m in Sources */,
 				DA0157361C6A691900FAC166 /* valert.m in Sources */,
 				DA0157391C6A691900FAC166 /* vspinner.m in Sources */,
+				DAEACBB71C6CF19F0047ABF0 /* mflowcolors.m in Sources */,
 				DA0157321C6A691900FAC166 /* cpages.m in Sources */,
 				DA0157381C6A691900FAC166 /* viewbase.m in Sources */,
 				DAEACBB31C6CEF4C0047ABF0 /* vflowcatalogcolorcel.m in Sources */,
