@@ -64,8 +64,9 @@
     NSUInteger y = point.y;
     NSUInteger minx = x - pointmargin;
     NSUInteger miny = y - pointmargin;
-    NSUInteger maxx =
-    CGRect rect = CGRectMake(x - pointmargin, y - pointmargin, x + pointmargin, y + pointmargin);
+    NSUInteger maxx = x + pointmargin;
+    NSUInteger maxy = y + pointmargin;
+    CGRect rect = CGRectMake(minx, miny, maxx, maxy);
     NSArray *subviews = self.container.subviews;
     
     for(UIView *view in subviews)
@@ -80,7 +81,9 @@
     
     if(valid)
     {
+        BOOL changed = NO;
         
+        if(minx)
     }
         
     return valid;
