@@ -3,6 +3,7 @@
 
 @class mflow;
 @class vflowcatalogett;
+@class vflowcatalogcolor;
 @class vflowcontent;
 @class vflowpoint;
 
@@ -14,6 +15,7 @@
 
 @property(strong, nonatomic)mflow *model;
 @property(weak, nonatomic)vflowcatalogett *catalogett;
+@property(weak, nonatomic)vflowcatalogcolor *catalogcolor;
 @property(weak, nonatomic)vflowcontent *contentview;
 @property(nonatomic)NSUInteger width;
 @property(nonatomic)NSUInteger height;
