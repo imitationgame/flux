@@ -9,7 +9,7 @@
     [self setBackgroundColor:[UIColor whiteColor]];
     
     self.controller = controller;
-    self.model = [[mflow alloc] init];
+    self.model = [[mflow alloc] init:self];
     [vflowcontent containerin:self];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 3), dispatch_get_main_queue(),
@@ -34,13 +34,13 @@
 
 -(void)addpointatx:(NSUInteger)x y:(NSUInteger)y
 {
-    [mflowpointsitem pointat:x y:y flow:self];
+    [self.model.points pointat:x y:y];
 }
 
 -(void)updateheight:(CGFloat)height
 {
-    [self.scroll setContentSize:CGSizeMake(self.width, self.height)];
-    [self.container setFrame:CGRectMake(0, 0, self.width, self.height)];
+//    [self.scroll setContentSize:CGSizeMake(self.width, self.height)];
+//    [self.container setFrame:CGRectMake(0, 0, self.width, self.height)];
 }
 
 #pragma mark public
@@ -48,7 +48,7 @@
 -(void)catalogtypeselected:(id<mflowetttypesprotocol>)type
 {
     [self.catalogett show:NO];
-    mflowpointsitem *point = [self.model.points selecteditem];
+    mflowpointsitem *point = self.model.points.selected;
     vflowett *ettview = [self.model add:type point:point];
     
     CGPoint linestarting = CGPointMake(ettview.model.x, ettview.model.y);

@@ -5,6 +5,7 @@
 
 @interface mflowett:NSObject
 
++(void)ett:(id<mflowetttypesprotocol>)type at:(mflowpointsitem*)point flow:(vflow*)flow;
 -(void)atpoint:(mflowpointsitem*)point;
 -(vflowett*)generateview;
 -(vflowett*)flowett;

@@ -15,6 +15,8 @@
 -(NSUInteger)count;
 -(mflowett*)item:(NSUInteger)index;
 -(vflowett*)add:(id<mflowetttypesprotocol>)type point:(mflowpointsitem*)point;
+-(void)linedownfrom:()
+
 -(CGPoint)pointlinedown:(CGPoint)point;
 -(CGPoint)pointlineleft:(CGPoint)point;
 -(CGPoint)pointlineright:(CGPoint)point;

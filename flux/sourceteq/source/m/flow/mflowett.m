@@ -3,6 +3,17 @@
 
 @implementation mflowett
 
++(void)ett:(id<mflowetttypesprotocol>)type at:(mflowpointsitem*)point flow:(vflow*)flow
+{
+    mflowett *ettmodel = [type modelett];
+    [ettmodel atpoint:point];
+    vflowett *ettview = [ettmodel generateview];
+    
+    [array addObject:ettmodel];
+    
+    return ettview;
+}
+
 #pragma mark public
 
 -(void)atpoint:(mflowpointsitem*)point
