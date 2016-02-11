@@ -1,4 +1,5 @@
 #import <UIKit/UIKit.h>
+#import "mflowcolorsprotocol.h"
 
 @class mflow;
 @class mflowpointsitem;
@@ -12,6 +13,7 @@
 
 @property(weak, nonatomic)mflow *flow;
 @property(weak, nonatomic)vflowett *view;
+@property(weak, nonatomic)id<mflowcolorsprotocol> color;
 @property(strong, nonatomic)mflowlinesitemlist *linesitemlist;
 @property(nonatomic)Class viewclass;
 @property(nonatomic)NSUInteger x;

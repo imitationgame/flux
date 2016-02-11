@@ -12,6 +12,7 @@
     self.y = point.y;
     self.linesitemlist = [[mflowlinesitemlist alloc] init:self];
     self.viewclass = [vflowett class];
+    self.color = [flow.colors defaultcolor];
     
     return self;
 }
