@@ -1,13 +1,8 @@
-//
-//  mflowcolors.h
-//  flux
-//
-//  Created by zero on 2/11/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@interface mflowcolors:NSObject
 
-@interface mflowcolors : NSObject
+-(NSUInteger)count;
+-(id<mflowcolorsprotocol>)item:(NSUInteger)index;
 
 @end
