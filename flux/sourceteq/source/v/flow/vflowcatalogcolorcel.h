@@ -1,13 +1,5 @@
-//
-//  vflowcatalogcolorcel.h
-//  flux
-//
-//  Created by zero on 2/11/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
-
-@interface vflowcatalogcolorcel : NSObject
+@interface vflowcatalogcolorcel:UICollectionViewCell
 
 @end

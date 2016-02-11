@@ -1,13 +1,14 @@
-//
-//  vflowcatalogcolorcel.m
-//  flux
-//
-//  Created by zero on 2/11/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "vflowcatalogcolorcel.h"
 
 @implementation vflowcatalogcolorcel
+
+-(instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    [self setClipsToBounds:YES];
+    [self setBackgroundColor:[UIColor clearColor]];
+    
+    return self;
+}
 
 @end
