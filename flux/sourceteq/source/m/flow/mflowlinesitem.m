@@ -8,7 +8,7 @@
     vflowline *lineview = [linemodel generateview];
     
     [flow.model.lines add:linemodel];
-    [flow.contentview addview:lineview];
+    [flow.contentview addSubview:lineview];
     
     return linemodel;
 }

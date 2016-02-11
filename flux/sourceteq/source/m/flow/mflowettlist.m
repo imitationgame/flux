@@ -31,4 +31,9 @@
     return item;
 }
 
+-(void)add:(mflowett*)item
+{
+    [array addObject:item];
+}
+
 @end

@@ -8,6 +8,7 @@
 -(instancetype)init:(mflow*)flow;
 -(NSUInteger)count;
 -(mflowett*)item:(NSUInteger)index;
+-(void)add:(mflowett*)item;
 
 @property(weak, nonatomic)mflow *flow;
 
