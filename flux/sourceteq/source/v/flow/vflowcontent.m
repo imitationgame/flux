@@ -60,8 +60,11 @@
 -(BOOL)validatepoint:(CGPoint)point
 {
     BOOL valid = YES;
-    NSInteger x = point.x;
-    NSInteger y = point.y;
+    NSUInteger x = point.x;
+    NSUInteger y = point.y;
+    NSUInteger minx = x - pointmargin;
+    NSUInteger miny = y - pointmargin;
+    NSUInteger maxx =
     CGRect rect = CGRectMake(x - pointmargin, y - pointmargin, x + pointmargin, y + pointmargin);
     NSArray *subviews = self.container.subviews;
     
@@ -73,6 +76,11 @@
             
             break;
         }
+    }
+    
+    if(valid)
+    {
+        
     }
         
     return valid;
