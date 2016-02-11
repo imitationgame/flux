@@ -13,6 +13,7 @@
     [self.imageView setClipsToBounds:YES];
     [self.imageView setTintColor:[model.color color]];
     [self.layer setBorderWidth:3];
+    [self.layer setBorderColor:[UIColor clearColor].CGColor];
     
     self.model = model;
     self.flowview = model.flow.view;

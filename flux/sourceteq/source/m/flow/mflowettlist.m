@@ -42,6 +42,7 @@
 
 -(void)selectett:(mflowett*)ett
 {
+    [self.selected selected:NO];
     self.selected = ett;
     [ett selected:YES];
 }
