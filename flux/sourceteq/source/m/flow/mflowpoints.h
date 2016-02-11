@@ -8,7 +8,9 @@
 -(mflowpointsitem*)item:(NSUInteger)index;
 -(void)add:(mflowpointsitem*)item;
 -(void)remove:(mflowpointsitem*)item;
--(void)unselectall;
+-(void)selectpoint:(mflowpointsitem*)point;
 -(mflowpointsitem*)selecteditem;
+
+@property(weak, nonatomic)mflowpointsitem *selected;
 
 @end

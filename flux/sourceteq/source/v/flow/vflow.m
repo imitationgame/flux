@@ -1,9 +1,6 @@
 #import "vflow.h"
 
 @implementation vflow
-{
-    BOOL initialized;
-}
 
 -(instancetype)init:(cflow*)controller
 {
@@ -12,39 +9,25 @@
     [self setBackgroundColor:[UIColor whiteColor]];
     
     self.controller = controller;
-    initialized = NO;
     self.model = [[mflow alloc] init];
-    [vflowcontent containerint:self];
+    [vflowcontent containerin:self];
     
     return self;
-}
-
--(void)layoutSubviews
-{
-    if(!initialized)
-    {
-        initialized = YES;
-        [self initialpoint];
-    }
-    
-    [super layoutSubviews];
 }
 
 #pragma mark actions
 
 -(void)actionpoint:(vflowpoint*)point
 {
-    [self.model.points unselectall];
-    [point setSelected:YES];
-    
-    [self showcatalogett];
+    [self.model.points selectpoint:point.model];
+    [vflowcatalogett catalogin:self];
 }
 
 #pragma mark functionality
 
 -(void)showcatalogett
 {
-    [vflowcatalogett catalogin:self];
+    
 }
 
 -(void)addpointatx:(NSUInteger)x y:(NSUInteger)y

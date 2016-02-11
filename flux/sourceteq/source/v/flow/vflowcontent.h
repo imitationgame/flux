@@ -1,5 +1,7 @@
 #import "appdel.h"
 
+@class vflow;
+
 @interface vflowcontent:UIScrollView
 
 +(void)containerin:(vflow*)flow;

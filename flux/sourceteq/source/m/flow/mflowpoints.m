@@ -41,35 +41,11 @@
     [array removeObject:item];
 }
 
--(void)unselectall
+-(void)selectpoint:(mflowpointsitem*)point
 {
-    NSUInteger count = [self count];
-    
-    for(NSUInteger i = 0; i < count; i++)
-    {
-        mflowpointsitem *item = [self item:i];
-        [item.view setSelected:NO];
-    }
-}
-
--(mflowpointsitem*)selecteditem
-{
-    mflowpointsitem *selected;
-    NSUInteger count = [self count];
-    
-    for(NSUInteger i = 0; i < count; i++)
-    {
-        mflowpointsitem *item = [self item:i];
-        
-        if([item.view isSelected])
-        {
-            selected = item;
-            
-            break;
-        }
-    }
-    
-    return selected;
+    [self.selected.view setSelected:NO];
+    self.selected = point;
+    [point.view setSelected:YES];
 }
 
 @end
