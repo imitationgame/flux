@@ -62,8 +62,8 @@
     [buttoncancel setBackgroundColor:[UIColor clearColor]];
     [buttoncancel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [buttoncancel.titleLabel setFont:[UIFont fontWithName:fontname size:16]];
-    [buttoncancel setTitleColor:colormain forState:UIControlStateNormal];
-    [buttoncancel setTitleColor:[colormain colorWithAlphaComponent:0.2] forState:UIControlStateHighlighted];
+    [buttoncancel setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [buttoncancel setTitleColor:[UIColor colorWithWhite:0 alpha:0.1] forState:UIControlStateHighlighted];
     [buttoncancel setTitle:NSLocalizedString(@"flow_colors_accept", nil) forState:UIControlStateNormal];
     [buttoncancel addTarget:self action:@selector(actionclose:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -81,7 +81,7 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-40-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[border(40)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(150)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(120)]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[button(40)]" options:0 metrics:metrics views:views]];
     
     return self;
