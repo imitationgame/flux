@@ -1,13 +1,14 @@
-//
-//  mflowettlist.h
-//  flux
-//
-//  Created by zero on 2/10/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@class mflow;
+@class mflowett;
 
-@interface mflowettlist : NSObject
+@interface mflowettlist:NSObject
+
+-(instancetype)init:(mflow*)flow;
+-(NSUInteger)count;
+-(mflowett*)item:(NSUInteger)index;
+
+@property(weak, nonatomic)mflow *flow;
 
 @end
