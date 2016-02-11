@@ -19,9 +19,9 @@
     return name;
 }
 
--(mflowett*)modelett
+-(mflowett*)modelett:(mflow*)flow
 {
-    mflowettcon *ettcon = [[mflowettcon alloc] init];
+    mflowettcon *ettcon = [[mflowettcon alloc] init:flow];
     
     return ettcon;
 }

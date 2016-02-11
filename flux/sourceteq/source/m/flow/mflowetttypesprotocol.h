@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 
+@class mflow;
 @class mflowett;
 @class mflowlinesitem;
 
@@ -7,6 +8,6 @@
 
 -(NSString*)labeltext;
 -(NSString*)imagename;
--(mflowett*)modelett;
+-(mflowett*)modelett:(mflow*)flow;
 
 @end
