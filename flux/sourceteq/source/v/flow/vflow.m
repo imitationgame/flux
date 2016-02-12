@@ -80,4 +80,9 @@
     [self.model add:type];
 }
 
+-(void)choosingmode:(BOOL)mode
+{
+    
+}
+
 @end

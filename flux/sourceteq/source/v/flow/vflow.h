@@ -15,6 +15,7 @@
 -(void)show;
 -(void)addpointatx:(NSUInteger)x y:(NSUInteger)y;
 -(void)catalogtypeselected:(id<mflowetttypesprotocol>)type;
+-(void)choosingmode:(BOOL)mode;
 
 @property(strong, nonatomic)mflow *model;
 @property(weak, nonatomic)vflowcatalogett *catalogett;
