@@ -26,3 +26,4 @@
 #import "mflowcolorsviolet.h"
 #import "mflowcolorsgrey.h"
 #import "mflowcolorspink.h"
+#import "mflowtext.h"

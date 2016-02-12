@@ -66,12 +66,22 @@
     [buttoncancel setTitle:NSLocalizedString(@"flow_catalog_cancel", nil) forState:UIControlStateNormal];
     [buttoncancel addTarget:self action:@selector(actionclose:) forControlEvents:UIControlEventTouchUpInside];
     
+    UIButton *buttonconnect = [[UIButton alloc] init];
+    [buttonconnect setBackgroundColor:[UIColor clearColor]];
+    [buttonconnect setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [buttonconnect.titleLabel setFont:[UIFont fontWithName:fontname size:16]];
+    [buttonconnect setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [buttonconnect setTitleColor:[UIColor colorWithWhite:0 alpha:0.2] forState:UIControlStateNormal];
+    [buttonconnect setTitle:NSLocalizedString(@"flow_catalog_connect", nil) forState:UIControlStateNormal];
+    [buttonconnect addTarget:self action:@selector(actionconnect:) forControlEvents:UIControlEventTouchUpInside];
+    
     [self addSubview:blur];
     [self addSubview:border];
     [self addSubview:collection];
     [self addSubview:buttoncancel];
+    [self addSubview:buttonconnect];
     
-    NSDictionary *views = @{@"col":collection, @"blur":blur, @"border":border, @"button":buttoncancel};
+    NSDictionary *views = @{@"col":collection, @"blur":blur, @"border":border, @"button":buttoncancel, @"connect":buttonconnect};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
@@ -80,8 +90,9 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-40-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[border(40)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(120)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[connect(160)][button(120)]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[button(40)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[connect(40)]" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -91,6 +102,11 @@
 -(void)actionclose:(UIButton*)button
 {
     [self show:NO];
+}
+
+-(void)actionconnect:(UIButton*)button
+{
+    
 }
 
 #pragma mark public

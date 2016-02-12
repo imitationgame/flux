@@ -5,6 +5,7 @@
 "flow_catalog_dec"="Decision";
 "flow_catalog_io"="input/output";
 "flow_catalog_cancel"="Cancel";
+"flow_catalog_connect"="Connect";
 
 "flow_colors_main"="Main";
 "flow_colors_blue"="Blue";
