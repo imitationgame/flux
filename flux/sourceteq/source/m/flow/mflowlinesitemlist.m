@@ -52,8 +52,6 @@
     CGPoint lineend = [self.flowett.flow.view.contentview linefrom:linestart deltax:0 deltay:1];
     
     [self addlinestart:linestart lineend:lineend];
-    
-#warning "con"
 }
 
 -(void)linesparting
@@ -71,7 +69,7 @@
     NSUInteger startpointx = line.ending.x;
     NSUInteger startpointy = line.ending.y;
     
-    CGPoint linestart = CGPointMake(line.ending.x, line.ending.y);
+    CGPoint linestart = CGPointMake(startpointx, startpointy);
     CGPoint lineendright = [self.flowett.flow.view.contentview linefrom:linestart deltax:1 deltay:0];
     CGPoint lineendleft = [self.flowett.flow.view.contentview linefrom:linestart deltax:-1 deltay:0];
     
