@@ -5,6 +5,7 @@
 #import "mflow.h"
 #import "mflowettlist.h"
 #import "mflowettcon.h"
+#import "mflowettdec.h"
 #import "mflowpoints.h"
 #import "mflowpointsitem.h"
 #import "mflowetttypes.h"
