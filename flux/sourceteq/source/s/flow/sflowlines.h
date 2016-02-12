@@ -3,9 +3,9 @@
 
 @interface sflowlines:NSObject
 
-+(void)linesleft;
-+(void)linesright;
-+(void)linesrandom;
++(instancetype)linesleft;
++(instancetype)linesright;
++(instancetype)linesrandom;
 -(NSUInteger)count;
 -(id<sflowlinesprotocol>)item:(NSUInteger)index;
 

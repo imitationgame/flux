@@ -2,19 +2,37 @@
 
 @implementation sflowlines
 
-+(void)linesleft
++(instancetype)linesleft
 {
+    sflowlines *lines = [[sflowlines alloc] init];
+    lines.array = [NSArray arrayWithObjects:
+                   [[sflowlinesright alloc] init],
+                   [[sflowlinesleft alloc] init],
+                   nil];
     
+    return lines;
 }
 
-+(void)linesright
++(instancetype)linesright
 {
+    sflowlines *lines = [[sflowlines alloc] init];
+    lines.array = [NSArray arrayWithObjects:
+                   [[sflowlinesright alloc] init],
+                   [[sflowlinesleft alloc] init],
+                   nil];
     
+    return lines;
 }
 
-+(void)linesrandom
++(instancetype)linesrandom
 {
+    sflowlines *lines = [[sflowlines alloc] init];
+    lines.array = [NSArray arrayWithObjects:
+                   [[sflowlinesright alloc] init],
+                   [[sflowlinesleft alloc] init],
+                   nil];
     
+    return lines;
 }
 
 -(instancetype)init
