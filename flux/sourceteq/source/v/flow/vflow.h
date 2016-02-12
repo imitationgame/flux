@@ -21,6 +21,7 @@
 @property(weak, nonatomic)vflowcatalogett *catalogett;
 @property(weak, nonatomic)vflowcatalogcolor *catalogcolor;
 @property(weak, nonatomic)vflowcontent *contentview;
+@property(weak, nonatomic)UIView *view;
 @property(nonatomic)NSUInteger width;
 @property(nonatomic)NSUInteger height;
 @property(nonatomic)BOOL choosing;
