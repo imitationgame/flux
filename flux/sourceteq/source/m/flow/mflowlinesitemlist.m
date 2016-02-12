@@ -52,6 +52,8 @@
     CGPoint lineend = [self.flowett.flow.view.contentview linefrom:linestart deltax:0 deltay:1];
     
     [self addlinestart:linestart lineend:lineend];
+    
+#warning "con"
 }
 
 -(void)linesparting
