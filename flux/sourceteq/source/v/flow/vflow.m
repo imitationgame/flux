@@ -40,7 +40,9 @@
 {
     if(self.choosing)
     {
-        if(ett.model != self.model.ettlist.selected)
+        mflowlinesitem *line = self.model.points.selected.line;
+        
+        if(ett.model != line.startingett)
         {
             [self clearpoint];
             [self clearcolor];
@@ -48,7 +50,7 @@
             
             CGPoint point = CGPointMake(ett.model.x, ett.model.y);
             
-            [self.model.points.selected.line connecttopoint:point];
+            [line connecttopoint:point];
         }
     }
     else
