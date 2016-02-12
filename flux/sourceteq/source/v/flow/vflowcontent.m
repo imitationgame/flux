@@ -100,9 +100,9 @@
             changed = YES;
         }
         
-        if(maxymargin > self.visibley)
+        if(maxymargin > self.margintop + self.visibley)
         {
-            self.visibley = maxymargin;
+            self.visibley = maxymargin - self.margintop;
             changed = YES;
         }
         
