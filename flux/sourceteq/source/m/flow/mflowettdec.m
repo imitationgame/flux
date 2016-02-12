@@ -1,13 +1,18 @@
-//
-//  mflowettdec.m
-//  flux
-//
-//  Created by zero on 2/11/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "mflowettdec.h"
 
 @implementation mflowettdec
+
+-(instancetype)init:(mflow*)flow atpoint:(mflowpointsitem*)point
+{
+    self = [super init:flow atpoint:point];
+    
+    self.viewclass = [vflowettcon class];
+    self.width = 150;
+    self.height = 150;
+    
+    [self.linesitemlist linesparting];
+    
+    return self;
+}
 
 @end
