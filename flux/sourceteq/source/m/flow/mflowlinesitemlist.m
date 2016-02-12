@@ -70,18 +70,19 @@
     NSUInteger startpointy = line.ending.y;
     NSUInteger endpointx = point.x;
     NSUInteger endpointy = point.y;
+    sflowlines *lines;
     
     if(startpointx > endpointx)
     {
-        
+        lines = [sflowlines linesright];
     }
     else if(startpointx < endpointx)
     {
-        
+        lines = [sflowlines linesleft];
     }
     else
     {
-        
+        lines = [sflowlines linesrandom];
     }
     
     CGPoint linestart = CGPointMake(startpointx, startpointy);
