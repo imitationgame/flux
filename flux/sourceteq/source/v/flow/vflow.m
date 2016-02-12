@@ -21,15 +21,18 @@
 
 -(void)actionpoint:(vflowpoint*)point
 {
-    if(point.model == self.model.points.selected)
+    if(!self.choosing)
     {
-        [self clearpoint];
-    }
-    else
-    {
-        [self clearcolor];
-        [self.model.points selectpoint:point.model];
-        [vflowcatalogett catalogin:self];
+        if(point.model == self.model.points.selected)
+        {
+            [self clearpoint];
+        }
+        else
+        {
+            [self clearcolor];
+            [self.model.points selectpoint:point.model];
+            [vflowcatalogett catalogin:self];
+        }
     }
 }
 

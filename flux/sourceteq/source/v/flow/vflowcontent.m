@@ -24,6 +24,8 @@
     self = [super init];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self setClipsToBounds:YES];
+    [self setAlwaysBounceHorizontal:YES];
+    [self setAlwaysBounceVertical:YES];
 
     self.width = 100000;
     self.height = 100000;
