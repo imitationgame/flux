@@ -2,6 +2,11 @@
 
 @implementation vflowstopchoosing
 
++(void)stopchoosing:(vflow*)flow;
+{
+    
+}
+
 -(instancetype)init
 {
     self = [super init];

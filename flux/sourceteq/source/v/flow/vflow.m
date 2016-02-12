@@ -12,6 +12,7 @@
     self.controller = controller;
     self.model = [[mflow alloc] init:self];
     [vflowcontent containerin:self];
+    [vflowstopchoosing stopchoosing:self];
     
     return self;
 }

@@ -7,6 +7,7 @@
 @class vflowcontent;
 @class vflowpoint;
 @class vflowett;
+@class vflowstopchoosing;
 
 @interface vflow:viewbase
 
@@ -21,7 +22,7 @@
 @property(weak, nonatomic)vflowcatalogett *catalogett;
 @property(weak, nonatomic)vflowcatalogcolor *catalogcolor;
 @property(weak, nonatomic)vflowcontent *contentview;
-@property(weak, nonatomic)UIView *view;
+@property(weak, nonatomic)vflowstopchoosing *stopchoosing;
 @property(nonatomic)NSUInteger width;
 @property(nonatomic)NSUInteger height;
 @property(nonatomic)BOOL choosing;
