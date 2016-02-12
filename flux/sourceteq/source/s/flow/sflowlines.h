@@ -3,12 +3,12 @@
 
 @interface sflowlines:NSObject
 
-+(instancetype)linesleft;
-+(instancetype)linesright;
-+(instancetype)linesrandom;
 -(NSUInteger)count;
 -(id<sflowlinesprotocol>)item:(NSUInteger)index;
+-(void)linesleft;
+-(void)linesright;
+-(void)linesrandomleftright;
 
-@property(strong, nonatomic)NSArray *array;
+@property(strong, nonatomic)NSMutableArray *array;
 
 @end

@@ -2,49 +2,11 @@
 
 @implementation sflowlines
 
-+(instancetype)linesleft
-{
-    sflowlines *lines = [[sflowlines alloc] init];
-    lines.array = [NSArray arrayWithObjects:
-                   [[sflowlinesright alloc] init],
-                   [[sflowlinesleft alloc] init],
-                   nil];
-    
-    return lines;
-}
-
-+(instancetype)linesright
-{
-    sflowlines *lines = [[sflowlines alloc] init];
-    lines.array = [NSArray arrayWithObjects:
-                   [[sflowlinesright alloc] init],
-                   [[sflowlinesleft alloc] init],
-                   nil];
-    
-    return lines;
-}
-
-+(instancetype)linesrandom
-{
-    sflowlines *lines;
-    
-    NSInteger rand = arc4random_uniform(2);
-    
-    if(rand)
-    {
-        lines = [sflowlines linesleft];
-    }
-    else
-    {
-        lines = [sflowlines linesright];
-    }
-    
-    return lines;
-}
-
 -(instancetype)init
 {
     self = [super init];
+ 
+    self.array = [NSMutableArray array];
     
     return self;
 }
@@ -63,6 +25,30 @@
     id<sflowlinesprotocol> item = self.array[index];
     
     return item;
+}
+
+-(void)linesleft
+{
+    [self.array addObject:[[sflowlinesleft alloc] init]];
+}
+
+-(void)linesright
+{
+    [self.array addObject:[[sflowlinesright alloc] init]];
+}
+
+-(void)linesrandomleftright
+{
+    NSInteger rand = arc4random_uniform(2);
+    
+    if(rand)
+    {
+        [self linesleft];
+    }
+    else
+    {
+        [self linesright];
+    }
 }
 
 @end
