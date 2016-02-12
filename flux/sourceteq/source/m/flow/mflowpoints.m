@@ -49,6 +49,12 @@
     [point.view setSelected:YES];
 }
 
+-(void)unselect
+{
+    [self.selected.view setSelected:NO];
+    self.selected = nil;
+}
+
 -(void)pointat:(NSUInteger)x y:(NSUInteger)y
 {
     mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:x y:y];

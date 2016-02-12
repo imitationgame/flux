@@ -19,23 +19,44 @@
 
 -(void)actionpoint:(vflowpoint*)point
 {
-    [self.model.points selectpoint:point.model];
-    [vflowcatalogett catalogin:self];
+    if(point.model == self.model.points.selected)
+    {
+        [self clearpoint];
+    }
+    else
+    {
+        [self clearett];
+        [self.model.points selectpoint:point.model];
+        [vflowcatalogett catalogin:self];
+    }
 }
 
 -(void)actionett:(vflowett*)ett
 {
     if(ett.model == self.model.ettlist.selected)
     {
-        [self.model.ettlist deselect];
-        [self.catalogcolor show:NO];
+        [self clearett];
     }
     else
     {
-        [self.catalogett show:NO];
+        [self clearpoint];
         [self.model.ettlist selectett:ett.model];
         [vflowcatalogcolor catalogin:ett];
     }
+}
+
+#pragma mark functionality
+
+-(void)clearett
+{
+    [self.model.ettlist deselect];
+    [self.catalogcolor show:NO];
+}
+
+-(void)clearpoint
+{
+    [self.model.points unselect];
+    [self.catalogcolor show:NO];
 }
 
 #pragma mark public
