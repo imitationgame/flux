@@ -17,7 +17,7 @@
 
 -(void)addlinestart:(CGPoint)linestart lineend:(CGPoint)lineend
 {
-    mflowlinesitem *linemodel = [[mflowlinesitem alloc] init:linestart ending:lineend];
+    mflowlinesitem *linemodel = [[mflowlinesitem alloc] init:self starting:linestart ending:lineend];
     vflowline *lineview = [linemodel generateview];
     linemodel.startingett = self.flowett;
     [self add:linemodel];

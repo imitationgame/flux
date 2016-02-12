@@ -46,7 +46,9 @@
             [self clearcolor];
             [self choosingmode:NO];
             
-            [self.model.points.selected.line add]
+            CGPoint point = CGPointMake(ett.model.x, ett.model.y);
+            
+            [self.model.points.selected.line connecttopoint:point];
         }
     }
     else

@@ -8,8 +8,9 @@
 
 @interface mflowlinesitem:NSObject
 
--(instancetype)init:(CGPoint)starting ending:(CGPoint)ending;
+-(instancetype)init:(mflowlinesitemlist*)list starting:(CGPoint)starting ending:(CGPoint)ending;
 -(vflowline*)generateview;
+-(void)connecttopoint:(CGPoint)point;
 
 @property(weak, nonatomic)vflowline *view;
 @property(weak, nonatomic)mflowett *startingett;

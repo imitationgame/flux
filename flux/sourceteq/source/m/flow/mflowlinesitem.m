@@ -2,13 +2,14 @@
 
 @implementation mflowlinesitem
 
--(instancetype)init:(CGPoint)starting ending:(CGPoint)ending
+-(instancetype)init:(mflowlinesitemlist*)list starting:(CGPoint)starting ending:(CGPoint)ending
 {
     self = [super init];
     
     self.linewidth = 4;
     self.starting = starting;
     self.ending = ending;
+    self.list = list;
     
     NSUInteger startingx = starting.x;
     NSUInteger startingy = starting.y;
@@ -65,6 +66,11 @@
     self.view = view;
     
     return view;
+}
+
+-(void)connecttopoint:(CGPoint)point
+{
+    [self.list connectline:self topoint:point];
 }
 
 @end
