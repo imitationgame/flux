@@ -7,6 +7,7 @@
     if(viewett.flowview.catalogcolor)
     {
         [viewett.flowview.catalogcolor loadcolor:viewett.model.color];
+        viewett.flowview.catalogcolor.viewett = viewett;
     }
     else
     {
