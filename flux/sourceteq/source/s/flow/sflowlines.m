@@ -26,11 +26,18 @@
 
 +(instancetype)linesrandom
 {
-    sflowlines *lines = [[sflowlines alloc] init];
-    lines.array = [NSArray arrayWithObjects:
-                   [[sflowlinesright alloc] init],
-                   [[sflowlinesleft alloc] init],
-                   nil];
+    sflowlines *lines;
+    
+    NSInteger rand = arc4random_uniform(2);
+    
+    if(rand)
+    {
+        lines = [sflowlines linesleft];
+    }
+    else
+    {
+        lines = [sflowlines linesright];
+    }
     
     return lines;
 }
