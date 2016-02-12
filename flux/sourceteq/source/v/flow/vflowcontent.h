@@ -12,6 +12,7 @@
 @property(nonatomic)NSUInteger height;
 @property(nonatomic)NSUInteger marginleft;
 @property(nonatomic)NSUInteger marginright;
+@property(nonatomic)NSUInteger margintop;
 @property(nonatomic)NSUInteger visibley;
 @property(nonatomic)NSUInteger centerx;
 

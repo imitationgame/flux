@@ -49,10 +49,11 @@
                        NSUInteger deadwidth_2 = deadwidth / 2;
                        self.marginleft = deadwidth_2;
                        self.marginright = deadwidth_2;
+                       self.margintop = 1000;
                        self.visibley = self.bounds.size.height;
                        self.centerx = deadwidth_2 + (screenwidth / 2);
                        
-                       [self.container setFrame:CGRectMake(-((CGFloat)self.marginleft), 0, self.width, self.height)];
+                       [self.container setFrame:CGRectMake(-((CGFloat)self.marginleft), -((CGFloat)self.margintop), self.width, self.height)];
                    });
 }
 
@@ -118,6 +119,7 @@
 {
     NSUInteger pagewidth = self.marginright - self.marginleft;
     CGFloat screenmarginleft = -(CGFloat)self.marginleft;
+    CGFloat screenmargintop = -(CGFloat)self.margintop;
     CGSize contentsize = CGSizeMake(pagewidth, self.visibley);
     CGRect containerframe = CGRectMake(screenmarginleft, 0, self.width, self.height);
     

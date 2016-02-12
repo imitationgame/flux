@@ -51,7 +51,7 @@
 
 -(void)linesparting
 {
-    
+    CGPoint linestart = CGPointMake(self.flowett.x, self.flowett.y);
 }
 
 @end
