@@ -72,7 +72,7 @@
     NSUInteger maxxmargin = maxx + pagemargin;
     NSUInteger minxmargin = minx - pagemargin;
     NSUInteger minymargin = miny - pagemargin;
-    CGRect rect = CGRectMake(minx, miny, maxx, maxy);
+    CGRect rect = CGRectMake(minx, miny, 2 * pointmargin, 2 * pointmargin);
     NSArray *subviews = self.container.subviews;
     
     for(UIView *view in subviews)
@@ -126,7 +126,7 @@
 
 -(void)adjustscreen
 {
-    NSUInteger pagewidth = self.marginright - self.marginleft;
+    NSUInteger pagewidth = (self.width - self.marginright) - self.marginleft;
     CGFloat screenmarginleft = -(CGFloat)self.marginleft;
     CGFloat screenmargintop = -(CGFloat)self.margintop;
     CGSize contentsize = CGSizeMake(pagewidth, self.visibley);
