@@ -81,6 +81,7 @@
 		DAEACBCA1C6CF2290047ABF0 /* mflowcolorsgrey.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBC91C6CF2290047ABF0 /* mflowcolorsgrey.m */; };
 		DAEACBCD1C6CF2400047ABF0 /* mflowcolorspink.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBCC1C6CF2400047ABF0 /* mflowcolorspink.m */; };
 		DAEACBD01C6D64770047ABF0 /* mflowettdec.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBCF1C6D64770047ABF0 /* mflowettdec.m */; };
+		DAEACBD31C6D6D9F0047ABF0 /* mflowtext.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBD21C6D6D9F0047ABF0 /* mflowtext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -225,6 +226,8 @@
 		DAEACBCC1C6CF2400047ABF0 /* mflowcolorspink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowcolorspink.m; sourceTree = "<group>"; };
 		DAEACBCE1C6D64770047ABF0 /* mflowettdec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowettdec.h; sourceTree = "<group>"; };
 		DAEACBCF1C6D64770047ABF0 /* mflowettdec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowettdec.m; sourceTree = "<group>"; };
+		DAEACBD11C6D6D9F0047ABF0 /* mflowtext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowtext.h; sourceTree = "<group>"; };
+		DAEACBD21C6D6D9F0047ABF0 /* mflowtext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowtext.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -623,6 +626,8 @@
 				DAEACBC91C6CF2290047ABF0 /* mflowcolorsgrey.m */,
 				DAEACBCB1C6CF2400047ABF0 /* mflowcolorspink.h */,
 				DAEACBCC1C6CF2400047ABF0 /* mflowcolorspink.m */,
+				DAEACBD11C6D6D9F0047ABF0 /* mflowtext.h */,
+				DAEACBD21C6D6D9F0047ABF0 /* mflowtext.m */,
 			);
 			path = flow;
 			sourceTree = "<group>";
@@ -772,6 +777,7 @@
 				DAEACBCA1C6CF2290047ABF0 /* mflowcolorsgrey.m in Sources */,
 				DAB837BA1C6AC15100730B67 /* vflowcatalogett.m in Sources */,
 				DAB837AE1C6AAB9C00730B67 /* mflowettcon.m in Sources */,
+				DAEACBD31C6D6D9F0047ABF0 /* mflowtext.m in Sources */,
 				DA87C54C1C6C12AA00796D79 /* vflowcontent.m in Sources */,
 				DA87C54F1C6C444F00796D79 /* mflowettlist.m in Sources */,
 				DA0157301C6A691900FAC166 /* cmain.m in Sources */,
