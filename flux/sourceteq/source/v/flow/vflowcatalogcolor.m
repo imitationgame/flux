@@ -4,7 +4,11 @@
 
 +(void)catalogin:(vflowett*)viewett
 {
-    if(!viewett.flowview.catalogcolor)
+    if(viewett.flowview.catalogcolor)
+    {
+        [viewett.flowview.catalogcolor loadcolor:viewett.model.color];
+    }
+    else
     {
         vflowcatalogcolor *catalogcolor = [[vflowcatalogcolor alloc] init:viewett];
         viewett.flowview.catalogcolor = catalogcolor;
@@ -95,6 +99,26 @@
     [self show:NO];
 }
 
+-(void)loadcolor:(id<mflowcolorsprotocol>)current
+{
+    NSUInteger selected = 0;
+    NSUInteger count = [self.model count];
+    
+    for(NSUInteger i = 0; i < count; i++)
+    {
+        id<mflowcolorsprotocol> item = [self.model item:i];
+        
+        if(item == current)
+        {
+            selected = i;
+            
+            break;
+        }
+    }
+    
+    [self.collection selectItemAtIndexPath:[NSIndexPath indexPathForItem:selected inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
+}
+
 #pragma mark public
 
 -(void)show:(BOOL)show
@@ -115,23 +139,7 @@
      {
          if(show)
          {
-             id<mflowcolorsprotocol> current = self.viewett.model.color;
-             NSUInteger selected = 0;
-             NSUInteger count = [self.model count];
-             
-             for(NSUInteger i = 0; i < count; i++)
-             {
-                 id<mflowcolorsprotocol> item = [self.model item:i];
-                 
-                 if(item == current)
-                 {
-                     selected = i;
-                     
-                     break;
-                 }
-             }
-             
-             [self.collection selectItemAtIndexPath:[NSIndexPath indexPathForItem:selected inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
+             [self loadcolor:self.viewett.model.color];
          }
          else
          {
