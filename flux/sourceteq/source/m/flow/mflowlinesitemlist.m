@@ -15,7 +15,7 @@
     return self;
 }
 
--(void)addlinestart:(CGPoint)linestart lineend:(CGPoint)lineend
+-(mflowlinesitem*)addlinestart:(CGPoint)linestart lineend:(CGPoint)lineend
 {
     mflowlinesitem *linemodel = [[mflowlinesitem alloc] init:self starting:linestart ending:lineend];
     vflowline *lineview = [linemodel generateview];
@@ -23,6 +23,8 @@
     [self add:linemodel];
     [self.flowett.flow.view.contentview addSubview:lineview];
     [self.flowett.flow.points pointatline:linemodel];
+    
+    return linemodel;
 }
 
 #pragma mark public
@@ -85,12 +87,35 @@
         [strategy linesrandomleftright];
     }
     
-    CGPoint linestart = CGPointMake(startpointx, startpointy);
-    CGPoint lineendright = [self.flowett.flow.view.contentview linefrom:linestart deltax:1 deltay:0];
-    CGPoint lineendleft = [self.flowett.flow.view.contentview linefrom:linestart deltax:-1 deltay:0];
+    if(startpointy > endpointy)
+    {
+        [strategy linesup];
+    }
+    else if(startpointy < endpointy)
+    {
+        [strategy linesdown];
+    }
+    else
+    {
+        [strategy linesrandomupdown];
+    }
     
-    [self addlinestart:linestart lineend:lineendright];
-    [self addlinestart:linestart lineend:lineendleft];
+    vflowcontent *content = self.flowett.flow.view.contentview;
+    mflowlinesitem *currentline = line;
+    NSUInteger count = strategy.count;
+    
+    for(NSUInteger i = 0; i < count; i++)
+    {
+        id<sflowlinesprotocol> stritem = [strategy item:i];
+        
+        CGPoint nextpoint = [content linefrom:currentline.ending deltax:[stritem deltax] deltay:[stritem deltay]];
+        mflowlinesitem *newline = [self addlinestart:currentline.ending lineend:nextpoint];
+        currentline.nextline = newline;
+        currentline = newline;
+    }
+    
+    mflowlinesitem *endingline = [self addlinestart:currentline.ending lineend:point];
+    currentline.nextline = endingline;
 }
 
 @end
