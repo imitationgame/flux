@@ -88,11 +88,13 @@
     
     if(mode)
     {
+        [self.stopchoosing setHidden:NO];
         [self.catalogcolor setHidden:YES];
         [self.catalogett setHidden:YES];
     }
     else
     {
+        [self.stopchoosing setHidden:YES];
         [self.catalogcolor setHidden:NO];
         [self.catalogett setHidden:NO];
     }
