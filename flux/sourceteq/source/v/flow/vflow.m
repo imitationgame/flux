@@ -66,7 +66,7 @@
     }
 }
 
-#pragma mark functionality
+#pragma mark public
 
 -(void)clearcolor
 {
@@ -79,8 +79,6 @@
     [self.model.points unselect];
     [self.catalogett show:NO];
 }
-
-#pragma mark public
 
 -(void)show
 {

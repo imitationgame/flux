@@ -97,7 +97,7 @@
 
 -(void)actionclose:(UIButton*)button
 {
-    [self show:NO];
+    [self.viewett.flowview clearcolor];
 }
 
 -(void)loadcolor:(id<mflowcolorsprotocol>)current
