@@ -65,7 +65,7 @@
 {
     if(![self.model.points count])
     {
-        [self addpointatx:self.contentview.centerx y:100];
+        [self addpointatx:self.contentview.centerx y:self.contentview.margintop + 150];
     }
 }
 

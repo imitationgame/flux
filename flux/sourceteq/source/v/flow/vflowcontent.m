@@ -121,7 +121,7 @@
     CGFloat screenmarginleft = -(CGFloat)self.marginleft;
     CGFloat screenmargintop = -(CGFloat)self.margintop;
     CGSize contentsize = CGSizeMake(pagewidth, self.visibley);
-    CGRect containerframe = CGRectMake(screenmarginleft, 0, self.width, self.height);
+    CGRect containerframe = CGRectMake(screenmarginleft, screenmargintop, self.width, self.height);
     
     [self setContentSize:contentsize];
     [self.container setFrame:containerframe];
