@@ -10,6 +10,7 @@
 -(mflowlinesitem*)item:(NSUInteger)index;
 -(void)add:(mflowlinesitem*)item;
 -(void)linedown;
+-(void)linesparting;
 
 @property(weak, nonatomic)mflowett *flowett;
 

@@ -49,4 +49,9 @@
     [self.flowett.flow.view addpointatx:lineend.x y:lineend.y];
 }
 
+-(void)linesparting
+{
+    
+}
+
 @end
