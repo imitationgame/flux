@@ -95,6 +95,11 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[button(40)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[connect(40)]" options:0 metrics:metrics views:views]];
     
+    if([flow.model.ettlist count] < 2)
+    {
+        [buttonconnect setHidden:YES];
+    }
+    
     return self;
 }
 
