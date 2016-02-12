@@ -3,6 +3,8 @@
 @class vflow;
 @class vflowline;
 @class mflowett;
+@class mflowlinesitem;
+@class mflowlinesitemlist;
 
 @interface mflowlinesitem:NSObject
 
@@ -12,6 +14,8 @@
 @property(weak, nonatomic)vflowline *view;
 @property(weak, nonatomic)mflowett *startingett;
 @property(weak, nonatomic)mflowett *endingett;
+@property(weak, nonatomic)mflowlinesitem *nextline;
+@property(weak, nonatomic)mflowlinesitemlist *list;
 @property(nonatomic)CGPoint starting;
 @property(nonatomic)CGPoint ending;
 @property(nonatomic)CGPoint instarting;

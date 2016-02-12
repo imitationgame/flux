@@ -64,4 +64,9 @@
     [self addlinestart:linestart lineend:lineendleft];
 }
 
+-(void)connectline:(mflowlinesitem*)line topoint:(CGPoint)point
+{
+    
+}
+
 @end

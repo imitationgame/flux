@@ -43,8 +43,10 @@
         if(ett.model != self.model.ettlist.selected)
         {
             [self clearpoint];
-            [self.model.ettlist selectett:ett.model];
-            [vflowcatalogcolor catalogin:ett];
+            [self clearcolor];
+            [self choosingmode:NO];
+            
+            [self.model.points.selected.line add]
         }
     }
     else

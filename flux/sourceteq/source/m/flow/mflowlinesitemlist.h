@@ -11,6 +11,7 @@
 -(void)add:(mflowlinesitem*)item;
 -(void)linedown;
 -(void)linesparting;
+-(void)connectline:(mflowlinesitem*)line topoint:(CGPoint)point;
 
 @property(weak, nonatomic)mflowett *flowett;
 
