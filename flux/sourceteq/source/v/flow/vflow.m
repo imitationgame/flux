@@ -25,7 +25,7 @@
     }
     else
     {
-        [self clearett];
+        [self clearcolor];
         [self.model.points selectpoint:point.model];
         [vflowcatalogett catalogin:self];
     }
@@ -35,7 +35,7 @@
 {
     if(ett.model == self.model.ettlist.selected)
     {
-        [self clearett];
+        [self clearcolor];
     }
     else
     {
@@ -47,7 +47,7 @@
 
 #pragma mark functionality
 
--(void)clearett
+-(void)clearcolor
 {
     [self.model.ettlist deselect];
     [self.catalogcolor show:NO];
@@ -56,7 +56,7 @@
 -(void)clearpoint
 {
     [self.model.points unselect];
-    [self.catalogcolor show:NO];
+    [self.catalogett show:NO];
 }
 
 #pragma mark public
