@@ -80,6 +80,7 @@
 		DAEACBC71C6CF21C0047ABF0 /* mflowcolorsviolet.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBC61C6CF21C0047ABF0 /* mflowcolorsviolet.m */; };
 		DAEACBCA1C6CF2290047ABF0 /* mflowcolorsgrey.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBC91C6CF2290047ABF0 /* mflowcolorsgrey.m */; };
 		DAEACBCD1C6CF2400047ABF0 /* mflowcolorspink.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBCC1C6CF2400047ABF0 /* mflowcolorspink.m */; };
+		DAEACBD01C6D64770047ABF0 /* mflowettdec.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBCF1C6D64770047ABF0 /* mflowettdec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -222,6 +223,8 @@
 		DAEACBC91C6CF2290047ABF0 /* mflowcolorsgrey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowcolorsgrey.m; sourceTree = "<group>"; };
 		DAEACBCB1C6CF2400047ABF0 /* mflowcolorspink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowcolorspink.h; sourceTree = "<group>"; };
 		DAEACBCC1C6CF2400047ABF0 /* mflowcolorspink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowcolorspink.m; sourceTree = "<group>"; };
+		DAEACBCE1C6D64770047ABF0 /* mflowettdec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowettdec.h; sourceTree = "<group>"; };
+		DAEACBCF1C6D64770047ABF0 /* mflowettdec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowettdec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -580,6 +583,8 @@
 				DAB837AA1C6AAB6600730B67 /* mflowett.m */,
 				DAB837AC1C6AAB9C00730B67 /* mflowettcon.h */,
 				DAB837AD1C6AAB9C00730B67 /* mflowettcon.m */,
+				DAEACBCE1C6D64770047ABF0 /* mflowettdec.h */,
+				DAEACBCF1C6D64770047ABF0 /* mflowettdec.m */,
 				DAB837B21C6AB69100730B67 /* mflowpoints.h */,
 				DAB837B31C6AB69100730B67 /* mflowpoints.m */,
 				DAB837B51C6AB6AB00730B67 /* mflowpointsitem.h */,
@@ -810,6 +815,7 @@
 				DAB837B11C6AAD1B00730B67 /* vflowpoint.m in Sources */,
 				DA01572A1C6A691900FAC166 /* tools.m in Sources */,
 				DA01572B1C6A691900FAC166 /* updater.m in Sources */,
+				DAEACBD01C6D64770047ABF0 /* mflowettdec.m in Sources */,
 				DA87C5521C6C4C5D00796D79 /* mflowlinesitemlist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
