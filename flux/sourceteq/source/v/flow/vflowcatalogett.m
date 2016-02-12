@@ -60,7 +60,7 @@
     UIButton *buttoncancel = [[UIButton alloc] init];
     [buttoncancel setBackgroundColor:[UIColor clearColor]];
     [buttoncancel setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [buttoncancel.titleLabel setFont:[UIFont fontWithName:fontname size:16]];
+    [buttoncancel.titleLabel setFont:[UIFont fontWithName:fontname size:14]];
     [buttoncancel setTitleColor:[UIColor colorWithRed:1 green:0.1 blue:0 alpha:1] forState:UIControlStateNormal];
     [buttoncancel setTitleColor:[UIColor colorWithRed:1 green:0.1 blue:0 alpha:0.2] forState:UIControlStateHighlighted];
     [buttoncancel setTitle:NSLocalizedString(@"flow_catalog_cancel", nil) forState:UIControlStateNormal];
@@ -69,9 +69,9 @@
     UIButton *buttonconnect = [[UIButton alloc] init];
     [buttonconnect setBackgroundColor:[UIColor clearColor]];
     [buttonconnect setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [buttonconnect.titleLabel setFont:[UIFont fontWithName:fontname size:16]];
+    [buttonconnect.titleLabel setFont:[UIFont fontWithName:fontname size:14]];
     [buttonconnect setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [buttonconnect setTitleColor:[UIColor colorWithWhite:0 alpha:0.2] forState:UIControlStateNormal];
+    [buttonconnect setTitleColor:[UIColor colorWithWhite:0 alpha:0.2] forState:UIControlStateHighlighted];
     [buttonconnect setTitle:NSLocalizedString(@"flow_catalog_connect", nil) forState:UIControlStateNormal];
     [buttonconnect addTarget:self action:@selector(actionconnect:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -91,7 +91,7 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[border(40)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[connect(160)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(120)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(100)]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[button(40)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[connect(40)]" options:0 metrics:metrics views:views]];
     

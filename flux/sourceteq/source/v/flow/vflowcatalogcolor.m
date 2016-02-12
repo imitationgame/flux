@@ -67,7 +67,7 @@
     UIButton *buttoncancel = [[UIButton alloc] init];
     [buttoncancel setBackgroundColor:[UIColor clearColor]];
     [buttoncancel setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [buttoncancel.titleLabel setFont:[UIFont fontWithName:fontname size:16]];
+    [buttoncancel.titleLabel setFont:[UIFont fontWithName:fontname size:14]];
     [buttoncancel setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [buttoncancel setTitleColor:[UIColor colorWithWhite:0 alpha:0.1] forState:UIControlStateHighlighted];
     [buttoncancel setTitle:NSLocalizedString(@"flow_colors_accept", nil) forState:UIControlStateNormal];
@@ -87,7 +87,7 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-40-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[border(40)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(120)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(100)]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[button(40)]" options:0 metrics:metrics views:views]];
     
     return self;
