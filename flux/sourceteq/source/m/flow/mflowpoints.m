@@ -15,6 +15,17 @@
     return self;
 }
 
+#pragma mark functionality
+
+-(void)processmodel:(mflowpointsitem*)modelpoint
+{
+    vflowpoint *viewpoint = [modelpoint generateview];
+    [viewpoint addTarget:self.flow.view action:@selector(actionpoint:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self add:modelpoint];
+    [self.flow.view.contentview addSubview:viewpoint];
+}
+
 #pragma mark public
 
 -(NSUInteger)count
@@ -58,11 +69,16 @@
 -(void)pointat:(NSUInteger)x y:(NSUInteger)y
 {
     mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:x y:y];
-    vflowpoint *viewpoint = [modelpoint generateview];
-    [viewpoint addTarget:self.flow.view action:@selector(actionpoint:) forControlEvents:UIControlEventTouchUpInside];
+    [self processmodel:modelpoint];
+}
+
+-(void)pointatline:(mflowlinesitem*)line
+{
+    CGPoint endingpoint = line.ending;
     
-    [self add:modelpoint];
-    [self.flow.view.contentview addSubview:viewpoint];
+    mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:endingpoint.x y:endingpoint.y];
+    modelpoint.line = line;
+    [self processmodel:modelpoint];
 }
 
 @end

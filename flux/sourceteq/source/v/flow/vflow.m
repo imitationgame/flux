@@ -38,15 +38,27 @@
 
 -(void)actionett:(vflowett*)ett
 {
-    if(ett.model == self.model.ettlist.selected)
+    if(self.choosing)
     {
-        [self clearcolor];
+        if(ett.model != self.model.ettlist.selected)
+        {
+            [self clearpoint];
+            [self.model.ettlist selectett:ett.model];
+            [vflowcatalogcolor catalogin:ett];
+        }
     }
     else
     {
-        [self clearpoint];
-        [self.model.ettlist selectett:ett.model];
-        [vflowcatalogcolor catalogin:ett];
+        if(ett.model == self.model.ettlist.selected)
+        {
+            [self clearcolor];
+        }
+        else
+        {
+            [self clearpoint];
+            [self.model.ettlist selectett:ett.model];
+            [vflowcatalogcolor catalogin:ett];
+        }
     }
 }
 

@@ -2,6 +2,7 @@
 
 @class mflow;
 @class mflowpointsitem;
+@class mflowlinesitem;
 
 @interface mflowpoints:NSObject
 
@@ -13,6 +14,7 @@
 -(void)selectpoint:(mflowpointsitem*)point;
 -(void)unselect;
 -(void)pointat:(NSUInteger)x y:(NSUInteger)y;
+-(void)pointatline:(mflowlinesitem*)line;
 
 @property(weak, nonatomic)mflow *flow;
 @property(weak, nonatomic)mflowpointsitem *selected;
