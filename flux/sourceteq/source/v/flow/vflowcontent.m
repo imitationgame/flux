@@ -71,6 +71,7 @@
     NSUInteger maxymargin = maxy + pagemargin;
     NSUInteger maxxmargin = maxx + pagemargin;
     NSUInteger minxmargin = minx - pagemargin;
+    NSUInteger minymargin = miny - pagemargin;
     CGRect rect = CGRectMake(minx, miny, maxx, maxy);
     NSArray *subviews = self.container.subviews;
     
@@ -97,6 +98,14 @@
         if(maxxmargin > self.width - self.marginright)
         {
             self.marginright = self.width - maxxmargin;
+            changed = YES;
+        }
+        
+        if(minymargin < self.margintop)
+        {
+            NSUInteger addedy = self.margintop - minymargin;
+            self.margintop -= addedy;
+            self.visibley += addedy;
             changed = YES;
         }
         
