@@ -8,6 +8,9 @@
 -(void)linesleft;
 -(void)linesright;
 -(void)linesrandomleftright;
+-(void)linesup;
+-(void)linesdown;
+-(void)linesrandomupdown;
 
 @property(strong, nonatomic)NSMutableArray *array;
 

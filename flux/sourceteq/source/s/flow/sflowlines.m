@@ -51,4 +51,19 @@
     }
 }
 
+-(void)linesup
+{
+    
+}
+
+-(void)linesdown
+{
+    
+}
+
+-(void)linesrandomupdown
+{
+    
+}
+
 @end

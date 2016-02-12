@@ -2,3 +2,5 @@
 #import "sflowlinesprotocol.h"
 #import "sflowlinesleft.h"
 #import "sflowlinesright.h"
+#import "sflowlinesup.h"
+#import "sflowlinesdown.h"

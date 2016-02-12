@@ -42,6 +42,8 @@
 		DA402AA91C6E3546001DB033 /* sflowlines.m in Sources */ = {isa = PBXBuildFile; fileRef = DA402AA81C6E3546001DB033 /* sflowlines.m */; };
 		DA402AAD1C6E37A8001DB033 /* sflowlinesleft.m in Sources */ = {isa = PBXBuildFile; fileRef = DA402AAC1C6E37A8001DB033 /* sflowlinesleft.m */; };
 		DA402AB01C6E37B2001DB033 /* sflowlinesright.m in Sources */ = {isa = PBXBuildFile; fileRef = DA402AAF1C6E37B2001DB033 /* sflowlinesright.m */; };
+		DA402AB61C6E4B2C001DB033 /* sflowlinesup.m in Sources */ = {isa = PBXBuildFile; fileRef = DA402AB51C6E4B2C001DB033 /* sflowlinesup.m */; };
+		DA402AB91C6E4B36001DB033 /* sflowlinesdown.m in Sources */ = {isa = PBXBuildFile; fileRef = DA402AB81C6E4B36001DB033 /* sflowlinesdown.m */; };
 		DA87C5401C6BBB8B00796D79 /* vflowline.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C53F1C6BBB8B00796D79 /* vflowline.m */; };
 		DA87C5461C6BD3C300796D79 /* mflowlines.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C5451C6BD3C300796D79 /* mflowlines.m */; };
 		DA87C5491C6BD3DB00796D79 /* mflowlinesitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C5481C6BD3DB00796D79 /* mflowlinesitem.m */; };
@@ -162,6 +164,10 @@
 		DA402AAC1C6E37A8001DB033 /* sflowlinesleft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sflowlinesleft.m; sourceTree = "<group>"; };
 		DA402AAE1C6E37B2001DB033 /* sflowlinesright.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sflowlinesright.h; sourceTree = "<group>"; };
 		DA402AAF1C6E37B2001DB033 /* sflowlinesright.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sflowlinesright.m; sourceTree = "<group>"; };
+		DA402AB41C6E4B2C001DB033 /* sflowlinesup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sflowlinesup.h; sourceTree = "<group>"; };
+		DA402AB51C6E4B2C001DB033 /* sflowlinesup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sflowlinesup.m; sourceTree = "<group>"; };
+		DA402AB71C6E4B36001DB033 /* sflowlinesdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sflowlinesdown.h; sourceTree = "<group>"; };
+		DA402AB81C6E4B36001DB033 /* sflowlinesdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sflowlinesdown.m; sourceTree = "<group>"; };
 		DA44B3001C6A6C3F00767625 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA44B3011C6A6C3F00767625 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA87C53E1C6BBB8B00796D79 /* vflowline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowline.h; sourceTree = "<group>"; };
@@ -602,6 +608,10 @@
 				DA402AAC1C6E37A8001DB033 /* sflowlinesleft.m */,
 				DA402AAE1C6E37B2001DB033 /* sflowlinesright.h */,
 				DA402AAF1C6E37B2001DB033 /* sflowlinesright.m */,
+				DA402AB41C6E4B2C001DB033 /* sflowlinesup.h */,
+				DA402AB51C6E4B2C001DB033 /* sflowlinesup.m */,
+				DA402AB71C6E4B36001DB033 /* sflowlinesdown.h */,
+				DA402AB81C6E4B36001DB033 /* sflowlinesdown.m */,
 			);
 			path = flow;
 			sourceTree = "<group>";
@@ -850,6 +860,7 @@
 				DAB837B41C6AB69100730B67 /* mflowpoints.m in Sources */,
 				DA0157361C6A691900FAC166 /* valert.m in Sources */,
 				DA0157391C6A691900FAC166 /* vspinner.m in Sources */,
+				DA402AB91C6E4B36001DB033 /* sflowlinesdown.m in Sources */,
 				DAEACBB71C6CF19F0047ABF0 /* mflowcolors.m in Sources */,
 				DA0157321C6A691900FAC166 /* cpages.m in Sources */,
 				DA0157381C6A691900FAC166 /* viewbase.m in Sources */,
@@ -862,6 +873,7 @@
 				DA87C5491C6BD3DB00796D79 /* mflowlinesitem.m in Sources */,
 				DAB837B11C6AAD1B00730B67 /* vflowpoint.m in Sources */,
 				DA01572A1C6A691900FAC166 /* tools.m in Sources */,
+				DA402AB61C6E4B2C001DB033 /* sflowlinesup.m in Sources */,
 				DA402AB01C6E37B2001DB033 /* sflowlinesright.m in Sources */,
 				DA402AAD1C6E37A8001DB033 /* sflowlinesleft.m in Sources */,
 				DA01572B1C6A691900FAC166 /* updater.m in Sources */,
