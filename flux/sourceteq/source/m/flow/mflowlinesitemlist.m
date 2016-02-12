@@ -68,6 +68,21 @@
 {
     NSUInteger startpointx = line.ending.x;
     NSUInteger startpointy = line.ending.y;
+    NSUInteger endpointx = point.x;
+    NSUInteger endpointy = point.y;
+    
+    if(startpointx > endpointx)
+    {
+        
+    }
+    else if(startpointx < endpointx)
+    {
+        
+    }
+    else
+    {
+        
+    }
     
     CGPoint linestart = CGPointMake(startpointx, startpointy);
     CGPoint lineendright = [self.flowett.flow.view.contentview linefrom:linestart deltax:1 deltay:0];
