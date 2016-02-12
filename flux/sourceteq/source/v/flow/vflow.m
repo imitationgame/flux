@@ -8,6 +8,7 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
     
+    self.choosing = NO;
     self.controller = controller;
     self.model = [[mflow alloc] init:self];
     [vflowcontent containerin:self];
@@ -82,7 +83,18 @@
 
 -(void)choosingmode:(BOOL)mode
 {
+    self.choosing = mode;
     
+    if(mode)
+    {
+        [self.catalogcolor setHidden:YES];
+        [self.catalogett setHidden:YES];
+    }
+    else
+    {
+        [self.catalogcolor setHidden:NO];
+        [self.catalogett setHidden:NO];
+    }
 }
 
 @end

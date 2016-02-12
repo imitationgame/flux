@@ -107,7 +107,7 @@
 
 -(void)actionconnect:(UIButton*)button
 {
-    
+    [self.flow choosingmode:YES];
 }
 
 #pragma mark public

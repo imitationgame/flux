@@ -23,5 +23,6 @@
 @property(weak, nonatomic)vflowcontent *contentview;
 @property(nonatomic)NSUInteger width;
 @property(nonatomic)NSUInteger height;
+@property(nonatomic)BOOL choosing;
 
 @end
