@@ -40,6 +40,9 @@
 		DA30A83B1C6A9376004F5828 /* vflowett.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30A83A1C6A9376004F5828 /* vflowett.m */; };
 		DA30A83E1C6A93FB004F5828 /* vflowettcon.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30A83D1C6A93FB004F5828 /* vflowettcon.m */; };
 		DA402AA91C6E3546001DB033 /* sflowlines.m in Sources */ = {isa = PBXBuildFile; fileRef = DA402AA81C6E3546001DB033 /* sflowlines.m */; };
+		DA402AAD1C6E37A8001DB033 /* sflowlinesleft.m in Sources */ = {isa = PBXBuildFile; fileRef = DA402AAC1C6E37A8001DB033 /* sflowlinesleft.m */; };
+		DA402AB01C6E37B2001DB033 /* sflowlinesright.m in Sources */ = {isa = PBXBuildFile; fileRef = DA402AAF1C6E37B2001DB033 /* sflowlinesright.m */; };
+		DA402AB31C6E37BF001DB033 /* sflowlinesrandom.m in Sources */ = {isa = PBXBuildFile; fileRef = DA402AB21C6E37BF001DB033 /* sflowlinesrandom.m */; };
 		DA87C5401C6BBB8B00796D79 /* vflowline.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C53F1C6BBB8B00796D79 /* vflowline.m */; };
 		DA87C5461C6BD3C300796D79 /* mflowlines.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C5451C6BD3C300796D79 /* mflowlines.m */; };
 		DA87C5491C6BD3DB00796D79 /* mflowlinesitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C5481C6BD3DB00796D79 /* mflowlinesitem.m */; };
@@ -155,6 +158,13 @@
 		DA402AA51C6E34D1001DB033 /* s.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = s.h; sourceTree = "<group>"; };
 		DA402AA71C6E3546001DB033 /* sflowlines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sflowlines.h; sourceTree = "<group>"; };
 		DA402AA81C6E3546001DB033 /* sflowlines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sflowlines.m; sourceTree = "<group>"; };
+		DA402AAA1C6E3760001DB033 /* sflowlinesprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sflowlinesprotocol.h; sourceTree = "<group>"; };
+		DA402AAB1C6E37A8001DB033 /* sflowlinesleft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sflowlinesleft.h; sourceTree = "<group>"; };
+		DA402AAC1C6E37A8001DB033 /* sflowlinesleft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sflowlinesleft.m; sourceTree = "<group>"; };
+		DA402AAE1C6E37B2001DB033 /* sflowlinesright.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sflowlinesright.h; sourceTree = "<group>"; };
+		DA402AAF1C6E37B2001DB033 /* sflowlinesright.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sflowlinesright.m; sourceTree = "<group>"; };
+		DA402AB11C6E37BF001DB033 /* sflowlinesrandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sflowlinesrandom.h; sourceTree = "<group>"; };
+		DA402AB21C6E37BF001DB033 /* sflowlinesrandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sflowlinesrandom.m; sourceTree = "<group>"; };
 		DA44B3001C6A6C3F00767625 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA44B3011C6A6C3F00767625 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA87C53E1C6BBB8B00796D79 /* vflowline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowline.h; sourceTree = "<group>"; };
@@ -590,6 +600,13 @@
 			children = (
 				DA402AA71C6E3546001DB033 /* sflowlines.h */,
 				DA402AA81C6E3546001DB033 /* sflowlines.m */,
+				DA402AAA1C6E3760001DB033 /* sflowlinesprotocol.h */,
+				DA402AAB1C6E37A8001DB033 /* sflowlinesleft.h */,
+				DA402AAC1C6E37A8001DB033 /* sflowlinesleft.m */,
+				DA402AAE1C6E37B2001DB033 /* sflowlinesright.h */,
+				DA402AAF1C6E37B2001DB033 /* sflowlinesright.m */,
+				DA402AB11C6E37BF001DB033 /* sflowlinesrandom.h */,
+				DA402AB21C6E37BF001DB033 /* sflowlinesrandom.m */,
 			);
 			path = flow;
 			sourceTree = "<group>";
@@ -798,6 +815,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA402AB31C6E37BF001DB033 /* sflowlinesrandom.m in Sources */,
 				DA402AA91C6E3546001DB033 /* sflowlines.m in Sources */,
 				DA0157331C6A691900FAC166 /* mdb.m in Sources */,
 				DAB837C71C6AC56D00730B67 /* vflowcatalogettcel.m in Sources */,
@@ -850,6 +868,8 @@
 				DA87C5491C6BD3DB00796D79 /* mflowlinesitem.m in Sources */,
 				DAB837B11C6AAD1B00730B67 /* vflowpoint.m in Sources */,
 				DA01572A1C6A691900FAC166 /* tools.m in Sources */,
+				DA402AB01C6E37B2001DB033 /* sflowlinesright.m in Sources */,
+				DA402AAD1C6E37A8001DB033 /* sflowlinesleft.m in Sources */,
 				DA01572B1C6A691900FAC166 /* updater.m in Sources */,
 				DAEACBD01C6D64770047ABF0 /* mflowettdec.m in Sources */,
 				DA87C5521C6C4C5D00796D79 /* mflowlinesitemlist.m in Sources */,
