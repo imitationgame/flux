@@ -21,7 +21,7 @@
     vflowline *lineview = [linemodel generateview];
     linemodel.startingett = self.flowett;
     [self add:linemodel];
-    [self.flowett.flow.view.contentview insertSubview:lineview atIndex:0];
+    [self.flowett.flow.view.contentview.container insertSubview:lineview atIndex:0];
 
     if(point)
     {

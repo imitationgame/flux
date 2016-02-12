@@ -40,10 +40,12 @@
 {
     if(self.choosing)
     {
-        mflowlinesitem *line = self.model.points.selected.line;
+        mflowpointsitem *pointselected = self.model.points.selected;
+        mflowlinesitem *line = pointselected.line;
         
         if(ett.model != line.startingett)
         {
+            [self.model.points remove:pointselected];
             [self clearpoint];
             [self clearcolor];
             [self choosingmode:NO];
