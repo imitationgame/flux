@@ -66,7 +66,15 @@
 
 -(void)connectline:(mflowlinesitem*)line topoint:(CGPoint)point
 {
+    NSUInteger startpointx = line.ending.x;
+    NSUInteger startpointy = line.ending.y;
     
+    CGPoint linestart = CGPointMake(line.ending.x, line.ending.y);
+    CGPoint lineendright = [self.flowett.flow.view.contentview linefrom:linestart deltax:1 deltay:0];
+    CGPoint lineendleft = [self.flowett.flow.view.contentview linefrom:linestart deltax:-1 deltay:0];
+    
+    [self addlinestart:linestart lineend:lineendright];
+    [self addlinestart:linestart lineend:lineendleft];
 }
 
 @end
