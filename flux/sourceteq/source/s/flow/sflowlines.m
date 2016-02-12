@@ -53,17 +53,26 @@
 
 -(void)linesup
 {
-    
+    [self.array addObject:[[sflowlinesup alloc] init]];
 }
 
 -(void)linesdown
 {
-    
+    [self.array addObject:[[sflowlinesdown alloc] init]];
 }
 
 -(void)linesrandomupdown
 {
+    NSInteger rand = arc4random_uniform(2);
     
+    if(rand)
+    {
+        [self linesup];
+    }
+    else
+    {
+        [self linesdown];
+    }
 }
 
 @end
