@@ -7,5 +7,6 @@
 -(instancetype)init:(mflowtext*)model;
 
 @property(weak, nonatomic)mflowtext *model;
+@property(weak, nonatomic)UILabel *label;
 
 @end

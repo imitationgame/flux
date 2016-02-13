@@ -12,11 +12,11 @@
     self.viewclass = [vflowettcon class];
     self.width = 150;
     self.height = 150;
-    ending = NO;
+    ending = YES;
     
     if(![flow.ettlist count])
     {
-        ending = YES;
+        ending = NO;
         [self.linesitemlist linedown];
     }
     

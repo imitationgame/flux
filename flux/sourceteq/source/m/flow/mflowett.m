@@ -13,7 +13,6 @@
     self.linesitemlist = [[mflowlinesitemlist alloc] init:self];
     self.viewclass = [vflowett class];
     self.color = [flow.colors defaultcolor];
-    self.text = [[mflowtext alloc] init:self];
     
     return self;
 }
@@ -26,6 +25,7 @@
     vflowett *view = [(vflowett*)[self.viewclass alloc] init:self imagename:imagename];
     [view addTarget:self.flow.view action:@selector(actionett:) forControlEvents:UIControlEventTouchUpInside];
     self.view = view;
+    self.text = [[mflowtext alloc] init:self];
     
     return view;
 }
