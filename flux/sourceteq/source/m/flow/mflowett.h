@@ -3,8 +3,9 @@
 
 @class mflow;
 @class mflowpointsitem;
-@class vflowett;
 @class mflowlinesitemlist;
+@class mflowtext;
+@class vflowett;
 
 @interface mflowett:NSObject
 
