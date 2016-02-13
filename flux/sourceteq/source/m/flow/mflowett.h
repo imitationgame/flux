@@ -14,6 +14,7 @@
 -(void)selected:(BOOL)selected;
 -(void)changecolor:(id<mflowcolorsprotocol>)color;
 -(NSString*)initialtext;
+-(NSTextAlignment)textalign;
 
 @property(weak, nonatomic)mflow *flow;
 @property(weak, nonatomic)id<mflowcolorsprotocol> color;

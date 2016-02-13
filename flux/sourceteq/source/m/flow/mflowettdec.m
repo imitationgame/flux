@@ -25,4 +25,11 @@
     return str;
 }
 
+-(NSTextAlignment)textalign
+{
+    NSTextAlignment align = NSTextAlignmentCenter;
+    
+    return align;
+}
+
 @end

@@ -48,4 +48,11 @@
     return str;
 }
 
+-(NSTextAlignment)textalign
+{
+    NSTextAlignment align = NSTextAlignmentLeft;
+    
+    return align;
+}
+
 @end

@@ -13,9 +13,10 @@
     [label setUserInteractionEnabled:NO];
     [label setNumberOfLines:0];
     [label setText:model.text];
-    [label setFont:[UIFont fontWithName:fontname size:13]];
-    [label setTextColor:[UIColor colorWithWhite:0 alpha:0.4]];
+    [label setFont:[UIFont fontWithName:fontname size:15]];
+    [label setTextColor:[UIColor colorWithWhite:0 alpha:0.5]];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [label setTextAlignment:[model.ett textalign]];
     self.label = label;
     
     [self addSubview:label];
