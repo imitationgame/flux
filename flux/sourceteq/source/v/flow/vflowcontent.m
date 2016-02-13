@@ -97,9 +97,9 @@
             changed = YES;
         }
         
-        if(maxxmargin > self.width - self.marginright)
+        if(maxxmargin > self.marginright)
         {
-            self.marginright = self.width - maxxmargin;
+            self.marginright = maxxmargin;
             changed = YES;
         }
         
@@ -128,7 +128,7 @@
 
 -(void)adjustscreen
 {
-    NSUInteger pagewidth = (self.width - self.marginright) - self.marginleft;
+    NSUInteger pagewidth = self.width - (self.marginright + self.marginleft);
     CGFloat screenmarginleft = -(CGFloat)self.marginleft;
     CGFloat screenmargintop = -(CGFloat)self.margintop;
     CGSize contentsize = CGSizeMake(pagewidth, self.visibley);
