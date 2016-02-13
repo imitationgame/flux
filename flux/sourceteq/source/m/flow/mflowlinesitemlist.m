@@ -15,9 +15,9 @@
     return self;
 }
 
--(mflowlinesitem*)addlinestart:(CGPoint)linestart lineend:(CGPoint)lineend point:(BOOL)point
+-(mflowlinesitem*)addlinestart:(CGPoint)linestart lineend:(CGPoint)lineend point:(BOOL)point showinit:(BOOL)showinit
 {
-    mflowlinesitem *linemodel = [[mflowlinesitem alloc] init:self starting:linestart ending:lineend];
+    mflowlinesitem *linemodel = [[mflowlinesitem alloc] init:self starting:linestart ending:lineend showinit:showinit];
     vflowline *lineview = [linemodel generateview];
     linemodel.startingett = self.flowett;
     [self add:linemodel];
@@ -57,7 +57,7 @@
     CGPoint linestart = CGPointMake(self.flowett.x, self.flowett.y);
     CGPoint lineend = [self.flowett.flow.view.contentview linefrom:linestart deltax:0 deltay:1];
     
-    [self addlinestart:linestart lineend:lineend point:YES];
+    [self addlinestart:linestart lineend:lineend point:YES showinit:YES];
 }
 
 -(void)linesparting
@@ -66,8 +66,8 @@
     CGPoint lineendright = [self.flowett.flow.view.contentview linefrom:linestart deltax:1 deltay:0];
     CGPoint lineendleft = [self.flowett.flow.view.contentview linefrom:linestart deltax:-1 deltay:0];
     
-    [self addlinestart:linestart lineend:lineendright point:YES];
-    [self addlinestart:linestart lineend:lineendleft point:YES];
+    [self addlinestart:linestart lineend:lineendright point:YES showinit:YES];
+    [self addlinestart:linestart lineend:lineendleft point:YES showinit:YES];
 }
 
 -(void)connectline:(mflowlinesitem*)line topoint:(CGPoint)point
@@ -113,12 +113,12 @@
         id<sflowlinesprotocol> stritem = [strategy item:i];
         
         CGPoint nextpoint = [content linefrom:currentline.ending deltax:[stritem deltax] deltay:[stritem deltay]];
-        mflowlinesitem *newline = [self addlinestart:currentline.ending lineend:nextpoint point:NO];
+        mflowlinesitem *newline = [self addlinestart:currentline.ending lineend:nextpoint point:NO showinit:NO];
         currentline.nextline = newline;
         currentline = newline;
     }
     
-    mflowlinesitem *endingline = [self addlinestart:currentline.ending lineend:point point:NO];
+    mflowlinesitem *endingline = [self addlinestart:currentline.ending lineend:point point:NO showinit:NO];
     currentline.nextline = endingline;
 }
 

@@ -20,12 +20,16 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(context, self.model.linewidth);
     CGContextSetStrokeColorWithColor(context, self.tintColor.CGColor);
-    CGContextSetFillColorWithColor(context, self.tintColor.CGColor);
     CGContextMoveToPoint(context, self.model.instarting.x, self.model.instarting.y);
     CGContextAddLineToPoint(context, self.model.inending.x, self.model.inending.y);
     CGContextDrawPath(context, kCGPathStroke);
-    CGContextAddArc(context, self.model.midpoint.x, self.model.midpoint.y, 13, 0.001, 0, 0);
-    CGContextDrawPath(context, kCGPathFill);
+    
+    if(self.model.showinit)
+    {
+        CGContextSetFillColorWithColor(context, self.tintColor.CGColor);
+        CGContextAddArc(context, self.model.midpoint.x, self.model.midpoint.y, 13, 0.001, 0, 0);
+        CGContextDrawPath(context, kCGPathFill);
+    }
 }
 
 @end

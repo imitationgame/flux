@@ -8,7 +8,7 @@
 
 @interface mflowlinesitem:NSObject
 
--(instancetype)init:(mflowlinesitemlist*)list starting:(CGPoint)starting ending:(CGPoint)ending;
+-(instancetype)init:(mflowlinesitemlist*)list starting:(CGPoint)starting ending:(CGPoint)ending showinit:(BOOL)showinit;
 -(vflowline*)generateview;
 -(void)connecttopoint:(CGPoint)point;
 
@@ -24,5 +24,6 @@
 @property(nonatomic)CGPoint inending;
 @property(nonatomic)CGRect rect;
 @property(nonatomic)NSUInteger linewidth;
+@property(nonatomic)BOOL showinit;
 
 @end

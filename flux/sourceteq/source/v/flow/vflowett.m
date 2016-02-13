@@ -19,7 +19,7 @@
     [button setTranslatesAutoresizingMaskIntoConstraints:NO];
     [button setImage:[[UIImage imageNamed:@"close"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     [button setImage:[[UIImage imageNamed:@"close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateHighlighted];
-    [button setTintColor:[UIColor colorWithRed:1 green:0.2 blue:0 alpha:0.5]];
+    [button setTintColor:[UIColor colorWithRed:1 green:0.2 blue:0 alpha:0.7]];
     [button.imageView setClipsToBounds:YES];
     [button.imageView setContentMode:UIViewContentModeScaleAspectFit];
     self.button = button;

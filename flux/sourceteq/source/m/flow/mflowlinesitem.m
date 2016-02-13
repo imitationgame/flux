@@ -2,7 +2,7 @@
 
 @implementation mflowlinesitem
 
--(instancetype)init:(mflowlinesitemlist*)list starting:(CGPoint)starting ending:(CGPoint)ending
+-(instancetype)init:(mflowlinesitemlist*)list starting:(CGPoint)starting ending:(CGPoint)ending showinit:(BOOL)showinit
 {
     self = [super init];
     
@@ -11,6 +11,7 @@
     self.starting = starting;
     self.ending = ending;
     self.list = list;
+    self.showinit = showinit;
     
     NSUInteger startingx = starting.x;
     NSUInteger startingy = starting.y;
