@@ -6,6 +6,8 @@
 #import "mflowettlist.h"
 #import "mflowettcon.h"
 #import "mflowettdec.h"
+#import "mflowettio.h"
+#import "mflowettpro.h"
 #import "mflowpoints.h"
 #import "mflowpointsitem.h"
 #import "mflowetttypes.h"

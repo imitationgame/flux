@@ -1,13 +1,6 @@
-//
-//  mflowettio.h
-//  flux
-//
-//  Created by zero on 2/13/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mflowett.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mflowettio : NSObject
+@interface mflowettio:mflowett
 
 @end
