@@ -8,7 +8,7 @@
     self.ett = ett;
     self.text = [ett initialtext];
     
-    vflowtext *view = [[vflowtext alloc] init];
+    vflowtext *view = [[vflowtext alloc] init:self];
     self.view = view;
     [ett.flow.view.contentview addSubview:view];
     
