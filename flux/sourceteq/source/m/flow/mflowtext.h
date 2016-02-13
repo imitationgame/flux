@@ -6,6 +6,7 @@
 @interface mflowtext:NSObject
 
 -(instancetype)init:(mflowett*)ett;
+-(void)adjusttext;
 
 @property(weak, nonatomic)mflowett *ett;
 @property(weak, nonatomic)vflowtext *view;
