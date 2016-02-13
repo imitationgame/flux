@@ -15,6 +15,8 @@
 -(void)changecolor:(id<mflowcolorsprotocol>)color;
 -(NSString*)initialtext;
 -(NSTextAlignment)textalign;
+-(NSInteger)textdeltay;
+-(NSInteger)textdeltax;
 
 @property(weak, nonatomic)mflow *flow;
 @property(weak, nonatomic)id<mflowcolorsprotocol> color;

@@ -55,4 +55,18 @@
     return align;
 }
 
+-(NSInteger)textdeltay
+{
+    NSInteger delta = 0;
+    
+    return delta;
+}
+
+-(NSInteger)textdeltax
+{
+    NSInteger delta = 1;
+    
+    return delta;
+}
+
 @end

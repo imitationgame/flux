@@ -49,4 +49,27 @@
     return align;
 }
 
+-(NSInteger)textdeltay
+{
+    NSInteger delta;
+    
+    if(ending)
+    {
+        delta = 1;
+    }
+    else
+    {
+        delta = -1;
+    }
+    
+    return delta;
+}
+
+-(NSInteger)textdeltax
+{
+    NSInteger delta = 0;
+    
+    return delta;
+}
+
 @end
