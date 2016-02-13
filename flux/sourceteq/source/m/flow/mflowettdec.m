@@ -20,7 +20,7 @@
 
 -(NSString*)initialtext
 {
-    NSString *str = NSLocalizedString(@"", nil);
+    NSString *str = NSLocalizedString(@"flow_etttext_pro", nil);
     
     return str;
 }
