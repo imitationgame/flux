@@ -14,3 +14,4 @@
 #import "vflowcatalogcolor.h"
 #import "vflowcatalogcolorcel.h"
 #import "vflowstopchoosing.h"
+#import "vflowtext.h"
