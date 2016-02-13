@@ -15,4 +15,14 @@
     return self;
 }
 
+#pragma mark -
+#pragma mark flow ett
+
+-(NSString*)initialtext
+{
+    NSString *str = NSLocalizedString(@"", nil);
+    
+    return str;
+}
+
 @end
