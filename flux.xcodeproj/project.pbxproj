@@ -50,6 +50,9 @@
 		DA87C54C1C6C12AA00796D79 /* vflowcontent.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C54B1C6C12AA00796D79 /* vflowcontent.m */; };
 		DA87C54F1C6C444F00796D79 /* mflowettlist.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C54E1C6C444F00796D79 /* mflowettlist.m */; };
 		DA87C5521C6C4C5D00796D79 /* mflowlinesitemlist.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C5511C6C4C5D00796D79 /* mflowlinesitemlist.m */; };
+		DAA2DCE61C6ED02300CF2B8E /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA2DCE31C6ED02300CF2B8E /* close.png */; };
+		DAA2DCE71C6ED02300CF2B8E /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA2DCE41C6ED02300CF2B8E /* close@2x.png */; };
+		DAA2DCE81C6ED02300CF2B8E /* close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA2DCE51C6ED02300CF2B8E /* close@3x.png */; };
 		DAB837A81C6AAB4400730B67 /* mflow.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837A71C6AAB4400730B67 /* mflow.m */; };
 		DAB837AB1C6AAB6600730B67 /* mflowett.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837AA1C6AAB6600730B67 /* mflowett.m */; };
 		DAB837AE1C6AAB9C00730B67 /* mflowettcon.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB837AD1C6AAB9C00730B67 /* mflowettcon.m */; };
@@ -182,6 +185,9 @@
 		DA87C54E1C6C444F00796D79 /* mflowettlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowettlist.m; sourceTree = "<group>"; };
 		DA87C5501C6C4C5D00796D79 /* mflowlinesitemlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowlinesitemlist.h; sourceTree = "<group>"; };
 		DA87C5511C6C4C5D00796D79 /* mflowlinesitemlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowlinesitemlist.m; sourceTree = "<group>"; };
+		DAA2DCE31C6ED02300CF2B8E /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		DAA2DCE41C6ED02300CF2B8E /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		DAA2DCE51C6ED02300CF2B8E /* close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@3x.png"; sourceTree = "<group>"; };
 		DAB837A61C6AAB4400730B67 /* mflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflow.h; sourceTree = "<group>"; };
 		DAB837A71C6AAB4400730B67 /* mflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflow.m; sourceTree = "<group>"; };
 		DAB837A91C6AAB6600730B67 /* mflowett.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowett.h; sourceTree = "<group>"; };
@@ -331,6 +337,9 @@
 		DA0156D21C6A691900FAC166 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				DAA2DCE31C6ED02300CF2B8E /* close.png */,
+				DAA2DCE41C6ED02300CF2B8E /* close@2x.png */,
+				DAA2DCE51C6ED02300CF2B8E /* close@3x.png */,
 				DAB837D41C6ADAB000730B67 /* decision.png */,
 				DAB837D51C6ADAB000730B67 /* decision@2x.png */,
 				DAB837D61C6ADAB000730B67 /* decision@3x.png */,
@@ -755,12 +764,15 @@
 				DAB837CB1C6AD6F700730B67 /* connector.png in Resources */,
 				DAB837D11C6AD91300730B67 /* process.png in Resources */,
 				DA0157231C6A691900FAC166 /* analytics.plist in Resources */,
+				DAA2DCE81C6ED02300CF2B8E /* close@3x.png in Resources */,
 				DA0157241C6A691900FAC166 /* defs.plist in Resources */,
 				DAB837DF1C6ADAB000730B67 /* io@3x.png in Resources */,
 				DAB837DC1C6ADAB000730B67 /* decision@3x.png in Resources */,
+				DAA2DCE71C6ED02300CF2B8E /* close@2x.png in Resources */,
 				DA0157271C6A691900FAC166 /* Info.plist in Resources */,
 				DAB837DB1C6ADAB000730B67 /* decision@2x.png in Resources */,
 				DA0157411C6A694300FAC166 /* in in Resources */,
+				DAA2DCE61C6ED02300CF2B8E /* close.png in Resources */,
 				DAB837DA1C6ADAB000730B67 /* decision.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
