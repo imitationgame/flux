@@ -15,6 +15,11 @@
     [self.layer setBorderWidth:2];
     [self hover];
     
+    UIButton *button = [[UIButton alloc] init];
+    [button setClipsToBounds:YES];
+    [button setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.button = button;
+    
     self.model = model;
     self.flowview = model.flow.view;
     

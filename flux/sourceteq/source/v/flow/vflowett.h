@@ -9,5 +9,6 @@
 
 @property(weak, nonatomic)mflowett *model;
 @property(weak, nonatomic)vflow *flowview;
+@property(weak, nonatomic)UIButton *button;
 
 @end
