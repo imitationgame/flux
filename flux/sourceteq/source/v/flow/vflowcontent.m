@@ -5,6 +5,9 @@
 #define pagemargin 200
 
 @implementation vflowcontent
+{
+    BOOL firsttime;
+}
 
 +(void)containerin:(vflow*)flow
 {
@@ -27,6 +30,7 @@
     [self setAlwaysBounceHorizontal:YES];
     [self setAlwaysBounceVertical:YES];
 
+    firsttime = NO;
     self.width = 100000;
     self.height = 100000;
     
@@ -46,16 +50,20 @@
     dispatch_async(dispatch_get_main_queue(),
                    ^
                    {
-                       NSUInteger screenwidth = self.bounds.size.width;
-                       NSUInteger deadwidth = self.width - screenwidth;
-                       NSUInteger deadwidth_2 = deadwidth / 2;
-                       self.marginleft = deadwidth_2;
-                       self.marginright = deadwidth_2;
-                       self.margintop = 1000;
-                       self.visibley = self.bounds.size.height;
-                       self.centerx = deadwidth_2 + (screenwidth / 2);
-                       
-                       [self.container setFrame:CGRectMake(-((CGFloat)self.marginleft), -((CGFloat)self.margintop), self.width, self.height)];
+                       if(!firsttime)
+                       {
+                           firsttime = YES;
+                           NSUInteger screenwidth = self.bounds.size.width;
+                           NSUInteger deadwidth = self.width - screenwidth;
+                           NSUInteger deadwidth_2 = deadwidth / 2;
+                           self.marginleft = deadwidth_2;
+                           self.marginright = deadwidth_2;
+                           self.margintop = 1000;
+                           self.visibley = self.bounds.size.height;
+                           self.centerx = deadwidth_2 + (screenwidth / 2);
+                           
+                           [self.container setFrame:CGRectMake(-((CGFloat)self.marginleft), -((CGFloat)self.margintop), self.width, self.height)];
+                       }
                    });
 }
 
@@ -97,9 +105,9 @@
             changed = YES;
         }
         
-        if(maxxmargin > self.marginright)
+        if(maxxmargin > self.width - self.marginright)
         {
-            self.marginright = maxxmargin;
+            self.marginright = self.width - maxxmargin;
             changed = YES;
         }
         
@@ -133,9 +141,8 @@
     CGFloat screenmargintop = -(CGFloat)self.margintop;
     CGSize contentsize = CGSizeMake(pagewidth, self.visibley);
     CGRect containerframe = CGRectMake(screenmarginleft, screenmargintop, self.width, self.height);
-    
-    [self setContentSize:contentsize];
     [self.container setFrame:containerframe];
+    [self setContentSize:contentsize];
 }
 
 #pragma mark public
