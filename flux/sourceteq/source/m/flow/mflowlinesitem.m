@@ -6,7 +6,7 @@
 {
     self = [super init];
     
-    CGFloat padding = 10;
+    CGFloat padding = 20;
     self.linewidth = 4;
     self.starting = starting;
     self.ending = ending;
@@ -20,8 +20,8 @@
     NSUInteger startingrecty = startingy;
     NSUInteger endingrectx = endingx;
     NSUInteger endingrecty = endingy;
-    NSUInteger midx = fabs((CGFloat)endingx - (CGFloat)startingx) * 0.3;
-    NSUInteger midy = fabs((CGFloat)endingy - (CGFloat)startingy) * 0.3;
+    NSUInteger midx = (fabs((CGFloat)endingx - (CGFloat)startingx) * 0.3);
+    NSUInteger midy = (fabs((CGFloat)endingy - (CGFloat)startingy) * 0.3);
     NSUInteger instartx;
     NSUInteger instarty;
     NSUInteger inendx;
@@ -35,12 +35,22 @@
     {
         startingrectx = endingx;
         endingrectx = startingx;
+        midx -= endingx;
+    }
+    else
+    {
+        midx += startingx;
     }
     
     if(startingy > endingy)
     {
         startingrecty = endingy;
         endingrecty = startingy;
+        midy -= endingy;
+    }
+    else
+    {
+        midy += startingy;
     }
     
     startingrectx -= padding;

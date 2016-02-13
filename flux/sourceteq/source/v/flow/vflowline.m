@@ -24,7 +24,7 @@
     CGContextMoveToPoint(context, self.model.instarting.x, self.model.instarting.y);
     CGContextAddLineToPoint(context, self.model.inending.x, self.model.inending.y);
     CGContextDrawPath(context, kCGPathStroke);
-    CGContextAddArc(context, self.model.instarting.x, self.model.instarting.y, 5, 0.001, 0, 0);
+    CGContextAddArc(context, self.model.midpoint.x, self.model.midpoint.y, 13, 0.001, 0, 0);
     CGContextDrawPath(context, kCGPathFill);
 }
 
