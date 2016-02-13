@@ -6,6 +6,7 @@
 {
     self = [super init];
     
+    CGFloat padding = 10;
     self.linewidth = 4;
     self.starting = starting;
     self.ending = ending;
@@ -19,12 +20,16 @@
     NSUInteger startingrecty = startingy;
     NSUInteger endingrectx = endingx;
     NSUInteger endingrecty = endingy;
+    NSUInteger midx = fabs((CGFloat)endingx - (CGFloat)startingx) * 0.3;
+    NSUInteger midy = fabs((CGFloat)endingy - (CGFloat)startingy) * 0.3;
     NSUInteger instartx;
     NSUInteger instarty;
     NSUInteger inendx;
     NSUInteger inendy;
     NSUInteger width;
     NSUInteger height;
+    NSUInteger inmidx;
+    NSUInteger inmidy;
     
     if(startingx > endingx)
     {
@@ -38,20 +43,22 @@
         endingrecty = startingy;
     }
     
-    startingrectx -= self.linewidth;
-    startingrecty -= self.linewidth;
-    endingrectx += self.linewidth;
-    endingrecty += self.linewidth;
-    
+    startingrectx -= padding;
+    startingrecty -= padding;
+    endingrectx += padding;
+    endingrecty += padding;
     width = endingrectx - startingrectx;
     height = endingrecty - startingrecty;
     instartx = startingx - startingrectx;
     instarty = startingy - startingrecty;
     inendx = endingx - startingrectx;
     inendy = endingy - startingrecty;
+    inmidx = midx - startingrectx;
+    inmidy = midy - startingrecty;
     
     self.instarting = CGPointMake(instartx, instarty);
     self.inending = CGPointMake(inendx, inendy);
+    self.midpoint = CGPointMake(inmidx, inmidy);
     self.rect = CGRectMake(startingrectx, startingrecty, width, height);
     
     return self;

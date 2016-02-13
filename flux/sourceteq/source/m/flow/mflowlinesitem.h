@@ -19,6 +19,7 @@
 @property(weak, nonatomic)mflowlinesitemlist *list;
 @property(nonatomic)CGPoint starting;
 @property(nonatomic)CGPoint ending;
+@property(nonatomic)CGPoint midpoint;
 @property(nonatomic)CGPoint instarting;
 @property(nonatomic)CGPoint inending;
 @property(nonatomic)CGRect rect;
