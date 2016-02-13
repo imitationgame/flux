@@ -13,6 +13,7 @@
 -(vflowett*)generateview:(NSString*)imagename;
 -(void)selected:(BOOL)selected;
 -(void)changecolor:(id<mflowcolorsprotocol>)color;
+-(NSString*)initialtext;
 
 @property(weak, nonatomic)mflow *flow;
 @property(weak, nonatomic)id<mflowcolorsprotocol> color;

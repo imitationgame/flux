@@ -17,6 +17,12 @@
 "flow_colors_pink"="Pink";
 "flow_colors_accept"="Done";
 
+"flow_etttext_con_start"="Starting point";
+"flow_etttext_con_end"="Ending point";
+"flow_etttext_dec"="Some decision";
+"flow_etttext_io"="Some input";
+"flow_etttext_pro"="Some process";
+
 "rate_descr"="How would you rate this app?";
 "rate_donereview"="Rate sent. Would you write a review in the app store?";
 "rate_send"="Send";

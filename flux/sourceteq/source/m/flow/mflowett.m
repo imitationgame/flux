@@ -13,6 +13,7 @@
     self.linesitemlist = [[mflowlinesitemlist alloc] init:self];
     self.viewclass = [vflowett class];
     self.color = [flow.colors defaultcolor];
+    self.text = [[mflowtext alloc] init:self];
     
     return self;
 }
@@ -38,6 +39,13 @@
 {
     self.color = color;
     [self.view.imageView setTintColor:[color color]];
+}
+
+-(NSString*)initialtext
+{
+    NSString *str = @"";
+    
+    return str;
 }
 
 @end
