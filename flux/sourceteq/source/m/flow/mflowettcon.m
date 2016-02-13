@@ -1,6 +1,9 @@
 #import "mflowettcon.h"
 
 @implementation mflowettcon
+{
+    BOOL ending;
+}
 
 -(instancetype)init:(mflow*)flow atpoint:(mflowpointsitem*)point
 {
@@ -9,8 +12,13 @@
     self.viewclass = [vflowettcon class];
     self.width = 150;
     self.height = 150;
+    ending = NO;
     
-    [self.linesitemlist linedown];
+    if(![flow.ettlist count])
+    {
+        ending = YES;
+        [self.linesitemlist linedown];
+    }
     
     return self;
 }
@@ -20,7 +28,16 @@
 
 -(NSString*)initialtext
 {
-    NSString *str = NSLocalizedString(@"flow_etttext_con", nil);
+    NSString *str;
+    
+    if(ending)
+    {
+        str = NSLocalizedString(@"flow_etttext_con_end", nil);
+    }
+    else
+    {
+        str = NSLocalizedString(@"flow_etttext_con_start", nil);
+    }
     
     return str;
 }
