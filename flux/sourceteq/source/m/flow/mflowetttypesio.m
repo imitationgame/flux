@@ -21,7 +21,7 @@
 
 -(mflowett*)modelett:(mflow*)flow atpoint:(mflowpointsitem*)point
 {
-    mflowettcon *ettcon = [[mflowettcon alloc] init:flow atpoint:point];
+    mflowettio *ettcon = [[mflowettio alloc] init:flow atpoint:point];
     
     return ettcon;
 }
