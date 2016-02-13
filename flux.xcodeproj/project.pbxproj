@@ -44,9 +44,6 @@
 		DA402AB01C6E37B2001DB033 /* sflowlinesright.m in Sources */ = {isa = PBXBuildFile; fileRef = DA402AAF1C6E37B2001DB033 /* sflowlinesright.m */; };
 		DA402AB61C6E4B2C001DB033 /* sflowlinesup.m in Sources */ = {isa = PBXBuildFile; fileRef = DA402AB51C6E4B2C001DB033 /* sflowlinesup.m */; };
 		DA402AB91C6E4B36001DB033 /* sflowlinesdown.m in Sources */ = {isa = PBXBuildFile; fileRef = DA402AB81C6E4B36001DB033 /* sflowlinesdown.m */; };
-		DA402ABD1C6E73E9001DB033 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DA402ABA1C6E73E9001DB033 /* arrow.png */; };
-		DA402ABE1C6E73E9001DB033 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA402ABB1C6E73E9001DB033 /* arrow@2x.png */; };
-		DA402ABF1C6E73E9001DB033 /* arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA402ABC1C6E73E9001DB033 /* arrow@3x.png */; };
 		DA87C5401C6BBB8B00796D79 /* vflowline.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C53F1C6BBB8B00796D79 /* vflowline.m */; };
 		DA87C5461C6BD3C300796D79 /* mflowlines.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C5451C6BD3C300796D79 /* mflowlines.m */; };
 		DA87C5491C6BD3DB00796D79 /* mflowlinesitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C5481C6BD3DB00796D79 /* mflowlinesitem.m */; };
@@ -171,9 +168,6 @@
 		DA402AB51C6E4B2C001DB033 /* sflowlinesup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sflowlinesup.m; sourceTree = "<group>"; };
 		DA402AB71C6E4B36001DB033 /* sflowlinesdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sflowlinesdown.h; sourceTree = "<group>"; };
 		DA402AB81C6E4B36001DB033 /* sflowlinesdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sflowlinesdown.m; sourceTree = "<group>"; };
-		DA402ABA1C6E73E9001DB033 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
-		DA402ABB1C6E73E9001DB033 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
-		DA402ABC1C6E73E9001DB033 /* arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@3x.png"; sourceTree = "<group>"; };
 		DA44B3001C6A6C3F00767625 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA44B3011C6A6C3F00767625 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA87C53E1C6BBB8B00796D79 /* vflowline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowline.h; sourceTree = "<group>"; };
@@ -337,9 +331,6 @@
 		DA0156D21C6A691900FAC166 /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				DA402ABA1C6E73E9001DB033 /* arrow.png */,
-				DA402ABB1C6E73E9001DB033 /* arrow@2x.png */,
-				DA402ABC1C6E73E9001DB033 /* arrow@3x.png */,
 				DAB837D41C6ADAB000730B67 /* decision.png */,
 				DAB837D51C6ADAB000730B67 /* decision@2x.png */,
 				DAB837D61C6ADAB000730B67 /* decision@3x.png */,
@@ -755,9 +746,7 @@
 				DAB837CC1C6AD6F700730B67 /* connector@2x.png in Resources */,
 				DA0157201C6A691900FAC166 /* flux.db in Resources */,
 				DAB837DD1C6ADAB000730B67 /* io.png in Resources */,
-				DA402ABD1C6E73E9001DB033 /* arrow.png in Resources */,
 				DAB837D21C6AD91300730B67 /* process@2x.png in Resources */,
-				DA402ABF1C6E73E9001DB033 /* arrow@3x.png in Resources */,
 				DA0157251C6A691900FAC166 /* Localizable.strings in Resources */,
 				DAB837D31C6AD91300730B67 /* process@3x.png in Resources */,
 				DAB837CD1C6AD6F700730B67 /* connector@3x.png in Resources */,
@@ -770,7 +759,6 @@
 				DAB837DF1C6ADAB000730B67 /* io@3x.png in Resources */,
 				DAB837DC1C6ADAB000730B67 /* decision@3x.png in Resources */,
 				DA0157271C6A691900FAC166 /* Info.plist in Resources */,
-				DA402ABE1C6E73E9001DB033 /* arrow@2x.png in Resources */,
 				DAB837DB1C6ADAB000730B67 /* decision@2x.png in Resources */,
 				DA0157411C6A694300FAC166 /* in in Resources */,
 				DAB837DA1C6ADAB000730B67 /* decision.png in Resources */,
