@@ -15,9 +15,10 @@
 -(void)changecolor:(id<mflowcolorsprotocol>)color;
 
 @property(weak, nonatomic)mflow *flow;
-@property(weak, nonatomic)vflowett *view;
 @property(weak, nonatomic)id<mflowcolorsprotocol> color;
 @property(strong, nonatomic)mflowlinesitemlist *linesitemlist;
+@property(strong, nonatomic)mflowtext *text;
+@property(weak, nonatomic)vflowett *view;
 @property(nonatomic)Class viewclass;
 @property(nonatomic)NSUInteger x;
 @property(nonatomic)NSUInteger y;
