@@ -35,7 +35,7 @@
     {
         startingrectx = endingx;
         endingrectx = startingx;
-        midx -= endingx;
+        midx = startingx - midx;
     }
     else
     {
@@ -46,7 +46,7 @@
     {
         startingrecty = endingy;
         endingrecty = startingy;
-        midy -= endingy;
+        midy = startingy - midy;
     }
     else
     {
