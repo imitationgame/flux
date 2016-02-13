@@ -6,6 +6,11 @@
 {
     self = [super init];
     self.ett = ett;
+    self.text = [ett initialtext];
+    
+    vflowtext *view = [[vflowtext alloc] init];
+    self.view = view;
+    [ett.flow.view.contentview addSubview:view];
     
     return self;
 }

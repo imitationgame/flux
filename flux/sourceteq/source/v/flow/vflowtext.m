@@ -2,4 +2,6 @@
 
 @implementation vflowtext
 
+-(instancetype)init:(mflowtext*)model
+
 @end
