@@ -87,7 +87,7 @@
 
 -(void)cleartext
 {
-    
+    [self.field.field resignFirstResponder];
 }
 
 -(void)show
