@@ -32,7 +32,7 @@
     self.model = [[mflowetttypes alloc] init];
     
     UIView *border = [[UIView alloc] init];
-    [border setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.1]];
+    [border setBackgroundColor:[UIColor colorWithWhite:0.97 alpha:0.96]];
     [border setTranslatesAutoresizingMaskIntoConstraints:NO];
     [border setUserInteractionEnabled:NO];
     
