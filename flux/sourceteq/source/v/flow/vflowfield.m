@@ -93,12 +93,13 @@
 -(void)notifiedkeyboardchange:(NSNotification*)notification
 {
     CGFloat ypos;
+    CGRect keyrect = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat origin = keyrect.origin.y;
+    CGFloat screenheight = [UIScreen mainScreen].bounds.size.height;
     
-    if(self.flowtext)
+    if(origin < screenheight)
     {
-        CGRect keyrect = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-        CGFloat origin = keyrect.origin.y;
-        ypos = -([UIScreen mainScreen].bounds.size.height - origin);
+        ypos = -(screenheight - origin);
     }
     else
     {

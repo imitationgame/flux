@@ -1,5 +1,7 @@
 #import "mflowtext.h"
 
+#define textmargin 10
+
 @implementation mflowtext
 
 -(instancetype)init:(mflowett*)ett
@@ -21,8 +23,8 @@
 -(void)adjusttext
 {
     CGSize textsize = [self.text boundingRectWithSize:CGSizeMake(200, 100) options:stringdrawing attributes:@{NSFontAttributeName:self.view.label.font} context:nil].size;
-    NSUInteger textwidth = ceilf(textsize.width);
-    NSUInteger textheight = ceilf(textsize.height);
+    NSUInteger textwidth = ceilf(textsize.width) + textmargin;
+    NSUInteger textheight = ceilf(textsize.height) + textmargin;
     NSUInteger textwidth_2 = ceilf(textwidth / 2.0);
     NSUInteger textheight_2 = ceilf(textheight / 2.0);
     NSInteger deltax = [self.ett textdeltax];

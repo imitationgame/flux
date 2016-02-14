@@ -22,7 +22,7 @@
     UIButton *button = [[UIButton alloc] init];
     [button setClipsToBounds:YES];
     [button setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [button setBackgroundColor:[UIColor clearColor]];
+    [button setBackgroundColor:[UIColor redColor]];
     [button addTarget:self action:@selector(actionbutton:) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:label];
