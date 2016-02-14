@@ -88,6 +88,21 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+#pragma mark notified
+
+-(void)notifiedkeyboardchange:(NSNotification*)notification
+{
+    CGRect keyrect = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat origin = keyrect.origin.y;
+    self.constraint.constant = - ([UIScreen mainScreen].bounds.size.height - origin);
+    
+    [UIView animateWithDuration:1.5 animations:
+     ^
+     {
+         [self layoutIfNeeded];
+     }];
+}
+
 #pragma mark actions
 
 -(void)actiondone:(UIButton*)button
