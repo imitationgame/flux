@@ -1,6 +1,9 @@
 #import "vflowtext.h"
 
 @implementation vflowtext
+{
+    UIColor *color;
+}
 
 -(instancetype)init:(mflowtext*)model
 {
@@ -8,13 +11,15 @@
     
     self.model = model;
     
+    color = [UIColor colorWithWhite:0 alpha:0.5];
+    
     UILabel *label = [[UILabel alloc] init];
     [label setBackgroundColor:[UIColor clearColor]];
     [label setUserInteractionEnabled:NO];
     [label setNumberOfLines:0];
     [label setText:model.text];
     [label setFont:[UIFont fontWithName:fontname size:15]];
-    [label setTextColor:[UIColor colorWithWhite:0 alpha:0.5]];
+    [label setTextColor:color];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setTextAlignment:[model.ett textalign]];
     self.label = label;
@@ -43,7 +48,15 @@
 
 -(void)actionbutton:(UIButton*)button
 {
+    [self.label setTextColor:colormain];
     [self.model.ett.flow.view.field edit:self];
+}
+
+#pragma mark public
+
+-(void)editdone:(NSString*)newtext
+{
+    [self.label setTextColor:color];
 }
 
 @end
