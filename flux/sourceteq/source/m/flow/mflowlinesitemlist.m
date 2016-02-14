@@ -106,11 +106,25 @@
     
     if(startpointy > endpointy)
     {
-        [strategy linesup];
+        CGFloat sum = 0;
+        
+        while(startpointy - sum > endpointy)
+        {
+            [strategy linesup];
+            
+            sum += deltaline;
+        }
     }
     else if(startpointy < endpointy)
     {
-        [strategy linesdown];
+        CGFloat sum = 0;
+        
+        while(startpointy + sum < endpointy)
+        {
+            [strategy linesdown];
+            
+            sum += deltaline;
+        }
     }
     else
     {

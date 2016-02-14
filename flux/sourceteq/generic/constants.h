@@ -14,6 +14,10 @@
 #define footerid                @"footer"
 #define headerid                @"header"
 
+// sizes
+
+#define deltaline               300
+
 // notifications
 
 // extra

@@ -1,6 +1,5 @@
 #import "vflowcontent.h"
 
-#define deltaline 300
 #define pointmargin 50
 #define pagemargin 250
 
