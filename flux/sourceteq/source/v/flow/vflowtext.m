@@ -23,6 +23,7 @@
     [button setClipsToBounds:YES];
     [button setTranslatesAutoresizingMaskIntoConstraints:NO];
     [button setBackgroundColor:[UIColor clearColor]];
+    [button addTarget:self action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>];
     
     [self addSubview:label];
     [self addSubview:button];
@@ -36,6 +37,13 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[button]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+#pragma mark actions
+
+-(void)actionbutton:(UIButton*)button
+{
+    self.model.ett.flow.view.field
 }
 
 @end
