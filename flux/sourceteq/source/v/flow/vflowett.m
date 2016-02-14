@@ -12,6 +12,7 @@
     [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
     [self.imageView setClipsToBounds:YES];
     [self.imageView setTintColor:[model.color color]];
+    [self setAlpha:0.2];
     [self.layer setBorderWidth:2];
     
     UIButton *button = [[UIButton alloc] init];

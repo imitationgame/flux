@@ -1,5 +1,7 @@
 #import "vflowline.h"
 
+#define radius 13
+
 @implementation vflowline
 
 -(instancetype)init:(mflowlinesitem*)model
@@ -26,8 +28,14 @@
     
     if(self.model.showinit)
     {
+        CGContextSetLineWidth(context, 2.0 * radius);
+        CGContextMoveToPoint(context, self.model.instarting.x, self.model.instarting.y);
+        CGContextAddLineToPoint(context, self.model.midpoint.x, self.model.midpoint.y);
+        CGContextDrawPath(context, kCGPathStroke);
         CGContextSetFillColorWithColor(context, self.tintColor.CGColor);
-        CGContextAddArc(context, self.model.midpoint.x, self.model.midpoint.y, 13, 0.001, 0, 0);
+        CGContextAddArc(context, self.model.instarting.x, self.model.instarting.y, radius, 0.001, 0, 0);
+        CGContextDrawPath(context, kCGPathFill);
+        CGContextAddArc(context, self.model.midpoint.x, self.model.midpoint.y, radius, 0.001, 0, 0);
         CGContextDrawPath(context, kCGPathFill);
     }
 }
