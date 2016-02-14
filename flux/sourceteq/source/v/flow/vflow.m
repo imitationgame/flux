@@ -85,6 +85,11 @@
     [self.catalogett show:NO];
 }
 
+-(void)cleartext
+{
+    
+}
+
 -(void)show
 {
     if(![self.model.points count])
