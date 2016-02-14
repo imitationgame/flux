@@ -2,7 +2,7 @@
 
 #define deltaline 300
 #define pointmargin 50
-#define pagemargin 200
+#define pagemargin 250
 
 @implementation vflowcontent
 {
@@ -31,8 +31,8 @@
     [self setAlwaysBounceVertical:YES];
 
     firsttime = NO;
-    self.width = 100000;
-    self.height = 100000;
+    self.width = 1000000;
+    self.height = 1000000;
     
     UIView *container = [[UIView alloc] init];
     [container setClipsToBounds:YES];
@@ -137,12 +137,19 @@
 -(void)adjustscreen
 {
     NSUInteger pagewidth = self.width - (self.marginright + self.marginleft);
+    CGFloat pagewidth_2 = pagewidth / 2.0;
     CGFloat screenmarginleft = -(CGFloat)self.marginleft;
     CGFloat screenmargintop = -(CGFloat)self.margintop;
     CGSize contentsize = CGSizeMake(pagewidth, self.visibley);
     CGRect containerframe = CGRectMake(screenmarginleft, screenmargintop, self.width, self.height);
+    CGFloat width = self.bounds.size.width;
+    CGFloat width_2 = width / 2.0;
+    CGFloat height = self.bounds.size.height;
+    CGFloat scrollleft = pagewidth_2 - width_2;
+    CGRect rectscroll = CGRectMake(scrollleft, self.contentOffset.y, width, height);
     [self.container setFrame:containerframe];
     [self setContentSize:contentsize];
+    [self scrollRectToVisible:rectscroll animated:YES];
 }
 
 #pragma mark public

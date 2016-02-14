@@ -9,6 +9,7 @@
 @class vflowett;
 @class vflowstopchoosing;
 @class vflowfield;
+@class vflowtext;
 
 @interface vflow:viewbase
 
