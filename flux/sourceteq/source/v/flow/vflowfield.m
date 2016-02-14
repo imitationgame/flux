@@ -92,9 +92,20 @@
 
 -(void)notifiedkeyboardchange:(NSNotification*)notification
 {
-    CGRect keyrect = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    CGFloat origin = keyrect.origin.y;
-    self.constraint.constant = - ([UIScreen mainScreen].bounds.size.height - origin);
+    CGFloat ypos;
+    
+    if(self.field.isFirstResponder)
+    {
+        CGRect keyrect = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+        CGFloat origin = keyrect.origin.y;
+        ypos = -([UIScreen mainScreen].bounds.size.height - origin);
+    }
+    else
+    {
+        ypos = 90;
+    }
+    
+    self.constraint.constant = ypos;
     
     [UIView animateWithDuration:1.5 animations:
      ^
