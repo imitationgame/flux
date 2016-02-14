@@ -14,6 +14,7 @@
 
 -(void)actionpoint:(vflowpoint*)point;
 -(void)actionett:(vflowett*)ett;
+-(void)actiontext:(vflowtext*)text;
 -(void)clearcolor;
 -(void)clearpoint;
 -(void)cleartext;

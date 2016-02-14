@@ -71,6 +71,11 @@
     }
 }
 
+-(void)actiontext:(vflowtext*)text
+{
+    
+}
+
 #pragma mark public
 
 -(void)clearcolor

@@ -48,11 +48,15 @@
 
 -(void)actionbutton:(UIButton*)button
 {
-    [self.label setTextColor:colormain];
-    [self.model.ett.flow.view.field edit:self];
+    [self.model.ett.flow.view actiontext:self];
 }
 
 #pragma mark public
+
+-(void)editstart
+{
+    [self.label setTextColor:colormain];
+}
 
 -(void)editdone:(NSString*)newtext
 {

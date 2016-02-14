@@ -5,6 +5,7 @@
 @interface vflowtext:UIView
 
 -(instancetype)init:(mflowtext*)model;
+-(void)editstart;
 -(void)editdone:(NSString*)newtext;
 
 @property(weak, nonatomic)mflowtext *model;
