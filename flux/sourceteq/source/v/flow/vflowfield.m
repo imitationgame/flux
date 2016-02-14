@@ -135,6 +135,7 @@
 {
     self.flowtext = flowtext;
     
+    [self.field setText:flowtext.model.text];
     [self.field becomeFirstResponder];
 }
 
