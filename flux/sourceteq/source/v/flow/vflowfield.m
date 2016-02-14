@@ -26,7 +26,7 @@
     vblur *blur = [vblur light:YES];
     
     UIView *border = [[UIView alloc] init];
-    [border setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.2]];
+    [border setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.3]];
     [border setUserInteractionEnabled:NO];
     [border setClipsToBounds:YES];
     [border setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -41,11 +41,30 @@
     [button setTranslatesAutoresizingMaskIntoConstraints:NO];
     [button addTarget:self action:@selector(actiondone:) forControlEvents:UIControlEventTouchUpInside];
     
+    UITextField *field = [[UITextField alloc] init];
+    [field setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+    [field setAutocorrectionType:UITextAutocorrectionTypeNo];
+    [field setBackgroundColor:[UIColor clearColor]];
+    [field setBorderStyle:UITextBorderStyleNone];
+    [field setClearButtonMode:UITextFieldViewModeNever];
+    [field setDelegate:self];
+    [field setFont:[UIFont fontWithName:fontname size:18]];
+    [field setKeyboardType:UIKeyboardTypeAlphabet];
+    [field setKeyboardAppearance:UIKeyboardAppearanceLight];
+    [field setPlaceholder:NSLocalizedString(@"flow_field_placeholder", nil)];
+    [field setReturnKeyType:UIReturnKeyDone];
+    [field setSpellCheckingType:UITextSpellCheckingTypeNo];
+    [field setTextColor:[UIColor blackColor]];
+    [field setTintColor:[UIColor blackColor]];
+    [field setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.field = field;
+    
     [self addSubview:blur];
     [self addSubview:border];
     [self addSubview:button];
+    [self addSubview:field];
     
-    NSDictionary *views = @{@"blur":blur, @"border":border, @"button":button};
+    NSDictionary *views = @{@"blur":blur, @"border":border, @"button":button, @"field":field};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
@@ -54,6 +73,7 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[border(1)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(100)]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[button(40)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[field]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }

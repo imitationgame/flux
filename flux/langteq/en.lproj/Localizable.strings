@@ -24,6 +24,7 @@
 "flow_etttext_pro"="Some process";
 
 "flow_field_done"="Done";
+"flow_field_placeholder"="Description";
 
 "rate_descr"="How would you rate this app?";
 "rate_donereview"="Rate sent. Would you write a review in the app store?";

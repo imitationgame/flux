@@ -2,7 +2,7 @@
 
 @class vflow;
 
-@interface vflowfield:UIView
+@interface vflowfield:UIView<UITextFieldDelegate>
 
 +(void)fieldin:(vflow*)flow;
 
