@@ -13,6 +13,7 @@
     self.model = [[mflow alloc] init:self];
     [vflowcontent containerin:self];
     [vflowstopchoosing stopchoosing:self];
+    [vflowfield fieldin:self];
     
     return self;
 }

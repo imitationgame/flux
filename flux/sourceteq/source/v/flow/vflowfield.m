@@ -5,6 +5,7 @@
 +(void)fieldin:(vflow*)flow
 {
     vflowfield *field = [[vflowfield alloc] init:flow];
+    flow.field = field;
     [flow addSubview:field];
     
     NSDictionary *views = @{@"field":field};
