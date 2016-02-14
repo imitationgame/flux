@@ -4,7 +4,7 @@
 
 @interface vflowfield:UIView
 
--(instancetype)init:(vflow*)flow;
++(void)fieldin:(vflow*)flow;
 
 @property(weak, nonatomic)vflow *flow;
 @property(weak, nonatomic)UITextField *field;
