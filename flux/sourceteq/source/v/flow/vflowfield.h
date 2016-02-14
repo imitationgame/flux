@@ -1,13 +1,12 @@
-//
-//  vflowfield.h
-//  flux
-//
-//  Created by zero on 2/13/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@class vflow;
 
-@interface vflowfield : NSObject
+@interface vflowfield:UIView
+
+-(instancetype)init:(vflow*)flow;
+
+@property(weak, nonatomic)vflow *flow;
+@property(weak, nonatomic)UITextField *field;
 
 @end
