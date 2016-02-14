@@ -57,6 +57,8 @@
 -(void)editdone:(NSString*)newtext
 {
     [self.label setTextColor:color];
+    [self.label setText:newtext];
+    [self.model editedtext:newtext];
 }
 
 @end

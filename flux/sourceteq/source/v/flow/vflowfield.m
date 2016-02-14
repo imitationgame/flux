@@ -126,6 +126,7 @@
 
 -(void)changetext
 {
+    [self.flowtext editdone:self.field.text];
     self.flowtext = nil;
 }
 

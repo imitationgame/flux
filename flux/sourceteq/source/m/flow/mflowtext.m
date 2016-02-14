@@ -20,6 +20,12 @@
 
 #pragma mark public
 
+-(void)editedtext:(NSString*)newtext
+{
+    self.text = newtext;
+    [self adjusttext];
+}
+
 -(void)adjusttext
 {
     CGSize textsize = [self.text boundingRectWithSize:CGSizeMake(200, 100) options:stringdrawing attributes:@{NSFontAttributeName:self.view.label.font} context:nil].size;
