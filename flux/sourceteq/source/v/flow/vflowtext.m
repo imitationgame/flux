@@ -19,6 +19,11 @@
     [label setTextAlignment:[model.ett textalign]];
     self.label = label;
     
+    UIButton *button = [[UIButton alloc] init];
+    [button setClipsToBounds:YES];
+    [button setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [button setBackgroundColor:[UIColor clearColor]];
+    
     [self addSubview:label];
     
     NSDictionary *views = @{@"label":label};
