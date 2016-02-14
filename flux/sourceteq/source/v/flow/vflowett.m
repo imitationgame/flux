@@ -57,7 +57,7 @@
 
 -(void)actiondelete:(UIButton*)button
 {
-    
+    [self.model.flow.ettlist removeett:self.model];
 }
 
 #pragma mark functionality
