@@ -16,6 +16,7 @@
 @property(weak, nonatomic)mflowett *startingett;
 @property(weak, nonatomic)mflowett *endingett;
 @property(weak, nonatomic)mflowlinesitem *nextline;
+@property(weak, nonatomic)mflowlinesitem *prevline;
 @property(weak, nonatomic)mflowlinesitemlist *list;
 @property(nonatomic)CGPoint starting;
 @property(nonatomic)CGPoint ending;

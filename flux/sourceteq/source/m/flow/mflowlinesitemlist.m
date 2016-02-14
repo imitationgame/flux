@@ -62,12 +62,16 @@
 
 -(void)linesparting
 {
+    vflowcontent *content = self.flowett.flow.view.contentview;
     CGPoint linestart = CGPointMake(self.flowett.x, self.flowett.y);
-    CGPoint lineendright = [self.flowett.flow.view.contentview linefrom:linestart deltax:1 deltay:0];
-    CGPoint lineendleft = [self.flowett.flow.view.contentview linefrom:linestart deltax:-1 deltay:0];
+    CGPoint lineendright = [content linefrom:linestart deltax:1 deltay:0];
+    CGPoint lineendleft = [content linefrom:linestart deltax:-1 deltay:0];
     
-    [self addlinestart:linestart lineend:lineendright point:YES showinit:YES];
-    [self addlinestart:linestart lineend:lineendleft point:YES showinit:YES];
+    mflowlinesitem *lineright = [self addlinestart:linestart lineend:lineendright point:YES showinit:YES];
+    mflowlinesitem *lineleft = [self addlinestart:linestart lineend:lineendleft point:YES showinit:YES];
+    
+    CGPoint lineendrightdown = [content linefrom:lineendright deltax:0 deltay:1];
+    CGPoint lineendleftdown = [content linefrom:lineendleft deltax:0 deltay:1];
 }
 
 -(void)connectline:(mflowlinesitem*)line topoint:(CGPoint)point
@@ -115,6 +119,7 @@
         CGPoint nextpoint = [content linefrom:currentline.ending deltax:[stritem deltax] deltay:[stritem deltay]];
         mflowlinesitem *newline = [self addlinestart:currentline.ending lineend:nextpoint point:NO showinit:NO];
         currentline.nextline = newline;
+        newline.prevline = currentline;
         currentline = newline;
     }
     
