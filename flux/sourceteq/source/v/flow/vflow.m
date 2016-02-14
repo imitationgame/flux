@@ -31,6 +31,7 @@
         else
         {
             [self clearcolor];
+            [self cleartext];
             [self.model.points selectpoint:point.model];
             [vflowcatalogett catalogin:self];
         }
@@ -49,6 +50,7 @@
             [self.model.points remove:pointselected];
             [self clearpoint];
             [self clearcolor];
+            [self cleartext];
             [self choosingmode:NO];
             
             CGPoint point = CGPointMake(ett.model.x, ett.model.y);
@@ -65,6 +67,7 @@
         else
         {
             [self clearpoint];
+            [self cleartext];
             [self.model.ettlist selectett:ett.model];
             [vflowcatalogcolor catalogin:ett];
         }
@@ -73,7 +76,21 @@
 
 -(void)actiontext:(vflowtext*)text
 {
-    
+    if(!self.choosing)
+    {
+        if(self.field.flowtext)
+        {
+            [self cleartext];
+        }
+        else
+        {
+            [self clearcolor];
+            [self clearpoint];
+            
+            [self.field edit:text];
+            [text editstart];
+        }
+    }
 }
 
 #pragma mark public
