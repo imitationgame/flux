@@ -12,7 +12,7 @@
     NSDictionary *metrics = @{};
     
     [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[field]-0-|" options:0 metrics:metrics views:views]];
-    [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[field(130)]-0-|" options:0 metrics:metrics views:views]];
+    [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[field(100)]-0-|" options:0 metrics:metrics views:views]];
 }
 
 -(instancetype)init:(vflow*)flow
@@ -23,15 +23,24 @@
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     self.flow = flow;
-    vblur *blur = [vblur light:NO];
+    vblur *blur = [vblur light:YES];
+    
+    UIView *border = [[UIView alloc] init];
+    [border setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.2]];
+    [border setUserInteractionEnabled:NO];
+    [border setClipsToBounds:YES];
+    [border setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     [self addSubview:blur];
+    [self addSubview:border];
     
-    NSDictionary *views = @{@"blur":blur};
+    NSDictionary *views = @{@"blur":blur, @"border":border};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[blur]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[border(1)]" options:0 metrics:metrics views:views]];
     
     return self;
 }
