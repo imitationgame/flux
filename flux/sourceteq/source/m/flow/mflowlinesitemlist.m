@@ -67,11 +67,20 @@
     CGPoint lineendright = [content linefrom:linestart deltax:1 deltay:0];
     CGPoint lineendleft = [content linefrom:linestart deltax:-1 deltay:0];
     
-    mflowlinesitem *lineright = [self addlinestart:linestart lineend:lineendright point:YES showinit:YES];
-    mflowlinesitem *lineleft = [self addlinestart:linestart lineend:lineendleft point:YES showinit:YES];
+    mflowlinesitem *lineright = [self addlinestart:linestart lineend:lineendright point:NO showinit:YES];
+    mflowlinesitem *lineleft = [self addlinestart:linestart lineend:lineendleft point:NO showinit:YES];
     
     CGPoint lineendrightdown = [content linefrom:lineendright deltax:0 deltay:1];
     CGPoint lineendleftdown = [content linefrom:lineendleft deltax:0 deltay:1];
+    
+    mflowlinesitem *linerightdown = [self addlinestart:lineendright lineend:lineendrightdown point:YES showinit:NO];
+    mflowlinesitem *lineleftdown = [self addlinestart:lineendleft lineend:lineendleftdown point:YES showinit:NO];
+    
+    lineright.nextline = linerightdown;
+    linerightdown.prevline = lineright;
+    
+    lineleft.nextline = lineleftdown;
+    lineleftdown.prevline = lineleft;
 }
 
 -(void)connectline:(mflowlinesitem*)line topoint:(CGPoint)point
