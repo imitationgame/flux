@@ -11,6 +11,9 @@
     NSDictionary *views = @{@"field":field};
     NSDictionary *metrics = @{};
     
+    field.constraint = [NSLayoutConstraint constraintWithItem:field attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:flow attribute:NSLayoutAttributeBottom multiplier:1 constant:-100];
+    
+    [flow addConstraint:field.constraint];
     [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[field]-0-|" options:0 metrics:metrics views:views]];
     [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[field(90)]-0-|" options:0 metrics:metrics views:views]];
 }
