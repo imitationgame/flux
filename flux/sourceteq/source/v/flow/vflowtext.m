@@ -23,7 +23,7 @@
     [button setClipsToBounds:YES];
     [button setTranslatesAutoresizingMaskIntoConstraints:NO];
     [button setBackgroundColor:[UIColor clearColor]];
-    [button addTarget:self action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>];
+    [button addTarget:self action:@selector(actionbutton:) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:label];
     [self addSubview:button];
@@ -43,7 +43,7 @@
 
 -(void)actionbutton:(UIButton*)button
 {
-    self.model.ett.flow.view.field
+    [self.model.ett.flow.view.field edit:self];
 }
 
 @end

@@ -117,6 +117,15 @@
     
 }
 
+#pragma mark public
+
+-(void)edit:(vflowtext*)flowtext
+{
+    self.flowtext = flowtext;
+    
+    [self.field becomeFirstResponder];
+}
+
 #pragma mark -
 #pragma mark field del
 
