@@ -54,4 +54,9 @@
     self.selected = nil;
 }
 
+-(void)removeett:(mflowett*)ett
+{
+    
+}
+
 @end

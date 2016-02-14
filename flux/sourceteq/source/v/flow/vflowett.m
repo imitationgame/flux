@@ -22,6 +22,7 @@
     [button setTintColor:[UIColor colorWithRed:1 green:0.2 blue:0 alpha:0.7]];
     [button.imageView setClipsToBounds:YES];
     [button.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    [button addTarget:self action:@selector(actiondelete:) forControlEvents:UIControlEventTouchUpInside];
     self.button = button;
     
     self.model = model;
@@ -50,6 +51,13 @@
 {
     [super setHighlighted:highlighted];
     [self hover];
+}
+
+#pragma mark actions
+
+-(void)actiondelete:(UIButton*)button
+{
+    
 }
 
 #pragma mark functionality

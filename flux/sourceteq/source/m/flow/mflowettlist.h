@@ -13,6 +13,7 @@
 -(void)add:(id<mflowetttypesprotocol>)type point:(mflowpointsitem*)point;
 -(void)selectett:(mflowett*)ett;
 -(void)deselect;
+-(void)removeett:(mflowett*)ett;
 
 @property(weak, nonatomic)mflow *flow;
 @property(weak, nonatomic)mflowett *selected;
