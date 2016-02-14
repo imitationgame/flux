@@ -94,7 +94,7 @@
 {
     CGFloat ypos;
     
-    if(self.field.isFirstResponder)
+    if(self.flowtext)
     {
         CGRect keyrect = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
         CGFloat origin = keyrect.origin.y;
@@ -125,7 +125,7 @@
 
 -(void)changetext
 {
-    
+    self.flowtext = nil;
 }
 
 #pragma mark public
