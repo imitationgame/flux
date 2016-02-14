@@ -12,7 +12,7 @@
     NSDictionary *metrics = @{};
     
     [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[field]-0-|" options:0 metrics:metrics views:views]];
-    [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[field(100)]-0-|" options:0 metrics:metrics views:views]];
+    [flow addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[field(90)]-0-|" options:0 metrics:metrics views:views]];
 }
 
 -(instancetype)init:(vflow*)flow
@@ -48,7 +48,7 @@
     [field setBorderStyle:UITextBorderStyleNone];
     [field setClearButtonMode:UITextFieldViewModeNever];
     [field setDelegate:self];
-    [field setFont:[UIFont fontWithName:fontname size:18]];
+    [field setFont:[UIFont fontWithName:fontname size:20]];
     [field setKeyboardType:UIKeyboardTypeAlphabet];
     [field setKeyboardAppearance:UIKeyboardAppearanceLight];
     [field setPlaceholder:NSLocalizedString(@"flow_field_placeholder", nil)];
@@ -72,8 +72,8 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[border(1)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(100)]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[button(40)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[field]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[button(40)]-0-[field]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[field]-5-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -82,7 +82,29 @@
 
 -(void)actiondone:(UIButton*)button
 {
+    [self.field resignFirstResponder];
+}
+
+#pragma mark functionality
+
+-(void)changetext
+{
     
+}
+
+#pragma mark -
+#pragma mark field del
+
+-(void)textFieldDidEndEditing:(UITextField*)field
+{
+    [self changetext];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField*)field
+{
+    [field resignFirstResponder];
+    
+    return YES;
 }
 
 @end
