@@ -15,7 +15,6 @@
 -(void)unselect;
 -(void)pointat:(NSUInteger)x y:(NSUInteger)y;
 -(void)pointatline:(mflowlinesitem*)line;
--(void)remove:(mflowpointsitem*)point;
 
 @property(weak, nonatomic)mflow *flow;
 @property(weak, nonatomic)mflowpointsitem *selected;

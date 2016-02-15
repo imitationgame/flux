@@ -27,7 +27,6 @@
 -(void)remove
 {
     [self.points remove:self];
-    [self.view removeFromSuperview];
 }
 
 @end

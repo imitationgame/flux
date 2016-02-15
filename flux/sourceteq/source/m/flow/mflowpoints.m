@@ -82,9 +82,4 @@
     [self processmodel:modelpoint];
 }
 
--(void)remove:(mflowpointsitem*)point
-{
-    [array removeObject:point];
-}
-
 @end
