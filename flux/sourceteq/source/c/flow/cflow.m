@@ -36,7 +36,7 @@
     NSError *error;
     [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:&error];
     
-    [self.navigationController pushViewController:[[cflowdetail alloc] init] animated:YES];
+    [self.navigationController pushViewController:[[cflowdetail alloc] init:url] animated:YES];
 }
 
 -(void)share

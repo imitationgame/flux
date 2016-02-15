@@ -2,6 +2,14 @@
 
 @implementation cflowdetail
 
+-(instancetype)init:(NSURL*)urlpicture
+{
+    self = [super init];
+    self.urlpicture = urlpicture;
+    
+    return self;
+}
+
 -(void)viewDidLoad
 {
     [super viewDidLoad];
