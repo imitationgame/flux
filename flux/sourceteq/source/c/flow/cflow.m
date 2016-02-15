@@ -18,24 +18,21 @@
 
 -(void)exportflow
 {
-    UIImage *image;
     vflowcontent *content = self.viewflow.contentview;
-    CGSize size = content.contentSize;
-    CGFloat marginleft = -(CGFloat)content.marginleft;
-    CGFloat margintop = -(CGFloat)content.margintop;
-    CGFloat totalwidth = content.width;
-    CGFloat totalheight = content.height;
-    UIGraphicsBeginImageContextWithOptions(size, YES, [UIScreen mainScreen].scale);
-    [content.container drawViewHierarchyInRect:CGRectMake(marginleft, margintop, totalwidth, totalheight) afterScreenUpdates:YES];
-    image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    UIView *snapshot = [content.container snapshotViewAfterScreenUpdates:YES];
+    CGFloat x = snapshot.frame.origin.x;
+    CGFloat y = snapshot.frame.origin.y;
+    CGFloat width = content.contentSize.width;
+    CGFloat height = content.contentSize.height;
+    UIScrollView *scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
+    [scroll setContentSize:CGSizeMake(width, height)];
+    [scroll addSubview:snapshot];
+    [scroll setBackgroundColor:[UIColor whiteColor]];
+    [snapshot setFrame:CGRectMake(-(CGFloat)content.marginleft, -(CGFloat)content.margintop, content.width, content.height)];
     
-    NSString *filename = NSLocalizedString(@"flow_exportname", nil);
-    NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
-    NSURL *url = [NSURL fileURLWithPath:filepath];
-    [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
+    UIView *snapshot2 = [scroll snapshotViewAfterScreenUpdates:YES];
     
-    [self.navigationController pushViewController:[[cflowdetail alloc] init:filepath] animated:YES];
+    [self.navigationController pushViewController:[[cflowdetail alloc] init:snapshot2] animated:YES];
 }
 
 -(void)share

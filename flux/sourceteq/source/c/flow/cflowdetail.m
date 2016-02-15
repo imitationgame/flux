@@ -2,10 +2,11 @@
 
 @implementation cflowdetail
 
--(instancetype)init:(NSString*)pathpicture
+-(instancetype)init:(UIView*)snapshot
 {
     self = [super init];
-    self.pathpicture = pathpicture;;
+//    self.pathpicture = pathpicture;
+    self.snapshot = snapshot;
     
     return self;
 }
