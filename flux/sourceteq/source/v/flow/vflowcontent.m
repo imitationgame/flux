@@ -199,8 +199,8 @@
             CGRect frame = view.frame;
             NSUInteger x = frame.origin.x - pointpage;
             NSUInteger y = frame.origin.y - pointpage;
-            NSUInteger w = frame.size.width + x + pointpage;
-            NSUInteger h = frame.size.height + y + pointpage;
+            NSUInteger w = frame.size.width + frame.origin.x + pointpage;
+            NSUInteger h = frame.size.height + frame.origin.y + pointpage;
             
             if(x < self.marginleft)
             {
