@@ -34,9 +34,12 @@
 //    [snap setFrame:CGRectMake(0, 0, snapwidth, snapheight)];
     
     
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(10000, 10000), YES, 1);
-    [content.container snapshotViewAfterScreenUpdates];
-    [content.container.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIView *snip = [content.container resizableSnapshotViewFromRect:CGRectMake(500, 1000, 500, 500) afterScreenUpdates:YES withCapInsets:UIEdgeInsetsZero];
+    
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(1000, 1000), YES, 1);
+    [snip drawViewHierarchyInRect:CGRectMake(0, 0, 500, 500) afterScreenUpdates:YES];
+//    [content.container snapshotViewAfterScreenUpdates];
+//    [content.container.layer renderInContext:UIGraphicsGetCurrentContext()];
     image = UIGraphicsGetImageFromCurrentImageContext();
 //    UIGraphicsEndImageContext();
     
