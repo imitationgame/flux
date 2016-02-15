@@ -73,7 +73,7 @@
 -(void)actionshare:(UIBarButtonItem*)item
 {
     cflow *controller = self.viewControllers[0];
-    [controller share];
+    [controller exportflow];
 }
 
 @end

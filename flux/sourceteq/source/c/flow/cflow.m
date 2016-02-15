@@ -18,7 +18,24 @@
 
 -(void)exportflow
 {
+    UIImage *image;
+    vflowcontent *content = self.viewflow.contentview;
+    CGSize size = content.contentSize;
+    CGFloat width = size.width;
+    CGFloat marginleft = -(CGFloat)content.marginleft;
+    CGFloat margintop = -(CGFloat)content.margintop;
+    CGFloat totalwidth = content.width;
+    CGFloat totalheight = content.height;
+    UIGraphicsBeginImageContextWithOptions(size, YES, [UIScreen mainScreen].scale);
+    [content.container drawViewHierarchyInRect:CGRectMake(marginleft, margintop, totalwidth, totalheight) afterScreenUpdates:YES];
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
+    NSString *filename = NSLocalizedString(@"flow_exportname", nil);
+    NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:filename]];
+    
+    NSError *error;
+    [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:&error];
 }
 
 -(void)share
