@@ -34,7 +34,7 @@
 //    [snap setFrame:CGRectMake(0, 0, snapwidth, snapheight)];
     
     
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(3000, 3000), YES, 1);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(10000, 10000), YES, 1);
     [content.container.layer renderInContext:UIGraphicsGetCurrentContext()];
     image = UIGraphicsGetImageFromCurrentImageContext();
 //    UIGraphicsEndImageContext();
