@@ -18,24 +18,32 @@
 
 -(void)exportflow
 {
-    UIImage *image;
+    __block UIImage *image;
     vflowcontent *content = self.viewflow.contentview;
     CGSize size = content.contentSize;
     
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(10000, 10000), YES, 0.0f);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
-    CGContextAddRect(context, CGRectMake(1000, 1000, 8000, 8000));
-    CGContextDrawPath(context, kCGPathFill);
-    image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-
-    NSString *filename = NSLocalizedString(@"flow_exportname", nil);
-    NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
-    NSURL *url = [NSURL fileURLWithPath:filepath];
-    [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
-    
-    [self.navigationController pushViewController:[[cflowdetail alloc] init:filepath] animated:YES];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^
+                   {
+                       UIGraphicsBeginImageContextWithOptions(CGSizeMake(1000000, 1000000), YES, 1);
+                       CGContextRef context = UIGraphicsGetCurrentContext();
+                       CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
+                       CGContextAddRect(context, CGRectMake(1000, 1000, 8000, 8000));
+                       CGContextDrawPath(context, kCGPathFill);
+                       image = UIGraphicsGetImageFromCurrentImageContext();
+                       UIGraphicsEndImageContext();
+                       
+                       NSString *filename = NSLocalizedString(@"flow_exportname", nil);
+                       NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
+                       NSURL *url = [NSURL fileURLWithPath:filepath];
+                       [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
+                       
+                       dispatch_async(dispatch_get_main_queue(),
+                                      ^
+                                      {
+                                          [self.navigationController pushViewController:[[cflowdetail alloc] init:filepath] animated:YES];
+                                      });
+                   });
     
 }
 
