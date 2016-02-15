@@ -23,15 +23,34 @@
     CGSize size = content.contentSize;
     CGFloat contentwidth = size.width;
     CGFloat contentheight = size.height;
-    CGFloat marginleft = (- (CGFloat)content.marginleft);
-    CGFloat margintop = (- (CGFloat)content.margintop);
+    CGFloat marginleft = (-(CGFloat)content.marginleft);
+    CGFloat margintop = (-(CGFloat)content.margintop);
     CGFloat width = content.width;
     CGFloat height = content.height;
     CGRect rect = CGRectMake(marginleft, margintop, width, height);
     size = CGSizeMake(contentwidth, contentheight);
+//    CGFloat snapwidth = snap.frame.size.width / 1;
+//    CGFloat snapheight = snap.frame.size.height / 1;
+//    [snap setFrame:CGRectMake(0, 0, snapwidth, snapheight)];
     
+    
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(3000, 3000), YES, 1);
+    [content.container.layer renderInContext:UIGraphicsGetCurrentContext()];
+    image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+    
+    UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
+    [imageview setFrame:CGRectMake(0, 0, 500, 500)];
+    [self.view addSubview:imageview];
+    /*
+    [snip setFrame:CGRectMake(0, 0, 1500, 1500)];
     UIGraphicsBeginImageContextWithOptions(size, YES, 1);
-    [content.container drawViewHierarchyInRect:rect afterScreenUpdates:YES];
+    [snip drawViewHierarchyInRect:CGRectMake(0, 0, contentwidth, contentheight) afterScreenUpdates:YES];
+//    [snap.layer renderInContext:UIGraphicsGetCurrentContext()];
+//    [content.container drawViewHierarchyInRect:CGRectMake(0, 0, size.width, size.height) afterScreenUpdates:YES];
+//    [content.container.layer renderInContext:UIGraphicsGetCurrentContext()];
+    //                       [snapcontainer drawViewHierarchyInRect:CGRectMake(0, 0, size.width, size.height) afterScreenUpdates:YES];
+    //    [content.container drawViewHierarchyInRect:rect afterScreenUpdates:YES];
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
@@ -41,6 +60,8 @@
     [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
     
     [self.navigationController pushViewController:[[cflowdetail alloc] init:filepath] animated:YES];
+     
+     */
 }
 
 -(void)share
