@@ -194,7 +194,7 @@
     
     for(UIView *view in subviews)
     {
-        if(![view isKindOfClass:[vflowtext class]])
+        if(![view isKindOfClass:[vflowtext class]] && [view isKindOfClass:[UIImageView class]])
         {
             CGRect frame = view.frame;
             NSUInteger x = frame.origin.x - pointpage;
