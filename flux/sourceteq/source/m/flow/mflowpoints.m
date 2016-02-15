@@ -68,7 +68,7 @@
 
 -(void)pointat:(NSUInteger)x y:(NSUInteger)y
 {
-    mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:x y:y];
+    mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:self x:x y:y];
     [self processmodel:modelpoint];
 }
 
@@ -76,7 +76,7 @@
 {
     CGPoint endingpoint = line.ending;
     
-    mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:endingpoint.x y:endingpoint.y];
+    mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:self x:endingpoint.x y:endingpoint.y];
     modelpoint.line = line;
     line.pointitem = modelpoint;
     [self processmodel:modelpoint];
