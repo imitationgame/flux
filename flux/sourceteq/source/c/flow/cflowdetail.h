@@ -1,5 +1,5 @@
 #import "appdel.h"
 
-@interface cflowdetail : NSObject
+@interface cflowdetail:UIViewController
 
 @end
