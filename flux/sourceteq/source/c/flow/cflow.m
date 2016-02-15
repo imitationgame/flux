@@ -16,6 +16,11 @@
 
 #pragma mark public
 
+-(void)exportflow
+{
+    
+}
+
 -(void)share
 {
     UIImage *image;

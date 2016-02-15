@@ -4,7 +4,7 @@
 
 @interface cflow:UIViewController
 
--(void)share;
+-(void)exportflow;
 
 @property(weak, nonatomic)vflow *viewflow;
 
