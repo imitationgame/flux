@@ -35,6 +35,7 @@
     
     
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(10000, 10000), YES, 1);
+    [content.container snapshotViewAfterScreenUpdates];
     [content.container.layer renderInContext:UIGraphicsGetCurrentContext()];
     image = UIGraphicsGetImageFromCurrentImageContext();
 //    UIGraphicsEndImageContext();
