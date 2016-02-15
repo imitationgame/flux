@@ -148,6 +148,8 @@
     
     mflowlinesitem *endingline = [self addlinestart:currentline.ending lineend:point point:NO showinit:NO];
     currentline.nextline = endingline;
+    
+    [self.flowett.flow.view.contentview checkdimensions];
 }
 
 -(void)remove
