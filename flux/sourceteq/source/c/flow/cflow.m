@@ -21,7 +21,6 @@
     UIImage *image;
     vflowcontent *content = self.viewflow.contentview;
     CGSize size = content.contentSize;
-    CGFloat width = size.width;
     CGFloat marginleft = -(CGFloat)content.marginleft;
     CGFloat margintop = -(CGFloat)content.margintop;
     CGFloat totalwidth = content.width;
@@ -36,6 +35,8 @@
     
     NSError *error;
     [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:&error];
+    
+    [self.navigationController pushViewController:[[cflowdetail alloc] init] animated:YES];
 }
 
 -(void)share

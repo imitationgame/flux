@@ -16,7 +16,7 @@
 
 -(void)loadView
 {
-    self.view = nil;
+    self.view = [[vflowdetail alloc] init:self];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle
