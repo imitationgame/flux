@@ -183,7 +183,15 @@
 
 -(void)checkdimensions
 {
+    NSArray *subviews = self.container.subviews;
     
+    for(UIView *view in subviews)
+    {
+        if(![view isKindOfClass:[vflowtext class]])
+        {
+            
+        }
+    }
 }
 
 @end
