@@ -56,8 +56,6 @@
 
 -(void)removeett:(mflowett*)ett
 {
-#warning "here"
-    
     [self.flow.view clearcolor];
     [ett.view removeFromSuperview];
 }
