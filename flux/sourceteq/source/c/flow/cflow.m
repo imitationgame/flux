@@ -21,13 +21,13 @@
     UIImage *image;
     vflowcontent *content = self.viewflow.contentview;
     CGSize size = content.contentSize;
-    CGFloat scrollwidth = 100;
-    CGFloat scrollheight = 100;
+    CGFloat basesize = 100;
+    CGFloat scrollwidth = basesize;
+    CGFloat scrollheight = basesize;
     CGFloat contentwidth = size.width;
     CGFloat contentheight = size.height;
     CGFloat marginleft = content.marginleft;
     CGFloat margintop = content.margintop;
-
     
     if(scrollwidth > contentwidth)
     {
@@ -51,6 +51,8 @@
             CGRect realrect = CGRectMake(adwidth, adheight, scrollwidth, scrollheight);
             CGPoint pointoffset = CGPointMake(marginleft + adwidth, margintop + adheight);
             
+            NSLog(@"scroll: %@, %@; ad %@, %@; margin %@, %@", @(scrollwidth), @(scrollheight), @(adwidth), @(adheight), @(marginleft), @(margintop));
+            
             [content setFrame:rectscroll];
             [content setContentOffset:pointoffset animated:NO];
             [content drawViewHierarchyInRect:realrect afterScreenUpdates:YES];
@@ -63,6 +65,8 @@
             }
         }
         
+        adwidth = 0;
+        scrollwidth = basesize;
         adheight += scrollheight;
         
         if(adheight + scrollheight > contentheight)
@@ -91,8 +95,19 @@
     
     */
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
-    [imageview setFrame:CGRectMake(0, 0, 500, 500)];
+    [imageview setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [imageview setClipsToBounds:YES];
+    [imageview setContentMode:UIViewContentModeScaleAspectFit];
+    
+    
     [self.view addSubview:imageview];
+    
+    NSDictionary *views = @{@"img":imageview};
+    NSDictionary *metrics = @{};
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[img]-0-|" options:0 metrics:metrics views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[img]-0-|" options:0 metrics:metrics views:views]];
+    
     /*
     [snip setFrame:CGRectMake(0, 0, 1500, 1500)];
     UIGraphicsBeginImageContextWithOptions(size, YES, 1);
