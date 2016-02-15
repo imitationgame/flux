@@ -13,12 +13,9 @@
     [image setUserInteractionEnabled:NO];
     [image setTranslatesAutoresizingMaskIntoConstraints:NO];
     [image setImage:[UIImage imageWithContentsOfFile:controller.pathpicture]];
-//    [self addSubview:image];
+    [self addSubview:image];
     
-    [controller.snapshot setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self addSubview:controller.snapshot];
-    
-    NSDictionary *views = @{@"image":controller.snapshot};
+    NSDictionary *views = @{@"image":image};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[image]-0-|" options:0 metrics:metrics views:views]];

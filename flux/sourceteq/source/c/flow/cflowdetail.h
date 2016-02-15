@@ -2,10 +2,8 @@
 
 @interface cflowdetail:UIViewController
 
-//-(instancetype)init:(NSString*)pathpicture;
--(instancetype)init:(UIView*)snapshot;
+-(instancetype)init:(NSString*)pathpicture;
 
 @property(copy, nonatomic)NSString *pathpicture;
-@property(strong, nonatomic)UIView *snapshot;
 
 @end
