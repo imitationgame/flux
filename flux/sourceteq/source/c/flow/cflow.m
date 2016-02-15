@@ -31,12 +31,11 @@
     UIGraphicsEndImageContext();
     
     NSString *filename = NSLocalizedString(@"flow_exportname", nil);
-    NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:filename]];
+    NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
+    NSURL *url = [NSURL fileURLWithPath:filepath];
+    [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
     
-    NSError *error;
-    [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:&error];
-    
-    [self.navigationController pushViewController:[[cflowdetail alloc] init:url] animated:YES];
+    [self.navigationController pushViewController:[[cflowdetail alloc] init:filepath] animated:YES];
 }
 
 -(void)share

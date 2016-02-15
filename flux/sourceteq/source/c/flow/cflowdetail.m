@@ -2,10 +2,10 @@
 
 @implementation cflowdetail
 
--(instancetype)init:(NSURL*)urlpicture
+-(instancetype)init:(NSString*)pathpicture
 {
     self = [super init];
-    self.urlpicture = urlpicture;
+    self.pathpicture = pathpicture;;
     
     return self;
 }

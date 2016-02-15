@@ -2,8 +2,8 @@
 
 @interface cflowdetail:UIViewController
 
--(instancetype)init:(NSURL*)urlpicture;
+-(instancetype)init:(NSString*)pathpicture;
 
-@property(weak, nonatomic)NSURL *urlpicture;
+@property(weak, nonatomic)NSString *pathpicture;
 
 @end
