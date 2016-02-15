@@ -22,12 +22,11 @@
     vflowcontent *content = self.viewflow.contentview;
     CGSize size = content.contentSize;
     
-    UIGraphicsBeginImageContextWithOptions(size, YES, 0.0f);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(10000, 10000), YES, 0.0f);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
     CGContextAddRect(context, CGRectMake(1000, 1000, 8000, 8000));
     CGContextDrawPath(context, kCGPathFill);
-    UIGraphicsEndImageContext();
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
