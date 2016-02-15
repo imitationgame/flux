@@ -107,7 +107,7 @@
 
 -(void)actionclose:(UIButton*)button
 {
-    [self show:NO];
+    [self.flow clearpoint];
 }
 
 -(void)actionconnect:(UIButton*)button
