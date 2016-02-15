@@ -22,10 +22,8 @@
     vflowcontent *content = self.viewflow.contentview;
     CGSize size = content.contentSize;
     CGFloat width = size.width;
-    CGFloat height = size.height;
-    
     UIGraphicsBeginImageContextWithOptions(size, YES, [UIScreen mainScreen].scale);
-    [content drawViewHierarchyInRect:CGRectMake(0, 0, width, height) afterScreenUpdates:YES];
+    [content.container drawViewHierarchyInRect:CGRectMake(-(CGFloat)content.marginleft, -(CGFloat)content.margintop, content.width, content.height) afterScreenUpdates:YES];
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     

@@ -28,10 +28,12 @@
     [self setClipsToBounds:YES];
     [self setAlwaysBounceHorizontal:YES];
     [self setAlwaysBounceVertical:YES];
+    [self setShowsHorizontalScrollIndicator:NO];
+    [self setShowsVerticalScrollIndicator:NO];
 
     firsttime = NO;
-    self.width = 1000000;
-    self.height = 1000000;
+    self.width = 2000;
+    self.height = 2000;
     
     UIView *container = [[UIView alloc] init];
     [container setClipsToBounds:YES];
@@ -53,7 +55,6 @@
                        {
                            firsttime = YES;
                            [self firsttimeconstraints];
-                           
                            [self.container setFrame:CGRectMake(-((CGFloat)self.marginleft), -((CGFloat)self.margintop), self.width, self.height)];
                        }
                    });
@@ -80,8 +81,6 @@
     NSUInteger y = point.y;
     NSUInteger minx = x - pointmargin;
     NSUInteger miny = y - pointmargin;
-    NSUInteger maxx = x + pointmargin;
-    NSUInteger maxy = y + pointmargin;
     CGRect rect = CGRectMake(minx, miny, 2 * pointmargin, 2 * pointmargin);
     NSArray *subviews = self.container.subviews;
     
