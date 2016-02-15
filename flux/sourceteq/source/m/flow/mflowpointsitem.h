@@ -8,6 +8,7 @@
 
 -(instancetype)init:(NSUInteger)x y:(NSUInteger)y;
 -(vflowpoint*)generateview;
+-(void)remove;
 
 @property(weak, nonatomic)vflowpoint *view;
 @property(weak, nonatomic)mflowlinesitem *line;

@@ -78,6 +78,7 @@
     
     mflowpointsitem *modelpoint = [[mflowpointsitem alloc] init:endingpoint.x y:endingpoint.y];
     modelpoint.line = line;
+    line.pointitem = modelpoint;
     [self processmodel:modelpoint];
 }
 

@@ -93,6 +93,7 @@
 
 -(void)remove
 {
+    [self.pointitem remove];
     [self.view removeFromSuperview];
     [self.endingett remove];
     [self.nextline remove];

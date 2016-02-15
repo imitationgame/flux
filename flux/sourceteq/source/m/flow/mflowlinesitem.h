@@ -5,6 +5,7 @@
 @class mflowett;
 @class mflowlinesitem;
 @class mflowlinesitemlist;
+@class mflowpointsitem;
 
 @interface mflowlinesitem:NSObject
 
@@ -19,6 +20,7 @@
 @property(weak, nonatomic)mflowlinesitem *nextline;
 @property(weak, nonatomic)mflowlinesitem *prevline;
 @property(weak, nonatomic)mflowlinesitemlist *list;
+@property(weak, nonatomic)mflowpointsitem *pointitem;
 @property(nonatomic)CGPoint starting;
 @property(nonatomic)CGPoint ending;
 @property(nonatomic)CGPoint midpoint;

@@ -23,4 +23,9 @@
     return view;
 }
 
+-(void)remove
+{
+    [self.view removeFromSuperview];
+}
+
 @end
