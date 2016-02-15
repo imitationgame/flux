@@ -12,7 +12,7 @@
     [image setContentMode:UIViewContentModeScaleAspectFit];
     [image setUserInteractionEnabled:NO];
     [image setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [image setImage:[[UIImage alloc] initWithData:[[NSData alloc] initWithContentsOfURL:controller.urlpicture]]];
+    [image setImage:[UIImage imageWithContentsOfFile:controller.pathpicture]];
     [self addSubview:image];
     
     NSDictionary *views = @{@"image":image};
