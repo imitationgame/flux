@@ -18,36 +18,29 @@
 
 -(void)exportflow
 {
-    __block UIImage *image;
+    UIImage *image;
     vflowcontent *content = self.viewflow.contentview;
+    CGSize size = content.contentSize;
+    CGFloat contentwidth = size.width / 10.0;
+    CGFloat contentheight = size.height / 10.0;
+    CGFloat marginleft = (- (CGFloat)content.marginleft) / 10.0;
+    CGFloat margintop = (- (CGFloat)content.margintop) / 10.0;
+    CGFloat width = content.width;
+    CGFloat height = content.height;
+    CGRect rect = CGRectMake(marginleft, margintop, width, height);
+    size = CGSizeMake(contentwidth, contentheight);
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
-                   ^
-                   {
-                       CGSize size = content.contentSize;
-                       CGFloat marginleft = - (CGFloat)content.marginleft;
-                       CGFloat margintop = - (CGFloat)content.margintop;
-                       CGFloat width = content.width;
-                       CGFloat height = content.height;
-                       CGRect rect = CGRectMake(marginleft, margintop, width, height);
-                       
-                       UIGraphicsBeginImageContextWithOptions(size, YES, 1);
-                       [content.container drawViewHierarchyInRect:rect afterScreenUpdates:YES];
-                       image = UIGraphicsGetImageFromCurrentImageContext();
-                       UIGraphicsEndImageContext();
-                       
-                       NSString *filename = NSLocalizedString(@"flow_exportname", nil);
-                       NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
-                       NSURL *url = [NSURL fileURLWithPath:filepath];
-                       [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
-                       
-                       dispatch_async(dispatch_get_main_queue(),
-                                      ^
-                                      {
-                                          [self.navigationController pushViewController:[[cflowdetail alloc] init:filepath] animated:YES];
-                                      });
-                   });
+    UIGraphicsBeginImageContextWithOptions(size, YES, 1);
+    [content.container drawViewHierarchyInRect:rect afterScreenUpdates:YES];
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
+    NSString *filename = NSLocalizedString(@"flow_exportname", nil);
+    NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
+    NSURL *url = [NSURL fileURLWithPath:filepath];
+    [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
+    
+    [self.navigationController pushViewController:[[cflowdetail alloc] init:filepath] animated:YES];
 }
 
 -(void)share
@@ -55,12 +48,14 @@
     UIImage *image;
     vflowcontent *content = self.viewflow.contentview;
     CGSize size = content.contentSize;
-    CGFloat width = size.width;
-    CGFloat marginleft = -(CGFloat)content.marginleft;
-    CGFloat margintop = -(CGFloat)content.margintop;
-    CGFloat totalwidth = content.width;
-    CGFloat totalheight = content.height;
-    UIGraphicsBeginImageContextWithOptions(size, YES, [UIScreen mainScreen].scale);
+    CGFloat width = size.width / 10.0;
+    CGFloat height = size.height / 10.0;
+    CGFloat marginleft = (-(CGFloat)content.marginleft) / 10.0;
+    CGFloat margintop = (-(CGFloat)content.margintop) / 10.0;
+    CGFloat totalwidth = content.width / 10.0;
+    CGFloat totalheight = content.height / 10.0;
+    size = CGSizeMake(width, height);
+    UIGraphicsBeginImageContextWithOptions(size, YES, 1);
     [content.container drawViewHierarchyInRect:CGRectMake(marginleft, margintop, totalwidth, totalheight) afterScreenUpdates:YES];
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
