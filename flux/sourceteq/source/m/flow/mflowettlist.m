@@ -59,6 +59,7 @@
 {
     [self.flow.view clearcolor];
     [ett remove:YES];
+    [self.flow.view.contentview checkdimensions];
 }
 
 -(void)clean:(mflowett*)ett
