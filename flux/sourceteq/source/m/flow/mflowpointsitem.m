@@ -2,10 +2,11 @@
 
 @implementation mflowpointsitem
 
--(instancetype)init:(NSUInteger)x y:(NSUInteger)y
+-(instancetype)init:(mflowpoints*)points x:(NSUInteger)x y:(NSUInteger)y
 {
     self = [super init];
 
+    self.points = points;
     self.x = x;
     self.y = y;
     
