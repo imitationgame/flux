@@ -19,17 +19,17 @@
 -(void)share
 {
     UIImage *image;
-
-    CGSize size = self.viewflow.container.bounds.size;
+    vflowcontent *content = self.viewflow.contentview;
+    CGSize size = content.contentSize;
     CGFloat width = size.width;
     CGFloat height = size.height;
     
     UIGraphicsBeginImageContextWithOptions(size, YES, [UIScreen mainScreen].scale);
-    [self.viewflow.container drawViewHierarchyInRect:CGRectMake(0, 0, width, height) afterScreenUpdates:YES];
+    [content drawViewHierarchyInRect:CGRectMake(0, 0, width, height) afterScreenUpdates:YES];
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    NSString *filename = @"flowchart.png";
+    NSString *filename = NSLocalizedString(@"flow_exportname", nil);
     NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:filename]];
     [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
 

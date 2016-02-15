@@ -26,6 +26,8 @@
 "flow_field_done"="Done";
 "flow_field_placeholder"="Description";
 
+"flow_exportname"="flow.png";
+
 "rate_descr"="How would you rate this app?";
 "rate_donereview"="Rate sent. Would you write a review in the app store?";
 "rate_send"="Send";
