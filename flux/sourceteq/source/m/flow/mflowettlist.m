@@ -40,6 +40,7 @@
     [array addObject:ettmodel];
     
     [self.flow.view.contentview addSubview:ettview];
+    [self.flow.view.contentview checkdimensions];
 }
 
 -(void)selectett:(mflowett*)ett

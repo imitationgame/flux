@@ -24,6 +24,7 @@
     
     [self add:modelpoint];
     [self.flow.view.contentview addSubview:viewpoint];
+    [self.flow.view.contentview checkdimensions];
 }
 
 #pragma mark public
