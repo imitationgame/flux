@@ -71,6 +71,7 @@
 
 -(void)remove
 {
+    [self.linesitemlist remove];
     [self.text remove];
     [self.view removeFromSuperview];
 }

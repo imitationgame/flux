@@ -150,4 +150,15 @@
     currentline.nextline = endingline;
 }
 
+-(void)remove
+{
+    NSUInteger count = [self count];
+    
+    for(NSInteger i = count - 1; i >= 0; i--)
+    {
+        mflowlinesitem *line = [self item:i];
+        [line remove];
+    }
+}
+
 @end

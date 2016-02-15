@@ -91,4 +91,9 @@
     [self.list connectline:self topoint:point];
 }
 
+-(void)remove
+{
+    
+}
+
 @end

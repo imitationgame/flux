@@ -11,6 +11,7 @@
 -(instancetype)init:(mflowlinesitemlist*)list starting:(CGPoint)starting ending:(CGPoint)ending showinit:(BOOL)showinit;
 -(vflowline*)generateview;
 -(void)connecttopoint:(CGPoint)point;
+-(void)remove;
 
 @property(weak, nonatomic)vflowline *view;
 @property(weak, nonatomic)mflowett *startingett;
