@@ -16,3 +16,4 @@
 #import "vflowstopchoosing.h"
 #import "vflowtext.h"
 #import "vflowfield.h"
+#import "vflowdetail.h"
