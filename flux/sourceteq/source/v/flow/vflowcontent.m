@@ -32,8 +32,8 @@
     [self setShowsVerticalScrollIndicator:NO];
 
     firsttime = NO;
-    self.width = 3000;
-    self.height = 3000;
+    self.width = 10000;
+    self.height = 10000;
     
     UIView *container = [[UIView alloc] init];
     [container setClipsToBounds:YES];
