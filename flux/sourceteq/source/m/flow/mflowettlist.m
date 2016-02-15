@@ -57,9 +57,13 @@
 
 -(void)removeett:(mflowett*)ett
 {
-    [array removeObject:ett];
     [self.flow.view clearcolor];
     [ett remove:YES];
+}
+
+-(void)clean:(mflowett*)ett
+{
+    [array removeObject:ett];
 }
 
 @end

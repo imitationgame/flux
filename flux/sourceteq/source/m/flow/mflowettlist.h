@@ -14,6 +14,7 @@
 -(void)selectett:(mflowett*)ett;
 -(void)deselect;
 -(void)removeett:(mflowett*)ett;
+-(void)clean:(mflowett*)ett;
 
 @property(weak, nonatomic)mflow *flow;
 @property(weak, nonatomic)mflowett *selected;

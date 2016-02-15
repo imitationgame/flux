@@ -83,6 +83,7 @@
         }
     }
     
+    [self.flow.ettlist clean:self];
     [self.linesitemlist remove];
     [self.text remove];
     [self.view removeFromSuperview];
