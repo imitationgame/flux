@@ -21,22 +21,55 @@
     UIImage *image;
     vflowcontent *content = self.viewflow.contentview;
     CGSize size = content.contentSize;
+    CGFloat scrollwidth = 100;
+    CGFloat scrollheight = 100;
     CGFloat contentwidth = size.width;
     CGFloat contentheight = size.height;
     CGFloat marginleft = (-(CGFloat)content.marginleft);
     CGFloat margintop = (-(CGFloat)content.margintop);
     CGFloat width = content.width;
     CGFloat height = content.height;
-    CGRect rect = CGRectMake(marginleft, margintop, width, height);
-    size = CGSizeMake(contentwidth, contentheight);
+    
+    if(scrollwidth > contentwidth)
+    {
+        scrollwidth = contentwidth;
+    }
+    
+    if(scrollheight > contentheight)
+    {
+        scrollheight = contentheight;
+    }
+    
+    CGFloat adwidth = 0;
+    CGFloat adheight = 0;
+    
+    [content setFrame:CGRectMake(0, 0, scrollwidth, scrollheight)];
+    
+    while(adheight < contentheight)
+    {
+        while(adwidth < contentwidth)
+        {
+            adwidth += scrollwidth;
+            
+            if(adwidth + scrollwidth > contentwidth)
+            {
+                scrollwidth = contentwidth - adwidth;
+            }
+        }
+        
+        adheight += scrollheight;
+        
+        if(adheight + scrollheight > contentheight)
+        {
+            scrollheight = contentheight - adheight;
+        }
+    }
+    
+    
+    
 //    CGFloat snapwidth = snap.frame.size.width / 1;
 //    CGFloat snapheight = snap.frame.size.height / 1;
 //    [snap setFrame:CGRectMake(0, 0, snapwidth, snapheight)];
-    
-    UIImageView *snip = (UIImageView*)[content.container resizableSnapshotViewFromRect:CGRectMake(500, 1000, 500, 500) afterScreenUpdates:YES withCapInsets:UIEdgeInsetsZero];
-    [UIImagePNGRepresentation(snip.image) writeToURL:[NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"temp"]] options:NSDataWritingAtomic error:nil];
-    
-    
     
     /*
     CGFloat snipx = snip.frame.origin.x;
