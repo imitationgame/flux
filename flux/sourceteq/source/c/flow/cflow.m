@@ -25,10 +25,9 @@
     CGFloat scrollheight = 100;
     CGFloat contentwidth = size.width;
     CGFloat contentheight = size.height;
-    CGFloat marginleft = (-(CGFloat)content.marginleft);
-    CGFloat margintop = (-(CGFloat)content.margintop);
-    CGFloat width = content.width;
-    CGFloat height = content.height;
+    CGFloat marginleft = content.marginleft;
+    CGFloat margintop = content.margintop;
+
     
     if(scrollwidth > contentwidth)
     {
@@ -42,13 +41,20 @@
     
     CGFloat adwidth = 0;
     CGFloat adheight = 0;
-    
-    [content setFrame:CGRectMake(0, 0, scrollwidth, scrollheight)];
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(contentwidth, contentheight), YES, 1);
     
     while(adheight < contentheight)
     {
         while(adwidth < contentwidth)
         {
+            CGRect rectscroll = CGRectMake(0, 0, scrollwidth, scrollheight);
+            CGRect realrect = CGRectMake(adwidth, adheight, scrollwidth, scrollheight);
+            CGPoint pointoffset = CGPointMake(marginleft + adwidth, margintop + adheight);
+            
+            [content setFrame:rectscroll];
+            [content setContentOffset:pointoffset animated:NO];
+            [content drawViewHierarchyInRect:realrect afterScreenUpdates:YES];
+            
             adwidth += scrollwidth;
             
             if(adwidth + scrollwidth > contentwidth)
@@ -65,6 +71,8 @@
         }
     }
     
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
     
 //    CGFloat snapwidth = snap.frame.size.width / 1;
@@ -80,12 +88,11 @@
     [snip drawViewHierarchyInRect:CGRectMake(0, 0, snipwidth, snipheight) afterScreenUpdates:NO];
 //    [content.container snapshotViewAfterScreenUpdates];
 //    [content.container.layer renderInContext:UIGraphicsGetCurrentContext()];
-    image = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
     
+    */
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
-    [imageview setFrame:CGRectMake(0, 0, 500, 500)];*/
-    [self.view addSubview:snip];
+    [imageview setFrame:CGRectMake(0, 0, 500, 500)];
+    [self.view addSubview:imageview];
     /*
     [snip setFrame:CGRectMake(0, 0, 1500, 1500)];
     UIGraphicsBeginImageContextWithOptions(size, YES, 1);
