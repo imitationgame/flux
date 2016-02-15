@@ -33,19 +33,26 @@
 //    CGFloat snapheight = snap.frame.size.height / 1;
 //    [snap setFrame:CGRectMake(0, 0, snapwidth, snapheight)];
     
+    UIImageView *snip = (UIImageView*)[content.container resizableSnapshotViewFromRect:CGRectMake(500, 1000, 500, 500) afterScreenUpdates:YES withCapInsets:UIEdgeInsetsZero];
+    [UIImagePNGRepresentation(snip.image) writeToURL:[NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"temp"]] options:NSDataWritingAtomic error:nil];
     
-    UIView *snip = [content.container resizableSnapshotViewFromRect:CGRectMake(500, 1000, 500, 500) afterScreenUpdates:YES withCapInsets:UIEdgeInsetsZero];
     
+    
+    /*
+    CGFloat snipx = snip.frame.origin.x;
+    CGFloat snipy = snip.frame.origin.y;
+    CGFloat snipwidth = snip.frame.size.width;
+    CGFloat snipheight = snip.frame.size.height;
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(1000, 1000), YES, 1);
-    [snip drawViewHierarchyInRect:CGRectMake(0, 0, 500, 500) afterScreenUpdates:YES];
+    [snip drawViewHierarchyInRect:CGRectMake(0, 0, snipwidth, snipheight) afterScreenUpdates:NO];
 //    [content.container snapshotViewAfterScreenUpdates];
 //    [content.container.layer renderInContext:UIGraphicsGetCurrentContext()];
     image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+//    UIGraphicsEndImageContext();
     
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
-    [imageview setFrame:CGRectMake(0, 0, 500, 500)];
-    [self.view addSubview:imageview];
+    [imageview setFrame:CGRectMake(0, 0, 500, 500)];*/
+    [self.view addSubview:snip];
     /*
     [snip setFrame:CGRectMake(0, 0, 1500, 1500)];
     UIGraphicsBeginImageContextWithOptions(size, YES, 1);
