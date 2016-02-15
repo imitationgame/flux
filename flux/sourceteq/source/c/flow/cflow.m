@@ -19,7 +19,7 @@
 -(void)share
 {
     UIImage *image;
- /*
+
     CGSize size = self.viewflow.container.bounds.size;
     CGFloat width = size.width;
     CGFloat height = size.height;
@@ -43,9 +43,6 @@
     }
     
     [[cmain singleton] presentViewController:act animated:YES completion:nil];
-  */
-    
-#warning "needs revision"
 }
 
 @end
