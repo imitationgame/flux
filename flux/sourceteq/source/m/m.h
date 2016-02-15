@@ -16,7 +16,6 @@
 #import "mflowetttypespro.h"
 #import "mflowetttypesdec.h"
 #import "mflowetttypesio.h"
-#import "mflowlines.h"
 #import "mflowlinesitem.h"
 #import "mflowlinesitemlist.h"
 #import "mflowcolors.h"
