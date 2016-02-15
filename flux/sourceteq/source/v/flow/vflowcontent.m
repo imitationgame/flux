@@ -52,14 +52,7 @@
                        if(!firsttime)
                        {
                            firsttime = YES;
-                           NSUInteger screenwidth = self.bounds.size.width;
-                           NSUInteger deadwidth = self.width - screenwidth;
-                           NSUInteger deadwidth_2 = deadwidth / 2;
-                           self.marginleft = deadwidth_2;
-                           self.marginright = deadwidth_2;
-                           self.margintop = 1000;
-                           self.visibley = self.bounds.size.height;
-                           self.centerx = deadwidth_2 + (screenwidth / 2);
+                           [self firsttimeconstraints];
                            
                            [self.container setFrame:CGRectMake(-((CGFloat)self.marginleft), -((CGFloat)self.margintop), self.width, self.height)];
                        }
@@ -67,6 +60,18 @@
 }
 
 #pragma mark functionality
+
+-(void)firsttimeconstraints
+{
+    NSUInteger screenwidth = self.bounds.size.width;
+    NSUInteger deadwidth = self.width - screenwidth;
+    NSUInteger deadwidth_2 = deadwidth / 2;
+    self.marginleft = deadwidth_2;
+    self.marginright = deadwidth_2;
+    self.margintop = 1000;
+    self.visibley = self.bounds.size.height;
+    self.centerx = deadwidth_2 + (screenwidth / 2);
+}
 
 -(BOOL)validatepoint:(CGPoint)point
 {
@@ -183,15 +188,44 @@
 
 -(void)checkdimensions
 {
+    [self firsttimeconstraints];
     NSArray *subviews = self.container.subviews;
     
     for(UIView *view in subviews)
     {
         if(![view isKindOfClass:[vflowtext class]])
         {
+            CGRect frame = view.frame;
+            NSUInteger x = frame.origin.x;
+            NSUInteger y = frame.origin.y;
+            NSUInteger w = frame.size.width + x;
+            NSUInteger h = frame.size.height + y;
             
+            if(x < self.marginleft)
+            {
+                self.marginleft = x;
+            }
+            
+            if(w > self.width - self.marginright)
+            {
+                self.marginright = self.width - w;
+            }
+            
+            if(y < self.margintop)
+            {
+                NSUInteger addedy = self.margintop - y;
+                self.margintop -= addedy;
+                self.visibley += addedy;
+            }
+            
+            if(h > self.margintop + self.visibley)
+            {
+                self.visibley = h - self.margintop;
+            }
         }
     }
+    
+    [self adjustscreen];
 }
 
 @end
