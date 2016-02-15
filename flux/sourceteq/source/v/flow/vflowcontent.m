@@ -1,7 +1,7 @@
 #import "vflowcontent.h"
 
 #define pointmargin 50
-#define pagemargin 250
+#define pagemargin 50
 
 @implementation vflowcontent
 {
@@ -82,10 +82,6 @@
     NSUInteger miny = y - pointmargin;
     NSUInteger maxx = x + pointmargin;
     NSUInteger maxy = y + pointmargin;
-    NSUInteger maxymargin = maxy + pagemargin;
-    NSUInteger maxxmargin = maxx + pagemargin;
-    NSUInteger minxmargin = minx - pagemargin;
-    NSUInteger minymargin = miny - pagemargin;
     CGRect rect = CGRectMake(minx, miny, 2 * pointmargin, 2 * pointmargin);
     NSArray *subviews = self.container.subviews;
     
@@ -96,42 +92,6 @@
             valid = NO;
             
             break;
-        }
-    }
-    
-    if(valid)
-    {
-        BOOL changed = NO;
-        
-        if(minxmargin < self.marginleft)
-        {
-            self.marginleft = minxmargin;
-            changed = YES;
-        }
-        
-        if(maxxmargin > self.width - self.marginright)
-        {
-            self.marginright = self.width - maxxmargin;
-            changed = YES;
-        }
-        
-        if(minymargin < self.margintop)
-        {
-            NSUInteger addedy = self.margintop - minymargin;
-            self.margintop -= addedy;
-            self.visibley += addedy;
-            changed = YES;
-        }
-        
-        if(maxymargin > self.margintop + self.visibley)
-        {
-            self.visibley = maxymargin - self.margintop;
-            changed = YES;
-        }
-        
-        if(changed)
-        {
-            [self adjustscreen];
         }
     }
         
@@ -194,11 +154,11 @@
     
     for(UIView *view in subviews)
     {
-        if(![view isKindOfClass:[vflowtext class]] && ![view isKindOfClass:[UIImageView class]])
+        if(![view isKindOfClass:[UIImageView class]])
         {
             CGRect frame = view.frame;
             NSUInteger x = frame.origin.x - pointpage;
-            NSUInteger y = frame.origin.y - pointpage;
+            NSUInteger y = frame.origin.y - pointmargin;
             NSUInteger w = frame.size.width + frame.origin.x + pointpage;
             NSUInteger h = frame.size.height + frame.origin.y + pointpage;
             
