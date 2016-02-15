@@ -69,15 +69,18 @@
     return delta;
 }
 
--(void)remove
+-(void)remove:(BOOL)addpoint
 {
-    if(self.prevline)
+    if(addpoint)
     {
-        [self.flow.points pointatline:self.prevline];
-    }
-    else
-    {
-        [self.flow.view addpointatx:self.x y:self.y];
+        if(self.prevline)
+        {
+            [self.flow.points pointatline:self.prevline];
+        }
+        else
+        {
+            [self.flow.view addpointatx:self.x y:self.y];
+        }
     }
     
     [self.linesitemlist remove];

@@ -95,7 +95,7 @@
 {
     [self.pointitem remove];
     [self.view removeFromSuperview];
-    [self.endingett remove];
+    [self.endingett remove:NO];
     [self.nextline remove];
 }
 

@@ -58,7 +58,7 @@
 -(void)removeett:(mflowett*)ett
 {
     [self.flow.view clearcolor];
-    [ett remove];
+    [ett remove:YES];
 }
 
 @end
