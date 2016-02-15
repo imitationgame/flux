@@ -6,6 +6,7 @@
 
 +(void)containerin:(vflow*)flow;
 -(CGPoint)linefrom:(CGPoint)point deltax:(NSInteger)deltax deltay:(NSInteger)deltay;
+-(void)checkdimensions;
 
 @property(weak, nonatomic)UIView *container;
 @property(nonatomic)NSUInteger width;

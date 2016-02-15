@@ -181,4 +181,9 @@
     return endingpoint;
 }
 
+-(void)checkdimensions
+{
+    
+}
+
 @end
