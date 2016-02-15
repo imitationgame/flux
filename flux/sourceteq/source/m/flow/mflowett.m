@@ -71,6 +71,15 @@
 
 -(void)remove
 {
+    if(1)
+    {
+        [self.flowett.flow.points pointatline:linemodel];
+    }
+    else
+    {
+        
+    }
+    
     [self.linesitemlist remove];
     [self.text remove];
     [self.view removeFromSuperview];
