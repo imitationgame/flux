@@ -21,10 +21,10 @@
     UIImage *image;
     vflowcontent *content = self.viewflow.contentview;
     CGSize size = content.contentSize;
-    CGFloat contentwidth = size.width / 10.0;
-    CGFloat contentheight = size.height / 10.0;
-    CGFloat marginleft = (- (CGFloat)content.marginleft) / 10.0;
-    CGFloat margintop = (- (CGFloat)content.margintop) / 10.0;
+    CGFloat contentwidth = size.width;
+    CGFloat contentheight = size.height;
+    CGFloat marginleft = (- (CGFloat)content.marginleft);
+    CGFloat margintop = (- (CGFloat)content.margintop);
     CGFloat width = content.width;
     CGFloat height = content.height;
     CGRect rect = CGRectMake(marginleft, margintop, width, height);
