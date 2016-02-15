@@ -71,7 +71,8 @@
 
 -(void)remove
 {
-    
+    [self.text remove];
+    [self.view removeFromSuperview];
 }
 
 @end

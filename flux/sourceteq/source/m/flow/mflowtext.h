@@ -8,6 +8,7 @@
 -(instancetype)init:(mflowett*)ett;
 -(void)editedtext:(NSString*)newtext;
 -(void)adjusttext;
+-(void)remove;
 
 @property(weak, nonatomic)mflowett *ett;
 @property(weak, nonatomic)vflowtext *view;

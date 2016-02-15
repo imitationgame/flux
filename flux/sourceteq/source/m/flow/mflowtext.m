@@ -84,4 +84,9 @@
     [self.view setFrame:recttext];
 }
 
+-(void)remove
+{
+    [self.view removeFromSuperview];
+}
+
 @end
