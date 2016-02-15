@@ -20,16 +20,19 @@
 {
     __block UIImage *image;
     vflowcontent *content = self.viewflow.contentview;
-    CGSize size = content.contentSize;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                    ^
                    {
-                       UIGraphicsBeginImageContextWithOptions(CGSizeMake(1000000, 1000000), YES, 1);
-                       CGContextRef context = UIGraphicsGetCurrentContext();
-                       CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
-                       CGContextAddRect(context, CGRectMake(1000, 1000, 8000, 8000));
-                       CGContextDrawPath(context, kCGPathFill);
+                       CGSize size = content.contentSize;
+                       CGFloat marginleft = - (CGFloat)content.marginleft;
+                       CGFloat margintop = - (CGFloat)content.margintop;
+                       CGFloat width = content.width;
+                       CGFloat height = content.height;
+                       CGRect rect = CGRectMake(marginleft, margintop, width, height);
+                       
+                       UIGraphicsBeginImageContextWithOptions(size, YES, 1);
+                       [content.container drawViewHierarchyInRect:rect afterScreenUpdates:YES];
                        image = UIGraphicsGetImageFromCurrentImageContext();
                        UIGraphicsEndImageContext();
                        
