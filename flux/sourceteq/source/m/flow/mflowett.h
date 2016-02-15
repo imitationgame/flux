@@ -6,6 +6,7 @@
 @class mflowlinesitemlist;
 @class mflowtext;
 @class vflowett;
+@class mflowlinesitem;
 
 @interface mflowett:NSObject
 
@@ -23,6 +24,7 @@
 @property(weak, nonatomic)id<mflowcolorsprotocol> color;
 @property(strong, nonatomic)mflowlinesitemlist *linesitemlist;
 @property(strong, nonatomic)mflowtext *text;
+@property(weak, nonatomic)mflowlinesitem *prevline;
 @property(weak, nonatomic)vflowett *view;
 @property(nonatomic)Class viewclass;
 @property(nonatomic)NSUInteger x;

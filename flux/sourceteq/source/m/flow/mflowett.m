@@ -71,13 +71,13 @@
 
 -(void)remove
 {
-    if(1)
+    if(self.prevline)
     {
-        [self.flowett.flow.points pointatline:linemodel];
+        [self.flow.points pointatline:self.prevline];
     }
     else
     {
-        
+        [self.flow.view addpointatx:self.x y:self.y];
     }
     
     [self.linesitemlist remove];

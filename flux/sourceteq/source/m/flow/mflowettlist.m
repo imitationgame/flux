@@ -35,6 +35,7 @@
 {
     mflowett *ettmodel = [type modelett:self.flow atpoint:point];
     point.line.endingett = ettmodel;
+    ettmodel.prevline = point.line;
     vflowett *ettview = [ettmodel generateview:[type imagename]];
     [array addObject:ettmodel];
     
