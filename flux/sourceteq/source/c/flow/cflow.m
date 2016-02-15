@@ -22,15 +22,26 @@
     vflowcontent *content = self.viewflow.contentview;
     CGSize size = content.contentSize;
     CGFloat width = size.width;
+    CGFloat marginleft = -(CGFloat)content.marginleft;
+    CGFloat margintop = -(CGFloat)content.margintop;
+    CGFloat totalwidth = content.width;
+    CGFloat totalheight = content.height;
     UIGraphicsBeginImageContextWithOptions(size, YES, [UIScreen mainScreen].scale);
-    [content.container drawViewHierarchyInRect:CGRectMake(-(CGFloat)content.marginleft, -(CGFloat)content.margintop, content.width, content.height) afterScreenUpdates:YES];
+    [content.container drawViewHierarchyInRect:CGRectMake(marginleft, margintop, totalwidth, totalheight) afterScreenUpdates:YES];
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     NSString *filename = NSLocalizedString(@"flow_exportname", nil);
     NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:filename]];
-    [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
+    
+    NSError *error;
+    [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:&error];
 
+    if(error)
+    {
+        NSLog(@"error!!!");
+    }
+    
     UIActivityViewController *act = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:nil];
     
     if([UIPopoverPresentationController class])
