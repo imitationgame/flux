@@ -41,7 +41,7 @@
 //    [content.container snapshotViewAfterScreenUpdates];
 //    [content.container.layer renderInContext:UIGraphicsGetCurrentContext()];
     image = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
+    UIGraphicsEndImageContext();
     
     UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
     [imageview setFrame:CGRectMake(0, 0, 500, 500)];
