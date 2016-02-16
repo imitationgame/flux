@@ -51,26 +51,12 @@
 
 -(void)actionadd:(UIBarButtonItem*)item
 {
-    __weak cpages *weakself = self;
-    
-    [weakself setViewControllers:@[[[cflow alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:
-     ^(BOOL done)
-     {
-         [weakself.navigationItem setRightBarButtonItem:weakself.itemshare];
-         [weakself.navigationItem setLeftBarButtonItem:weakself.itemlistleft];
-     }];
+    [self insideaddflow];
 }
 
 -(void)actionlistleft:(UIBarButtonItem*)item
 {
-    __weak cpages *weakself = self;
-    
-    [weakself setViewControllers:@[[[clist alloc] init]] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:
-     ^(BOOL done)
-     {
-         [weakself.navigationItem setRightBarButtonItem:weakself.itemadd];
-         [weakself.navigationItem setLeftBarButtonItem:weakself.itemsettings];
-     }];
+    [self insideshowlistleft];
 }
 
 -(void)actionlistright:(UIBarButtonItem*)item
@@ -103,16 +89,42 @@
     [controller exportflow];
 }
 
+#pragma mark functionality
+
+-(void)insideaddflow
+{
+    __weak cpages *weakself = self;
+    
+    [weakself setViewControllers:@[[[cflow alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:
+     ^(BOOL done)
+     {
+         [weakself.navigationItem setRightBarButtonItem:weakself.itemshare];
+         [weakself.navigationItem setLeftBarButtonItem:weakself.itemlistleft];
+     }];
+}
+
+-(void)insideshowlistleft
+{
+    __weak cpages *weakself = self;
+    
+    [weakself setViewControllers:@[[[clist alloc] init]] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:
+     ^(BOOL done)
+     {
+         [weakself.navigationItem setRightBarButtonItem:weakself.itemadd];
+         [weakself.navigationItem setLeftBarButtonItem:weakself.itemsettings];
+     }];
+}
+
 #pragma mark public
 
 -(void)addflow
 {
-    [self actionadd:nil];
+    [self insideaddflow];
 }
 
 -(void)showlist
 {
-    [self actionlistleft:nil];
+    [self insideshowlistleft];
 }
 
 @end
