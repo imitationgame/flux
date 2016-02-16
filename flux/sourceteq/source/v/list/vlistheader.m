@@ -19,11 +19,13 @@
     [label setText:NSLocalizedString(@"list_header_empty", nil)];
     [self addSubview:label];
     
+    
+    
     NSDictionary *views = @{@"label":label};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-50-[label]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
