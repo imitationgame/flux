@@ -4,11 +4,15 @@
 <dict>
 	<key>screens</key>
 	<array>
-		<string>pic/list</string>
+		<string>list</string>
+        <string>flow</string>
+        <string>detail</string>
+        <string>config</string>
 	</array>
 	<key>events</key>
 	<array>
-		<string>shoot</string>
+		<string>export</string>
+        <string>save</string>
 	</array>
 	<key>actions</key>
 	<array>
