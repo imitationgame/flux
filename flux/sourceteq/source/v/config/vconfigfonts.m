@@ -43,6 +43,7 @@
     [collection setDelegate:self];
     [collection setDataSource:self];
     [collection registerClass:[vconfigfontscel class] forCellWithReuseIdentifier:celid];
+    self.collection = collection;
     
     [self addSubview:label];
     [self addSubview:collection];
@@ -52,12 +53,12 @@
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label(200)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label]-10-[col(60)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label]-20-[col(60)]-0-|" options:0 metrics:metrics views:views]];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_MSEC * 300), dispatch_get_main_queue(),
                    ^
                    {
-                       [self selectcurrent:collection];
+                       [self selectcurrent];
                    });
     
     return self;
@@ -65,7 +66,7 @@
 
 #pragma mark functionality
 
--(void)selectcurrent:(UICollectionView*)collection
+-(void)selectcurrent
 {
     selected = 0;
     NSUInteger count = [self.model count];
@@ -84,7 +85,7 @@
         }
     }
     
-    [collection selectItemAtIndexPath:[NSIndexPath indexPathForItem:selected inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
+    [self.collection selectItemAtIndexPath:[NSIndexPath indexPathForItem:selected inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
 }
 
 -(void)postselect:(NSInteger)index
@@ -116,7 +117,7 @@
     {
         CGFloat leftoffset = scroll.contentOffset.x;
         
-        CGPoint point = CGPointMake(leftoffset + (scroll.bounds.size.width / 2), 80);
+        CGPoint point = CGPointMake(leftoffset + (scroll.bounds.size.width / 2), 0);
         NSIndexPath *index = [self.collection indexPathForItemAtPoint:point];
         
         if(index)
