@@ -2,6 +2,24 @@
 
 @implementation mconfigsize
 
+#pragma mark actions
+
+-(void)actionstepper:(UIStepper*)stepper
+{
+    NSUInteger value = stepper.value;
+    
+    [self print:value];
+    [msettings singleton].fontsize = value;
+    [[msettings singleton] save];
+}
+
+#pragma mark functionality
+
+-(void)print:(NSUInteger)value
+{
+    [self.step.labelcount setText:[[tools singleton] numbertostring:@(value)]];
+}
+
 #pragma mark -
 #pragma mark config protocol
 
@@ -14,9 +32,15 @@
 
 -(void)configcel:(vconfigcel*)cel
 {
+    NSUInteger value = [msettings singleton].fontsize;
+    
     vconfigstep *step = [[vconfigstep alloc] init];
+    [step.stepper setValue:value];
+    [step.stepper addTarget:self action:@selector(actionstepper:) forControlEvents:UIControlEventValueChanged];
+    self.step = step;
     [step.label setText:NSLocalizedString(@"config_item_size", nil)];
     [cel changeoverview:step];
+    [self print:value];
 }
 
 @end
