@@ -44,7 +44,11 @@
 {
     if(self.isSelected || self.isHighlighted)
     {
-        
+        [self.image setAlpha:0.5];
+    }
+    else
+    {
+        [self.image setAlpha:1];
     }
 }
 
@@ -52,7 +56,7 @@
 
 -(void)config:(mlistitem*)item
 {
-    
+    [self hover];
 }
 
 @end
