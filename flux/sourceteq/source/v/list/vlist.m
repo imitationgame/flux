@@ -8,7 +8,21 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
     
+    self.model = [[mlist alloc] init];
+    
     return self;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark notified
+
+-(void)notifiedflowsreload:(NSNotification*)notification
+{
+    
 }
 
 #pragma mark -
