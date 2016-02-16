@@ -1,5 +1,6 @@
-#import "<#header#>"
+#import "appdel.h"
+#import "mconfigfontsprotocol.h"
 
-@interface mconfigfontsfutura : NSObject
+@interface mconfigfontsfutura:NSObject<mconfigfontsprotocol>
 
 @end
