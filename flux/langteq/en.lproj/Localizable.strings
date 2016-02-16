@@ -37,7 +37,7 @@
 "list_header_empty"="No flows created yet";
 
 "config_main_title"="Config";
-"config_item_hr"="Use high resolution";
+"config_item_hr"="Use high resolution\n";
 "config_item_hrdescr"="Better quality, bigger files";
 
 "rate_descr"="How would you rate this app?";

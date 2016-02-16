@@ -15,7 +15,14 @@
 -(void)configcel:(vconfigcel*)cel
 {
     vconfigsw *overview = [[vconfigsw alloc] init];
-    [overview.label setText:NSLocalizedString(@"config_item_hr", nil)];
+    
+    NSDictionary *attrtitle = @{NSFontAttributeName:[UIFont fontWithName:fontname size:16], NSForegroundColorAttributeName:[UIColor colorWithWhite:0 alpha:0.7]};
+    NSDictionary *attrdescr = @{NSFontAttributeName:[UIFont fontWithName:fontname size:13], NSForegroundColorAttributeName:[UIColor colorWithWhite:0 alpha:0.4]};
+    NSMutableAttributedString *mut = [[NSMutableAttributedString alloc] init];
+    [mut appendAttributedString:[[NSAttributedString alloc] initWithString:NSLocalizedString(@"config_item_hr", nil) attributes:attrtitle]];
+    [mut appendAttributedString:[[NSAttributedString alloc] initWithString:NSLocalizedString(@"config_item_hrdescr", nil) attributes:attrdescr]];
+    
+    [overview.label setAttributedText:mut];
     [cel changeoverview:overview];
 }
 
