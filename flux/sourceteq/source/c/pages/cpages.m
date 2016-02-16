@@ -13,7 +13,7 @@
     UIBarButtonItem *itemadd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(actionadd:)];
     self.itemadd = itemadd;
     
-    UIBarButtonItem *itemsettings = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:nil];
+    UIBarButtonItem *itemsettings = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(actionconfig:)];
     self.itemsettings = itemsettings;
     
     UIBarButtonItem *itemlist = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(actionlist:)];
@@ -67,6 +67,18 @@
      {
          [weakself.navigationItem setRightBarButtonItem:weakself.itemadd];
          [weakself.navigationItem setLeftBarButtonItem:weakself.itemsettings];
+     }];
+}
+
+-(void)actionconfig:(UIBarButtonItem*)item
+{
+    __weak cpages *weakself = self;
+    
+    [weakself setViewControllers:@[[[cconfig alloc] init]] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:
+     ^(BOOL done)
+     {
+         [weakself.navigationItem setRightBarButtonItem:weakself.itemlist];
+         [weakself.navigationItem setLeftBarButtonItem:nil];
      }];
 }
 
