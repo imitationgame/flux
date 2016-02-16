@@ -16,7 +16,7 @@
 	</array>
 	<key>actions</key>
 	<array>
-		<string>error</string>
+		<string>done</string>
 	</array>
 </dict>
 </plist>

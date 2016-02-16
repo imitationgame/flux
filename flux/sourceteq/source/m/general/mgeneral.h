@@ -33,5 +33,5 @@ typedef NS_ENUM(NSUInteger, ga_event)
 
 typedef NS_ENUM(NSUInteger, ga_action)
 {
-    ga_action_error
+    ga_action_done
 };

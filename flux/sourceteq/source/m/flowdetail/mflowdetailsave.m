@@ -17,6 +17,8 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                    ^
                    {
+                       [[analytics singleton] trackevent:ga_event_save action:ga_action_done label:nil];
+                       
                        NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
                        NSString *newpath = [flowsfolder stringByAppendingPathComponent:identifier];
                        
