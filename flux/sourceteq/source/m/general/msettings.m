@@ -16,7 +16,12 @@
     self = [super init];
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *settings = [defaults valueForKey:@"settings"];
     
+    if(settings)
+    {
+        
+    }
     
     return self;
 }
@@ -25,7 +30,8 @@
 
 -(void)save
 {
-    
+    NSMutableDictionary *settings = [NSMutableDictionary dictionary];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 }
 
 @end
