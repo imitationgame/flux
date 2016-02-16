@@ -2,13 +2,14 @@
 
 @implementation vflowdetailmenu
 
--(instancetype)init
+-(instancetype)init:(cflowdetail*)controller
 {
     self = [super init];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor clearColor]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     
+    self.controller = controller;
     self.model = [[mflowdetail alloc] init];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
