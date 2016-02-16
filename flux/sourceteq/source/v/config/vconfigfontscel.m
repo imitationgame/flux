@@ -67,7 +67,7 @@
 -(void)config:(id<mconfigfontsprotocol>)model
 {
     [self.label setText:[model name]];
-    [self.label setFont:[UIFont fontWithName:[model fontraw] size:17]];
+    [self.label setFont:[UIFont fontWithName:[model fontraw] size:16]];
     [self hover];
 }
 

@@ -1,6 +1,11 @@
 #import "vconfigfonts.h"
 
 @implementation vconfigfonts
+{
+    CGFloat itemwidth;
+    NSUInteger selected;
+    BOOL trackscroll;
+}
 
 -(instancetype)init
 {
@@ -9,6 +14,8 @@
     [self setBackgroundColor:[UIColor clearColor]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
 
+    trackscroll = NO;
+    itemwidth = 160;
     self.model = [[mconfigfonts alloc] init];
     
     UILabel *label = [[UILabel alloc] init];
@@ -23,9 +30,8 @@
     [flow setHeaderReferenceSize:CGSizeZero];
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
-    [flow setMinimumLineSpacing:10];
+    [flow setMinimumLineSpacing:0];
     [flow setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-    [flow setSectionInset:UIEdgeInsetsMake(0, 20, 0, 20)];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setClipsToBounds:YES];
@@ -46,9 +52,9 @@
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label(200)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label]-0-[col(60)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label]-10-[col(60)]-0-|" options:0 metrics:metrics views:views]];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC), dispatch_get_main_queue(),
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_MSEC * 300), dispatch_get_main_queue(),
                    ^
                    {
                        [self selectcurrent:collection];
@@ -61,7 +67,7 @@
 
 -(void)selectcurrent:(UICollectionView*)collection
 {
-    NSUInteger currentsel = 0;
+    selected = 0;
     NSUInteger count = [self.model count];
     NSString *fontcurrent = [msettings singleton].fontselected;
     
@@ -72,21 +78,66 @@
         
         if([fontraw isEqualToString:fontcurrent])
         {
-            currentsel = i;
+            selected = i;
             
             break;
         }
     }
     
-    [collection selectItemAtIndexPath:[NSIndexPath indexPathForItem:currentsel inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
+    [collection selectItemAtIndexPath:[NSIndexPath indexPathForItem:selected inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
+}
+
+-(void)postselect:(NSInteger)index
+{
+    if(index != selected)
+    {
+        selected = index;
+        [msettings singleton].fontselected = [[self.model item:selected] fontraw];
+        [[msettings singleton] save];
+    }
 }
 
 #pragma mark -
 #pragma mark col del
 
+-(void)scrollViewWillBeginDragging:(UIScrollView*)drag
+{
+    trackscroll = YES;
+}
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView*)scroll
+{
+    trackscroll = NO;
+}
+
+-(void)scrollViewDidScroll:(UIScrollView*)scroll
+{
+    if(trackscroll)
+    {
+        CGFloat leftoffset = scroll.contentOffset.x;
+        
+        CGPoint point = CGPointMake(leftoffset + (scroll.bounds.size.width / 2), 80);
+        NSIndexPath *index = [self.collection indexPathForItemAtPoint:point];
+        
+        if(index)
+        {
+            [self postselect:index.item];
+            [self.collection selectItemAtIndexPath:index animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+        }
+    }
+}
+
+-(UIEdgeInsets)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout insetForSectionAtIndex:(NSInteger)section
+{
+    CGFloat margin = (col.bounds.size.width - itemwidth) / 2;
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, margin, 0, margin);
+    
+    return insets;
+}
+
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    CGSize size = CGSizeMake(170, col.bounds.size.height);
+    CGSize size = CGSizeMake(itemwidth, col.bounds.size.height);
     
     return size;
 }
@@ -113,8 +164,9 @@
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    [msettings singleton].fontselected = [[self.model item:index.item] fontraw];
-    [[msettings singleton] save];
+    [col scrollToItemAtIndexPath:index atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+    [self postselect:index.item];
+    trackscroll = NO;
 }
 
 @end
