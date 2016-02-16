@@ -21,11 +21,32 @@
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     [collection setDataSource:self];
     [collection setDelegate:self];
+    [collection registerClass:[vflowdetailmenucel class] forCellWithReuseIdentifier:celid];
     self.collection = collection;
     
     [self addSubview:collection];
     
     return self;
+}
+
+#pragma mark -
+#pragma mark col del
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
+{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
+{
+    return 2;
+}
+
+-(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
+{
+    vflowdetailmenucel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
+    
+    return cel;
 }
 
 @end
