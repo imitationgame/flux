@@ -1,13 +1,33 @@
-//
-//  mconfigfonts.m
-//  flux
-//
-//  Created by zero on 2/16/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "mconfigfonts.h"
 
 @implementation mconfigfonts
+{
+    NSArray *array;
+}
+
+-(instancetype)init
+{
+    self = [super init];
+    
+    array = [NSArray array];
+    
+    return self;
+}
+
+#pragma mark public
+
+-(NSUInteger)count
+{
+    NSUInteger count = array.count;
+    
+    return count;
+}
+
+-(id<mconfigfontsprotocol>)item:(NSUInteger)index;
+{
+    id<mconfigfontsprotocol> item = array[index];
+    
+    return item;
+}
 
 @end

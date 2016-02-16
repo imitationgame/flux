@@ -3,4 +3,7 @@
 
 @interface mconfigfonts:NSObject<mconfigfontsprotocol>
 
+-(NSUInteger)count;
+-(id<mconfigfontsprotocol>)item:(NSUInteger)index;
+
 @end
