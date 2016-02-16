@@ -4,4 +4,6 @@
 
 -(void)config:(mlistitem*)item;
 
+@property(weak, nonatomic)UIImageView *image;
+
 @end
