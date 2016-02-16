@@ -1,7 +1,7 @@
 #import "appdel.h"
 #import "mconfigfontsprotocol.h"
 
-@interface mconfigfonts:NSObject<mconfigfontsprotocol>
+@interface mconfigfonts:NSObject
 
 -(NSUInteger)count;
 -(id<mconfigfontsprotocol>)item:(NSUInteger)index;

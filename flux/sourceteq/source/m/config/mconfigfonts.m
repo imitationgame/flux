@@ -15,7 +15,7 @@
              [[mconfigfontshelvetica alloc] init],
              [[mconfigfontstimes alloc] init],
              [[mconfigfontsfutura alloc] init],
-             ,nil];
+             nil];
     
     return self;
 }
