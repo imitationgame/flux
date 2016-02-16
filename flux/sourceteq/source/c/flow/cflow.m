@@ -73,56 +73,12 @@
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    
-//    CGFloat snapwidth = snap.frame.size.width / 1;
-//    CGFloat snapheight = snap.frame.size.height / 1;
-//    [snap setFrame:CGRectMake(0, 0, snapwidth, snapheight)];
-    
-    /*
-    CGFloat snipx = snip.frame.origin.x;
-    CGFloat snipy = snip.frame.origin.y;
-    CGFloat snipwidth = snip.frame.size.width;
-    CGFloat snipheight = snip.frame.size.height;
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(1000, 1000), YES, 1);
-    [snip drawViewHierarchyInRect:CGRectMake(0, 0, snipwidth, snipheight) afterScreenUpdates:NO];
-//    [content.container snapshotViewAfterScreenUpdates];
-//    [content.container.layer renderInContext:UIGraphicsGetCurrentContext()];
-    
-    */
-    UIImageView *imageview = [[UIImageView alloc] initWithImage:image];
-    [imageview setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [imageview setClipsToBounds:YES];
-    [imageview setContentMode:UIViewContentModeScaleAspectFit];
-    
-    
-    [self.view addSubview:imageview];
-    
-    NSDictionary *views = @{@"img":imageview};
-    NSDictionary *metrics = @{};
-    
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[img]-0-|" options:0 metrics:metrics views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[img]-0-|" options:0 metrics:metrics views:views]];
-    
-    /*
-    [snip setFrame:CGRectMake(0, 0, 1500, 1500)];
-    UIGraphicsBeginImageContextWithOptions(size, YES, 1);
-    [snip drawViewHierarchyInRect:CGRectMake(0, 0, contentwidth, contentheight) afterScreenUpdates:YES];
-//    [snap.layer renderInContext:UIGraphicsGetCurrentContext()];
-//    [content.container drawViewHierarchyInRect:CGRectMake(0, 0, size.width, size.height) afterScreenUpdates:YES];
-//    [content.container.layer renderInContext:UIGraphicsGetCurrentContext()];
-    //                       [snapcontainer drawViewHierarchyInRect:CGRectMake(0, 0, size.width, size.height) afterScreenUpdates:YES];
-    //    [content.container drawViewHierarchyInRect:rect afterScreenUpdates:YES];
-    image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
     NSString *filename = NSLocalizedString(@"flow_exportname", nil);
     NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
     NSURL *url = [NSURL fileURLWithPath:filepath];
     [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
     
     [self.navigationController pushViewController:[[cflowdetail alloc] init:filepath] animated:YES];
-     
-     */
 }
 
 -(void)share
