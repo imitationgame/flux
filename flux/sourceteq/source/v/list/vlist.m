@@ -13,7 +13,8 @@
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
-    [flow setMinimumLineSpacing:2];
+    [flow setMinimumLineSpacing:10];
+    [flow setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     [flow setSectionInset:UIEdgeInsetsZero];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
@@ -48,6 +49,18 @@
 
 #pragma mark -
 #pragma mark col del
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    
+}
+
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
+{
+    CGSize size = CGSizeMake(col.bounds.size.width, 100);
+    
+    return size;
+}
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
 {
