@@ -35,8 +35,12 @@
                        {
                            NSDictionary *rawflow = rawflows[i];
                            NSString *rawpath = rawflow[@"path"];
-                           mlistitem *item = [[mlistitem alloc] init];
+                           mlistitem *item = [[mlistitem alloc] init:rawpath];
+                           
+                           [array addObject:item];
                        }
+                       
+                       [[NSNotificationCenter defaultCenter] postNotificationName:<#(nonnull NSString *)#> object:<#(nullable id)#>];
                    });
 }
 

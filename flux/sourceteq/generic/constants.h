@@ -20,6 +20,9 @@
 
 // notifications
 
+#define notflowschanged         @"flowschanged"
+#define notflowsreload          @"flowsreload"
+
 // extra
 
 #define stringdrawing           NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin
