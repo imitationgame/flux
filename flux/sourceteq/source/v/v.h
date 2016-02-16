@@ -24,3 +24,7 @@
 #import "vlistheader.h"
 #import "vconfig.h"
 #import "vconfigcel.h"
+#import "vconfigsw.h"
+#import "vconfigstep.h"
+#import "vconfigfonts.h"
+#import "vconfigfontscel.h"
