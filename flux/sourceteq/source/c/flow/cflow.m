@@ -43,15 +43,20 @@
     CGFloat adheight = 0;
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(contentwidth, contentheight), YES, 1);
     
+    
+    NSLog(@"content: %@, %@ ; margin: %@, %@", @(contentwidth), @(contentheight), @(marginleft), @(margintop));
+    
     while(adheight < contentheight)
     {
         while(adwidth < contentwidth)
         {
+            CGFloat offsetx = marginleft + adwidth;
+            CGFloat offsety = margintop + adheight;
             CGRect rectscroll = CGRectMake(0, 0, scrollwidth, scrollheight);
             CGRect realrect = CGRectMake(adwidth, adheight, scrollwidth, scrollheight);
-            CGPoint pointoffset = CGPointMake(marginleft + adwidth, margintop + adheight);
+            CGPoint pointoffset = CGPointMake(offsetx, offsety);
             
-            NSLog(@"scroll: %@, %@; ad %@, %@; margin %@, %@", @(scrollwidth), @(scrollheight), @(adwidth), @(adheight), @(marginleft), @(margintop));
+            NSLog(@"scroll: %@, %@; ad %@, %@; margin %@, %@", @(scrollwidth), @(scrollheight), @(adwidth), @(adheight), @(offsetx), @(offsety));
             
             [content setFrame:rectscroll];
             [content setContentOffset:pointoffset animated:NO];
