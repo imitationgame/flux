@@ -5,7 +5,7 @@
 -(instancetype)init
 {
     self = [super init];
-    [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.7]];
+    [self setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.95]];
     [self setClipsToBounds:YES];
     [self setUserInteractionEnabled:NO];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -20,7 +20,7 @@
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[spin]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-100-[spin(50)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[spin]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }

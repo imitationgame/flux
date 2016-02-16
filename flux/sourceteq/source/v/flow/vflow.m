@@ -16,6 +16,7 @@
     [vflowfield fieldin:self];
     
     vspinner *spinner = [[vspinner alloc] init];
+    [spinner setHidden:YES];
     self.spinner = spinner;
     
     [self addSubview:spinner];
@@ -167,12 +168,12 @@
     [self cleartext];
     
     [self.spinner setHidden:NO];
-    [self.spinner startAnimating];
+    [self.spinner start];
 }
 
 -(void)stoploading
 {
-    [self.spinner stopAnimating];
+    [self.spinner stop];
     [self.spinner setHidden:YES];
 }
 
