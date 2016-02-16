@@ -10,12 +10,21 @@
     self = [super init];
     [self reload];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedflowschanged:) name:notflowschanged object:nil];
+    
     return self;
 }
 
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark notified
+
+-(void)notifiedflowschanged:(NSNotification*)notification
+{
+    [self reload];
 }
 
 #pragma mark public
@@ -40,7 +49,7 @@
                            [array addObject:item];
                        }
                        
-                       [[NSNotificationCenter defaultCenter] postNotificationName:<#(nonnull NSString *)#> object:<#(nullable id)#>];
+                       [[NSNotificationCenter defaultCenter] postNotificationName:notflowsreload object:nil];
                    });
 }
 
