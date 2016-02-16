@@ -30,6 +30,7 @@
     [stepper setTranslatesAutoresizingMaskIntoConstraints:NO];
     [stepper setMinimumValue:11];
     [stepper setMaximumValue:20];
+    [stepper setTintColor:[UIColor blackColor]];
     self.stepper = stepper;
     
     [self addSubview:label];
@@ -39,11 +40,11 @@
     NSDictionary *views = @{@"label":label, @"count":labelcount, @"stepper":stepper};
     NSDictionary *metrics = @{};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label(160)]-0-[label(30)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[stepper]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label(160)]-0-[count(30)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[stepper]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[count]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-25-[stepper]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-30-[stepper]" options:0 metrics:metrics views:views]];
     
     return self;
 }
