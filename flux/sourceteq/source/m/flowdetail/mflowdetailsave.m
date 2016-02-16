@@ -14,18 +14,28 @@
 
 -(void)action:(cflowdetail*)controller
 {
-    NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
-    NSString *newpath = [flowsfolder stringByAppendingPathComponent:identifier];
-    
-    NSInteger now = [NSDate date].timeIntervalSince1970;
-    [mdirs copyfilefrom:controller.pathpicture to:newpath];
-    NSString *query = [NSString stringWithFormat:
-                       @"INSERT INTO flows (created, path) "
-                       "values(%@, \"%@\");",
-                       @(now), identifier];
-    [db query:query];
-    
-    [controller.navigationController popViewControllerAnimated:YES];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^
+                   {
+                       NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
+                       NSString *newpath = [flowsfolder stringByAppendingPathComponent:identifier];
+                       
+                       NSInteger now = [NSDate date].timeIntervalSince1970;
+                       [mdirs copyfilefrom:controller.pathpicture to:newpath];
+                       NSString *query = [NSString stringWithFormat:
+                                          @"INSERT INTO flows (created, path) "
+                                          "values(%@, \"%@\");",
+                                          @(now), identifier];
+                       [db query:query];
+                       
+                       [[NSNotificationCenter defaultCenter] postNotificationName:notflowschanged object:nil];
+                       
+                       dispatch_async(dispatch_get_main_queue(),
+                                      ^
+                                      {
+                                          [controller.navigationController popViewControllerAnimated:YES];
+                                      });
+                   });
 }
 
 @end
