@@ -28,3 +28,7 @@
 #import "mflowcolorsgrey.h"
 #import "mflowcolorspink.h"
 #import "mflowtext.h"
+#import "mflowdetail.h"
+#import "mflowdetailprotocol.h"
+#import "mflowdetailexport.h"
+#import "mflowdetailsave.h"
