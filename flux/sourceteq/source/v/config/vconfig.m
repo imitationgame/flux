@@ -8,6 +8,8 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
     
+    self.model = [[mconfig alloc] init];
+    
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setHeaderReferenceSize:CGSizeZero];
     [flow setFooterReferenceSize:CGSizeZero];
@@ -41,7 +43,7 @@
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    NSInteger count = 0;
+    NSInteger count = [self.model count];
     
     return count;
 }
@@ -49,6 +51,7 @@
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
     vconfigcel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
+    [[self.model item:index.item] configcel:cel];
     
     return cel;
 }
