@@ -3,6 +3,7 @@
 @implementation updater
 
 NSString *documents;
+NSString *flowsfolder;
 
 +(void)launch
 {
@@ -15,6 +16,7 @@ NSString *documents;
 +(void)update
 {
     documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    flowsfolder = [documents stringByAppendingPathComponent:@"flows"];
     NSDictionary *defaults = [tools defaultdict];
     NSUserDefaults *properties = [NSUserDefaults standardUserDefaults];
     NSInteger def_version = [defaults[@"version"] integerValue];
@@ -27,6 +29,7 @@ NSString *documents;
         if(pro_version < 10)
         {
             [updater firsttime:defaults];
+            [mdirs createdir:[NSURL fileURLWithPath:flowsfolder]];
         }
         
         [mdb updatedb];

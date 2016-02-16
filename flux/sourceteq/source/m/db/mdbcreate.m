@@ -7,7 +7,7 @@
     NSString *query;
     db *dbcon = [db begin];
     
-    query = @"CREATE TABLE pic (id INTEGER PRIMARY KEY, name TEXT COLLATE NOCASE, firsttime INTEGER);";
+    query = @"CREATE TABLE flows (id INTEGER PRIMARY KEY, created INTEGER, path TEXT);";
     
     [dbcon query:query];
     
