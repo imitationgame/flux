@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+@class cflowdetail;
+
 @protocol mflowdetailprotocol <NSObject>
 
 -(NSString*)title;
