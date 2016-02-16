@@ -32,3 +32,5 @@
 #import "mflowdetailprotocol.h"
 #import "mflowdetailexport.h"
 #import "mflowdetailsave.h"
+#import "mlist.h"
+#import "mlistitem.h"

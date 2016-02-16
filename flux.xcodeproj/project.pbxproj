@@ -93,6 +93,7 @@
 		DAD4823B1C72C1A60063C150 /* vlistcel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD4823A1C72C1A60063C150 /* vlistcel.m */; };
 		DAD4823E1C72C1EB0063C150 /* vlistheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD4823D1C72C1EB0063C150 /* vlistheader.m */; };
 		DAD482421C72C2790063C150 /* mlist.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD482411C72C2790063C150 /* mlist.m */; };
+		DAD482451C72C28A0063C150 /* mlistitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD482441C72C28A0063C150 /* mlistitem.m */; };
 		DAEACBB01C6CEF380047ABF0 /* vflowcatalogcolor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBAF1C6CEF380047ABF0 /* vflowcatalogcolor.m */; };
 		DAEACBB31C6CEF4C0047ABF0 /* vflowcatalogcolorcel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBB21C6CEF4C0047ABF0 /* vflowcatalogcolorcel.m */; };
 		DAEACBB71C6CF19F0047ABF0 /* mflowcolors.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEACBB61C6CF19F0047ABF0 /* mflowcolors.m */; };
@@ -273,6 +274,8 @@
 		DAD4823D1C72C1EB0063C150 /* vlistheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlistheader.m; sourceTree = "<group>"; };
 		DAD482401C72C2790063C150 /* mlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mlist.h; sourceTree = "<group>"; };
 		DAD482411C72C2790063C150 /* mlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mlist.m; sourceTree = "<group>"; };
+		DAD482431C72C28A0063C150 /* mlistitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mlistitem.h; sourceTree = "<group>"; };
+		DAD482441C72C28A0063C150 /* mlistitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mlistitem.m; sourceTree = "<group>"; };
 		DAEACBAE1C6CEF370047ABF0 /* vflowcatalogcolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowcatalogcolor.h; sourceTree = "<group>"; };
 		DAEACBAF1C6CEF380047ABF0 /* vflowcatalogcolor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vflowcatalogcolor.m; sourceTree = "<group>"; };
 		DAEACBB11C6CEF4C0047ABF0 /* vflowcatalogcolorcel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowcatalogcolorcel.h; sourceTree = "<group>"; };
@@ -804,6 +807,8 @@
 			children = (
 				DAD482401C72C2790063C150 /* mlist.h */,
 				DAD482411C72C2790063C150 /* mlist.m */,
+				DAD482431C72C28A0063C150 /* mlistitem.h */,
+				DAD482441C72C28A0063C150 /* mlistitem.m */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -969,6 +974,7 @@
 				DAEACBBE1C6CF1EE0047ABF0 /* mflowcolorsblue.m in Sources */,
 				DAB837C41C6AC3F200730B67 /* mflowetttypespro.m in Sources */,
 				DA01573C1C6A691900FAC166 /* vratemenucel.m in Sources */,
+				DAD482451C72C28A0063C150 /* mlistitem.m in Sources */,
 				DAA2DCF41C6FFAE400CF2B8E /* vflowfield.m in Sources */,
 				DAB837B71C6AB6AB00730B67 /* mflowpointsitem.m in Sources */,
 				DAB837A81C6AAB4400730B67 /* mflow.m in Sources */,
