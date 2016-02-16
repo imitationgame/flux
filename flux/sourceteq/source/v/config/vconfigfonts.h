@@ -1,13 +1,7 @@
-//
-//  vconfigfonts.h
-//  flux
-//
-//  Created by zero on 2/16/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@interface vconfigfonts:UIView<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-@interface vconfigfonts : NSObject
+@property(weak, nonatomic)UICollectionView *collection;
 
 @end
