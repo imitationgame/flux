@@ -10,7 +10,6 @@
     query = @"CREATE TABLE flows (id INTEGER PRIMARY KEY, created INTEGER, path TEXT);";
     
     [dbcon query:query];
-    
     [dbcon commit];
 }
 
