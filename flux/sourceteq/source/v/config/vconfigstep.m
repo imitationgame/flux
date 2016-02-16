@@ -14,14 +14,14 @@
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setUserInteractionEnabled:NO];
     [label setFont:[UIFont fontWithName:fontname size:16]];
-    [label setTextColor:[UIColor colorWithWhite:0 alpha:0.5]];
+    [label setTextColor:[UIColor colorWithWhite:0 alpha:0.4]];
     self.label = label;
     
     UILabel *labelcount = [[UILabel alloc] init];
     [labelcount setBackgroundColor:[UIColor clearColor]];
     [labelcount setTranslatesAutoresizingMaskIntoConstraints:NO];
     [labelcount setUserInteractionEnabled:NO];
-    [labelcount setFont:[UIFont fontWithName:fontname size:18]];
+    [labelcount setFont:[UIFont fontWithName:fontname size:20]];
     [labelcount setTextColor:[UIColor colorWithWhite:0 alpha:0.8]];
     [labelcount setTextAlignment:NSTextAlignmentRight];
     self.labelcount = labelcount;
@@ -41,7 +41,7 @@
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label(160)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[count(40)]-10-[stepper]-25-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[count(45)]-10-[stepper]-25-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[count]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-30-[stepper]" options:0 metrics:metrics views:views]];
