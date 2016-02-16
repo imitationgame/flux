@@ -58,3 +58,6 @@
 "rate_thankyou"="Thank you for your support";
 
 "alert_cancel"="Cancel";
+"alert_delete_title"="Close editor?";
+"alert_delete_descr"="You will lose your changes";
+"alert_delete_ok"="Close";

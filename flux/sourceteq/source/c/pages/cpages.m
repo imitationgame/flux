@@ -56,8 +56,7 @@
 
 -(void)actionlistleft:(UIBarButtonItem*)item
 {
-    
-    [self insideshowlistleft];
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"alert_delete_title", nil) message:NSLocalizedString(@"alert_delete_descr", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"alert_cancel", nil) otherButtonTitles:NSLocalizedString(@"alert_delete_ok", nil), nil] show];
 }
 
 -(void)actionlistright:(UIBarButtonItem*)item
