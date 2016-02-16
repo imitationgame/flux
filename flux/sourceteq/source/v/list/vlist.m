@@ -85,6 +85,13 @@
     return count;
 }
 
+-(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
+{
+    vlistheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:header forIndexPath:index];
+    
+    return header;
+}
+
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
     vlistcel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
