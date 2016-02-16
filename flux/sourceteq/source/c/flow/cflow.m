@@ -5,6 +5,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [[analytics singleton] trackscreen:ga_screen_list];
     [self.viewflow show];
 }
 

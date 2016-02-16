@@ -11,6 +11,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [[analytics singleton] trackscreen:ga_screen_list];
 }
 
 -(void)loadView
