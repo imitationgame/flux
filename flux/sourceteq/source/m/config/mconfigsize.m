@@ -14,7 +14,8 @@
 
 -(void)configcel:(vconfigcel*)cel
 {
-    
+    vconfigstep *step = [[vconfigstep alloc] init];
+    [cel changeoverview:step];
 }
 
 @end
