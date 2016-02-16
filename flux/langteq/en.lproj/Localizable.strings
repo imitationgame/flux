@@ -41,6 +41,12 @@
 "config_item_hrdescr"="Better quality, bigger files";
 "config_item_size"="Font size";
 
+"font_menlo"="Menlo";
+"font_arial"="Arial";
+"font_helvetica"="Helvetica";
+"font_times"="Times";
+"font_futura"="Futura";
+
 "rate_descr"="How would you rate this app?";
 "rate_donereview"="Rate sent. Would you write a review in the app store?";
 "rate_send"="Send";
