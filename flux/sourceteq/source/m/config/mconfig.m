@@ -11,8 +11,8 @@
     
     array = [NSArray arrayWithObjects:
              [[mconfigresolution alloc] init],
-             [[mconfigfont alloc] init],
              [[mconfigsize alloc] init],
+             [[mconfigfont alloc] init],
              nil];
     
     return self;
