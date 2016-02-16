@@ -110,4 +110,14 @@
     return cel;
 }
 
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    NSString *original = [flowsfolder stringByAppendingPathComponent:[self.model item:index.item].path];
+    NSString *filename = NSLocalizedString(@"flow_exportname", nil);
+    NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
+    
+    [mdirs copyfilefrom:original to:filepath];
+    [self.controller.navigationController pushViewController:[[cflowdetail alloc] init:filepath] animated:YES];
+}
+
 @end
