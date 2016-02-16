@@ -22,3 +22,4 @@
 #import "vlist.h"
 #import "vlistcel.h"
 #import "vlistheader.h"
+#import "vconfig.h"

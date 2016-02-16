@@ -35,6 +35,8 @@
 "list_main_title"="Flows";
 "list_header_empty"="No flows created yet";
 
+"config_main_title"="Config";
+
 "rate_descr"="How would you rate this app?";
 "rate_donereview"="Rate sent. Would you write a review in the app store?";
 "rate_send"="Send";
