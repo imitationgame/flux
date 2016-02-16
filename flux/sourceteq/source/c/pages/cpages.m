@@ -8,7 +8,7 @@
 -(instancetype)init
 {
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    [self setViewControllers:@[[[UIViewController alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    [self setViewControllers:@[[[clist alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     UIBarButtonItem *itemadd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(actionadd:)];
     self.itemadd = itemadd;
@@ -62,7 +62,7 @@
 {
     __weak cpages *weakself = self;
     
-    [weakself setViewControllers:@[[[UIViewController alloc] init]] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:
+    [weakself setViewControllers:@[[[clist alloc] init]] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:
      ^(BOOL done)
      {
          [weakself.navigationItem setRightBarButtonItem:weakself.itemadd];

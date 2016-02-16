@@ -32,6 +32,7 @@
 "flow_detail_action_save"="Save";
 "flow_detail_action_export"="Export";
 
+"list_main_title"="Flows";
 "list_header_empty"="No flows created yet";
 
 "rate_descr"="How would you rate this app?";
