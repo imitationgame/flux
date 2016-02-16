@@ -42,3 +42,8 @@
 #import "msettings.h"
 #import "mconfigfonts.h"
 #import "mconfigfontsprotocol.h"
+#import "mconfigfontsmenlo.h"
+#import "mconfigfontsarial.h"
+#import "mconfigfontshelvetica.h"
+#import "mconfigfontstimes.h"
+#import "mconfigfontsfutura.h"
