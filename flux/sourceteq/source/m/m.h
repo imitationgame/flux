@@ -35,3 +35,7 @@
 #import "mlist.h"
 #import "mlistitem.h"
 #import "mconfig.h"
+#import "mconfigprotocol.h"
+#import "mconfigresolution.h"
+#import "mconfigfont.h"
+#import "mconfigsize.h"
