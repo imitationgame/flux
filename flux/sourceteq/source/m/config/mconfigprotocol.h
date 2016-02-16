@@ -4,6 +4,7 @@
 
 @protocol mconfigprotocol <NSObject>
 
+-(CGFloat)celsize;
 -(void)configcel:(vconfigcel*)cel;
 
 @end
