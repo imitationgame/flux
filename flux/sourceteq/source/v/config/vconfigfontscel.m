@@ -13,6 +13,7 @@
     [label setUserInteractionEnabled:NO];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setTextAlignment:NSTextAlignmentCenter];
+    [label setTextColor:[UIColor colorWithWhite:0 alpha:0.7]];
     self.label = label;
     
     UIView *selector = [[UIView alloc] init];
@@ -24,8 +25,13 @@
     [self addSubview:label];
     [self addSubview:selector];
     
-    NSDictionary *views = @{};
+    NSDictionary *views = @{@"label":label, @"selector":selector};
     NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[selector]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[selector(6)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -60,7 +66,9 @@
 
 -(void)config:(id<mconfigfontsprotocol>)model
 {
-    
+    [self.label setText:[model name]];
+    [self.label setFont:[UIFont fontWithName:[model fontraw] size:17]];
+    [self hover];
 }
 
 @end
