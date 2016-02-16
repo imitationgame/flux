@@ -18,7 +18,7 @@
     [label setUserInteractionEnabled:NO];
     [label setNumberOfLines:0];
     [label setText:model.text];
-    [label setFont:[UIFont fontWithName:fontname size:15]];
+    [label setFont:[UIFont fontWithName:[msettings singleton].fontselected size:[msettings singleton].fontsize]];
     [label setTextColor:color];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setTextAlignment:[model.ett textalign]];
