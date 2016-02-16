@@ -26,6 +26,8 @@
     [collection setDataSource:self];
     [collection setDelegate:self];
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [collection registerClass:[vlistcel class] forCellWithReuseIdentifier:celid];
+    [collection registerClass:[vlistheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
     self.collection = collection;
     [self addSubview:collection];
     
