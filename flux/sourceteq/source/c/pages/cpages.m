@@ -107,7 +107,7 @@
 
 -(void)addflow
 {
-    
+    [self actionadd:nil];
 }
 
 @end

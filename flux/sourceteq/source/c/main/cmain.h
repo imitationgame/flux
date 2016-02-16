@@ -4,4 +4,6 @@
 
 +(instancetype)singleton;
 
+@property(weak, nonatomic)cpages *pages;
+
 @end
