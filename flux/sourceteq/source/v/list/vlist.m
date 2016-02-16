@@ -13,9 +13,9 @@
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
-    [flow setMinimumLineSpacing:10];
-    [flow setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-    [flow setSectionInset:UIEdgeInsetsZero];
+    [flow setMinimumLineSpacing:2];
+    [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
+    [flow setSectionInset:UIEdgeInsetsMake(2, 2, 2, 2)];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setClipsToBounds:YES];
@@ -77,7 +77,8 @@
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    CGSize size = CGSizeMake(col.bounds.size.width, 100);
+    CGFloat width = (col.bounds.size.width - 6) / 2.0;
+    CGSize size = CGSizeMake(width, width);
     
     return size;
 }
