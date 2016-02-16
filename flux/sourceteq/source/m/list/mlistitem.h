@@ -1,13 +1,7 @@
-//
-//  mlistitem.h
-//  flux
-//
-//  Created by zero on 2/15/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@interface mlistitem:NSObject
 
-@interface mlistitem : NSObject
+@property(copy, nonatomic)NSString *path;
 
 @end

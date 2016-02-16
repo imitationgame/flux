@@ -1,13 +1,14 @@
-//
-//  mlistitem.m
-//  flux
-//
-//  Created by zero on 2/15/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "mlistitem.h"
 
 @implementation mlistitem
+
+-(instancetype)init:(NSString*)path
+{
+    self = [super init];
+    
+    self.path = path;
+    
+    return self;
+}
 
 @end
