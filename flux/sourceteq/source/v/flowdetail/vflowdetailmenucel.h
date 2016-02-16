@@ -2,6 +2,8 @@
 
 @interface vflowdetailmenucel:UICollectionViewCell
 
--(void)config:()
+-(void)config:(id<mflowdetailprotocol>)model;
+
+@property(weak, nonatomic)UILabel *label;
 
 @end
