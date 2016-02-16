@@ -51,6 +51,8 @@
 		DA76B7F81C73774C00C8E1B6 /* mconfigfont.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B7F71C73774C00C8E1B6 /* mconfigfont.m */; };
 		DA76B7FB1C73775400C8E1B6 /* mconfigsize.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B7FA1C73775400C8E1B6 /* mconfigsize.m */; };
 		DA76B7FE1C73775D00C8E1B6 /* mconfigresolution.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B7FD1C73775D00C8E1B6 /* mconfigresolution.m */; };
+		DA76B8011C73798000C8E1B6 /* vconfigsw.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B8001C73798000C8E1B6 /* vconfigsw.m */; };
+		DA76B8041C73798D00C8E1B6 /* vconfigstep.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B8031C73798D00C8E1B6 /* vconfigstep.m */; };
 		DA87C5401C6BBB8B00796D79 /* vflowline.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C53F1C6BBB8B00796D79 /* vflowline.m */; };
 		DA87C5491C6BD3DB00796D79 /* mflowlinesitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C5481C6BD3DB00796D79 /* mflowlinesitem.m */; };
 		DA87C54C1C6C12AA00796D79 /* vflowcontent.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C54B1C6C12AA00796D79 /* vflowcontent.m */; };
@@ -211,6 +213,10 @@
 		DA76B7FA1C73775400C8E1B6 /* mconfigsize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfigsize.m; sourceTree = "<group>"; };
 		DA76B7FC1C73775D00C8E1B6 /* mconfigresolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mconfigresolution.h; sourceTree = "<group>"; };
 		DA76B7FD1C73775D00C8E1B6 /* mconfigresolution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfigresolution.m; sourceTree = "<group>"; };
+		DA76B7FF1C73798000C8E1B6 /* vconfigsw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigsw.h; sourceTree = "<group>"; };
+		DA76B8001C73798000C8E1B6 /* vconfigsw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsw.m; sourceTree = "<group>"; };
+		DA76B8021C73798D00C8E1B6 /* vconfigstep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigstep.h; sourceTree = "<group>"; };
+		DA76B8031C73798D00C8E1B6 /* vconfigstep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigstep.m; sourceTree = "<group>"; };
 		DA87C53E1C6BBB8B00796D79 /* vflowline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowline.h; sourceTree = "<group>"; };
 		DA87C53F1C6BBB8B00796D79 /* vflowline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vflowline.m; sourceTree = "<group>"; };
 		DA87C5471C6BD3DB00796D79 /* mflowlinesitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowlinesitem.h; sourceTree = "<group>"; };
@@ -735,6 +741,10 @@
 				DA6574961C72E0CF0008CC2E /* vconfig.m */,
 				DA76B7EA1C73768A00C8E1B6 /* vconfigcel.h */,
 				DA76B7EB1C73768A00C8E1B6 /* vconfigcel.m */,
+				DA76B7FF1C73798000C8E1B6 /* vconfigsw.h */,
+				DA76B8001C73798000C8E1B6 /* vconfigsw.m */,
+				DA76B8021C73798D00C8E1B6 /* vconfigstep.h */,
+				DA76B8031C73798D00C8E1B6 /* vconfigstep.m */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -1031,6 +1041,7 @@
 				DA87C54C1C6C12AA00796D79 /* vflowcontent.m in Sources */,
 				DA87C54F1C6C444F00796D79 /* mflowettlist.m in Sources */,
 				DA0157301C6A691900FAC166 /* cmain.m in Sources */,
+				DA76B8011C73798000C8E1B6 /* vconfigsw.m in Sources */,
 				DAD4820E1C7245380063C150 /* cflowdetail.m in Sources */,
 				DAA2DCF11C6F909700CF2B8E /* mflowettpro.m in Sources */,
 				DA76B7F11C73770000C8E1B6 /* mconfig.m in Sources */,
@@ -1046,6 +1057,7 @@
 				DA0157311C6A691900FAC166 /* crate.m in Sources */,
 				DA30A83B1C6A9376004F5828 /* vflowett.m in Sources */,
 				DAD482381C72C18F0063C150 /* vlist.m in Sources */,
+				DA76B8041C73798D00C8E1B6 /* vconfigstep.m in Sources */,
 				DA6574931C72DD630008CC2E /* cconfig.m in Sources */,
 				DAEACBCD1C6CF2400047ABF0 /* mflowcolorspink.m in Sources */,
 				DAEACBC41C6CF20F0047ABF0 /* mflowcolorsyellow.m in Sources */,
