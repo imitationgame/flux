@@ -32,8 +32,8 @@
     [self setShowsVerticalScrollIndicator:NO];
 
     firsttime = NO;
-    self.width = 700;
-    self.height = 700;
+    self.width = 10000;
+    self.height = 10000;
     
     UIView *container = [[UIView alloc] init];
     [container setClipsToBounds:YES];
@@ -69,7 +69,7 @@
     NSUInteger deadwidth_2 = deadwidth / 2;
     self.marginleft = deadwidth_2;
     self.marginright = deadwidth_2;
-    self.margintop = 50;
+    self.margintop = 150;
     self.visibley = self.bounds.size.height;
     self.centerx = deadwidth_2 + (screenwidth / 2);
 }
