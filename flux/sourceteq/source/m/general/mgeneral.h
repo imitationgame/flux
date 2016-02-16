@@ -19,20 +19,19 @@ typedef NS_ENUM(NSUInteger, colortype)
 
 typedef NS_ENUM(NSUInteger, ga_screen)
 {
-    ga_screen_status,
-    ga_screen_rate
+    ga_screen_list,
+    ga_screen_flow,
+    ga_screen_detail,
+    ga_screen_config
 };
 
 typedef NS_ENUM(NSUInteger, ga_event)
 {
-    ga_event_rate,
-    ga_event_rate_review
+    ga_event_export,
+    ga_event_save
 };
 
 typedef NS_ENUM(NSUInteger, ga_action)
 {
-    ga_action_error,
-    ga_action_start,
-    ga_action_completed,
-    ga_action_cancel
+    ga_action_error
 };
