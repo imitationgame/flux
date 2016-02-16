@@ -37,7 +37,37 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC), dispatch_get_main_queue(),
+                   ^
+                   {
+                       [self selectcurrent:collection];
+                   });
+    
     return self;
+}
+
+#pragma mark functionality
+
+-(void)selectcurrent:(UICollectionView*)collection
+{
+    NSUInteger currentsel = 0;
+    NSUInteger count = [self.model count];
+    NSString *fontcurrent = [msettings singleton].fontselected;
+    
+    for(NSUInteger i = 0; i < count; i++)
+    {
+        id<mconfigfontsprotocol> item = [self.model item:i];
+        NSString *fontraw = [item fontraw];
+        
+        if([fontraw isEqualToString:fontcurrent])
+        {
+            currentsel = i;
+            
+            break;
+        }
+    }
+    
+    [collection selectItemAtIndexPath:[NSIndexPath indexPathForItem:currentsel inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
 }
 
 #pragma mark -
@@ -72,7 +102,8 @@
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    
+    [msettings singleton].fontselected = [[self.model item:index.item] fontraw];
+    [[msettings singleton] save];
 }
 
 @end
