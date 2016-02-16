@@ -50,9 +50,20 @@
 #pragma mark -
 #pragma mark col del
 
--(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
 {
+    CGSize size;
     
+    if([self.model count])
+    {
+        size = CGSizeZero;
+    }
+    else
+    {
+        size = CGSizeMake(col.bounds.size.width, 200);
+    }
+    
+    return size;
 }
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
