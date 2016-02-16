@@ -3,6 +3,7 @@
 @interface cpages:UIPageViewController
 
 -(void)addflow;
+-(void)showlist;
 
 @property(strong, nonatomic)UIBarButtonItem *itemadd;
 @property(strong, nonatomic)UIBarButtonItem *itemsettings;

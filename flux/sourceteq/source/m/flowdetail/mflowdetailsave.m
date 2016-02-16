@@ -36,6 +36,7 @@
                                       ^
                                       {
                                           [controller.navigationController popViewControllerAnimated:YES];
+                                          [[cmain singleton].pages showlist];
                                       });
                    });
 }

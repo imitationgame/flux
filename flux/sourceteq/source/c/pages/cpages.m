@@ -110,4 +110,9 @@
     [self actionadd:nil];
 }
 
+-(void)showlist
+{
+    [self actionlistleft:nil];
+}
+
 @end
