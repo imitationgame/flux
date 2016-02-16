@@ -6,7 +6,7 @@
 
 -(NSString*)name
 {
-    NSString *string = NSLocalizedString(@"", nil);
+    NSString *string = NSLocalizedString(@"font_helvetica", nil);
     
     return string;
 }
