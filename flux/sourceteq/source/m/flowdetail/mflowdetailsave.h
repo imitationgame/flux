@@ -1,5 +1,5 @@
 //
-//  flowdetailsave.h
+//  mflowdetailsave.h
 //  flux
 //
 //  Created by zero on 2/15/16.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface flowdetailsave : NSObject
+@interface mflowdetailsave : NSObject
 
 @end
