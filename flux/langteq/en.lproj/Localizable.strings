@@ -1,5 +1,6 @@
 "app_title"="Flux";
 
+"flow_main_title"="Construct";
 "flow_catalog_con"="Connector";
 "flow_catalog_pro"="Process";
 "flow_catalog_dec"="Decision";

@@ -2,6 +2,12 @@
 
 @implementation cflow
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self setTitle:NSLocalizedString(@"flow_main_title", nil)];
+}
+
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -14,7 +20,7 @@
     self.view = [[vflow alloc] init:self];
     self.viewflow = (vflow*)self.view;
 }
-
+ç
 #pragma mark public
 
 -(void)exportflow
