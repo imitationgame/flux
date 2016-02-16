@@ -29,6 +29,8 @@
 "flow_exportname"="flow.png";
 
 "flow_detail_title"="Finish";
+"flow_detail_action_save"="Save";
+"flow_detail_action_export"="Export";
 
 "rate_descr"="How would you rate this app?";
 "rate_donereview"="Rate sent. Would you write a review in the app store?";

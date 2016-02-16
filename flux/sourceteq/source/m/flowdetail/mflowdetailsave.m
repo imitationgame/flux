@@ -7,7 +7,7 @@
 
 -(NSString*)title
 {
-    NSString *string = NSLocalizedString(@"", nil);
+    NSString *string = NSLocalizedString(@"flow_detail_action_save", nil);
     
     return string;
 }
