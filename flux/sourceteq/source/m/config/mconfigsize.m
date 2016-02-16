@@ -15,6 +15,7 @@
 -(void)configcel:(vconfigcel*)cel
 {
     vconfigstep *step = [[vconfigstep alloc] init];
+    [step.label setText:NSLocalizedString(@"config_item_size", nil)];
     [cel changeoverview:step];
 }
 

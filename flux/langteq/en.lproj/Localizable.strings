@@ -39,6 +39,7 @@
 "config_main_title"="Config";
 "config_item_hr"="Use high resolution\n";
 "config_item_hrdescr"="Better quality, bigger files";
+"config_item_size"="Font size";
 
 "rate_descr"="How would you rate this app?";
 "rate_donereview"="Rate sent. Would you write a review in the app store?";
