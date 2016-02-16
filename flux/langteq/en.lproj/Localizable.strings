@@ -35,6 +35,7 @@
 
 "list_main_title"="Flows";
 "list_header_empty"="No flows created yet";
+"list_header_button"="Create your first";
 
 "config_main_title"="Config";
 "config_item_hr"="Use high resolution\n";
