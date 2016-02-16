@@ -12,7 +12,7 @@
     [label setBackgroundColor:[UIColor clearColor]];
     [label setUserInteractionEnabled:NO];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [label setFont:[UIFont fontWithName:fontboldname size:18]];
+    [label setFont:[UIFont fontWithName:fontboldname size:16]];
     [label setTextColor:colormain];
     [label setTextAlignment:NSTextAlignmentCenter];
     self.label = label;
@@ -32,7 +32,7 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[selector]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[label(5)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[selector(5)]" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -45,7 +45,7 @@
 
 -(void)setHighlighted:(BOOL)highlighted
 {
-    [self setHighlighted:highlighted];
+    [super setHighlighted:highlighted];
     [self hover];
 }
 
