@@ -15,13 +15,22 @@
     [image setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.image = image;
     
-    [self addSubview:image];
+    UIView *selector = [[UIView alloc] init];
+    [selector setBackgroundColor:colormain];
+    [selector setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [selector setUserInteractionEnabled:NO];
+    self.selector = selector;
     
-    NSDictionary *views = @{@"image":image};
+    [self addSubview:image];
+    [self addSubview:selector];
+    
+    NSDictionary *views = @{@"image":image, @"selector":selector};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[image]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[image]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[selector]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[selector(5)]" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -44,11 +53,13 @@
 {
     if(self.isSelected || self.isHighlighted)
     {
-        [self.image setAlpha:0.5];
+        [self.image setAlpha:0.2];
+        [self.selector setHidden:NO];
     }
     else
     {
         [self.image setAlpha:1];
+        [self.selector setHidden:YES];
     }
 }
 
@@ -62,7 +73,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                    ^
                    {
-                       UIImage *img = [UIImage imageWithContentsOfFile:item.path];
+                       UIImage *img = [UIImage imageWithContentsOfFile:[flowsfolder stringByAppendingPathComponent:item.path]];
                        
                        dispatch_async(dispatch_get_main_queue(),
                                       ^
