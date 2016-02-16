@@ -16,7 +16,7 @@
 
 -(void)loadView
 {
-//    self.view = [vcon];
+    self.view = [[vconfig alloc] init:self];
 }
 
 @end
