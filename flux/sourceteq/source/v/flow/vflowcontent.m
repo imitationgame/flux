@@ -1,7 +1,7 @@
 #import "vflowcontent.h"
 
 #define pointmargin 50
-#define pagemargin 50
+#define pagemargin 100
 
 @implementation vflowcontent
 {
