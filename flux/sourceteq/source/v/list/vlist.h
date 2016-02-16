@@ -3,4 +3,6 @@
 
 @interface vlist:viewbase<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
+@property(weak, nonatomic)UICollectionView *collection;
+
 @end
