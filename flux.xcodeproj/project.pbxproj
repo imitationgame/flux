@@ -62,6 +62,9 @@
 		DA76B81D1C739DC700C8E1B6 /* mconfigfontshelvetica.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B81C1C739DC700C8E1B6 /* mconfigfontshelvetica.m */; };
 		DA76B8201C739DDF00C8E1B6 /* mconfigfontstimes.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B81F1C739DDF00C8E1B6 /* mconfigfontstimes.m */; };
 		DA76B8231C739E0A00C8E1B6 /* mconfigfontsfutura.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B8221C739E0A00C8E1B6 /* mconfigfontsfutura.m */; };
+		DA76B8271C73DC4300C8E1B6 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = DA76B8241C73DC4300C8E1B6 /* list.png */; };
+		DA76B8281C73DC4300C8E1B6 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA76B8251C73DC4300C8E1B6 /* list@2x.png */; };
+		DA76B8291C73DC4300C8E1B6 /* list@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA76B8261C73DC4300C8E1B6 /* list@3x.png */; };
 		DA87C5401C6BBB8B00796D79 /* vflowline.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C53F1C6BBB8B00796D79 /* vflowline.m */; };
 		DA87C5491C6BD3DB00796D79 /* mflowlinesitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C5481C6BD3DB00796D79 /* mflowlinesitem.m */; };
 		DA87C54C1C6C12AA00796D79 /* vflowcontent.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C54B1C6C12AA00796D79 /* vflowcontent.m */; };
@@ -245,6 +248,9 @@
 		DA76B81F1C739DDF00C8E1B6 /* mconfigfontstimes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfigfontstimes.m; sourceTree = "<group>"; };
 		DA76B8211C739E0A00C8E1B6 /* mconfigfontsfutura.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mconfigfontsfutura.h; sourceTree = "<group>"; };
 		DA76B8221C739E0A00C8E1B6 /* mconfigfontsfutura.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfigfontsfutura.m; sourceTree = "<group>"; };
+		DA76B8241C73DC4300C8E1B6 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		DA76B8251C73DC4300C8E1B6 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
+		DA76B8261C73DC4300C8E1B6 /* list@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@3x.png"; sourceTree = "<group>"; };
 		DA87C53E1C6BBB8B00796D79 /* vflowline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowline.h; sourceTree = "<group>"; };
 		DA87C53F1C6BBB8B00796D79 /* vflowline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vflowline.m; sourceTree = "<group>"; };
 		DA87C5471C6BD3DB00796D79 /* mflowlinesitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowlinesitem.h; sourceTree = "<group>"; };
@@ -442,6 +448,9 @@
 		DA0156D21C6A691900FAC166 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				DA76B8241C73DC4300C8E1B6 /* list.png */,
+				DA76B8251C73DC4300C8E1B6 /* list@2x.png */,
+				DA76B8261C73DC4300C8E1B6 /* list@3x.png */,
 				DAA2DCE31C6ED02300CF2B8E /* close.png */,
 				DAA2DCE41C6ED02300CF2B8E /* close@2x.png */,
 				DAA2DCE51C6ED02300CF2B8E /* close@3x.png */,
@@ -996,14 +1005,17 @@
 				DA0157201C6A691900FAC166 /* flux.db in Resources */,
 				DAB837DD1C6ADAB000730B67 /* io.png in Resources */,
 				DAB837D21C6AD91300730B67 /* process@2x.png in Resources */,
+				DA76B8281C73DC4300C8E1B6 /* list@2x.png in Resources */,
 				DA0157251C6A691900FAC166 /* Localizable.strings in Resources */,
 				DAB837D31C6AD91300730B67 /* process@3x.png in Resources */,
 				DAB837CD1C6AD6F700730B67 /* connector@3x.png in Resources */,
 				DA30A8301C6A6DE1004F5828 /* Images.xcassets in Resources */,
+				DA76B8271C73DC4300C8E1B6 /* list.png in Resources */,
 				DAB837DE1C6ADAB000730B67 /* io@2x.png in Resources */,
 				DAB837CB1C6AD6F700730B67 /* connector.png in Resources */,
 				DAB837D11C6AD91300730B67 /* process.png in Resources */,
 				DA0157231C6A691900FAC166 /* analytics.plist in Resources */,
+				DA76B8291C73DC4300C8E1B6 /* list@3x.png in Resources */,
 				DAA2DCE81C6ED02300CF2B8E /* close@3x.png in Resources */,
 				DA0157241C6A691900FAC166 /* defs.plist in Resources */,
 				DAB837DF1C6ADAB000730B67 /* io@3x.png in Resources */,
