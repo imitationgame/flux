@@ -47,6 +47,8 @@
 		DA6574931C72DD630008CC2E /* cconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6574921C72DD630008CC2E /* cconfig.m */; };
 		DA6574971C72E0CF0008CC2E /* vconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6574961C72E0CF0008CC2E /* vconfig.m */; };
 		DA76B7EC1C73768A00C8E1B6 /* vconfigcel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B7EB1C73768A00C8E1B6 /* vconfigcel.m */; };
+		DA76B7F11C73770000C8E1B6 /* mconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B7F01C73770000C8E1B6 /* mconfig.m */; };
+		DA76B7F41C73770800C8E1B6 /* mconfigitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B7F31C73770800C8E1B6 /* mconfigitem.m */; };
 		DA87C5401C6BBB8B00796D79 /* vflowline.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C53F1C6BBB8B00796D79 /* vflowline.m */; };
 		DA87C5491C6BD3DB00796D79 /* mflowlinesitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C5481C6BD3DB00796D79 /* mflowlinesitem.m */; };
 		DA87C54C1C6C12AA00796D79 /* vflowcontent.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C54B1C6C12AA00796D79 /* vflowcontent.m */; };
@@ -198,6 +200,10 @@
 		DA6574961C72E0CF0008CC2E /* vconfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfig.m; sourceTree = "<group>"; };
 		DA76B7EA1C73768A00C8E1B6 /* vconfigcel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigcel.h; sourceTree = "<group>"; };
 		DA76B7EB1C73768A00C8E1B6 /* vconfigcel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigcel.m; sourceTree = "<group>"; };
+		DA76B7EF1C73770000C8E1B6 /* mconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mconfig.h; sourceTree = "<group>"; };
+		DA76B7F01C73770000C8E1B6 /* mconfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfig.m; sourceTree = "<group>"; };
+		DA76B7F21C73770800C8E1B6 /* mconfigitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mconfigitem.h; sourceTree = "<group>"; };
+		DA76B7F31C73770800C8E1B6 /* mconfigitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfigitem.m; sourceTree = "<group>"; };
 		DA87C53E1C6BBB8B00796D79 /* vflowline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowline.h; sourceTree = "<group>"; };
 		DA87C53F1C6BBB8B00796D79 /* vflowline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vflowline.m; sourceTree = "<group>"; };
 		DA87C5471C6BD3DB00796D79 /* mflowlinesitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowlinesitem.h; sourceTree = "<group>"; };
@@ -536,6 +542,7 @@
 		DA0157011C6A691900FAC166 /* m */ = {
 			isa = PBXGroup;
 			children = (
+				DA76B7EE1C7376F500C8E1B6 /* config */,
 				DAD4823F1C72C2700063C150 /* list */,
 				DAD4821C1C72AA120063C150 /* flowdetail */,
 				DAB837A51C6AAA9500730B67 /* flow */,
@@ -721,6 +728,17 @@
 				DA6574961C72E0CF0008CC2E /* vconfig.m */,
 				DA76B7EA1C73768A00C8E1B6 /* vconfigcel.h */,
 				DA76B7EB1C73768A00C8E1B6 /* vconfigcel.m */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		DA76B7EE1C7376F500C8E1B6 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				DA76B7EF1C73770000C8E1B6 /* mconfig.h */,
+				DA76B7F01C73770000C8E1B6 /* mconfig.m */,
+				DA76B7F21C73770800C8E1B6 /* mconfigitem.h */,
+				DA76B7F31C73770800C8E1B6 /* mconfigitem.m */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -1002,6 +1020,7 @@
 				DA0157301C6A691900FAC166 /* cmain.m in Sources */,
 				DAD4820E1C7245380063C150 /* cflowdetail.m in Sources */,
 				DAA2DCF11C6F909700CF2B8E /* mflowettpro.m in Sources */,
+				DA76B7F11C73770000C8E1B6 /* mconfig.m in Sources */,
 				DAEACBBE1C6CF1EE0047ABF0 /* mflowcolorsblue.m in Sources */,
 				DAB837C41C6AC3F200730B67 /* mflowetttypespro.m in Sources */,
 				DA01573C1C6A691900FAC166 /* vratemenucel.m in Sources */,
@@ -1058,6 +1077,7 @@
 				DA402AB61C6E4B2C001DB033 /* sflowlinesup.m in Sources */,
 				DA402AB01C6E37B2001DB033 /* sflowlinesright.m in Sources */,
 				DA402AAD1C6E37A8001DB033 /* sflowlinesleft.m in Sources */,
+				DA76B7F41C73770800C8E1B6 /* mconfigitem.m in Sources */,
 				DA01572B1C6A691900FAC166 /* updater.m in Sources */,
 				DAD482291C72AAFC0063C150 /* mflowdetail.m in Sources */,
 				DAEACBD01C6D64770047ABF0 /* mflowettdec.m in Sources */,
