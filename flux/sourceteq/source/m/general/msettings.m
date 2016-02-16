@@ -28,7 +28,7 @@
     {
         self.highresolution = YES;
         self.fontselected = fontname;
-        self.fontsize = 15;
+        self.fontsize = 16;
         
         [self save];
     }

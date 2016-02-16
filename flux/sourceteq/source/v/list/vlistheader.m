@@ -12,8 +12,8 @@
     [label setBackgroundColor:[UIColor clearColor]];
     [label setUserInteractionEnabled:NO];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [label setFont:[UIFont fontWithName:fontname size:20]];
-    [label setTextColor:[UIColor colorWithWhite:0 alpha:0.6]];
+    [label setFont:[UIFont fontWithName:fontname size:17]];
+    [label setTextColor:[UIColor colorWithWhite:0 alpha:0.3]];
     [label setTextAlignment:NSTextAlignmentCenter];
     [label setNumberOfLines:0];
     [label setText:NSLocalizedString(@"list_header_empty", nil)];
@@ -25,7 +25,7 @@
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor colorWithWhite:1 alpha:0.2] forState:UIControlStateHighlighted];
     [button setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [button.titleLabel setFont:[UIFont fontWithName:fontname size:16]];
+    [button.titleLabel setFont:[UIFont fontWithName:fontname size:14]];
     [button setTitle:NSLocalizedString(@"list_header_button", nil) forState:UIControlStateNormal];
     [button addTarget:self action:@selector(actionbutton:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -36,7 +36,7 @@
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-100-[button]-100-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-80-[button]-80-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-50-[label]-20-[button(40)]" options:0 metrics:metrics views:views]];
     
     return self;
