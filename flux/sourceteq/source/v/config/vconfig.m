@@ -24,6 +24,7 @@
     [collection setBackgroundColor:[UIColor clearColor]];
     [collection setDelegate:self];
     [collection setDataSource:self];
+    [collection registerClass:[vconfigcel class] forCellWithReuseIdentifier:celid];
     
     self.collection = collection;
     
