@@ -7,7 +7,8 @@
 
 -(void)configcel:(vconfigcel*)cel
 {
-    
+    vconfigsw *overview = [[vconfigsw alloc] init];
+    [cel changeoverview:overview];
 }
 
 @end
