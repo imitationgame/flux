@@ -2,4 +2,7 @@
 
 @protocol mconfigfontsprotocol <NSObject>
 
+-(NSString*)name;
+-(NSString*)fontraw;
+
 @end
