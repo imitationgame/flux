@@ -9,7 +9,13 @@
 {
     self = [super init];
     
-    array = [NSArray array];
+    array = [NSArray arrayWithObjects:
+             [[mconfigfontsmenlo alloc] init],
+             [[mconfigfontsarial alloc] init],
+             [[mconfigfontshelvetica alloc] init],
+             [[mconfigfontstimes alloc] init],
+             [[mconfigfontsfutura alloc] init],
+             ,nil];
     
     return self;
 }
