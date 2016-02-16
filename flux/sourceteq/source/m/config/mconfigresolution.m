@@ -2,6 +2,12 @@
 
 @implementation mconfigresolution
 
+-(void)actionchanged:(UISwitch*)sw
+{
+    [msettings singleton].highresolution = sw.isOn;
+    [[msettings singleton] save];
+}
+
 #pragma mark -
 #pragma mark config protocol
 
@@ -23,6 +29,9 @@
     [mut appendAttributedString:[[NSAttributedString alloc] initWithString:NSLocalizedString(@"config_item_hrdescr", nil) attributes:attrdescr]];
     
     [overview.label setAttributedText:mut];
+    [overview.sw setOn:[msettings singleton].highresolution animated:NO];
+    [overview.sw addTarget:self action:@selector(actionchanged:) forControlEvents:UIControlEventValueChanged];
+    
     [cel changeoverview:overview];
 }
 
