@@ -18,6 +18,10 @@
 
 -(void)exportflow
 {
+    [self.viewflow clearcolor];
+    [self.viewflow clearpoint];
+    [self.viewflow cleartext];
+    
     UIImage *image;
     vflowcontent *content = self.viewflow.contentview;
     CGRect originalrect = content.frame;
