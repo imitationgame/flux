@@ -18,6 +18,7 @@
     
     UISwitch *sw = [[UISwitch alloc] init];
     [sw setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [sw setTintColor:colormain];
     self.sw = sw;
     
     [self addSubview:label];
