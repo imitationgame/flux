@@ -6,5 +6,6 @@
 -(void)config:(id<mconfigfontsprotocol>)model;
 
 @property(weak, nonatomic)UILabel *label;
+@property(weak, nonatomic)UIView *selector;
 
 @end
