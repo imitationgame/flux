@@ -53,6 +53,8 @@
 		DA76B7FE1C73775D00C8E1B6 /* mconfigresolution.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B7FD1C73775D00C8E1B6 /* mconfigresolution.m */; };
 		DA76B8011C73798000C8E1B6 /* vconfigsw.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B8001C73798000C8E1B6 /* vconfigsw.m */; };
 		DA76B8041C73798D00C8E1B6 /* vconfigstep.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B8031C73798D00C8E1B6 /* vconfigstep.m */; };
+		DA76B8071C7379B800C8E1B6 /* vconfigfonts.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B8061C7379B800C8E1B6 /* vconfigfonts.m */; };
+		DA76B80A1C7379C700C8E1B6 /* vconfigfontscel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA76B8091C7379C700C8E1B6 /* vconfigfontscel.m */; };
 		DA87C5401C6BBB8B00796D79 /* vflowline.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C53F1C6BBB8B00796D79 /* vflowline.m */; };
 		DA87C5491C6BD3DB00796D79 /* mflowlinesitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C5481C6BD3DB00796D79 /* mflowlinesitem.m */; };
 		DA87C54C1C6C12AA00796D79 /* vflowcontent.m in Sources */ = {isa = PBXBuildFile; fileRef = DA87C54B1C6C12AA00796D79 /* vflowcontent.m */; };
@@ -217,6 +219,10 @@
 		DA76B8001C73798000C8E1B6 /* vconfigsw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigsw.m; sourceTree = "<group>"; };
 		DA76B8021C73798D00C8E1B6 /* vconfigstep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigstep.h; sourceTree = "<group>"; };
 		DA76B8031C73798D00C8E1B6 /* vconfigstep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigstep.m; sourceTree = "<group>"; };
+		DA76B8051C7379B800C8E1B6 /* vconfigfonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigfonts.h; sourceTree = "<group>"; };
+		DA76B8061C7379B800C8E1B6 /* vconfigfonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigfonts.m; sourceTree = "<group>"; };
+		DA76B8081C7379C700C8E1B6 /* vconfigfontscel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigfontscel.h; sourceTree = "<group>"; };
+		DA76B8091C7379C700C8E1B6 /* vconfigfontscel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigfontscel.m; sourceTree = "<group>"; };
 		DA87C53E1C6BBB8B00796D79 /* vflowline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowline.h; sourceTree = "<group>"; };
 		DA87C53F1C6BBB8B00796D79 /* vflowline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vflowline.m; sourceTree = "<group>"; };
 		DA87C5471C6BD3DB00796D79 /* mflowlinesitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowlinesitem.h; sourceTree = "<group>"; };
@@ -745,6 +751,10 @@
 				DA76B8001C73798000C8E1B6 /* vconfigsw.m */,
 				DA76B8021C73798D00C8E1B6 /* vconfigstep.h */,
 				DA76B8031C73798D00C8E1B6 /* vconfigstep.m */,
+				DA76B8051C7379B800C8E1B6 /* vconfigfonts.h */,
+				DA76B8061C7379B800C8E1B6 /* vconfigfonts.m */,
+				DA76B8081C7379C700C8E1B6 /* vconfigfontscel.h */,
+				DA76B8091C7379C700C8E1B6 /* vconfigfontscel.m */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -1035,6 +1045,7 @@
 				DAB837AE1C6AAB9C00730B67 /* mflowettcon.m in Sources */,
 				DAEACBD31C6D6D9F0047ABF0 /* mflowtext.m in Sources */,
 				DA76B7FE1C73775D00C8E1B6 /* mconfigresolution.m in Sources */,
+				DA76B8071C7379B800C8E1B6 /* vconfigfonts.m in Sources */,
 				DAD482121C7246DE0063C150 /* vflowdetail.m in Sources */,
 				DAD482151C72A8350063C150 /* vflowdetailmenu.m in Sources */,
 				DAD4822C1C72AB080063C150 /* mflowdetailsave.m in Sources */,
@@ -1058,6 +1069,7 @@
 				DA30A83B1C6A9376004F5828 /* vflowett.m in Sources */,
 				DAD482381C72C18F0063C150 /* vlist.m in Sources */,
 				DA76B8041C73798D00C8E1B6 /* vconfigstep.m in Sources */,
+				DA76B80A1C7379C700C8E1B6 /* vconfigfontscel.m in Sources */,
 				DA6574931C72DD630008CC2E /* cconfig.m in Sources */,
 				DAEACBCD1C6CF2400047ABF0 /* mflowcolorspink.m in Sources */,
 				DAEACBC41C6CF20F0047ABF0 /* mflowcolorsyellow.m in Sources */,
