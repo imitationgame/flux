@@ -257,6 +257,7 @@
 		DAD4822B1C72AB080063C150 /* mflowdetailsave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowdetailsave.m; sourceTree = "<group>"; };
 		DAD4822D1C72AB120063C150 /* mflowdetailexport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowdetailexport.h; sourceTree = "<group>"; };
 		DAD4822E1C72AB120063C150 /* mflowdetailexport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mflowdetailexport.m; sourceTree = "<group>"; };
+		DAD482301C72AB370063C150 /* mflowdetailprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mflowdetailprotocol.h; sourceTree = "<group>"; };
 		DAEACBAE1C6CEF370047ABF0 /* vflowcatalogcolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowcatalogcolor.h; sourceTree = "<group>"; };
 		DAEACBAF1C6CEF380047ABF0 /* vflowcatalogcolor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vflowcatalogcolor.m; sourceTree = "<group>"; };
 		DAEACBB11C6CEF4C0047ABF0 /* vflowcatalogcolorcel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowcatalogcolorcel.h; sourceTree = "<group>"; };
@@ -749,6 +750,7 @@
 			children = (
 				DAD482271C72AAFC0063C150 /* mflowdetail.h */,
 				DAD482281C72AAFC0063C150 /* mflowdetail.m */,
+				DAD482301C72AB370063C150 /* mflowdetailprotocol.h */,
 				DAD4822A1C72AB080063C150 /* mflowdetailsave.h */,
 				DAD4822B1C72AB080063C150 /* mflowdetailsave.m */,
 				DAD4822D1C72AB120063C150 /* mflowdetailexport.h */,
