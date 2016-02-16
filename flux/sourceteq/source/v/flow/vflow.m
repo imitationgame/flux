@@ -15,10 +15,7 @@
     [vflowstopchoosing stopchoosing:self];
     [vflowfield fieldin:self];
     
-    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    [spinner setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [spinner setUserInteractionEnabled:NO];
-    [spinner setHidden:YES];
+    vspinner *spinner = [[vspinner alloc] init];
     self.spinner = spinner;
     
     [self addSubview:spinner];
@@ -169,7 +166,6 @@
     [self clearpoint];
     [self cleartext];
     
-    [self.contentview setHidden:YES];
     [self.spinner setHidden:NO];
     [self.spinner startAnimating];
 }
@@ -178,7 +174,6 @@
 {
     [self.spinner stopAnimating];
     [self.spinner setHidden:YES];
-    [self.contentview setHidden:NO];
 }
 
 @end

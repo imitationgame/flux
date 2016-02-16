@@ -10,6 +10,7 @@
 @class vflowstopchoosing;
 @class vflowfield;
 @class vflowtext;
+@class vspinner;
 
 @interface vflow:viewbase
 
@@ -32,7 +33,7 @@
 @property(weak, nonatomic)vflowcontent *contentview;
 @property(weak, nonatomic)vflowstopchoosing *stopchoosing;
 @property(weak, nonatomic)vflowfield *field;
-@property(weak, nonatomic)UIActivityIndicatorView *spinner;
+@property(weak, nonatomic)vspinner *spinner;
 @property(nonatomic)NSUInteger width;
 @property(nonatomic)NSUInteger height;
 @property(nonatomic)BOOL choosing;
