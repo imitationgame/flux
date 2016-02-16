@@ -9,6 +9,11 @@
 {
     self = [super init];
     
+    array = [NSArray arrayWithObjects:
+             [[mflowdetailsave alloc] init],
+             [[mflowdetailexport alloc] init],
+             nil];
+    
     return self;
 }
 
