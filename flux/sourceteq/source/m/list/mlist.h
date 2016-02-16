@@ -1,13 +1,11 @@
-//
-//  mlist.h
-//  flux
-//
-//  Created by zero on 2/15/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@class mlistitem;
 
-@interface mlist : NSObject
+@interface mlist:NSObject
+
+-(void)reload;
+-(NSUInteger)count;
+-(mlistitem*)item:(NSUInteger)index;
 
 @end
