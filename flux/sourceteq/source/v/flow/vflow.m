@@ -165,9 +165,9 @@
 
 -(void)startloading
 {
-    [self.viewflow clearcolor];
-    [self.viewflow clearpoint];
-    [self.viewflow cleartext];
+    [self clearcolor];
+    [self clearpoint];
+    [self cleartext];
     
     [self.contentview setHidden:YES];
     [self.spinner setHidden:NO];
