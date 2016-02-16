@@ -6,7 +6,7 @@
 
 -(UIColor*)color
 {
-    UIColor *color = [UIColor yellowColor];
+    UIColor *color = [UIColor colorWithRed:0.9 green:0.92 blue:0 alpha:1];
     
     return color;
 }
