@@ -28,8 +28,6 @@
     
     UIStepper *stepper = [[UIStepper alloc] init];
     [stepper setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [stepper setMinimumValue:10];
-    [stepper setMaximumValue:25];
     [stepper setTintColor:[UIColor blackColor]];
     self.stepper = stepper;
     

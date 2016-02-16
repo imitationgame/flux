@@ -37,6 +37,8 @@
     vconfigstep *step = [[vconfigstep alloc] init];
     [step.stepper setValue:value];
     [step.stepper addTarget:self action:@selector(actionstepper:) forControlEvents:UIControlEventValueChanged];
+    [step.stepper setMinimumValue:10];
+    [step.stepper setMaximumValue:35];
     self.step = step;
     [step.label setText:NSLocalizedString(@"config_item_size", nil)];
     [cel changeoverview:step];
