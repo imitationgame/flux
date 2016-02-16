@@ -26,8 +26,6 @@
     CGFloat scrollheight = basesize;
     CGFloat contentwidth = size.width;
     CGFloat contentheight = size.height;
-    CGFloat marginleft = content.marginleft;
-    CGFloat margintop = content.margintop;
     
     if(scrollwidth > contentwidth)
     {
@@ -42,24 +40,16 @@
     CGFloat adwidth = 0;
     CGFloat adheight = 0;
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(contentwidth, contentheight), YES, 1);
-    
-    
-    NSLog(@"content: %@, %@ ; margin: %@, %@", @(contentwidth), @(contentheight), @(marginleft), @(margintop));
-    
+
     while(adheight < contentheight)
     {
         while(adwidth < contentwidth)
         {
-            CGFloat offsetx = marginleft + adwidth;
-            CGFloat offsety = margintop + adheight;
             CGRect rectscroll = CGRectMake(0, 0, scrollwidth, scrollheight);
             CGRect realrect = CGRectMake(adwidth, adheight, scrollwidth, scrollheight);
-            CGPoint pointoffset = CGPointMake(offsetx, offsety);
-            
-            NSLog(@"scroll: %@, %@; ad %@, %@; margin %@, %@", @(scrollwidth), @(scrollheight), @(adwidth), @(adheight), @(offsetx), @(offsety));
             
             [content setFrame:rectscroll];
-            [content setContentOffset:pointoffset animated:NO];
+            [content scrollRectToVisible:realrect animated:NO];
             [content drawViewHierarchyInRect:realrect afterScreenUpdates:YES];
             
             adwidth += scrollwidth;
