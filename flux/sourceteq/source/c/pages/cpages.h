@@ -2,6 +2,8 @@
 
 @interface cpages:UIPageViewController
 
+-(void)addflow;
+
 @property(strong, nonatomic)UIBarButtonItem *itemadd;
 @property(strong, nonatomic)UIBarButtonItem *itemsettings;
 @property(strong, nonatomic)UIBarButtonItem *itemlistright;

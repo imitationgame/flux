@@ -27,6 +27,7 @@
     [button setTranslatesAutoresizingMaskIntoConstraints:NO];
     [button.titleLabel setFont:[UIFont fontWithName:fontname size:16]];
     [button setTitle:NSLocalizedString(@"list_header_button", nil) forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(actionbutton:) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:button];
     [self addSubview:label];
@@ -39,6 +40,13 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-50-[label]-20-[button(40)]" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+#pragma mark actions
+
+-(void)actionbutton:(UIButton*)button
+{
+    
 }
 
 @end
