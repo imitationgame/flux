@@ -126,7 +126,7 @@
 
 -(void)show
 {
-    if(![self.model.points count])
+    if(![self.model.points count] && ![self.model.ettlist count])
     {
         [self addpointatx:self.contentview.centerx y:self.contentview.margintop + 200];
     }
