@@ -25,6 +25,8 @@
     [button addTarget:self action:@selector(actiondelete:) forControlEvents:UIControlEventTouchUpInside];
     self.button = button;
     
+#warning "asd"
+    
     self.model = model;
     self.flowview = model.flow.view;
     
