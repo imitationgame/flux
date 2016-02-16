@@ -10,7 +10,9 @@
     self = [super init];
     
     array = [NSArray arrayWithObjects:
-             [mconfigreso],
+             [[mconfigresolution alloc] init],
+             [[mconfigfont alloc] init],
+             [[mconfigsize alloc] init],
              nil];
     
     return self;

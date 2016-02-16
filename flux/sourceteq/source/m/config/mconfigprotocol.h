@@ -1,13 +1,9 @@
-//
-//  mconfigprotocol.h
-//  flux
-//
-//  Created by zero on 2/16/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import <UIKit/UIKit.h>
 
-#import <Foundation/Foundation.h>
+@class vconfigcel;
 
 @protocol mconfigprotocol <NSObject>
+
+-(void)configcel:(vconfigcel*)cel;
 
 @end
