@@ -41,8 +41,6 @@ NSString *flowsfolder;
 +(void)firsttime:(NSDictionary*)plist
 {
     NSNumber *appid = plist[@"appid"];
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-    
     NSUserDefaults *userdef = [NSUserDefaults standardUserDefaults];
     
     [userdef removePersistentDomainForName:NSGlobalDomain];
@@ -51,7 +49,6 @@ NSString *flowsfolder;
     [userdef setValue:appid forKey:@"appid"];
     [userdef setValue:@0 forKey:@"ttl"];
     [userdef setValue:[[NSUUID UUID] UUIDString] forKey:@"uuid"];
-    [userdef setValue:dictionary forKey:@"settings"];
     [userdef synchronize];
 }
 
