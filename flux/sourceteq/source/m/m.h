@@ -39,3 +39,4 @@
 #import "mconfigresolution.h"
 #import "mconfigfont.h"
 #import "mconfigsize.h"
+#import "msettings.h"
