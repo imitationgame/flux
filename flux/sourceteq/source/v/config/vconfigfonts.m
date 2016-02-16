@@ -20,8 +20,8 @@
     
     UILabel *label = [[UILabel alloc] init];
     [label setBackgroundColor:[UIColor clearColor]];
-    [label setFont:[UIFont fontWithName:fontname size:17]];
-    [label setTextColor:[UIColor colorWithWhite:0 alpha:0.6]];
+    [label setFont:[UIFont fontWithName:fontname size:16]];
+    [label setTextColor:[UIColor colorWithWhite:0 alpha:0.4]];
     [label setUserInteractionEnabled:NO];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setText:NSLocalizedString(@"font_title", nil)];
@@ -53,7 +53,7 @@
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label(200)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label]-20-[col(60)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[label]-20-[col(65)]-0-|" options:0 metrics:metrics views:views]];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_MSEC * 300), dispatch_get_main_queue(),
                    ^
