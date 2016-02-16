@@ -10,6 +10,23 @@
     
     self.model = [[mlist alloc] init];
     
+    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    [flow setFooterReferenceSize:CGSizeZero];
+    [flow setMinimumInteritemSpacing:0];
+    [flow setMinimumLineSpacing:2];
+    [flow setSectionInset:UIEdgeInsetsZero];
+    
+    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
+    [collection setClipsToBounds:YES];
+    [collection setShowsHorizontalScrollIndicator:NO];
+    [collection setShowsVerticalScrollIndicator:NO];
+    [collection setBackgroundColor:[UIColor clearColor]];
+    [collection setAlwaysBounceVertical:YES];
+    [collection setDataSource:self];
+    [collection setDelegate:self];
+    self.collection = collection;
+    [self addSubview:collection];
+    
     return self;
 }
 
@@ -22,7 +39,11 @@
 
 -(void)notifiedflowsreload:(NSNotification*)notification
 {
-    
+    dispatch_async(dispatch_get_main_queue(),
+                   ^
+                   {
+                       [self.collection reloadData];
+                   });
 }
 
 #pragma mark -
