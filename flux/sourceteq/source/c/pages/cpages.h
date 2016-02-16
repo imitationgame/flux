@@ -1,6 +1,6 @@
 #import "appdel.h"
 
-@interface cpages:UIPageViewController
+@interface cpages:UIPageViewController<UIAlertViewDelegate>
 
 -(void)addflow;
 -(void)showlist;

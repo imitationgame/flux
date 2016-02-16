@@ -56,6 +56,7 @@
 
 -(void)actionlistleft:(UIBarButtonItem*)item
 {
+    
     [self insideshowlistleft];
 }
 
@@ -125,6 +126,17 @@
 -(void)showlist
 {
     [self insideshowlistleft];
+}
+
+#pragma mark -
+#pragma mark alert del
+
+-(void)alertView:(UIAlertView*)alert clickedButtonAtIndex:(NSInteger)index
+{
+    if(index)
+    {
+        [self insideshowlistleft];
+    }
 }
 
 @end
