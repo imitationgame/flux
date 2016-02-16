@@ -1,5 +1,7 @@
 #import "appdel.h"
 
+@class cpages;
+
 @interface cmain:UINavigationController
 
 +(instancetype)singleton;

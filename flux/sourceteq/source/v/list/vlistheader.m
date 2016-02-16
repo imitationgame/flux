@@ -46,7 +46,7 @@
 
 -(void)actionbutton:(UIButton*)button
 {
-    
+    [[cmain singleton].pages addflow];
 }
 
 @end
