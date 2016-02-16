@@ -56,7 +56,20 @@
 
 -(void)config:(mlistitem*)item
 {
+    [self.image setImage:nil];
     [self hover];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^
+                   {
+                       UIImage *img = [UIImage imageWithContentsOfFmoile:item.path];
+                       
+                       dispatch_async(dispatch_get_main_queue(),
+                                      ^
+                                      {
+                                          [self.image setImage:img];
+                                      });
+                   });
 }
 
 @end
