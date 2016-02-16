@@ -27,8 +27,6 @@
     
     self.collection = collection;
     
-#warning "con"
-    
     return self;
 }
 
