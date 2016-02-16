@@ -128,6 +128,8 @@
 {
     [self.flowtext editdone:self.field.text];
     self.flowtext = nil;
+    
+    [[analytics singleton] trackevent:ga_event_edittext action:ga_action_done label:nil];
 }
 
 #pragma mark public

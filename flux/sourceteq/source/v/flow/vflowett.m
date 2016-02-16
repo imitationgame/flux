@@ -58,6 +58,7 @@
 -(void)actiondelete:(UIButton*)button
 {
     [self.model.flow.ettlist removeett:self.model];
+    [[analytics singleton] trackevent:ga_event_remove action:ga_action_done label:nil];
 }
 
 #pragma mark functionality

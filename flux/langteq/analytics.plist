@@ -13,6 +13,10 @@
 	<array>
 		<string>export</string>
         <string>save</string>
+        <string>addett</string>
+        <string>changecolor</string>
+        <string>edittext</string>
+        <string>remove</string>
 	</array>
 	<key>actions</key>
 	<array>

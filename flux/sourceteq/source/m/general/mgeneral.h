@@ -28,7 +28,11 @@ typedef NS_ENUM(NSUInteger, ga_screen)
 typedef NS_ENUM(NSUInteger, ga_event)
 {
     ga_event_export,
-    ga_event_save
+    ga_event_save,
+    ga_event_addett,
+    ga_event_changecolor,
+    ga_event_edittext,
+    ga_event_remove
 };
 
 typedef NS_ENUM(NSUInteger, ga_action)
