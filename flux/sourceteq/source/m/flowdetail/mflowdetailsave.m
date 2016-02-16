@@ -14,19 +14,18 @@
 
 -(void)action:(cflowdetail*)controller
 {
-//    [mdirs copyfilefrom:controller.pathpicture to:path];
+    NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
+    NSString *newpath = [flowsfolder stringByAppendingPathComponent:identifier];
     
-    NSURL *url = [NSURL fileURLWithPath:controller.pathpicture];
-    UIActivityViewController *act = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:nil];
+    NSInteger now = [NSDate date].timeIntervalSince1970;
+    [mdirs copyfilefrom:controller.pathpicture to:newpath];
+    NSString *query = [NSString stringWithFormat:
+                       @"INSERT INTO flows (created, path) "
+                       "values(%@, \"%@\");",
+                       @(now), identifier];
+    [db query:query];
     
-    if([UIPopoverPresentationController class])
-    {
-        act.popoverPresentationController.sourceView = controller.view;
-        act.popoverPresentationController.sourceRect = CGRectMake((controller.view.bounds.size.width / 2.0) - 2, controller.view.bounds.size.height - 100, 1, 1);
-        act.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp | UIPopoverArrowDirectionDown;
-    }
-    
-    [[cmain singleton] presentViewController:act animated:YES completion:nil];
+    [controller.navigationController popViewControllerAnimated:YES];
 }
 
 @end
