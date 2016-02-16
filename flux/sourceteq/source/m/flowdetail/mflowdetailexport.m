@@ -14,6 +14,8 @@
 
 -(void)action:(cflowdetail*)controller
 {
+    [[analytics singleton] trackevent:ga_event_export action:ga_action_done label:nil];
+    
     NSURL *url = [NSURL fileURLWithPath:controller.pathpicture];
     UIActivityViewController *act = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:nil];
     
