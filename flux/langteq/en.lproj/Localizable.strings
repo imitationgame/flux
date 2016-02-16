@@ -32,6 +32,8 @@
 "flow_detail_action_save"="Save";
 "flow_detail_action_export"="Export";
 
+"list_header_empty"="No flows created yet";
+
 "rate_descr"="How would you rate this app?";
 "rate_donereview"="Rate sent. Would you write a review in the app store?";
 "rate_send"="Send";
