@@ -13,7 +13,6 @@
 		DA0157241C6A691900FAC166 /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA0156D51C6A691900FAC166 /* defs.plist */; };
 		DA0157251C6A691900FAC166 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA0156D61C6A691900FAC166 /* Localizable.strings */; };
 		DA0157261C6A691900FAC166 /* appdel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0156DB1C6A691900FAC166 /* appdel.m */; };
-		DA0157271C6A691900FAC166 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA0156DC1C6A691900FAC166 /* Info.plist */; };
 		DA0157281C6A691900FAC166 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0156DD1C6A691900FAC166 /* main.m */; };
 		DA0157291C6A691900FAC166 /* analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0156E01C6A691900FAC166 /* analytics.m */; };
 		DA01572A1C6A691900FAC166 /* tools.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0156E41C6A691900FAC166 /* tools.m */; };
@@ -1033,7 +1032,6 @@
 				DAB837DC1C6ADAB000730B67 /* decision@3x.png in Resources */,
 				DAA2DCE71C6ED02300CF2B8E /* close@2x.png in Resources */,
 				DA76B82F1C73E28000C8E1B6 /* settings@3x.png in Resources */,
-				DA0157271C6A691900FAC166 /* Info.plist in Resources */,
 				DAB837DB1C6ADAB000730B67 /* decision@2x.png in Resources */,
 				DA0157411C6A694300FAC166 /* in in Resources */,
 				DAA2DCE61C6ED02300CF2B8E /* close.png in Resources */,
