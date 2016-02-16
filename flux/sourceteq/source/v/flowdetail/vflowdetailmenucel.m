@@ -17,15 +17,48 @@
     [label setTextAlignment:NSTextAlignmentCenter];
     self.label = label;
     
-    [self addSubview:label];
+    UIView *selector = [[UIView alloc] init];
+    [selector setUserInteractionEnabled:NO];
+    [selector setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [selector setBackgroundColor:colormain];
+    self.selector = selector;
     
-    NSDictionary *views = @{@"label":label};
+    [self addSubview:label];
+    [self addSubview:selector];
+    
+    NSDictionary *views = @{@"label":label, @"selector":selector};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[selector]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[label(5)]" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+-(void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    [self hover];
+}
+
+-(void)setHighlighted:(BOOL)highlighted
+{
+    [self setHighlighted:highlighted];
+    [self hover];
+}
+
+-(void)hover
+{
+    if(self.isSelected || self.isHighlighted)
+    {
+        [self.selector setHidden:NO];
+    }
+    else
+    {
+        [self.selector setHidden:YES];
+    }
 }
 
 #pragma mark public
@@ -33,6 +66,7 @@
 -(void)config:(id<mflowdetailprotocol>)model
 {
     [self.label setText:[model title]];
+    [self hover];
 }
 
 @end
