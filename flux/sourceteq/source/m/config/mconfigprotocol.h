@@ -1,5 +1,5 @@
 //
-//  mconfigitem.h
+//  mconfigprotocol.h
 //  flux
 //
 //  Created by zero on 2/16/16.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface mconfigitem : NSObject
+@protocol mconfigprotocol <NSObject>
 
 @end
