@@ -20,6 +20,10 @@
     [collection setClipsToBounds:YES];
     [collection setShowsHorizontalScrollIndicator:NO];
     [collection setShowsVerticalScrollIndicator:NO];
+    [collection setAlwaysBounceVertical:YES];
+    [collection setBackgroundColor:[UIColor clearColor]];
+    [collection setDelegate:self];
+    [collection setDataSource:self];
     
     self.collection = collection;
     
