@@ -14,7 +14,7 @@
     [image setTranslatesAutoresizingMaskIntoConstraints:NO];
     [image setImage:[UIImage imageWithContentsOfFile:controller.pathpicture]];
     
-    vflowdetailmenu *menu = [[vflowdetailmenu alloc] init];
+    vflowdetailmenu *menu = [[vflowdetailmenu alloc] init:controller];
     self.menu = menu;
     
     [self addSubview:image];
