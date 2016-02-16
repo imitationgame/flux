@@ -34,7 +34,8 @@
                        for(NSUInteger i = 0; i < count; i++)
                        {
                            NSDictionary *rawflow = rawflows[i];
-                           
+                           NSString *rawpath = rawflow[@"path"];
+                           mlistitem *item = [[mlistitem alloc] init];
                        }
                    });
 }
