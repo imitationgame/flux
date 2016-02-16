@@ -24,7 +24,7 @@
     [button.layer setCornerRadius:4];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor colorWithWhite:1 alpha:0.2] forState:UIControlStateHighlighted];
-    [button set];
+    [button setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     [self addSubview:button];
     [self addSubview:label];
