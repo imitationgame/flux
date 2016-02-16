@@ -17,3 +17,5 @@
 #import "vflowtext.h"
 #import "vflowfield.h"
 #import "vflowdetail.h"
+#import "vflowdetailmenu.h"
+#import "vflowdetailmenucel.h"
