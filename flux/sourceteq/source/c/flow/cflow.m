@@ -20,6 +20,7 @@
 {
     UIImage *image;
     vflowcontent *content = self.viewflow.contentview;
+    CGRect originalrect = content.frame;
     CGSize size = content.contentSize;
     CGFloat basesize = 100;
     CGFloat scrollwidth = basesize;
@@ -73,6 +74,7 @@
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
+    [content setFrame:originalrect];
     NSString *filename = NSLocalizedString(@"flow_exportname", nil);
     NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
     NSURL *url = [NSURL fileURLWithPath:filepath];
