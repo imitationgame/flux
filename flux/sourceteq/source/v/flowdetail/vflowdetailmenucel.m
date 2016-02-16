@@ -14,6 +14,7 @@
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setFont:[UIFont fontWithName:fontboldname size:18]];
     [label setTextColor:colormain];
+    [label setTextAlignment:NSTextAlignmentCenter];
     self.label = label;
     
     [self addSubview:label];
