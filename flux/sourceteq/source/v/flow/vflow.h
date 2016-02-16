@@ -23,6 +23,8 @@
 -(void)addpointatx:(NSUInteger)x y:(NSUInteger)y;
 -(void)catalogtypeselected:(id<mflowetttypesprotocol>)type;
 -(void)choosingmode:(BOOL)mode;
+-(void)startloading;
+-(void)stoploading;
 
 @property(strong, nonatomic)mflow *model;
 @property(weak, nonatomic)vflowcatalogett *catalogett;
@@ -30,6 +32,7 @@
 @property(weak, nonatomic)vflowcontent *contentview;
 @property(weak, nonatomic)vflowstopchoosing *stopchoosing;
 @property(weak, nonatomic)vflowfield *field;
+@property(weak, nonatomic)UIActivityIndicatorView *spinner;
 @property(nonatomic)NSUInteger width;
 @property(nonatomic)NSUInteger height;
 @property(nonatomic)BOOL choosing;

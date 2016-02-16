@@ -18,9 +18,7 @@
 
 -(void)exportflow
 {
-    [self.viewflow clearcolor];
-    [self.viewflow clearpoint];
-    [self.viewflow cleartext];
+    [self.viewflow startloading];
     
     UIImage *image;
     vflowcontent *content = self.viewflow.contentview;
@@ -84,6 +82,7 @@
     NSURL *url = [NSURL fileURLWithPath:filepath];
     [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
     
+    [self.viewflow stoploading];
     [self.navigationController pushViewController:[[cflowdetail alloc] init:filepath] animated:YES];
 }
 
