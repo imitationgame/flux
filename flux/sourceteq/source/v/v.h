@@ -19,3 +19,4 @@
 #import "vflowdetail.h"
 #import "vflowdetailmenu.h"
 #import "vflowdetailmenucel.h"
+#import "vlist.h"
