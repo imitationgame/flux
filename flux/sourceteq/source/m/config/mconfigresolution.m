@@ -15,6 +15,7 @@
 -(void)configcel:(vconfigcel*)cel
 {
     vconfigsw *overview = [[vconfigsw alloc] init];
+    [overview.label setText:NSLocalizedString(@"config_item_hr", nil)];
     [cel changeoverview:overview];
 }
 
