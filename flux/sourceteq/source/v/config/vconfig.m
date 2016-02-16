@@ -6,7 +6,7 @@
 {
     self = [super init:controller];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor whiteColor]];
+    [self setBackgroundColor:[UIColor colorWithWhite:0.97 alpha:1]];
     
     self.model = [[mconfig alloc] init];
     
@@ -14,7 +14,7 @@
     [flow setHeaderReferenceSize:CGSizeZero];
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(2, 0, 10, 0)];
+    [flow setSectionInset:UIEdgeInsetsMake(2, 0, 20, 0)];
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:2];
     
