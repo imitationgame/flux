@@ -40,3 +40,5 @@
 #import "mconfigfont.h"
 #import "mconfigsize.h"
 #import "msettings.h"
+#import "mconfigfonts.h"
+#import "mconfigfontsprotocol.h"
