@@ -982,6 +982,7 @@
 				TargetAttributes = {
 					DA0156B11C6A68B700FAC166 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 7AMWG3RLHN;
 					};
 				};
 			};
@@ -1293,6 +1294,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Agustin Iturbide (Q3HFYLXFGT)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/flux/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1302,6 +1304,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.flux;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "22919800-bdbb-48fe-bc0a-18c86e243344";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1312,6 +1315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Agustin Iturbide (7AMWG3RLHN)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/flux/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1321,6 +1325,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.flux;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "21075402-8ff0-4a62-ab63-efbf02859995";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -107,7 +107,7 @@
 
 -(void)actionsend:(UIButton*)button
 {
-    NSString *label = [[tools singleton] numbertostring:@(self.menu.stars)];
+//    NSString *label = [[tools singleton] numbertostring:@(self.menu.stars)];
 //    [[analytics singleton] trackevent:ga_event_rate action:ga_action_completed label:label];
     
     [self.menu setHidden:YES];
