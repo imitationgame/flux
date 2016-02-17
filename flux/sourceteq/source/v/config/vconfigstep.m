@@ -13,7 +13,7 @@
     [label setBackgroundColor:[UIColor clearColor]];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setUserInteractionEnabled:NO];
-    [label setFont:[UIFont fontWithName:fontname size:16]];
+    [label setFont:[UIFont fontWithName:fontname size:15]];
     [label setTextColor:[UIColor colorWithWhite:0 alpha:0.4]];
     self.label = label;
     

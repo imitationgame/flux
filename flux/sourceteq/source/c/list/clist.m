@@ -12,6 +12,8 @@
 {
     [super viewDidAppear:animated];
     [[analytics singleton] trackscreen:ga_screen_list];
+    
+    [((vlist*)self.view).collection reloadData];
 }
 
 -(void)loadView

@@ -20,7 +20,7 @@
     
     UILabel *label = [[UILabel alloc] init];
     [label setBackgroundColor:[UIColor clearColor]];
-    [label setFont:[UIFont fontWithName:fontname size:16]];
+    [label setFont:[UIFont fontWithName:fontname size:15]];
     [label setTextColor:[UIColor colorWithWhite:0 alpha:0.4]];
     [label setUserInteractionEnabled:NO];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
