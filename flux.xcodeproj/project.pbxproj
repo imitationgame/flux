@@ -1304,7 +1304,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.flux;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "22919800-bdbb-48fe-bc0a-18c86e243344";
+				PROVISIONING_PROFILE = "6a510214-7a8f-4397-bdd8-132c2faa5771";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1325,7 +1325,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.flux;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "21075402-8ff0-4a62-ab63-efbf02859995";
+				PROVISIONING_PROFILE = "4b9beddc-40a4-4d7c-a458-81f365cb2a94";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
