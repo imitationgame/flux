@@ -1,10 +1,10 @@
-"app_title"="Flux";
+"app_title"="flux";
 
 "flow_main_title"="Construct";
 "flow_catalog_con"="Connector";
 "flow_catalog_pro"="Process";
 "flow_catalog_dec"="Decision";
-"flow_catalog_io"="input/output";
+"flow_catalog_io"="Input/Output";
 "flow_catalog_cancel"="Cancel";
 "flow_catalog_connect"="Connect element";
 "flow_catalog_connect_cancel"="Cancel connect";
