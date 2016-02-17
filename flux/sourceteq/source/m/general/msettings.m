@@ -33,6 +33,8 @@
         [self save];
     }
     
+#warning @"high resolution is not working"
+    
     return self;
 }
 
