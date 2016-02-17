@@ -9,40 +9,40 @@
 "flow_catalog_connect"="Conectar elemento";
 "flow_catalog_connect_cancel"="Cancelar conectar";
 
-"flow_colors_main"="Main";
-"flow_colors_blue"="Blue";
-"flow_colors_green"="Green";
-"flow_colors_yellow"="Yellow";
-"flow_colors_violet"="Violet";
-"flow_colors_grey"="Grey";
-"flow_colors_pink"="Pink";
-"flow_colors_accept"="Done";
+"flow_colors_main"="Principal";
+"flow_colors_blue"="Azul";
+"flow_colors_green"="Verde";
+"flow_colors_yellow"="Amarillo";
+"flow_colors_violet"="Violeta";
+"flow_colors_grey"="Gris";
+"flow_colors_pink"="Rosa";
+"flow_colors_accept"="Listo";
 
-"flow_etttext_con_start"="Starting point";
-"flow_etttext_con_end"="Ending point";
-"flow_etttext_dec"="Some decision";
-"flow_etttext_io"="Some input";
-"flow_etttext_pro"="Some process";
+"flow_etttext_con_start"="Punto inicial";
+"flow_etttext_con_end"="Punto final";
+"flow_etttext_dec"="Una comparacion";
+"flow_etttext_io"="Entrada de datos";
+"flow_etttext_pro"="Algun proceso";
 
-"flow_field_done"="Done";
-"flow_field_placeholder"="Description";
+"flow_field_done"="Listo";
+"flow_field_placeholder"="Descripcion";
 
-"flow_exportname"="flow.png";
+"flow_exportname"="flujo.png";
 
-"flow_detail_title"="Finish";
-"flow_detail_action_save"="Save";
-"flow_detail_action_export"="Export";
+"flow_detail_title"="Finalizar";
+"flow_detail_action_save"="Guardar";
+"flow_detail_action_export"="Exportar";
 
-"list_main_title"="Flows";
-"list_header_empty"="No flows created yet";
-"list_header_button"="Create your first";
+"list_main_title"="Flujos";
+"list_header_empty"="No has creado flujos";
+"list_header_button"="Crea el primero";
 
-"config_main_title"="Config";
-"config_item_hr"="Use high resolution\n";
-"config_item_hrdescr"="Better quality, bigger files";
-"config_item_size"="Font size";
+"config_main_title"="Configurar";
+"config_item_hr"="Usar alta resolucion\n";
+"config_item_hrdescr"="Mejor calidad, archivos mas grandes";
+"config_item_size"="Tamaño de la fuente";
 
-"font_title"="Flow font";
+"font_title"="Fuente en flujos";
 "font_menlo"="Menlo";
 "font_arial"="Arial";
 "font_helvetica"="Helvetica";
@@ -57,7 +57,7 @@
 "rate_accept"="Done";
 "rate_thankyou"="Thank you for your support";
 
-"alert_cancel"="Cancel";
-"alert_delete_title"="Close editor?";
-"alert_delete_descr"="You will lose your changes";
-"alert_delete_ok"="Close";
+"alert_cancel"="Cancelar";
+"alert_delete_title"="¿Cerrar editor?";
+"alert_delete_descr"="Perderas tus cambios";
+"alert_delete_ok"="Cerrar";
