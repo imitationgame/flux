@@ -21,6 +21,7 @@
 		<string>email</string>
 		<string>review</string>
 		<string>font</string>
+		<string>fontsize</string>
 	</array>
 	<key>actions</key>
 	<array>
