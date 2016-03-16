@@ -1,4 +1,5 @@
-#import "appdel.h"
+#import <Foundation/Foundation.h>
+#import "mconfigprotocol.h"
 
 @interface mconfigsection:NSObject
 

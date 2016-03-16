@@ -36,6 +36,8 @@
 #import "mlistitem.h"
 #import "mconfig.h"
 #import "mconfigsection.h"
+#import "mconfigsectionsettings.h"
+#import "mconfigsectioncontact.h"
 #import "mconfigprotocol.h"
 #import "mconfigresolution.h"
 #import "mconfigreview.h"
