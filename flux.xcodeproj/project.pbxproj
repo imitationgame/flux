@@ -110,6 +110,7 @@
 		DABC6AD21C99E7F000AE1C50 /* mconfigsectionsettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DABC6AD11C99E7F000AE1C50 /* mconfigsectionsettings.m */; };
 		DABC6AD51C99E80900AE1C50 /* mconfigsectioncontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DABC6AD41C99E80900AE1C50 /* mconfigsectioncontact.m */; };
 		DABC6AD81C99ED8400AE1C50 /* vconfigheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DABC6AD71C99ED8400AE1C50 /* vconfigheader.m */; };
+		DABC6ADB1C99F2F600AE1C50 /* mconfigemail.m in Sources */ = {isa = PBXBuildFile; fileRef = DABC6ADA1C99F2F600AE1C50 /* mconfigemail.m */; };
 		DAD4820E1C7245380063C150 /* cflowdetail.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD4820D1C7245380063C150 /* cflowdetail.m */; };
 		DAD482121C7246DE0063C150 /* vflowdetail.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD482111C7246DE0063C150 /* vflowdetail.m */; };
 		DAD482151C72A8350063C150 /* vflowdetailmenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD482141C72A8350063C150 /* vflowdetailmenu.m */; };
@@ -334,6 +335,8 @@
 		DABC6AD41C99E80900AE1C50 /* mconfigsectioncontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfigsectioncontact.m; sourceTree = "<group>"; };
 		DABC6AD61C99ED8400AE1C50 /* vconfigheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigheader.h; sourceTree = "<group>"; };
 		DABC6AD71C99ED8400AE1C50 /* vconfigheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigheader.m; sourceTree = "<group>"; };
+		DABC6AD91C99F2F600AE1C50 /* mconfigemail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mconfigemail.h; sourceTree = "<group>"; };
+		DABC6ADA1C99F2F600AE1C50 /* mconfigemail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfigemail.m; sourceTree = "<group>"; };
 		DAD4820C1C7245380063C150 /* cflowdetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cflowdetail.h; sourceTree = "<group>"; };
 		DAD4820D1C7245380063C150 /* cflowdetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cflowdetail.m; sourceTree = "<group>"; };
 		DAD482101C7246DE0063C150 /* vflowdetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowdetail.h; sourceTree = "<group>"; };
@@ -842,6 +845,8 @@
 				DABC6AC81C99E67100AE1C50 /* mconfigreview.m */,
 				DABC6ACA1C99E67B00AE1C50 /* mconfigrate.h */,
 				DABC6ACB1C99E67B00AE1C50 /* mconfigrate.m */,
+				DABC6AD91C99F2F600AE1C50 /* mconfigemail.h */,
+				DABC6ADA1C99F2F600AE1C50 /* mconfigemail.m */,
 				DA76B80E1C739D2A00C8E1B6 /* mconfigfonts.h */,
 				DA76B80F1C739D2A00C8E1B6 /* mconfigfonts.m */,
 				DA76B8141C739D5F00C8E1B6 /* mconfigfontsprotocol.h */,
@@ -1153,6 +1158,7 @@
 				DA76B7F11C73770000C8E1B6 /* mconfig.m in Sources */,
 				DAEACBBE1C6CF1EE0047ABF0 /* mflowcolorsblue.m in Sources */,
 				DAB837C41C6AC3F200730B67 /* mflowetttypespro.m in Sources */,
+				DABC6ADB1C99F2F600AE1C50 /* mconfigemail.m in Sources */,
 				DA01573C1C6A691900FAC166 /* vratemenucel.m in Sources */,
 				DAD482451C72C28A0063C150 /* mlistitem.m in Sources */,
 				DAA2DCF41C6FFAE400CF2B8E /* vflowfield.m in Sources */,

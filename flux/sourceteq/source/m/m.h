@@ -42,6 +42,7 @@
 #import "mconfigresolution.h"
 #import "mconfigreview.h"
 #import "mconfigrate.h"
+#import "mconfigemail.h"
 #import "mconfigfont.h"
 #import "mconfigsize.h"
 #import "msettings.h"
