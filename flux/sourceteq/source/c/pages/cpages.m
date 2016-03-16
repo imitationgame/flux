@@ -1,9 +1,6 @@
 #import "cpages.h"
 
 @implementation cpages
-{
-    NSTimer *timer;
-}
 
 -(instancetype)init
 {
