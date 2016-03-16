@@ -5,7 +5,7 @@
 @interface mlist:NSObject
 
 -(void)reload;
--(NSUInteger)count;
--(mlistitem*)item:(NSUInteger)index;
+
+@property(strong, nonatomic)NSMutableArray<mlistitem*> *items;
 
 @end

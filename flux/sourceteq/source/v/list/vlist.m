@@ -63,7 +63,7 @@
 {
     CGSize size;
     
-    if([self.model count])
+    if(self.model.items.count)
     {
         size = CGSizeZero;
     }
@@ -90,7 +90,7 @@
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    NSUInteger count = [self.model count];
+    NSUInteger count = self.model.items.count;
     
     return count;
 }
@@ -104,15 +104,17 @@
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
+    mlistitem *model = self.model.items[index.item];
     vlistcel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
-    [cel config:[self.model item:index.item]];
+    [cel config:model];
     
     return cel;
 }
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    NSString *original = [flowsfolder stringByAppendingPathComponent:[self.model item:index.item].path];
+    mlistitem *model = self.model.items[index.item];
+    NSString *original = [flowsfolder stringByAppendingPathComponent:model.path];
     NSString *filename = NSLocalizedString(@"flow_exportname", nil);
     NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
     

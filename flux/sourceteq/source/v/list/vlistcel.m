@@ -29,12 +29,12 @@ static NSUInteger const cornerradius = 6;
     [self addSubview:background];
     
     NSDictionary *views = @{@"image":image, @"background":background};
-    NSDictionary *metrics = @{};
+    NSDictionary *metrics = @{@"margincell":@(margincell), @"marginimage":@(marginimage)};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-2-[image]-2-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-2-[image]-2-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-1-[background]-1-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-1-[background]-1-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(marginimage)-[image]-(marginimage)-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(marginimage)-[image]-(marginimage)-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(margincell)-[background]-(margincell)-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(margincell)-[background]-(margincell)-|" options:0 metrics:metrics views:views]];
     
     return self;
 }

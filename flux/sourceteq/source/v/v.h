@@ -20,6 +20,7 @@
 #import "vflowdetailmenu.h"
 #import "vflowdetailmenucel.h"
 #import "vlist.h"
+#import "vlistflow.h"
 #import "vlistcel.h"
 #import "vlistheader.h"
 #import "vconfig.h"
