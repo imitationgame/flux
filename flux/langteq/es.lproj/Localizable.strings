@@ -44,7 +44,8 @@
 "config_item_hrdescr"="Mejor calidad, archivos mas grandes";
 "config_item_size"="Tamaño de fuente";
 "config_email_title"="Escribenos";
-"config_email_subtitle"="\n¿Tienes dudas o sugerencias? Envianos un email";
+"config_email_subtitle"="\n¿Dudas o sugerencias?\nEnvianos un email";
+"config_email_button"="Escribir";
 
 "font_title"="Tipo de fuente";
 "font_menlo"="Menlo";

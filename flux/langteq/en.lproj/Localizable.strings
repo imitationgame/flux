@@ -44,7 +44,8 @@
 "config_item_hrdescr"="Better quality, bigger files";
 "config_item_size"="Font size";
 "config_email_title"="Write us";
-"config_email_subtitle"="\nAny question or have a suggestion? Send us an email";
+"config_email_subtitle"="\nAny question or have a suggestion?\nSend us an email";
+"config_email_button"="Write";
 
 "font_title"="Flow font";
 "font_menlo"="Menlo";
