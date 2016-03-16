@@ -30,3 +30,4 @@
 #import "vconfigfonts.h"
 #import "vconfigfontscel.h"
 #import "vconfigemail.h"
+#import "vconfigrate.h"
