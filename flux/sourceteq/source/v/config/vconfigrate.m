@@ -50,7 +50,7 @@
     [[analytics singleton] trackevent:ga_event_rate action:ga_action_start label:nil];
     
     crate *controller = [[crate alloc] init];
-    [[cmain singleton] pushViewController:controller animated:YES];
+    [[cmain singleton] presentViewController:controller animated:YES completion:nil];
 }
 
 @end
