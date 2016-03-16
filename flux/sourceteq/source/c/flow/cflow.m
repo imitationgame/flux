@@ -52,10 +52,14 @@
                        
                        CGFloat adwidth = 0;
                        CGFloat adheight = 0;
+                       CGFloat retina = 1;
                        
+                       if([msettings singleton].highresolution)
+                       {
+                           retina = 0;
+                       }
                        
-                       
-                       UIGraphicsBeginImageContextWithOptions(CGSizeMake(contentwidth, contentheight), YES, 0.0f);
+                       UIGraphicsBeginImageContextWithOptions(CGSizeMake(contentwidth, contentheight), YES, retina);
                        
                        while(adheight < contentheight)
                        {
