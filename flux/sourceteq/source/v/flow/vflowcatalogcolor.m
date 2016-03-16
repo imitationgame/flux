@@ -97,7 +97,7 @@
 
 -(void)actionclose:(UIButton*)button
 {
-    [[analytics singleton] trackevent:ga_event_changecolor action:ga_action_done label:nil];
+    [[analytics singleton] trackevent:ga_event_changecolor action:ga_action_done label:[self.viewett.model.color name]];
     [self.viewett.flowview clearcolor];
 }
 
