@@ -1,5 +1,7 @@
 #import "vratemenu.h"
 
+static NSUInteger const cellwidth = 55;
+
 @implementation vratemenu
 
 -(instancetype)init:(vrate*)view
@@ -18,7 +20,6 @@
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:0];
     [flow setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-    [flow setSectionInset:UIEdgeInsetsMake(0, 25, 0, 25)];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setBackgroundColor:[UIColor clearColor]];
@@ -46,9 +47,20 @@
 #pragma mark -
 #pragma mark col del
 
+-(UIEdgeInsets)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout insetForSectionAtIndex:(NSInteger)section
+{
+    CGFloat totalcells = cellwidth * 5;
+    CGFloat totalwidth = col.bounds.size.width;
+    CGFloat remaining = totalwidth - totalcells;
+    CGFloat margin = remaining / 2.0;
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, margin, 0, margin);
+    
+    return insets;
+}
+
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    CGSize size = CGSizeMake((col.bounds.size.width - 50)/ 5.0, col.bounds.size.height);
+    CGSize size = CGSizeMake(cellwidth, col.bounds.size.height);
     
     return size;
 }
