@@ -23,6 +23,7 @@
 #import "vlistcel.h"
 #import "vlistheader.h"
 #import "vconfig.h"
+#import "vconfigheader.h"
 #import "vconfigcel.h"
 #import "vconfigsw.h"
 #import "vconfigstep.h"

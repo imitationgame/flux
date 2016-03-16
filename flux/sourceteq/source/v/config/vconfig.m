@@ -29,6 +29,7 @@ static NSUInteger const sectionbottom = 40;
     [collection setDelegate:self];
     [collection setDataSource:self];
     [collection registerClass:[vconfigcel class] forCellWithReuseIdentifier:celid];
+    [collection registerClass:[vconfigheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerid];
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.collection = collection;
     
@@ -80,7 +81,11 @@ static NSUInteger const sectionbottom = 40;
 
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
 {
+    mconfigsection *model = self.model.sections[index.section];
+    vconfigheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerid forIndexPath:index];
+    [header config:model];
     
+    return header;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
