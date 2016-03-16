@@ -9,6 +9,7 @@ static NSString* const mailurl = @"mailto:flux@iturbi.de";
     self = [super init];
     [self setClipsToBounds:YES];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self setBackgroundColor:[UIColor clearColor]];
     
     NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:18], NSForegroundColorAttributeName:[UIColor colorWithWhite:0 alpha:0.4]};
     NSDictionary *dictsubtitle = @{NSFontAttributeName:[UIFont fontWithName:fontname size:14], NSForegroundColorAttributeName:[UIColor colorWithWhite:0 alpha:0.4]};

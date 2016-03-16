@@ -31,3 +31,4 @@
 #import "vconfigfontscel.h"
 #import "vconfigemail.h"
 #import "vconfigrate.h"
+#import "vconfigreview.h"

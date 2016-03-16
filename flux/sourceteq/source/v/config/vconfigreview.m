@@ -1,13 +1,13 @@
-#import "vconfigrate.h"
+#import "vconfigreview.h"
 
-@implementation vconfigrate
+@implementation vconfigreview
 
 -(instancetype)init
 {
     self = [super init];
     [self setClipsToBounds:YES];
-    [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self setBackgroundColor:[UIColor clearColor]];
+    [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     return self;
 }
