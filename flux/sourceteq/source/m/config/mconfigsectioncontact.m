@@ -1,13 +1,13 @@
-//
-//  mconfigsectioncontact.m
-//  flux
-//
-//  Created by zero on 3/16/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "mconfigsectioncontact.h"
 
 @implementation mconfigsectioncontact
+
+-(instancetype)init
+{
+    self = [super init];
+    self.name = NSLocalizedString(@"config_header_contact", nil);
+    
+    return self;
+}
 
 @end

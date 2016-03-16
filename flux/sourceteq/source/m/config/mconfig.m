@@ -6,11 +6,10 @@
 {
     self = [super init];
     
-    array = [NSArray arrayWithObjects:
-             [[mconfigresolution alloc] init],
-             [[mconfigsize alloc] init],
-             [[mconfigfont alloc] init],
-             nil];
+    self.sections = @[
+                      [[mconfigsectionsettings alloc] init],
+                      [[mconfigsectioncontact alloc] init],
+                      ];
     
     return self;
 }

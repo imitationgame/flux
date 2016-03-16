@@ -1,13 +1,6 @@
-//
-//  mconfigsectionsettings.h
-//  flux
-//
-//  Created by zero on 3/16/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mconfigsection.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mconfigsectionsettings : NSObject
+@interface mconfigsectionsettings:mconfigsection
 
 @end

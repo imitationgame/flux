@@ -37,6 +37,8 @@
 "list_header_empty"="No has creado flujos";
 "list_header_button"="Crea el primero";
 
+"config_header_settings"="Opciones";
+"config_header_contact"="Contacto";
 "config_main_title"="Configurar";
 "config_item_hr"="Usar alta resolucion\n";
 "config_item_hrdescr"="Mejor calidad, archivos mas grandes";
