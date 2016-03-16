@@ -55,7 +55,8 @@
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath *)index
 {
-    CGSize size = CGSizeMake(col.bounds.size.width / [self.model count], col.bounds.size.height);
+    NSUInteger totalitems = self.model.items.count;
+    CGSize size = CGSizeMake(col.bounds.size.width / totalitems, col.bounds.size.height);
     
     return size;
 }
@@ -74,15 +75,17 @@
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
+    id<mflowdetailprotocol> model = self.model.items[index.item];
     vflowdetailmenucel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
-    [cel config:[self.model item:index.item]];
+    [cel config:model];
     
     return cel;
 }
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    [[self.model item:index.item] action:self.controller];
+    id<mflowdetailprotocol> model = self.model.items[index.item];
+    [model action:self.controller];
 }
 
 @end
