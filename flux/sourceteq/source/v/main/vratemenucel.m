@@ -22,8 +22,8 @@
     NSDictionary *views = @{@"image":image};
     NSDictionary *metrics = @{};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(-3)-[image]-(-3)-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(-3)-[image]-(-3)-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(-5)-[image]-(-5)-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(-5)-[image]-(-5)-|" options:0 metrics:metrics views:views]];
     [self hover];
     
     return self;

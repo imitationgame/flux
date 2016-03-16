@@ -59,6 +59,7 @@
 "font_futura"="Futura";
 
 "rate_descr"="Rate flux";
+"rate_thanks"="Thanks for your support";
 
 "alert_cancel"="Cancel";
 "alert_delete_title"="Close editor?";

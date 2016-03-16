@@ -94,6 +94,9 @@ static NSUInteger const cellwidth = 55;
     }
     
     self.stars = item + 1;
+    
+    [[analytics singleton] trackevent:ga_event_rate action:ga_action_done label:[NSString stringWithFormat:@"%@", @(self.stars)]];
+    
     [self.view rateselected];
 }
 
