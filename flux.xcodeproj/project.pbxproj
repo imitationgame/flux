@@ -111,6 +111,7 @@
 		DABC6AD51C99E80900AE1C50 /* mconfigsectioncontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DABC6AD41C99E80900AE1C50 /* mconfigsectioncontact.m */; };
 		DABC6AD81C99ED8400AE1C50 /* vconfigheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DABC6AD71C99ED8400AE1C50 /* vconfigheader.m */; };
 		DABC6ADB1C99F2F600AE1C50 /* mconfigemail.m in Sources */ = {isa = PBXBuildFile; fileRef = DABC6ADA1C99F2F600AE1C50 /* mconfigemail.m */; };
+		DABC6ADE1C99F3E100AE1C50 /* vconfigemail.m in Sources */ = {isa = PBXBuildFile; fileRef = DABC6ADD1C99F3E100AE1C50 /* vconfigemail.m */; };
 		DAD4820E1C7245380063C150 /* cflowdetail.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD4820D1C7245380063C150 /* cflowdetail.m */; };
 		DAD482121C7246DE0063C150 /* vflowdetail.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD482111C7246DE0063C150 /* vflowdetail.m */; };
 		DAD482151C72A8350063C150 /* vflowdetailmenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD482141C72A8350063C150 /* vflowdetailmenu.m */; };
@@ -337,6 +338,8 @@
 		DABC6AD71C99ED8400AE1C50 /* vconfigheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigheader.m; sourceTree = "<group>"; };
 		DABC6AD91C99F2F600AE1C50 /* mconfigemail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mconfigemail.h; sourceTree = "<group>"; };
 		DABC6ADA1C99F2F600AE1C50 /* mconfigemail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mconfigemail.m; sourceTree = "<group>"; };
+		DABC6ADC1C99F3E100AE1C50 /* vconfigemail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconfigemail.h; sourceTree = "<group>"; };
+		DABC6ADD1C99F3E100AE1C50 /* vconfigemail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vconfigemail.m; sourceTree = "<group>"; };
 		DAD4820C1C7245380063C150 /* cflowdetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cflowdetail.h; sourceTree = "<group>"; };
 		DAD4820D1C7245380063C150 /* cflowdetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cflowdetail.m; sourceTree = "<group>"; };
 		DAD482101C7246DE0063C150 /* vflowdetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vflowdetail.h; sourceTree = "<group>"; };
@@ -819,6 +822,8 @@
 				DA76B8061C7379B800C8E1B6 /* vconfigfonts.m */,
 				DA76B8081C7379C700C8E1B6 /* vconfigfontscel.h */,
 				DA76B8091C7379C700C8E1B6 /* vconfigfontscel.m */,
+				DABC6ADC1C99F3E100AE1C50 /* vconfigemail.h */,
+				DABC6ADD1C99F3E100AE1C50 /* vconfigemail.m */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -1215,6 +1220,7 @@
 				DA30A83E1C6A93FB004F5828 /* vflowettcon.m in Sources */,
 				DA30A8381C6A9303004F5828 /* vflow.m in Sources */,
 				DA0157351C6A691900FAC166 /* mdirs.m in Sources */,
+				DABC6ADE1C99F3E100AE1C50 /* vconfigemail.m in Sources */,
 				DAA2DCEE1C6F908700CF2B8E /* mflowettio.m in Sources */,
 				DAA2DCEB1C6F8B7600CF2B8E /* vflowtext.m in Sources */,
 				DAEACBC11C6CF1FD0047ABF0 /* mflowcolorsgreen.m in Sources */,

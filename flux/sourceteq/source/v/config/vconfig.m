@@ -1,7 +1,7 @@
 #import "vconfig.h"
 
-static NSUInteger const headerheight = 60;
-static NSUInteger const sectionbottom = 40;
+static NSUInteger const headerheight = 70;
+static NSUInteger const sectionbottom = 50;
 
 @implementation vconfig
 

@@ -14,8 +14,8 @@
 
 -(void)configcel:(vconfigcel*)cel
 {
-    vconfigfonts *fonts = [[vconfigfonts alloc] init];
-    [cel changeoverview:fonts];
+    vconfigemail *email = [[vconfigemail alloc] init];
+    [cel changeoverview:email];
 }
 
 @end

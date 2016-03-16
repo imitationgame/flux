@@ -43,6 +43,8 @@
 "config_item_hr"="Use high resolution\n";
 "config_item_hrdescr"="Better quality, bigger files";
 "config_item_size"="Font size";
+"config_email_title"="Write us";
+"config_email_subtitle"="\nAny question or have a suggestion? Send us an email";
 
 "font_title"="Flow font";
 "font_menlo"="Menlo";

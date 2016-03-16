@@ -29,3 +29,4 @@
 #import "vconfigstep.h"
 #import "vconfigfonts.h"
 #import "vconfigfontscel.h"
+#import "vconfigemail.h"
