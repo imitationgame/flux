@@ -101,7 +101,7 @@
                        [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
                        
                        [self.viewflow stoploading];
-                       [self.navigationController pushViewController:[[cflowdetail alloc] init:filepath] animated:YES];
+                       [self.navigationController pushViewController:[[cflowdetail alloc] init:filepath saved:NO] animated:YES];
                    });
 }
 

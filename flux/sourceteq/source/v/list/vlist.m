@@ -117,7 +117,7 @@
     NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
     
     [mdirs copyfilefrom:original to:filepath];
-    [self.controller.navigationController pushViewController:[[cflowdetail alloc] init:filepath] animated:YES];
+    [self.controller.navigationController pushViewController:[[cflowdetail alloc] init:filepath saved:YES] animated:YES];
 }
 
 @end

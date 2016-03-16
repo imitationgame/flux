@@ -2,10 +2,11 @@
 
 @implementation cflowdetail
 
--(instancetype)init:(NSString*)pathpicture
+-(instancetype)init:(NSString*)pathpicture saved:(BOOL)saved
 {
     self = [super init];
     self.pathpicture = pathpicture;
+    self.saved = saved;
     
     return self;
 }
