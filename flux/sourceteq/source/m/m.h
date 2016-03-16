@@ -37,6 +37,8 @@
 #import "mconfig.h"
 #import "mconfigprotocol.h"
 #import "mconfigresolution.h"
+#import "mconfigreview.h"
+#import "mconfigrate.h"
 #import "mconfigfont.h"
 #import "mconfigsize.h"
 #import "msettings.h"
