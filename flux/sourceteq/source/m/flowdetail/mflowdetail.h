@@ -3,7 +3,8 @@
 
 @interface mflowdetail:NSObject
 
--(NSUInteger)count;
--(id<mflowdetailprotocol>)item:(NSUInteger)index;
+-(instancetype)init:(BOOL)saved;
+
+@property(strong, nonatomic)NSMutableArray<id<mflowdetailprotocol>> *items;
 
 @end

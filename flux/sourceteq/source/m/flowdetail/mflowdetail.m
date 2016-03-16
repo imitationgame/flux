@@ -5,32 +5,20 @@
     NSArray *array;
 }
 
--(instancetype)init
+-(instancetype)init:(BOOL)saved
 {
     self = [super init];
     
-    array = [NSArray arrayWithObjects:
-             [[mflowdetailsave alloc] init],
-             [[mflowdetailexport alloc] init],
-             nil];
+    self.items = [NSMutableArray array];
+    
+    if(!saved)
+    {
+        [self.items addObject:[[mflowdetailsave alloc] init]];
+    }
+    
+    [self.items addObject:[[mflowdetailexport alloc] init]];
     
     return self;
-}
-
-#pragma mark public
-
--(NSUInteger)count
-{
-    NSUInteger count = array.count;
-    
-    return count;
-}
-
--(id<mflowdetailprotocol>)item:(NSUInteger)index
-{
-    id<mflowdetailprotocol> item = array[index];
-    
-    return item;
 }
 
 @end
