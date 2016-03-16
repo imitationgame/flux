@@ -93,7 +93,11 @@
     if(index != selected)
     {
         selected = index;
-        [msettings singleton].fontselected = [[self.model item:selected] fontraw];
+        
+        id<mconfigfontsprotocol> font = [self.model item:selected];
+        [[analytics singleton] trackevent:ga_event_font action:ga_action_done label:[font name]];
+        
+        [msettings singleton].fontselected = [font fontraw];
         [[msettings singleton] save];
     }
 }

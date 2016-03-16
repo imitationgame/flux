@@ -20,6 +20,7 @@
 		<string>rate</string>
 		<string>email</string>
 		<string>review</string>
+		<string>font</string>
 	</array>
 	<key>actions</key>
 	<array>
