@@ -1,13 +1,21 @@
-//
-//  mconfigreview.m
-//  flux
-//
-//  Created by zero on 3/16/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "mconfigreview.h"
 
 @implementation mconfigreview
+
+#pragma mark -
+#pragma mark config protocol
+
+-(CGFloat)celsize
+{
+    CGFloat size = 120;
+    
+    return size;
+}
+
+-(void)configcel:(vconfigcel*)cel
+{
+    vconfigfonts *fonts = [[vconfigfonts alloc] init];
+    [cel changeoverview:fonts];
+}
 
 @end

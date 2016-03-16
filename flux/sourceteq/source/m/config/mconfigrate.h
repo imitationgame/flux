@@ -1,13 +1,6 @@
-//
-//  mconfigrate.h
-//  flux
-//
-//  Created by zero on 3/16/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mconfigprotocol.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mconfigrate : NSObject
+@interface mconfigrate:NSObject<mconfigprotocol>
 
 @end
