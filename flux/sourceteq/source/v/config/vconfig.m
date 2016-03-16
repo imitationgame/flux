@@ -1,5 +1,8 @@
 #import "vconfig.h"
 
+static NSUInteger const headerheight = 40;
+static NSUInteger const sectionbottom = 40;
+
 @implementation vconfig
 
 -(instancetype)init:(cconfig*)controller
@@ -11,10 +14,9 @@
     self.model = [[mconfig alloc] init];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-    [flow setHeaderReferenceSize:CGSizeZero];
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(2, 0, 20, 0)];
+    [flow setSectionInset:UIEdgeInsetsMake(2, 0, sectionbottom, 0)];
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:2];
     
@@ -44,6 +46,14 @@
 #pragma mark -
 #pragma mark col del
 
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    CGFloat width = col.bounds.size.width;
+    CGSize size = CGSizeMake(width, headerheight);
+    
+    return size;
+}
+
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
     id<mconfigprotocol> model = self.model.sections[index.section].items[index.item];
@@ -66,6 +76,11 @@
     NSInteger count = self.model.sections[section].items.count;
     
     return count;
+}
+
+-(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
+{
+    
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
