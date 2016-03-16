@@ -46,6 +46,8 @@
 "config_email_title"="Escribenos";
 "config_email_subtitle"="\n¿Dudas o sugerencias?\nEnvianos un email";
 "config_email_button"="Escribir";
+"config_rate_title"="Dinos que piensas de flux";
+"config_rate_button"="Valorar flux";
 
 "font_title"="Tipo de fuente";
 "font_menlo"="Menlo";

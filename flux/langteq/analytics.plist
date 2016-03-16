@@ -5,22 +5,24 @@
 	<key>screens</key>
 	<array>
 		<string>list</string>
-        <string>flow</string>
-        <string>detail</string>
-        <string>config</string>
+		<string>flow</string>
+		<string>detail</string>
+		<string>config</string>
 	</array>
 	<key>events</key>
 	<array>
 		<string>export</string>
-        <string>save</string>
-        <string>addett</string>
-        <string>changecolor</string>
-        <string>edittext</string>
-        <string>remove</string>
+		<string>save</string>
+		<string>addett</string>
+		<string>changecolor</string>
+		<string>edittext</string>
+		<string>remove</string>
+		<string>rate</string>
 	</array>
 	<key>actions</key>
 	<array>
 		<string>done</string>
+		<string>start</string>
 	</array>
 </dict>
 </plist>
