@@ -13,14 +13,9 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    [[analytics singleton] trackscreen:ga_screen_flow];
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
     [self setTitle:NSLocalizedString(@"flow_detail_title", nil)];
+    
+    [[analytics singleton] trackscreen:ga_screen_detail];
 }
 
 -(void)loadView
