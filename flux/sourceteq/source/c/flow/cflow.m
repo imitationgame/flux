@@ -6,12 +6,13 @@
 {
     [super viewDidLoad];
     [self setTitle:NSLocalizedString(@"flow_main_title", nil)];
+    
+    [[analytics singleton] trackscreen:ga_screen_flow];
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [[analytics singleton] trackscreen:ga_screen_list];
     [self.viewflow show];
 }
 

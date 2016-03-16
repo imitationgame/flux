@@ -13,6 +13,7 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    [[analytics singleton] trackscreen:ga_screen_flow];
 }
 
 -(void)viewDidAppear:(BOOL)animated
