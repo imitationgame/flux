@@ -46,27 +46,33 @@
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    CGSize size = CGSizeMake(col.bounds.size.width, [[self.model item:index.item] celsize]);
+    id<mconfigprotocol> model = self.model.sections[index.section].items[index.item];
+    CGFloat width = col.bounds.size.width;
+    CGFloat height = [model celsize];
+    CGSize size = CGSizeMake(width, height);
     
     return size;
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
 {
-    return 1;
+    NSUInteger count = self.model.sections.count;
+    
+    return count;
 }
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    NSInteger count = [self.model count];
+    NSInteger count = self.model.sections[section].items.count;
     
     return count;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
+    id<mconfigprotocol> model = self.model.sections[index.section].items[index.item];
     vconfigcel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
-    [[self.model item:index.item] configcel:cel];
+    [model configcel:cel];
     
     return cel;
 }
