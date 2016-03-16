@@ -19,6 +19,7 @@
 		<string>remove</string>
 		<string>rate</string>
 		<string>email</string>
+		<string>review</string>
 	</array>
 	<key>actions</key>
 	<array>

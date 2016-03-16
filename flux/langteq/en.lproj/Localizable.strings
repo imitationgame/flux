@@ -48,6 +48,8 @@
 "config_email_button"="Write";
 "config_rate_title"="Tell us what you think of flux";
 "config_rate_button"="Rate flux";
+"config_review_title"="Tell others about flux writing a review on the App Store";
+"config_review_button"="Review flux";
 
 "font_title"="Flow font";
 "font_menlo"="Menlo";
