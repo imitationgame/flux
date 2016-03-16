@@ -28,7 +28,7 @@
             width = 100;
         }
         
-        UIImage *image = [UIImage imageNamed:self.path];
+        UIImage *image = [UIImage imageWithContentsOfFile:[flowsfolder stringByAppendingPathComponent:self.path]];
         CGFloat delta = image.size.width / width;
         
         if(!delta)

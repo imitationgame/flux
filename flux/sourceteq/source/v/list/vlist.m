@@ -6,16 +6,10 @@
 {
     self = [super init:controller];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor colorWithWhite:0.97 alpha:1]];
+    [self setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1]];
     
     self.model = [[mlist alloc] init];
-    
-    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-    [flow setFooterReferenceSize:CGSizeZero];
-    [flow setMinimumInteritemSpacing:0];
-    [flow setMinimumLineSpacing:2];
-    [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(2, 2, 2, 2)];
+    vlistflow *flow = [[vlistflow alloc] init:self.model];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setClipsToBounds:YES];

@@ -19,7 +19,7 @@
     self = [super init];
     
     self.model = model;
-    padding = 4;
+    padding = 2;
     padding_2 = padding / 2;
     padding2 = padding * 2;
     mincols = 2;
