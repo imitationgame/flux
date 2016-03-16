@@ -7,7 +7,7 @@
 
 -(CGFloat)celsize
 {
-    CGFloat size = 130;
+    CGFloat size = 150;
     
     return size;
 }
