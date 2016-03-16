@@ -52,6 +52,9 @@
                        
                        CGFloat adwidth = 0;
                        CGFloat adheight = 0;
+                       
+                       
+                       
                        UIGraphicsBeginImageContextWithOptions(CGSizeMake(contentwidth, contentheight), YES, 0.0f);
                        
                        while(adheight < contentheight)

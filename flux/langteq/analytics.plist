@@ -22,6 +22,7 @@
 		<string>review</string>
 		<string>font</string>
 		<string>fontsize</string>
+		<string>retina</string>
 	</array>
 	<key>actions</key>
 	<array>

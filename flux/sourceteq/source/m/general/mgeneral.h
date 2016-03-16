@@ -37,7 +37,8 @@ typedef NS_ENUM(NSUInteger, ga_event)
     ga_event_email,
     ga_event_review,
     ga_event_font,
-    ga_event_fontsize
+    ga_event_fontsize,
+    ga_event_retina
 };
 
 typedef NS_ENUM(NSUInteger, ga_action)
