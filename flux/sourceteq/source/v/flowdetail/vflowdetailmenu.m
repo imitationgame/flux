@@ -10,7 +10,7 @@
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     self.controller = controller;
-    self.model = [[mflowdetail alloc] init];
+    self.model = [[mflowdetail alloc] init:controller.saved];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];
@@ -68,7 +68,7 @@
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    NSUInteger count = [self.model count];
+    NSUInteger count = self.model.items.count;
     
     return count;
 }
