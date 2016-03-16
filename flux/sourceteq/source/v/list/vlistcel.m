@@ -1,36 +1,40 @@
 #import "vlistcel.h"
 
+static NSUInteger const cornerradius = 6;
+
 @implementation vlistcel
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor whiteColor]];
+    [self setBackgroundColor:[UIColor clearColor]];
     
     UIImageView *image = [[UIImageView alloc] init];
-    [image setContentMode:UIViewContentModeScaleAspectFit];
+    [image setContentMode:UIViewContentModeScaleAspectFill];
     [image setClipsToBounds:YES];
     [image setUserInteractionEnabled:NO];
     [image setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [image.layer setCornerRadius:cornerradius];
     self.image = image;
     
-    UIView *selector = [[UIView alloc] init];
-    [selector setBackgroundColor:colormain];
-    [selector setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [selector setUserInteractionEnabled:NO];
-    self.selector = selector;
+    UIView *background = [[UIView alloc] init];
+    [background setBackgroundColor:colormain];
+    [background setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [background setUserInteractionEnabled:NO];
+    [background.layer setCornerRadius:cornerradius];
+    self.background = background;
     
-    [self addSubview:image];
-    [self addSubview:selector];
+    [background addSubview:image];
+    [self addSubview:background];
     
-    NSDictionary *views = @{@"image":image, @"selector":selector};
+    NSDictionary *views = @{@"image":image, @"background":background};
     NSDictionary *metrics = @{};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[image]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[image]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[selector]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[selector(10)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-2-[image]-2-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-2-[image]-2-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-1-[background]-1-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-1-[background]-1-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -53,13 +57,11 @@
 {
     if(self.isSelected || self.isHighlighted)
     {
-        [self.image setAlpha:0.2];
-        [self.selector setHidden:NO];
+        [self.background setBackgroundColor:colormain];
     }
     else
     {
-        [self.image setAlpha:1];
-        [self.selector setHidden:YES];
+        [self.background setBackgroundColor:[UIColor whiteColor]];
     }
 }
 
