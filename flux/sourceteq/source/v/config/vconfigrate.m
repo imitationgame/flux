@@ -14,7 +14,7 @@
     [label setUserInteractionEnabled:NO];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setNumberOfLines:0];
-    [label setFont:[UIFont fontWithName:fontname size:16]];
+    [label setFont:[UIFont fontWithName:fontname size:15]];
     [label setTextColor:[UIColor colorWithWhite:0 alpha:0.5]];
     [label setText:NSLocalizedString(@"config_rate_title", nil)];
     

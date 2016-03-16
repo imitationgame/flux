@@ -55,6 +55,8 @@ static NSString* const mailurl = @"mailto:flux@iturbi.de";
 
 -(void)actionwrite:(UIButton*)button
 {
+    [[analytics singleton] trackevent:ga_event_email action:ga_action_start label:nil];
+    
     NSURL *url = [NSURL URLWithString:mailurl];
     [[UIApplication sharedApplication] openURL:url];
 }

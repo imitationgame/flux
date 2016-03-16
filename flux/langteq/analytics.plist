@@ -18,6 +18,7 @@
 		<string>edittext</string>
 		<string>remove</string>
 		<string>rate</string>
+		<string>email</string>
 	</array>
 	<key>actions</key>
 	<array>
