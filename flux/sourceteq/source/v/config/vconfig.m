@@ -97,4 +97,9 @@ static NSUInteger const sectionbottom = 50;
     return cel;
 }
 
+-(BOOL)collectionView:(UICollectionView*)col shouldSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    return NO;
+}
+
 @end
