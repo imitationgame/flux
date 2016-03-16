@@ -14,8 +14,8 @@
 
 -(void)configcel:(vconfigcel*)cel
 {
-    vconfigfonts *fonts = [[vconfigfonts alloc] init];
-    [cel changeoverview:fonts];
+    vconfigreview *review = [[vconfigreview alloc] init];
+    [cel changeoverview:review];
 }
 
 @end
