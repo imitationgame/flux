@@ -12,12 +12,15 @@
     
     UIBarButtonItem *itemsettings = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settings"] style:UIBarButtonItemStylePlain target:self action:@selector(actionconfig:)];
     self.itemsettings = itemsettings;
+    self.itemsettings.imageInsets = UIEdgeInsetsMake(0, -14, 0, 0);
     
-    UIBarButtonItem *itemlistleft = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"list"] style:UIBarButtonItemStylePlain target:self action:@selector(actionlistleft:)];
+    UIBarButtonItem *itemlistleft = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"logo"] style:UIBarButtonItemStylePlain target:self action:@selector(actionlistleft:)];
     self.itemlistleft = itemlistleft;
+    self.itemlistleft.imageInsets = UIEdgeInsetsMake(0, -14, 0, 0);
     
-    UIBarButtonItem *itemlistright = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"list"] style:UIBarButtonItemStylePlain target:self action:@selector(actionlistright:)];
+    UIBarButtonItem *itemlistright = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"logo"] style:UIBarButtonItemStylePlain target:self action:@selector(actionlistright:)];
     self.itemlistright = itemlistright;
+    self.itemlistright.imageInsets = UIEdgeInsetsMake(0, -14, 0, 14);
     
     UIBarButtonItem *itemshare = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(actionshare:)];
     self.itemshare = itemshare;
@@ -73,6 +76,7 @@
      {
          [weakself.navigationItem setRightBarButtonItem:weakself.itemadd];
          [weakself.navigationItem setLeftBarButtonItem:weakself.itemsettings];
+         [weakself.titleview setImage:[UIImage imageNamed:@"logo"]];
      }];
 }
 
@@ -85,6 +89,7 @@
      {
          [weakself.navigationItem setRightBarButtonItem:weakself.itemlistright];
          [weakself.navigationItem setLeftBarButtonItem:nil];
+         [weakself.titleview setImage:[UIImage imageNamed:@"settings"]];
      }];
 }
 
@@ -117,6 +122,7 @@
      {
          [weakself.navigationItem setRightBarButtonItem:weakself.itemadd];
          [weakself.navigationItem setLeftBarButtonItem:weakself.itemsettings];
+         [weakself.titleview setImage:[UIImage imageNamed:@"logo"]];
      }];
 }
 
