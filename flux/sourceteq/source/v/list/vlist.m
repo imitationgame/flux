@@ -34,22 +34,6 @@
     return self;
 }
 
--(void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-#pragma mark notified
-
--(void)notifiedflowsreload:(NSNotification*)notification
-{
-    dispatch_async(dispatch_get_main_queue(),
-                   ^
-                   {
-                       [self.collection reloadData];
-                   });
-}
-
 #pragma mark -
 #pragma mark col del
 
