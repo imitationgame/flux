@@ -14,8 +14,6 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setTitle:NSLocalizedString(@"flow_detail_title", nil)];
-    
     [[analytics singleton] trackscreen:ga_screen_detail];
 }
 

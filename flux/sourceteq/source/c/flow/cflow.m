@@ -5,8 +5,6 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setTitle:NSLocalizedString(@"flow_main_title", nil)];
-    
     [[analytics singleton] trackscreen:ga_screen_flow];
 }
 

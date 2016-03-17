@@ -25,13 +25,21 @@
     [self.navigationItem setRightBarButtonItem:itemadd];
     [self.navigationItem setLeftBarButtonItem:itemsettings];
     
+    UIImageView *titleview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [titleview setUserInteractionEnabled:NO];
+    [titleview setClipsToBounds:YES];
+    [titleview setContentMode:UIViewContentModeScaleAspectFit];
+    [titleview setTintColor:[UIColor whiteColor]];
+    [titleview setImage:[UIImage imageNamed:@"logo"]];
+    [self.navigationItem setTitleView:titleview];
+    self.titleview = titleview;
+    
     return self;
 }
 
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setTitle:NSLocalizedString(@"app_title", nil)];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle

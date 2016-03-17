@@ -5,6 +5,7 @@
 -(void)addflow;
 -(void)showlist;
 
+@property(weak, nonatomic)UIImageView *titleview;
 @property(strong, nonatomic)UIBarButtonItem *itemadd;
 @property(strong, nonatomic)UIBarButtonItem *itemsettings;
 @property(strong, nonatomic)UIBarButtonItem *itemlistright;
