@@ -5,7 +5,7 @@
 	<key>appid</key>
 	<string>1084870501</string>
 	<key>version</key>
-	<integer>10</integer>
+	<integer>11</integer>
 	<key>dbname</key>
 	<string>flux.db</string>
 </dict>
