@@ -1,26 +1,27 @@
 #import "cpages.h"
 
 @implementation cpages
-{
-    NSTimer *timer;
-}
 
 -(instancetype)init
 {
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     [self setViewControllers:@[[[clist alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
-    UIBarButtonItem *itemadd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(actionadd:)];
+    UIBarButtonItem *itemadd = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"add"] style:UIBarButtonItemStylePlain target:self action:@selector(actionadd:)];
     self.itemadd = itemadd;
+    self.itemadd.imageInsets = UIEdgeInsetsMake(0, -14, 0, 14);
     
     UIBarButtonItem *itemsettings = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settings"] style:UIBarButtonItemStylePlain target:self action:@selector(actionconfig:)];
     self.itemsettings = itemsettings;
+    self.itemsettings.imageInsets = UIEdgeInsetsMake(0, -14, 0, 0);
     
-    UIBarButtonItem *itemlistleft = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"list"] style:UIBarButtonItemStylePlain target:self action:@selector(actionlistleft:)];
+    UIBarButtonItem *itemlistleft = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"logo"] style:UIBarButtonItemStylePlain target:self action:@selector(actionlistleft:)];
     self.itemlistleft = itemlistleft;
+    self.itemlistleft.imageInsets = UIEdgeInsetsMake(0, -14, 0, 0);
     
-    UIBarButtonItem *itemlistright = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"list"] style:UIBarButtonItemStylePlain target:self action:@selector(actionlistright:)];
+    UIBarButtonItem *itemlistright = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"logo"] style:UIBarButtonItemStylePlain target:self action:@selector(actionlistright:)];
     self.itemlistright = itemlistright;
+    self.itemlistright.imageInsets = UIEdgeInsetsMake(0, -14, 0, 14);
     
     UIBarButtonItem *itemshare = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(actionshare:)];
     self.itemshare = itemshare;
@@ -28,13 +29,21 @@
     [self.navigationItem setRightBarButtonItem:itemadd];
     [self.navigationItem setLeftBarButtonItem:itemsettings];
     
+    UIImageView *titleview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [titleview setUserInteractionEnabled:NO];
+    [titleview setClipsToBounds:YES];
+    [titleview setContentMode:UIViewContentModeScaleAspectFit];
+    [titleview setTintColor:[UIColor whiteColor]];
+    [titleview setImage:[UIImage imageNamed:@"logo"]];
+    [self.navigationItem setTitleView:titleview];
+    self.titleview = titleview;
+    
     return self;
 }
 
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setTitle:NSLocalizedString(@"app_title", nil)];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle
@@ -68,6 +77,7 @@
      {
          [weakself.navigationItem setRightBarButtonItem:weakself.itemadd];
          [weakself.navigationItem setLeftBarButtonItem:weakself.itemsettings];
+         [weakself.titleview setImage:[UIImage imageNamed:@"logo"]];
      }];
 }
 
@@ -80,6 +90,7 @@
      {
          [weakself.navigationItem setRightBarButtonItem:weakself.itemlistright];
          [weakself.navigationItem setLeftBarButtonItem:nil];
+         [weakself.titleview setImage:[UIImage imageNamed:@"settings"]];
      }];
 }
 
@@ -100,6 +111,7 @@
      {
          [weakself.navigationItem setRightBarButtonItem:weakself.itemshare];
          [weakself.navigationItem setLeftBarButtonItem:weakself.itemlistleft];
+         [weakself.titleview setImage:[UIImage imageNamed:@"add"]];
      }];
 }
 
@@ -112,6 +124,7 @@
      {
          [weakself.navigationItem setRightBarButtonItem:weakself.itemadd];
          [weakself.navigationItem setLeftBarButtonItem:weakself.itemsettings];
+         [weakself.titleview setImage:[UIImage imageNamed:@"logo"]];
      }];
 }
 

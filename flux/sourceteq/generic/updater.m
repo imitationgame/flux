@@ -30,9 +30,8 @@ NSString *flowsfolder;
         {
             [updater firsttime:defaults];
             [mdirs createdir:[NSURL fileURLWithPath:flowsfolder]];
+            [mdb updatedb];
         }
-        
-        [mdb updatedb];
     }
     
     dbname = [documents stringByAppendingPathComponent:[properties valueForKey:@"dbname"]];

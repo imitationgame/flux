@@ -5,13 +5,12 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setTitle:NSLocalizedString(@"flow_main_title", nil)];
+    [[analytics singleton] trackscreen:ga_screen_flow];
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [[analytics singleton] trackscreen:ga_screen_list];
     [self.viewflow show];
 }
 
@@ -52,7 +51,14 @@
                        
                        CGFloat adwidth = 0;
                        CGFloat adheight = 0;
-                       UIGraphicsBeginImageContextWithOptions(CGSizeMake(contentwidth, contentheight), YES, 0.0f);
+                       CGFloat retina = 1;
+                       
+                       if([msettings singleton].highresolution)
+                       {
+                           retina = 0;
+                       }
+                       
+                       UIGraphicsBeginImageContextWithOptions(CGSizeMake(contentwidth, contentheight), YES, retina);
                        
                        while(adheight < contentheight)
                        {
@@ -93,7 +99,7 @@
                        [UIImagePNGRepresentation(image) writeToURL:url options:NSDataWritingAtomic error:nil];
                        
                        [self.viewflow stoploading];
-                       [self.navigationController pushViewController:[[cflowdetail alloc] init:filepath] animated:YES];
+                       [self.navigationController pushViewController:[[cflowdetail alloc] init:filepath saved:NO] animated:YES];
                    });
 }
 

@@ -4,8 +4,10 @@
 
 -(void)actionchanged:(UISwitch*)sw
 {
-    [msettings singleton].highresolution = sw.isOn;
+    BOOL retina = sw.isOn;
+    [msettings singleton].highresolution = retina;
     [[msettings singleton] save];
+    [[analytics singleton] trackevent:ga_event_retina action:ga_action_done label:[NSString stringWithFormat:@"%@", @(retina)]];
 }
 
 #pragma mark -

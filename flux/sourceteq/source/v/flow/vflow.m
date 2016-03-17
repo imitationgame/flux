@@ -142,7 +142,7 @@
     [self.catalogett show:NO];
     [self.model add:type];
     
-    [[analytics singleton] trackevent:ga_event_addett action:ga_action_done label:nil];
+    [[analytics singleton] trackevent:ga_event_addett action:ga_action_done label:[type labeltext]];
 }
 
 -(void)choosingmode:(BOOL)mode

@@ -2,10 +2,11 @@
 
 @implementation cflowdetail
 
--(instancetype)init:(NSString*)pathpicture
+-(instancetype)init:(NSString*)pathpicture saved:(BOOL)saved
 {
     self = [super init];
     self.pathpicture = pathpicture;
+    self.saved = saved;
     
     return self;
 }
@@ -13,13 +14,7 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    [self setTitle:NSLocalizedString(@"flow_detail_title", nil)];
+    [[analytics singleton] trackscreen:ga_screen_detail];
 }
 
 -(void)loadView

@@ -31,7 +31,7 @@
 
 -(void)reload
 {
-    array = [NSMutableArray array];
+    self.items = [NSMutableArray array];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                    ^
@@ -46,25 +46,11 @@
                            NSString *rawpath = rawflow[@"path"];
                            mlistitem *item = [[mlistitem alloc] init:rawpath];
                            
-                           [array addObject:item];
+                           [self.items addObject:item];
                        }
                        
                        [[NSNotificationCenter defaultCenter] postNotificationName:notflowsreload object:nil];
                    });
-}
-
--(NSUInteger)count
-{
-    NSUInteger count = array.count;
-    
-    return count;
-}
-
--(mlistitem*)item:(NSUInteger)index
-{
-    mlistitem *item = array[index];
-    
-    return item;
 }
 
 @end

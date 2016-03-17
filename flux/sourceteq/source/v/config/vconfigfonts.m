@@ -53,7 +53,7 @@
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label(200)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[label]-20-[col(65)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[label]-20-[col(90)]-0-|" options:0 metrics:metrics views:views]];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_MSEC * 300), dispatch_get_main_queue(),
                    ^
@@ -93,7 +93,11 @@
     if(index != selected)
     {
         selected = index;
-        [msettings singleton].fontselected = [[self.model item:selected] fontraw];
+        
+        id<mconfigfontsprotocol> font = [self.model item:selected];
+        [[analytics singleton] trackevent:ga_event_font action:ga_action_done label:[font name]];
+        
+        [msettings singleton].fontselected = [font fontraw];
         [[msettings singleton] save];
     }
 }

@@ -11,6 +11,8 @@
     [self print:value];
     [msettings singleton].fontsize = value;
     [[msettings singleton] save];
+    
+    [[analytics singleton] trackevent:ga_event_fontsize action:ga_action_done label:[NSString stringWithFormat:@"%@", @(value)]];
 }
 
 #pragma mark functionality

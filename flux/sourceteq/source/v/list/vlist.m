@@ -6,16 +6,10 @@
 {
     self = [super init:controller];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor colorWithWhite:0.97 alpha:1]];
+    [self setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1]];
     
     self.model = [[mlist alloc] init];
-    
-    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-    [flow setFooterReferenceSize:CGSizeZero];
-    [flow setMinimumInteritemSpacing:0];
-    [flow setMinimumLineSpacing:2];
-    [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(2, 2, 2, 2)];
+    vlistflow *flow = [[vlistflow alloc] init:self.model];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setClipsToBounds:YES];
@@ -40,22 +34,6 @@
     return self;
 }
 
--(void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-#pragma mark notified
-
--(void)notifiedflowsreload:(NSNotification*)notification
-{
-    dispatch_async(dispatch_get_main_queue(),
-                   ^
-                   {
-                       [self.collection reloadData];
-                   });
-}
-
 #pragma mark -
 #pragma mark col del
 
@@ -63,7 +41,7 @@
 {
     CGSize size;
     
-    if([self.model count])
+    if(self.model.items.count)
     {
         size = CGSizeZero;
     }
@@ -90,7 +68,7 @@
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    NSUInteger count = [self.model count];
+    NSUInteger count = self.model.items.count;
     
     return count;
 }
@@ -104,20 +82,22 @@
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
+    mlistitem *model = self.model.items[index.item];
     vlistcel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
-    [cel config:[self.model item:index.item]];
+    [cel config:model];
     
     return cel;
 }
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    NSString *original = [flowsfolder stringByAppendingPathComponent:[self.model item:index.item].path];
+    mlistitem *model = self.model.items[index.item];
+    NSString *original = [flowsfolder stringByAppendingPathComponent:model.path];
     NSString *filename = NSLocalizedString(@"flow_exportname", nil);
     NSString *filepath = [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
     
     [mdirs copyfilefrom:original to:filepath];
-    [self.controller.navigationController pushViewController:[[cflowdetail alloc] init:filepath] animated:YES];
+    [self.controller.navigationController pushViewController:[[cflowdetail alloc] init:filepath saved:YES] animated:YES];
 }
 
 @end

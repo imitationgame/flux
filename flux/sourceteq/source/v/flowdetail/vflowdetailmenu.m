@@ -10,7 +10,7 @@
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     self.controller = controller;
-    self.model = [[mflowdetail alloc] init];
+    self.model = [[mflowdetail alloc] init:controller.saved];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];
@@ -34,10 +34,10 @@
     UIView *border = [[UIView alloc] init];
     [border setUserInteractionEnabled:NO];
     [border setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [border setBackgroundColor:colormain];
+    [border setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.2]];
     
-    [self addSubview:border];
     [self addSubview:collection];
+    [self addSubview:border];
     
     NSDictionary *views = @{@"col":collection, @"border":border};
     NSDictionary *metrics = @{};
@@ -55,7 +55,8 @@
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath *)index
 {
-    CGSize size = CGSizeMake(col.bounds.size.width / [self.model count], col.bounds.size.height);
+    NSUInteger totalitems = self.model.items.count;
+    CGSize size = CGSizeMake(col.bounds.size.width / totalitems, col.bounds.size.height);
     
     return size;
 }
@@ -67,22 +68,24 @@
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    NSUInteger count = [self.model count];
+    NSUInteger count = self.model.items.count;
     
     return count;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
+    id<mflowdetailprotocol> model = self.model.items[index.item];
     vflowdetailmenucel *cel = [col dequeueReusableCellWithReuseIdentifier:celid forIndexPath:index];
-    [cel config:[self.model item:index.item]];
+    [cel config:model];
     
     return cel;
 }
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    [[self.model item:index.item] action:self.controller];
+    id<mflowdetailprotocol> model = self.model.items[index.item];
+    [model action:self.controller];
 }
 
 @end

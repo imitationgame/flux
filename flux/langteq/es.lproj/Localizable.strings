@@ -1,6 +1,3 @@
-"app_title"="flux";
-
-"flow_main_title"="Constructor";
 "flow_catalog_con"="Conector";
 "flow_catalog_pro"="Proceso";
 "flow_catalog_dec"="Comparador";
@@ -33,14 +30,22 @@
 "flow_detail_action_save"="Guardar";
 "flow_detail_action_export"="Exportar";
 
-"list_main_title"="Flujos";
+
 "list_header_empty"="No has creado flujos";
 "list_header_button"="Crea el primero";
 
-"config_main_title"="Configurar";
+"config_header_settings"="Opciones";
+"config_header_contact"="Contacto";
 "config_item_hr"="Usar alta resolucion\n";
 "config_item_hrdescr"="Mejor calidad, archivos mas grandes";
 "config_item_size"="Tamaño de fuente";
+"config_email_title"="Escribenos";
+"config_email_subtitle"="\n¿Dudas o sugerencias?\nEnvianos un email";
+"config_email_button"="Escribir";
+"config_rate_title"="Dinos que piensas de flux";
+"config_rate_button"="Valorar flux";
+"config_review_title"="Dile a otros sobre flux escribiendo una reseña en la tienda";
+"config_review_button"="Escribe sobre flux";
 
 "font_title"="Tipo de fuente";
 "font_menlo"="Menlo";
@@ -49,13 +54,8 @@
 "font_times"="Times";
 "font_futura"="Futura";
 
-"rate_descr"="How would you rate this app?";
-"rate_donereview"="Rate sent. Would you write a review in the app store?";
-"rate_send"="Send";
-"rate_done"="Not now";
-"rate_review"="Review";
-"rate_accept"="Done";
-"rate_thankyou"="Thank you for your support";
+"rate_descr"="Valora flux";
+"rate_thanks"="Gracias por tu aporte";
 
 "alert_cancel"="Cancelar";
 "alert_delete_title"="¿Cerrar editor?";
