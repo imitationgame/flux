@@ -34,6 +34,9 @@
 		DA01573C1C6A691900FAC166 /* vratemenucel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA01571E1C6A691900FAC166 /* vratemenucel.m */; };
 		DA0157411C6A694300FAC166 /* in in Resources */ = {isa = PBXBuildFile; fileRef = DA0157401C6A694300FAC166 /* in */; };
 		DA19AD9E1C9A20C6005CDD3A /* vlistflow.m in Sources */ = {isa = PBXBuildFile; fileRef = DA19AD9D1C9A20C6005CDD3A /* vlistflow.m */; };
+		DA19ADA21C9A4880005CDD3A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DA19AD9F1C9A4880005CDD3A /* logo.png */; };
+		DA19ADA31C9A4880005CDD3A /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA19ADA01C9A4880005CDD3A /* logo@2x.png */; };
+		DA19ADA41C9A4880005CDD3A /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA19ADA11C9A4880005CDD3A /* logo@3x.png */; };
 		DA30A8301C6A6DE1004F5828 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA30A82F1C6A6DE1004F5828 /* Images.xcassets */; };
 		DA30A8341C6A708E004F5828 /* cflow.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30A8331C6A708E004F5828 /* cflow.m */; };
 		DA30A8381C6A9303004F5828 /* vflow.m in Sources */ = {isa = PBXBuildFile; fileRef = DA30A8371C6A9303004F5828 /* vflow.m */; };
@@ -205,6 +208,9 @@
 		DA0157461C6A6B2000FAC166 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DA19AD9C1C9A20C6005CDD3A /* vlistflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlistflow.h; sourceTree = "<group>"; };
 		DA19AD9D1C9A20C6005CDD3A /* vlistflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vlistflow.m; sourceTree = "<group>"; };
+		DA19AD9F1C9A4880005CDD3A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		DA19ADA01C9A4880005CDD3A /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		DA19ADA11C9A4880005CDD3A /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
 		DA30A82F1C6A6DE1004F5828 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA30A8321C6A708E004F5828 /* cflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cflow.h; sourceTree = "<group>"; };
 		DA30A8331C6A708E004F5828 /* cflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cflow.m; sourceTree = "<group>"; };
@@ -492,6 +498,9 @@
 		DA0156D21C6A691900FAC166 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				DA19AD9F1C9A4880005CDD3A /* logo.png */,
+				DA19ADA01C9A4880005CDD3A /* logo@2x.png */,
+				DA19ADA11C9A4880005CDD3A /* logo@3x.png */,
 				DABC6AE51C9A0C1D00AE1C50 /* star.png */,
 				DABC6AE61C9A0C1D00AE1C50 /* star@2x.png */,
 				DABC6AE71C9A0C1D00AE1C50 /* star@3x.png */,
@@ -1078,6 +1087,7 @@
 				DA0157201C6A691900FAC166 /* flux.db in Resources */,
 				DABC6AE91C9A0C1D00AE1C50 /* star@2x.png in Resources */,
 				DAB837DD1C6ADAB000730B67 /* io.png in Resources */,
+				DA19ADA41C9A4880005CDD3A /* logo@3x.png in Resources */,
 				DAB837D21C6AD91300730B67 /* process@2x.png in Resources */,
 				DA76B8281C73DC4300C8E1B6 /* list@2x.png in Resources */,
 				DA0157251C6A691900FAC166 /* Localizable.strings in Resources */,
@@ -1090,6 +1100,7 @@
 				DA76B82D1C73E28000C8E1B6 /* settings.png in Resources */,
 				DAB837DE1C6ADAB000730B67 /* io@2x.png in Resources */,
 				DAB837CB1C6AD6F700730B67 /* connector.png in Resources */,
+				DA19ADA21C9A4880005CDD3A /* logo.png in Resources */,
 				DAB837D11C6AD91300730B67 /* process.png in Resources */,
 				DA0157231C6A691900FAC166 /* analytics.plist in Resources */,
 				DA76B8291C73DC4300C8E1B6 /* list@3x.png in Resources */,
@@ -1098,6 +1109,7 @@
 				DAB837DF1C6ADAB000730B67 /* io@3x.png in Resources */,
 				DAB837DC1C6ADAB000730B67 /* decision@3x.png in Resources */,
 				DAA2DCE71C6ED02300CF2B8E /* close@2x.png in Resources */,
+				DA19ADA31C9A4880005CDD3A /* logo@2x.png in Resources */,
 				DA76B82F1C73E28000C8E1B6 /* settings@3x.png in Resources */,
 				DAB837DB1C6ADAB000730B67 /* decision@2x.png in Resources */,
 				DA0157411C6A694300FAC166 /* in in Resources */,
