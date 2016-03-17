@@ -34,10 +34,10 @@
     UIView *border = [[UIView alloc] init];
     [border setUserInteractionEnabled:NO];
     [border setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [border setBackgroundColor:colormain];
+    [border setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.2]];
     
-    [self addSubview:border];
     [self addSubview:collection];
+    [self addSubview:border];
     
     NSDictionary *views = @{@"col":collection, @"border":border};
     NSDictionary *metrics = @{};
