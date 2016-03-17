@@ -7,8 +7,9 @@
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     [self setViewControllers:@[[[clist alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
-    UIBarButtonItem *itemadd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(actionadd:)];
+    UIBarButtonItem *itemadd = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"add"] style:UIBarButtonItemStylePlain target:self action:@selector(actionadd:)];
     self.itemadd = itemadd;
+    self.itemadd.imageInsets = UIEdgeInsetsMake(0, -14, 0, 14);
     
     UIBarButtonItem *itemsettings = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settings"] style:UIBarButtonItemStylePlain target:self action:@selector(actionconfig:)];
     self.itemsettings = itemsettings;
@@ -110,6 +111,7 @@
      {
          [weakself.navigationItem setRightBarButtonItem:weakself.itemshare];
          [weakself.navigationItem setLeftBarButtonItem:weakself.itemlistleft];
+         [weakself.titleview setImage:[UIImage imageNamed:@"add"]];
      }];
 }
 
