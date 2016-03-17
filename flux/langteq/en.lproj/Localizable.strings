@@ -1,6 +1,3 @@
-"app_title"="flux";
-
-"flow_main_title"="Construct";
 "flow_catalog_con"="Connector";
 "flow_catalog_pro"="Process";
 "flow_catalog_dec"="Decision";
@@ -33,13 +30,11 @@
 "flow_detail_action_save"="Save";
 "flow_detail_action_export"="Export";
 
-"list_main_title"="Flows";
 "list_header_empty"="No flows created yet";
 "list_header_button"="Create your first";
 
 "config_header_settings"="Settings";
 "config_header_contact"="Contact";
-"config_main_title"="Config";
 "config_item_hr"="Use high resolution\n";
 "config_item_hrdescr"="Better quality, bigger files";
 "config_item_size"="Font size";
